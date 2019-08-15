@@ -3,14 +3,8 @@ extends ../../templates/_template.pug
 
 block content
   .flex-fill.d-flex.justify-content-center.flex-column.pt-lg-3
-    mixin callout-icon(block, index)
-      .w-lg.border.border-gray-light.m-2
-        .d-flex
-          .icon-cobot.icon-xl.text-primary.m-4(class!="'{% text \"Block_" + block + "_Callout_" + index + "_Icon\", no_wrapper=True %}'")
-          small.my-auto.mr-4
-            | {% raw_html "Block_#{block}_Callout_#{index}_Text" value='{{ title_var }}' %}
-    
+    include ../../components/_feature-1.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +callout-icon(3, 1)
-      +callout-icon(3, 1)
-      +callout-icon(3, 1)
+      +feature-1(3, 1)
+      +feature-1(3, 1)
+      +feature-1(3, 1)

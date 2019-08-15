@@ -1,0 +1,9 @@
+//- Components
+//- Feature 1
+
+mixin feature-1(block, index)
+  .w-lg.border.border-gray-light.m-2
+    .d-flex
+      .icon-cobot.icon-xl.text-primary.m-4(class!="'{% text \"Block_" + block + "_Callout_" + index + "_Icon\", no_wrapper=True %}'")
+      small.my-auto.mr-4
+        | {% raw_html "Block_#{block}_Callout_#{index}_Text" value='{{ title_var }}' %}
