@@ -13408,7 +13408,7 @@ small, small p, .small, .hs-fieldtype-text .hs-input, .hs_submit .hs-button, .sm
   transform: translateZ(0);
 }
 
-.hover-scale {
+.shadow-expand, .hover-scale {
   cursor: pointer;
 }
 
@@ -13419,6 +13419,20 @@ small, small p, .small, .hs-fieldtype-text .hs-input, .hs_submit .hs-button, .sm
   transition-duration: 0.5s;
   box-shadow: 0 6px 20px 8px #00000035;
   transform: scale(1.1);
+}
+
+.shadow-expand {
+  transition: 0.2s ease-in-out box-shadow;
+}
+.shadow-expand:hover {
+  box-shadow: 1rem 1rem 2rem #1f212135 !important;
+}
+
+.tab-card {
+  border: 1px solid #00000000;
+}
+.tab-card.active {
+  border: 1px solid #2b90e2;
 }
 
 .r-appearance {
@@ -14321,6 +14335,10 @@ small, small p, .small, .hs-fieldtype-text .hs-input, .hs_submit .hs-button, .sm
   max-width: 8rem;
   min-height: 2rem;
   max-height: 3rem;
+}
+
+.shadow-sm {
+  box-shadow: 0.0625rem 0.0625rem 0.375rem #1f212120 !important;
 }
 
 .hs_cos_wrapper form {

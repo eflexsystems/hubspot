@@ -19,6 +19,17 @@
     box-shadow: 0 6px 20px 8px #00000035
     transform: scale(1.1)
 
+.shadow-expand
+  @extend %pointer
+  transition: .2s ease-in-out box-shadow
+  &:hover
+    box-shadow: 1rem 1rem 2rem #{$black} + '35' !important
+
+.tab-card
+  border: 1px solid map-get($theme-colors, 'none')
+  &.active
+    border: 1px solid map-get($theme-colors, 'primary')
+
 .r-appearance
   -webkit-appearance: none !important
   -moz-appearance: none !important

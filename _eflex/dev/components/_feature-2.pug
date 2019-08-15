@@ -1,0 +1,9 @@
+//- Components
+//- Feature 2
+
+mixin feature-2(block, index)
+  .tab-card.w-half.shadow-sm.shadow-expand.rounded.m-2
+    .d-flex
+      .icon-cobot.icon-xl.text-primary.m-4(class!="'{% text \"Block_" + block + "_Feature_" + index + "_Icon\", no_wrapper=True %}'")
+      p.my-auto.mr-4.py-4
+        | {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ body-sm_var }}' %}

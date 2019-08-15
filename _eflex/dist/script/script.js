@@ -60,3 +60,10 @@ if (hasTouch()) {
         }
     } catch (ex) {}
 }
+
+// Tab Card Active
+$(function(){
+  $('.tab-card').click(function(e) {
+    $(this).toggleClass('active');
+  })
+})
