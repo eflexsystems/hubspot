@@ -1,0 +1,53 @@
+<div class="navbar navbar-expand-lg navbar-light bg-white fixed-top row no-gutters"><div class="col-lg-2 col-xl-3 col-12 d-flex"><div class="logo d-flex flex-column justify-content-center pr-lg-3 ml-lg-auto mx-2" onclick="window.location=&quot;{{ module.eflex_logo_url.href }}&quot;">{% image "eFlex_Logo" label='eFlex Systems Logo', alt='eFlex Systems Logo', src='https://cdn2.hubspot.net/hubfs/490686/_site/photos/logos/Logo_eFlex_02.png', style="width: 100%;" %}</div><button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div><div class="collapse navbar-collapse p-4 p-lg-0" id="navbarSupportedContent"><ul class="navbar-nav mx-auto"><li class="nav-item text-nowrap dropdown small mr-2"><div><a href="{{ href }}" class="d-flex nav-link pl-3 pl-lg-0 my-1 my-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_1_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_1_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_1_text" value="{{ module.nav_item_1_text }}" %}
+<span class="icon-arrow-down-sm text-black" style="font-size: 18px; margin: .1rem"></span>
+</a><div class="dropdown-menu bg-none p-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 mt-3 rounded shadow small">{% inline_text field="ni_1_group_label_1" value="{{ module.ni_1_group_label_1 }}" %}
+{% simple_menu menu_tree="{{ module.ni_1_simple_menu_1 }}" %}
+</div></div></div></li><li class="nav-item text-nowrap dropdown small mr-2"><div><a href="{{ href }}" class="d-flex nav-link pl-3 pl-lg-0 my-1 my-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_2_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_2_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_2_text" value="{{ module.nav_item_2_text }}" %}
+<span class="icon-arrow-down-sm text-black" style="font-size: 18px; margin: .1rem"></span>
+</a><div class="dropdown-menu bg-none p-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 mt-3 rounded shadow small">{% inline_text field="ni_2_group_label_1" value="{{ module.ni_2_group_label_1 }}" %}
+{% simple_menu menu_tree="{{ module.ni_2_simple_menu_1 }}" %}
+</div></div></div></li><li class="nav-item text-nowrap dropdown small mr-2"><div><a href="{{ href }}" class="d-flex nav-link pl-3 pl-lg-0 my-1 my-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_3_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_3_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_3_text" value="{{ module.nav_item_3_text }}" %}
+<span class="icon-arrow-down-sm text-black" style="font-size: 18px; margin: .1rem"></span>
+</a><div class="dropdown-menu bg-none p-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 mt-3 rounded shadow small">{% inline_text field="ni_3_group_label_1" value="{{ module.ni_3_group_label_1 }}" %}
+{% simple_menu menu_tree="{{ module.ni_3_simple_menu_1 }}" %}
+</div></div></div></li><li class="nav-item text-nowrap dropdown small mr-2"><div><a href="{{ href }}" class="d-flex nav-link pl-3 pl-lg-0 my-1 my-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_4_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_4_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_4_text" value="{{ module.nav_item_4_text }}" %}
+<span class="icon-arrow-down-sm text-black" style="font-size: 18px; margin: .1rem"></span>
+</a><div class="dropdown-menu bg-none p-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 mt-3 rounded shadow small">{% inline_text field="ni_4_group_label_1" value="{{ module.ni_4_group_label_1 }}" %}
+{% simple_menu menu_tree="{{ module.ni_4_simple_menu_1 }}" %}
+</div></div></div></li><li class="nav-item text-nowrap small m-2 mr-4">{% set href = module.nav_link_1_link.url.href %}
+{% if module.nav_link_1_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+<a href="{{ href }}" class="link"
+{% if module.nav_link_1_link.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_link_1_link.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_link_1_text" value="{{ module.nav_link_1_text }}" %}
+</a>
+</li><li class="nav-item text-nowrap small m-2">{% set href = module.nav_link_2_link.url.href %}
+{% if module.nav_link_2_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+<a href="{{ href }}" class="link"
+{% if module.nav_link_2_link.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_link_2_link.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_link_2_text" value="{{ module.nav_link_2_text }}" %}
+</a>
+</li></ul></div><div class="header-form col-lg-2 col-xl-3 d-none d-lg-block mr-2"><div class="w-100"><div class="w-md mr-lg-auto">{% form "Header_Free_Demo" form_to_use='11331edf-6f1c-442e-a88d-e79c23fbb4cf', no_title=True extra_classes="" %}</div></div></div></div>

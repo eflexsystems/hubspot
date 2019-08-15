@@ -1,0 +1,84 @@
+// Brand Identity Color Scheme
+$prussian-blue: #00274e; // Darkest Blue
+$tory-blue: #0064b2; // Blue
+$bal-hai: #93a4b7; // Light Blue
+$mystic: #e6ecf1; // Lightest Blue
+$abbey: #464749; // Dark Gray
+$star-dust: #a2a2a0; // Gray
+$westar: #e1dfdd; // Light Gray
+$white: #ffffff;
+$tia-maria: #d2611c; // Dark Orange
+$orange-peel: #ff9a00; // Orange
+
+// Theme Colors
+$mojo: #cc4744;
+$saffron-mango: #f9c655;
+$pear: #b5e530;
+$malachite: #2ee577;
+$turquoise: #30e1e5;
+$curious-blue: #2b90e2;
+$cornflower-blue: #7d7dff;
+
+// Darker Theme Colors
+$medium-carmine: #ad3b3b; // Dark Red
+$tia-maria: #c24a11; // Dark Orange
+$old-gold: #cea144; // Dark Yellow
+$limeade: #7ab200; // Dark Teal
+$forest-green: #23af41; // Dark Green
+$bondi-blue: #00a6b4; // Dark Cyan
+$tory-blue: #0c65b1; // Blue
+$butterfly-bush: #5151a5; // Dark Purple 
+
+// Grayscale
+$gray-100: #f2f2f2;
+$gray-200: $westar;
+$gray-300: #d5d6d3;
+$gray-400: $star-dust;
+$gray-500: #848585;
+$gray-600: #636466;
+$gray-700: $abbey;
+$gray-800: #323535;
+$gray-900: #2d2e2e;
+$black: #1f2121;
+$none: #00000000;
+
+$colors: (
+  "red": $mojo,
+  "orange": $orange-peel,
+  "yellow": $saffron-mango,
+  "green": $malachite,
+  "teal": $pear,
+  "cyan": $turquoise,
+  "blue": $curious-blue,
+  "purple": $cornflower-blue
+);
+
+$colors-dark: (
+  "red-dark": $medium-carmine,
+  "orange-dark": $tia-maria,
+  "yellow-dark": $old-gold,
+  "teal-dark": $limeade,
+  "green-dark": $forest-green,
+  "cyan-dark": $bondi-blue,
+  "blue-dark": $tory-blue,
+  "purple-dark": $butterfly-bush
+);
+
+$theme-colors: (
+  "brand": $tory-blue,
+  "primary": map-get($colors, "blue"),
+  "secondary": $tia-maria,
+  "success": map-get($colors, "green"),
+  "info": $tory-blue,
+  "warning": map-get($colors, "orange"),
+  "danger": map-get($colors, "red"),
+  "gray-light": $gray-300,
+  "gray": $star-dust,
+  "gray-dark": $abbey,
+  "white": $white,
+  "black": $black,
+  "none": $none
+);
+
+$theme-colors: map-merge($theme-colors, $colors);
+$theme-colors: map-merge($theme-colors, $colors-dark);

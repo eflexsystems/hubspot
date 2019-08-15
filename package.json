@@ -1,0 +1,23 @@
+{
+  "name": "eflex",
+  "version": "1.0.0",
+  "description": "eflexsystems.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "eflex site"
+  },
+  "keywords": [
+    "eflex",
+    "site"
+  ],
+  "author": "Ryan Jewell",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "pug-cli2": "^1.0.0-alpha6.1"
+  }
+}

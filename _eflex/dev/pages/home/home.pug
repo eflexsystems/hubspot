@@ -1,0 +1,48 @@
+//- home.pug
+extends ../../templates/_template.pug
+
+block content
+  | {% module "module_15656297764774" path="/_eflex/dist/components/testing", label="global_header" %}
+  .flex-fill.d-flex.justify-content-center.flex-column
+    // Video
+    .row.no-gutters
+      .col
+        .img-clip.position-absolute.w-100.vh-100
+          .video
+            video( autoplay="autoplay" muted="muted" loop="loop" playsinline)
+              source(src="https://cdn2.hubspot.net/hubfs/490686/_site/videos/JEM_Preview.mp4")
+    // Blend Multiply
+    .row.vh-100.no-gutters.m-0
+      .col-12
+        .blend-multiply-gray-dark.opacity-50.w-100.h-100
+    // Blend Exclusion
+    .row.vh-100.vw-100.no-gutters.position-absolute.m-0
+      .col-12
+        .blend-exclusion-gray-dark.w-100.h-100
+    // Down Arrow
+    .d-flex.flex-column.vh-100.w-100.position-absolute
+      .d-flex.flex-column.align-items-center.text-white.mt-auto.mx-auto.mb-4
+        small.text-uppercase.opacity-85.mb-n2 Scroll Down
+        span.icon-arrow-down-sm.icon-xl.position-relative(style="animation: 1s ease-in-out infinite forwards bounce;")
+    // Content
+    .row.no-gutters.align-self-center.align-items.center.position-absolute.pb-5.m-0
+      .col-12
+        h1.text-white.font-weight-bold.text-center.text-left.text-shadow
+          | {% raw_html "Title" value='The Manufacturing Integrated Platform' %}
+          .position-absolute.d-none.d-lg-block( style="top: -39px; width: 4rem; right: 132px;")
+            | {% image "MIP_Logo" label='MIP Logo Partial', alt='MIP Logo', src='https://cdn2.hubspot.net/hubfs/490686/_site/photos/logos/Logo_mip-partial.png', style="width: 100%;" %}
+        h5.text-white.text-center.font-weight-normal.text-shadow
+          | {% raw_html "Callout" value='The next-generation of process control and smart manufacturing.' %}
+        .row.no-gutters.justify-content-lg-center.justify-content-left.align-items-center.mt-5.m-0
+          .col-lg-4.col-12.px-3.py-2
+            | {% cta "request_demo" label='Primary CTA' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}
+          .col-lg-4.col-12.px-3.py-2
+            .cta-outline
+              | {% cta "contact_us" label='Secondary CTA' guid='a8fe13fb-36a0-45ae-ad0f-4728625ebdb4' %}
+
+  include blocks/_block-0.pug
+  include blocks/_block-1.pug
+  include blocks/_block-2.pug
+  include blocks/_block-3.pug
+  include blocks/_block-4.pug
+  include blocks/_block-5.pug

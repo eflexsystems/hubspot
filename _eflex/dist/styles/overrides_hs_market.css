@@ -1,0 +1,32 @@
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.hs-input:not([type=radio]):not([type=checkbox]) {
+  border-radius: 0.15rem 0 0 0.15rem !important;
+  padding: 13px;
+  position: relative;
+  bottom: 5px;
+  background-color: #ffffff;
+  border: 0.5px solid #d5d6d3;
+}
+
+.hs-input:not([type=radio]):not([type=checkbox])::placeholder {
+  color: #a2a2a0;
+}
+
+.hs_email.hs-form-field label {
+  display: none !important;
+}
+
+.hs-button {
+  text-transform: none !important;
+  font-weight: 400 !important;
+}
+
+.dropdown-bg {
+  margin-top: 1.625rem;
+}
+
+/*# sourceMappingURL=overrides_hs_market.css.map */

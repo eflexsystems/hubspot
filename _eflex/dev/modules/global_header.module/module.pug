@@ -1,0 +1,57 @@
+//- global_header.pug
+
+.navbar.navbar-expand-lg.navbar-light.bg-white.fixed-top.row.no-gutters
+  .col-lg-2.col-xl-3.col-12.d-flex
+    .logo.d-flex.flex-column.justify-content-center.pr-lg-3.ml-lg-auto.mx-2( onclick='window.location="{{ module.eflex_logo_url.href }}"')
+      | {% image "eFlex_Logo" label='eFlex Systems Logo', alt='eFlex Systems Logo', src='https://cdn2.hubspot.net/hubfs/490686/_site/photos/logos/Logo_eFlex_02.png', style="width: 100%;" %}
+    button.navbar-toggler.ml-auto( type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+  .collapse.navbar-collapse.p-4.p-lg-0( id="navbarSupportedContent")
+    ul.navbar-nav.mx-auto
+      mixin nav-item(index)
+        li.nav-item.text-nowrap.dropdown.small.mr-2
+          div
+            . 
+              <a href="{{ href }}" class="d-flex nav-link pl-3 pl-lg-0 my-1 my-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              {% if module.nav_item_#{index}_url.open_in_new_tab %}target="_blank"{% endif %}
+              {% if module.nav_item_#{index}_url.no_follow %}rel="nofollow"{% endif %}
+              >
+              {% inline_text field="nav_item_#{index}_text" value="{{ module.nav_item_#{index}_text }}" %}
+              <span class="icon-arrow-down-sm text-black" style="font-size: 18px; margin: .1rem"></span>
+              </a>
+            .dropdown-menu.bg-none.p-0( aria-labelledby='navBar')
+              .dropdown-bg.bg-white.px-3.pl-3.pl-lg-0.py-lg-5.mt-3.rounded.shadow.small
+                .
+                  {% inline_text field="ni_#{index}_group_label_1" value="{{ module.ni_#{index}_group_label_1 }}" %}
+                  {% simple_menu menu_tree="{{ module.ni_#{index}_simple_menu_1 }}" %}
+
+      - var n = 1
+      while n <= 4
+        +nav-item(n++)
+      
+      mixin nav-link(index, margin)
+        li.nav-item.text-nowrap.small(class=margin)
+          .
+            {% set href = module.nav_link_#{index}_link.url.href %}
+            {% if module.nav_link_#{index}_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}" class="link"
+            {% if module.nav_link_#{index}_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if module.nav_link_#{index}_link.no_follow %}rel="nofollow"{% endif %}
+            >
+            {% inline_text field="nav_link_#{index}_text" value="{{ module.nav_link_#{index}_text }}" %}
+            </a>
+
+      - var n = 1
+      while n <= 1
+        +nav-link(n++, 'm-2 mr-4')
+      
+      - var n = 2
+      +nav-link(n, 'm-2')
+
+  .header-form.col-lg-2.col-xl-3.d-none.d-lg-block.mr-2
+    .w-100
+      .w-md.mr-lg-auto
+        .
+          {% form "Header_Free_Demo" form_to_use='11331edf-6f1c-442e-a88d-e79c23fbb4cf', no_title=True extra_classes="" %}

@@ -1,0 +1,14 @@
+portals:
+  - portalId: 490686
+    name: PROD
+    authType: oauth2
+    auth:
+      clientId: 53cc8324-d401-4180-83b3-1a1d9842eae4
+      clientSecret: 5399b5f2-cb45-4a34-b025-f1d5baa76a10
+      scopes:
+        - content
+      tokenInfo:
+        expiresAt: '2019-08-15T21:45:01.098Z'
+        refreshToken: 9d21e3db-56c2-417c-bb10-86fb94ade705
+        accessToken: >-
+          CPTH0rzJLRICAgEYvvkdIN_3xAMo6Z0MMhkAZfg693ND9heAfxDTkckYFqSKs0m3f_4ZOhAAMQBB_wcAAAAAgAAAYHjDQhkAZfg693MkmCLuX8FIbucgKuW7HoT9X9yx

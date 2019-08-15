@@ -1,0 +1,41 @@
+%t-duration
+  transition-duration: .5s
+  *
+    transition-duration: .5s
+
+%t-fix
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateZ(0) scale(1.0, 1.0)
+  transform: translateZ(0)
+
+%pointer
+  cursor: pointer
+
+.hover-scale
+  @extend %pointer
+  transition-timing-function: ease-out
+  &:hover
+    transition-duration: .5s
+    box-shadow: 0 6px 20px 8px #00000035
+    transform: scale(1.1)
+
+.r-appearance
+  -webkit-appearance: none !important
+  -moz-appearance: none !important
+  appearance: none !important
+
+.bottom
+  bottom: 0
+
+.opacity-low
+  opacity: .1
+
+.text-shadow
+  text-shadow: 0.1rem 0.1rem 2rem #1f212190
+
+.overflow-scroll
+  overflow: scroll
+
+.black-fade
+  background-image: linear-gradient($none 15%, $black )
+  mix-blend-mode: multiply
