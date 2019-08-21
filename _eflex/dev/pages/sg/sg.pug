@@ -3,14 +3,99 @@ extends ../../templates/_template.pug
 
 block content
   .flex-fill.d-flex.justify-content-center.flex-column.pt-lg-3
+    .brightness-toggle.fixed-top.w-sm.d-flex.flex-column.m-5.ml-auto
+      button.btn.btn-primary.rounded-pill.my-5 Toggle Brightness
+    
+    .d-flex.flex-column.m-5
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Heading 1
+        h1 {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Heading 2
+        h2 {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Heading 3
+        h3 {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Heading 4
+        h4 {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Heading 5
+        h5 {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Heading 6
+        h6 {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Paragraph
+        p {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+      .d-flex.flex-column.m-2
+        p.font-italic.m-0 Small
+        small {% raw_html "Block_#{block}_Feature_#{index}_Text" value='{{ heading_var }}' %}
+
+    .d-flex.flex-lg-row.flex-column.flex-wrap.m-5
+      mixin color-swatch(semantic_name)
+        .d-flex.flex-column.m-2
+          p.font-italic.mb-2.text-capitalize= semantic_name
+          .res-sm.rounded( class='bg-' + semantic_name)
+      
+      +color-swatch('brand')
+      +color-swatch('primary')
+      +color-swatch('white')
+      +color-swatch('gray-light')
+      +color-swatch('gray')
+      +color-swatch('gray-dark')
+      +color-swatch('black')
+      +color-swatch('info')
+      +color-swatch('success')
+      +color-swatch('danger')
+      +color-swatch('secondary')
+      +color-swatch('warning')
+      
+    .d-flex.flex-lg-row.flex-column.flex-wrap.m-5
+      +color-swatch('red')
+      +color-swatch('orange')
+      +color-swatch('yellow')
+      +color-swatch('teal')
+      +color-swatch('green')
+      +color-swatch('cyan')
+      +color-swatch('blue')
+      +color-swatch('purple')
+    
+    .d-flex.flex-lg-row.flex-column.flex-wrap.m-5
+      +color-swatch('red-dark')
+      +color-swatch('orange-dark')
+      +color-swatch('yellow-dark')
+      +color-swatch('teal-dark')
+      +color-swatch('green-dark')
+      +color-swatch('cyan-dark')
+      +color-swatch('blue-dark')
+      +color-swatch('purple-dark')
+
     include ../../components/_feature-1.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +feature-1(1, 1)
-      +feature-1(1, 2)
-      +feature-1(1, 3)
+      +feature-1(1)
+      +feature-1(2)
+      +feature-1(3)
 
     include ../../components/_feature-2.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +feature-2(2, 1)
-      +feature-2(2, 2)
-
+      +feature-2(1)
+      +feature-2(2)
+    
+    include ../../components/_image-link.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      +image-link(1)
+      +image-link(2)
+      +image-link(3)
+    
+    include ../../components/_layout-1.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      +layout-1(_4_1)
+    
+    include ../../components/_layout-2.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      +layout-2(_5_1)
+    
+    include ../../components/_image-wallpaper-1.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      +image-wallpaper-1(_6_1)

@@ -23,6 +23,24 @@
     height: $width / 1.78 + vw
     max-height: ( 9 * $width ) / 16 + rem
     oveflow: ellipse
+  .res-lg-#{$desc}
+    @media (min-width: 992px)
+      width: $width / .875 + vw
+      height: $width / 1.555 + vw
+      max-height: ( 9 * $width ) / 16 + rem
+      max-width: $width + rem
+      min-width: $width / 1.45 + rem
+      min-height: $width / 2.62 + rem
+  .w-lg-#{$desc}
+    @media (min-width: 992px)
+      width: $width vw
+      max-width: $width + rem
+      min-width: $width / 2 + rem
+  .h-lg-#{$desc}
+    @media (min-width: 992px)
+      height: $width / 1.78 + vw
+      max-height: ( 9 * $width ) / 16 + rem
+      oveflow: ellipse
 
 +static-resolution(sm, 25)
 +static-resolution(md, 17)

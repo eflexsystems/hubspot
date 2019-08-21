@@ -1,0 +1,23 @@
+//- Components
+//- Image Link
+
+mixin image-link(index)
+  .m-2
+    .res-lg.shadow-sm.shadow-expand.scale.slick-slide.rounded( class!='{% text \"Image_Link_' + index + '_Display\", value="d-none", no_wrapper=True %}' onclick!="window.location='{% text \"Image_Link_" + index + "_URL\", no_wrapper=True %}'")
+      // Image
+      .res-lg.img-clip-rounded.position-absolute
+        | {% set class='res-lg' %}
+        | {% module "Image_Link_#{index}_Image" path='/_eflex/components/image' %}
+      // Blend Exclusion
+      .res-lg.position-absolute.opacity-25
+        .blend-exclusion-gray.rounded.w-100.h-100
+      // Black Fade
+      .res-lg.position-absolute
+        .black-fade.rounded.w-100.h-100
+      // Content
+      .res-lg.position-absolute
+        .d-flex.flex-column.justify-content-end.w-100.h-100.p-4
+          p.font-weight-light.text-white.text-shadow.m-0
+            | {% raw_html "Image_Link_#{index}_Date" value="{{ date_var }}" %}
+          h6.font-weight-bold.text-white.text-shadow.mb-0
+            | {% raw_html "Image_Link_#{index}_Title" value="{{ title_var }}" %}

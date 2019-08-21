@@ -1,6 +1,17 @@
 //- Global Header Styles
 
 @import ../../styles/partials/_colors
+
+.logo
+  width: 12.5rem
+  margin-right: 4rem
+  cursor: pointer
+  &:hover
+    opacity: .65
+
+.navbar-collapse
+  max-width: 48.75rem
+
 .hs-menu-wrapper 
   .hs-menu-item
     margin-top: .5rem
@@ -21,6 +32,7 @@
     text-transform: uppercase
   
 .dropdown-bg
+  margin-top: 2.3rem
   min-width: 22rem
 
 .link
@@ -33,13 +45,13 @@
   min-width: 14rem
   .hs-fieldtype-text .hs-input, .hs_submit .hs-button
     padding: .5rem 1rem
-    
+  
   h3
     display: none
 
-@media (max-width: 920px)
+@media (max-width: 992px)
   .dropdown-menu .hs_cos_wrapper_type_inline_text
-    margin-top: 1.5rem
+    margin-top: 1rem
     margin-left: 0
     opacity: .65
     font-size: .75rem
@@ -50,3 +62,29 @@
   
   .navbar
     border-bottom: .5px solid $gray-300
+  
+  .logo
+    width: 8rem
+
+  a#cta_button_490686_4b0f6943-4c1f-4b9b-914b-4bc5acfce5e0
+    width: 100%
+    text-align: left
+    border-radius: .25rem
+    padding: 1rem 0 1rem 1rem
+    box-sizing: border-box !important
+  
+  .nav-link
+    color: $gray-700!important
+    background-color: map-get($theme-colors, 'primary') + unquote('20')
+    border-radius: .25rem
+  
+  .navbar .link
+    font-size: 1rem
+
+
+@media (min-width: 1300px)  
+  .nav-item
+    font-size: 1.125rem
+  
+  .logo
+    margin-right: 4rem

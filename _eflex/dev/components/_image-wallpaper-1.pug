@@ -1,0 +1,5 @@
+mixin image-wallpaper-1(index)
+  .d-flex.align-items-center.flex-lg-row.flex-column
+    .vw-100.h-half.img-clip-rounded.
+      {% set class = "w-100 h-100" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}

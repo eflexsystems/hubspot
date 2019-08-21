@@ -1,10 +1,3 @@
-// eFlex Logo
-.logo
-  width: 11.25rem
-  cursor: pointer
-  &:hover
-    opacity: .65
-
 // Videos
 .video
   position: fixed
@@ -21,9 +14,13 @@
     width: 38.22vw
 
 // Images
-.img-clip
+.img-clip-rounded
   clip-path: inset(0 0 0 0 round .25rem)
   -webkit-clip-path: inset(0 0 0 0 round .25rem)
+
+.img-clip
+  clip-path: inset(0 0 0 0 .25rem)
+  -webkit-clip-path: inset(0 0 0 0 .25rem)
 
 .img-thumbnail-tabs
   @media (max-width: 81.25rem)
@@ -32,7 +29,7 @@
     max-width: 26.875rem
 
 .img-thumbnail
-  @extend .img-clip, %t-fix, %t-duration
+  @extend .img-clip-rounded, %t-fix, %t-duration
   border: none !important
   h5
     font-size: 1.25rem
@@ -67,7 +64,7 @@
   height: 4rem
 
 .img-banner
-  @extend .img-clip
+  @extend .img-clip-rounded
   height: 3.75rem
   img
     position: absolute

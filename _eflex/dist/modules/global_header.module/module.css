@@ -1,3 +1,16 @@
+.logo {
+  width: 12.5rem;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+.logo:hover {
+  opacity: 0.65;
+}
+
+.navbar-collapse {
+  max-width: 48.75rem;
+}
+
 .hs-menu-wrapper .hs-menu-item {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -20,6 +33,7 @@
 }
 
 .dropdown-bg {
+  margin-top: 2.3rem;
   min-width: 22rem;
 }
 
@@ -41,9 +55,9 @@
   display: none;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 992px) {
   .dropdown-menu .hs_cos_wrapper_type_inline_text {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-left: 0;
     opacity: 0.65;
     font-size: 0.75rem;
@@ -56,6 +70,37 @@
 
   .navbar {
     border-bottom: 0.5px solid #d5d6d3;
+  }
+
+  .logo {
+    width: 8rem;
+  }
+
+  a#cta_button_490686_4b0f6943-4c1f-4b9b-914b-4bc5acfce5e0 {
+    width: 100%;
+    text-align: left;
+    border-radius: 0.25rem;
+    padding: 1rem 0 1rem 1rem;
+    box-sizing: border-box !important;
+  }
+
+  .nav-link {
+    color: #464749 !important;
+    background-color: #2b90e220;
+    border-radius: 0.25rem;
+  }
+
+  .navbar .link {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1300px) {
+  .nav-item {
+    font-size: 1.125rem;
+  }
+
+  .logo {
+    margin-right: 4rem;
   }
 }
 
