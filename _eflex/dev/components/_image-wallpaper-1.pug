@@ -1,5 +1,18 @@
 mixin image-wallpaper-1(index)
-  .d-flex.align-items-center.flex-lg-row.flex-column
-    .vw-100.h-half.img-clip-rounded.
-      {% set class = "w-100 h-100" %}
+  .vw-100.h-xl
+    // Image
+    .vw-100.h-xl.img-clip.position-absolute.
+      {% set class = "" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+    // Blend Exclusion
+    .vw-100.h-xl.position-absolute.opacity-25
+      .blend-exclusion-gray.rounded.w-100.h-100
+    // Black Fade
+    .vw-100.h-xl.position-absolute
+      .black-fade.rounded.w-100.h-100
+    // Content
+    .vw-100.h-xl.position-absolute
+      .d-flex.flex-column.justify-content-end.align-items-center.h-xl
+        .res-half.
+          {% set class = "res-half" %}
+          {% module "Image_#{index}" path='/_eflex/components/image'%}

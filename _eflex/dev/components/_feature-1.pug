@@ -4,7 +4,7 @@
 mixin feature-1(index)
   .w-lg.border.border-gray-light.rounded.m-2
     .d-flex
-      .icon-cobot.icon-xl.text-primary.m-4(class!="'{% text \"Feature_" + index + "_Icon\", no_wrapper=True %}'")
+      .icon-xl.text-primary.m-4(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
       .d-flex.flex-column.mr-5.my-auto.py-4
         h6
           | {% raw_html "Feature_#{index}_Heading" value='{{ heading_var }}' %}

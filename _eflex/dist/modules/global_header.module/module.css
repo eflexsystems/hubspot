@@ -1,5 +1,5 @@
 .logo {
-  width: 12.5rem;
+  width: 8.5rem;
   margin-right: 4rem;
   cursor: pointer;
 }
@@ -33,7 +33,7 @@
 }
 
 .dropdown-bg {
-  margin-top: 2.3rem;
+  margin-top: 1.45rem;
   min-width: 22rem;
 }
 
@@ -85,7 +85,6 @@
   }
 
   .nav-link {
-    color: #464749 !important;
     background-color: #2b90e220;
     border-radius: 0.25rem;
   }

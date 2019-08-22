@@ -12762,11 +12762,13 @@ h3 {
 .img-clip-rounded, .img-banner, .img-thumbnail {
   clip-path: inset(0 0 0 0 round 0.25rem);
   -webkit-clip-path: inset(0 0 0 0 round 0.25rem);
+  overflow: hidden;
 }
 
 .img-clip {
-  clip-path: inset(0 0 0 0 0.25rem);
-  -webkit-clip-path: inset(0 0 0 0 0.25rem);
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+  overflow: hidden;
 }
 
 @media (max-width: 81.25rem) {
@@ -13413,11 +13415,11 @@ small, small p, .small, .hs-fieldtype-text .hs-input, .hs_submit .hs-button, .sm
   cursor: pointer;
 }
 
-.scale {
+.h-scale {
   @extemd %pointer;
   transition: 0.2s ease-in-out;
 }
-.scale:hover {
+.h-scale:hover {
   transform: scale(1.025);
 }
 
@@ -14084,6 +14086,54 @@ small, small p, .small, .hs-fieldtype-text .hs-input, .hs_submit .hs-button, .sm
     oveflow: ellipse;
   }
 }
+@media (min-width: 992px) {
+  .res-xl {
+    width: 82.2857142857vw;
+    height: 46.3022508039vw;
+    max-height: 40.5rem;
+    max-width: 72rem;
+    min-width: 49.6551724138rem;
+    min-height: 27.4809160305rem;
+  }
+}
+@media (min-width: 992px) {
+  .w-xl {
+    width: 72 vw;
+    max-width: 72rem;
+    min-width: 36rem;
+  }
+}
+@media (min-width: 992px) {
+  .h-xl {
+    height: 40.4494382022vw;
+    max-height: 40.5rem;
+    oveflow: ellipse;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .res-lg-xl {
+    width: 82.2857142857vw;
+    height: 46.3022508039vw;
+    max-height: 40.5rem;
+    max-width: 72rem;
+    min-width: 49.6551724138rem;
+    min-height: 27.4809160305rem;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .w-lg-xl {
+    width: 72 vw;
+    max-width: 72rem;
+    min-width: 36rem;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .h-lg-xl {
+    height: 40.4494382022vw;
+    max-height: 40.5rem;
+    oveflow: ellipse;
+  }
+}
 .icon-lg {
   font-size: 2rem;
 }
@@ -14213,7 +14263,7 @@ small, small p, .small, .hs-fieldtype-text .hs-input, .hs_submit .hs-button, .sm
   opacity: 0.6;
 }
 
-.opacity-65 {
+.opacity-65, .h-opacity:hover {
   opacity: 0.65;
 }
 

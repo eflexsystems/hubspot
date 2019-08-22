@@ -4,7 +4,7 @@ extends ../../templates/_template.pug
 block content
   .flex-fill.d-flex.justify-content-center.flex-column.pt-lg-3
     .brightness-toggle.fixed-top.w-sm.d-flex.flex-column.m-5.ml-auto
-      button.btn.btn-primary.rounded-pill.my-5 Toggle Brightness
+      button.btn.btn-primary.rounded-pill( style="margin-top: 7.5rem") Toggle Brightness
     
     .d-flex.flex-column.m-5
       .d-flex.flex-column.m-2
@@ -73,29 +73,44 @@ block content
 
     include ../../components/_feature-1.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +feature-1(1)
-      +feature-1(2)
-      +feature-1(3)
+      +feature-1('1_1')
+      +feature-1('1_2')
+      +feature-1('1_3')
 
     include ../../components/_feature-2.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +feature-2(1)
-      +feature-2(2)
+      +feature-2('2_1')
+      +feature-2('2_2')
+
+    include ../../components/_feature-3.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      +feature-3('3_1')
+      +feature-3('3_2')
+      +feature-3('3_3')
     
     include ../../components/_image-link.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +image-link(1)
-      +image-link(2)
-      +image-link(3)
+      +image-link('4_1')
+      +image-link('4_2')
+      +image-link('4_3')
     
     include ../../components/_layout-1.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +layout-1(_4_1)
+      +layout-1('5_1')
     
     include ../../components/_layout-2.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +layout-2(_5_1)
+      +layout-2('6_1')
     
     include ../../components/_image-wallpaper-1.pug
+    .my-5
+      +image-wallpaper-1('7_1')
+
+    include ../../components/_layout-3.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +image-wallpaper-1(_6_1)
+      +layout-3('8_1')
+      +layout-3('9_1')
+
+    include ../../components/_layout-4.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      +layout-4('10_1')
