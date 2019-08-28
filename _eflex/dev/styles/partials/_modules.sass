@@ -1,28 +1,27 @@
 // Videos
-.video
-  position: fixed
-  width: 100%
+.video_wrap
+  pointer-events: none
   video
     width: 100vw
     min-width: 177.78vh
+    height: 100vh
+    min-height: 56.25vw
 
 .video-yt
   height: 41.5vw
   width: 80vw
   @include media-breakpoint-up(lg)
-    height: 20.75vw
+    height: 20vw
     width: 38.22vw
 
 // Images
 .img-clip-rounded
   clip-path: inset(0 0 0 0 round .25rem)
   -webkit-clip-path: inset(0 0 0 0 round .25rem)
-  overflow: hidden
 
 .img-clip
   clip-path: inset(0 0 0 0)
   -webkit-clip-path: inset(0 0 0 0)
-  overflow: hidden
 
 .img-thumbnail-tabs
   @media (max-width: 81.25rem)

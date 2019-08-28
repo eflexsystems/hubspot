@@ -2,9 +2,12 @@
 extends ../../templates/_template.pug
 
 block content
-  .flex-fill.d-flex.justify-content-center.flex-column.pt-lg-3
+  script( src="{{ get_public_template_url('/_eflex/script/components.js') }}")
+  .flex-fill.d-flex.justify-content-center.flex-column
     .brightness-toggle.fixed-top.w-sm.d-flex.flex-column.m-5.ml-auto
-      button.btn.btn-primary.rounded-pill( style="margin-top: 7.5rem") Toggle Brightness
+      button.btn.btn-primary.rounded-pill( style="margin-top: 5.5rem") Toggle Brightness
+    
+    include ../../components/_preview-wallpaper.pug
     
     .d-flex.flex-column.m-5
       .d-flex.flex-column.m-2
@@ -101,10 +104,6 @@ block content
     include ../../components/_layout-2.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
       +layout-2('6_1')
-    
-    include ../../components/_image-wallpaper-1.pug
-    .my-5
-      +image-wallpaper-1('7_1')
 
     include ../../components/_layout-3.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5

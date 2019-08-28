@@ -41,3 +41,8 @@ p, .p
 small, small p, .small, .small p
   @extend %t-fix
   font-size: .875rem
+
+
+$custom-spacers:( '6': $spacer * 5, '7': $spacer * 7)
+
+$spacers: map-merge($spacers, $custom-spacers)

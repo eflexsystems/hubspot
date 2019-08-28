@@ -16,12 +16,12 @@
         .nav.nav-tabs.img-thumbnail-tabs.border-none.d-flex.flex-column.align-items-center.mb-4( id="myTab" role="tablist")
           mixin nav-tabs(heading, id, color, index)
             if active
-              a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.my-auto.m-lg-2.active( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id aria-selected="selected" onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
+              a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.m-lg-2.active( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id aria-selected="selected" onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
                 | {% set class = "img-thumbnail-size position-absolute opacity-10 img-fluid" %} {% module "Thumbnail_#{index}" path='/_eflex/components/image' %}
                 .img-thumbnail-size.position-absolute.opacity-0( class='blend-multiply-'+color)
                 .black-fade.img-thumbnail-size.opacity-10.position-absolute
                 h5.text-blue-dark.font-weight-bold.position-absolute.p-3= heading
-                .w-100.align-items-center.h-100.position-absolute
+                .img-thumbnail-size.align-items-center.position-absolute
                   span.icon-arrow-right-sm.text-white.ml-auto
             else
               a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.m-lg-2( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
@@ -29,7 +29,7 @@
                 .img-thumbnail-size.position-absolute.opacity-0( class='blend-multiply-'+color)
                 .black-fade.img-thumbnail-size.opacity-10.position-absolute
                 h5.text-blue-dark.font-weight-bold.position-absolute.p-3= heading
-                .w-100.align-items-center.h-100.position-absolute
+                .img-thumbnail-size.align-items-center.position-absolute
                   span.icon-arrow-right-sm.text-white.ml-auto
 
           - active = true
@@ -43,7 +43,7 @@
           +nav-tabs('Business Intelligence', 'bi', 'blue', '7')
           +nav-tabs('Quality Management', 'quality', 'purple', '8')
 
-        .tab-content.d-flex.flex-column.justify-content-center.align-items-center.pl-lg-5.my-auto.mb-5.my-4( id="nav-tabContent" style="max-width:34rem; width:80%;" )
+        .tab-content.d-flex.flex-column.justify-content-center.align-items-center.pl-lg-5.mb-5.my-4( id="nav-tabContent" style="max-width:34rem; width:80%;" )
           mixin nav-tab-contents(id, index, color)
             if active
               .tab-pane.active.show( id=id role="tabpanel" aria-labelledby=id+'-tab')

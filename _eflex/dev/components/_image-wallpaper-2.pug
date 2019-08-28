@@ -1,0 +1,17 @@
+//- Components
+//- Image Wallpaper 2
+
+mixin image-wallpaper-2(index)
+  .res-full
+    // Image
+    .res-full.img-clip.position-absolute.
+      {% set class = "w-100" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+    // Blend Exclusion
+    .res-full.position-absolute.opacity-25
+      .blend-exclusion-gray.rounded.w-100.h-100
+    // Black Fade
+    .res-full.position-absolute
+      .black-fade.rounded.w-100.h-100
+    // Content
+    .res-full.position-absolute

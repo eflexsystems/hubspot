@@ -41,11 +41,24 @@
   text-shadow: 0.1rem 0.1rem 2rem #1f212190
 
 .overflow-scroll
-  overflow: scroll
+  overflow: scroll !important
 
+.overflow-hidden
+  overflow: hidden !important
+  
 .black-fade
   background-image: linear-gradient($none 15%, $black )
   mix-blend-mode: multiply
+
+.black-fade-x
+  background-image: linear-gradient(-90deg,$none 15%, $black )
+  mix-blend-mode: multiply
+
+.black-fade-opaque
+  background-image: linear-gradient($none 0%, $black )
+
+.black-fade-opaque-x
+  background-image: linear-gradient(-90deg,$none 0%, #{$black} + '75' 20%, $black 70% )
 
 .border-box
   box-sizing: border-box !important

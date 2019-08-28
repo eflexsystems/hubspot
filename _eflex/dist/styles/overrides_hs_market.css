@@ -25,8 +25,46 @@
   font-weight: 400 !important;
 }
 
-.dropdown-bg {
-  margin-top: 1.625rem;
+.row-fluid [class*=span] {
+  margin-left: 0 !important;
+}
+
+#global_header p, #global_header .p, #global_footer p, #global_footer .p {
+  margin-bottom: auto;
+}
+
+.row-fluid .col-3 {
+  max-width: initial;
+}
+
+.widget-span h1 {
+  line-height: initial !important;
+  color: inherit !important;
+}
+.widget-span h2 {
+  line-height: initial !important;
+  color: inherit !important;
+}
+.widget-span h3 {
+  font-size: 1.75rem !important;
+  line-height: initial !important;
+  color: inherit !important;
+}
+.widget-span h4 {
+  line-height: initial !important;
+  color: inherit !important;
+}
+.widget-span h5 {
+  line-height: initial !important;
+  color: inherit !important;
+}
+.widget-span h6 {
+  line-height: initial !important;
+  color: inherit !important;
+}
+
+.row-fluid [class*=span] {
+  margin-left: auto !important;
 }
 
 /*# sourceMappingURL=overrides_hs_market.css.map */

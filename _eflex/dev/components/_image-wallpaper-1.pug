@@ -1,18 +1,21 @@
+//- Components
+//- Image Wallpaper 1
+
 mixin image-wallpaper-1(index)
-  .vw-100.h-xl
+  .res-full
     // Image
-    .vw-100.h-xl.img-clip.position-absolute.
-      {% set class = "" %}
+    .res-full.img-clip.position-absolute.
+      {% set class = "w-100" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
     // Blend Exclusion
-    .vw-100.h-xl.position-absolute.opacity-25
+    .res-full.position-absolute.opacity-25
       .blend-exclusion-gray.rounded.w-100.h-100
     // Black Fade
-    .vw-100.h-xl.position-absolute
+    .res-full.position-absolute
       .black-fade.rounded.w-100.h-100
     // Content
-    .vw-100.h-xl.position-absolute
-      .d-flex.flex-column.justify-content-end.align-items-center.h-xl
+    .res-full.position-absolute
+      .d-flex.flex-column.justify-content-end.align-items-center.h-full
         .res-half.
           {% set class = "res-half" %}
           {% module "Image_#{index}" path='/_eflex/components/image'%}
