@@ -12,6 +12,6 @@ mixin layout-2(index)
         {% raw_html "Body_#{index}" value="{{ body_var }}" %}
       .w-md.mx-auto.mx-lg-0.my-3.
         {% cta "learn_more_2" label='Learn_More_CTA_2' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
-    .res-half.m-5.
-      {% set class = "img-fluid rounded my-4" %}
+    .res-half.img-clip-rounded.m-5.
+      {% set class = "img-fluid rounded" %}
       {% module "Image_#{index}" path='/_eflex/components/image' %}

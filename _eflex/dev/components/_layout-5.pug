@@ -1,0 +1,9 @@
+//- Components
+//- Layout - 5
+
+mixin layout-5(index)
+  .d-flex.flex-column.justify-content-center.m-5
+    h5.w-lg.text-lg-left.text-center.mb-4.
+      {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
+    p.w-lg.text-lg-left.text-center.
+      {% raw_html "Body_#{index}" value="{{ body_var }}" %}

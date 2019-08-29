@@ -1,0 +1,17 @@
+include ../../../components/_feature-1.pug
+.d-flex.flex-column.align-items-center.w-100.border-bottom.p-5
+  h3.text-primary.w-100.text-center.mb-4.
+    {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+  h5.w-lg.text-center.mb-4.
+    {% raw_html "Heading_#{index}" value="{{ paragraph_var }}" %}
+  .d-flex.justify-content-center.flex-wrap
+    .d-flex.flex-column
+      +feature-1('6_1')
+      +feature-1('6_2')
+      +feature-1('6_3')
+      +feature-1('6_4')
+    .d-flex.flex-column
+      +feature-1('6_5')
+      +feature-1('6_6')
+      +feature-1('6_7')
+      +feature-1('6_8')

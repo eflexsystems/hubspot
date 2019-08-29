@@ -1,0 +1,7 @@
+.block-fluid.border-bottom.border-gray-light
+  .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-full.p-5.text-center
+    p.w-lg.
+      {% raw_html "Body_1_1" value='{{ paragraph_var }}' %}
+    .res-half.img-clip-rounded.m-5.
+      {% set class="res-half" %}
+      {% module "Infographic_#{index}" path="/_eflex/components/image" %}

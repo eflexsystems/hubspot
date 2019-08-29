@@ -3,12 +3,11 @@ extends ../../templates/_template.pug
 
 block content
   include ../../components/_image-wallpaper-2.pug
-  .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  .d-flex.flex-column.justify-content-center.align-items-center.vw-100.overflow-hidden
     .w-full.h-half
       // Image
-      .w-full.h-half.img-clip.position-absolute.
-        {% set class = "w-100" %}
-        {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+      .w-full.h-half.img-clip.position-absolute.img-inset-wide.
+        {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-height: 52.25vw" %}
       // Black Fade
       .w-full.h-half.position-absolute
         .black-fade-opaque-x.w-100.h-100
@@ -16,8 +15,8 @@ block content
       .w-full.h-half.position-absolute
         .blend-hue-purple.w-100.h-100.opacity-70
       // Content
-      .w-full.h-half.position-absolute
-        .d-flex.flex-column.justify-content-center.h-100.w-100.pl-7
+      .w-full.h-half.position-absolute.pl-lg-6.pl-0
+        .d-flex.flex-column.justify-content-center.text-lg-left.text-center.h-100.w-100
           h2.text-purple.text-shadow Quality Management
           h5.text-white.text-shadow.font-weight-light Prevent defective parts and errors in your assembly process.
 
@@ -25,3 +24,6 @@ block content
   include blocks/_block-2.pug
   include blocks/_block-3.pug
   include blocks/_block-4.pug
+  include blocks/_block-5.pug
+  include blocks/_block-6.pug
+  include blocks/_block-7.pug

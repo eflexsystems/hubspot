@@ -1,0 +1,9 @@
+//- Components
+//- Image - Size: Half
+
+//- Single Image
+
+mixin image-1(index)
+  .res-half.img-clip-rounded.m-5.
+    {% set class = "img-fluid rounded" %}
+    {% module "Image_#{index}" path='/_eflex/components/image' %}

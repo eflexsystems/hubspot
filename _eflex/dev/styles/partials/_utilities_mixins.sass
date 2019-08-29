@@ -30,7 +30,7 @@
     max-height: ( 9 * $width ) / 16 + rem
     oveflow: ellipse
 
-+static-resolution(sm, 25)
++static-resolution(sm, 12)
 +static-resolution(md, 17)
 +static-resolution(lg, 24)
 
@@ -39,7 +39,6 @@
   +static-resolution(md, 17.5)
   +static-resolution(lg, 24)
   +static-resolution(half, 42)
-
 
 // Responsive Sizes
 
@@ -71,6 +70,14 @@
 
 
 // Sizes (Full)
+
+.res-half, .w-half
+  width: 42vw !important
+  max-width: 42rem
+  min-width: 21rem
+.res-half, .h-half
+  height: 23.5vw !important
+  min-height: 15rem
 
 .res-full, .w-full
   width: 100vw !important

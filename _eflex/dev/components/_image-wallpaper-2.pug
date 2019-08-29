@@ -2,16 +2,25 @@
 //- Image Wallpaper 2
 
 mixin image-wallpaper-2(index)
-  .res-full
-    // Image
-    .res-full.img-clip.position-absolute.
-      {% set class = "w-100" %}
-      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+  .w-full.vh-100
+    // Wallpaper
+    .w-full.vh-100.overflow-hidden.position-absolute.
+      {% set class = "h-100" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-width: 177.77vh" %}
     // Blend Exclusion
-    .res-full.position-absolute.opacity-25
+    .w-full.vh-100.position-absolute.opacity-60
       .blend-exclusion-gray.rounded.w-100.h-100
-    // Black Fade
-    .res-full.position-absolute
-      .black-fade.rounded.w-100.h-100
+    // Blend Multiply
+    .w-full.vh-100.position-absolute
+      .blend-multiply-black.rounded.w-100.h-100.opacity-60
     // Content
-    .res-full.position-absolute
+    .w-full.vh-100.position-absolute
+      .d-flex.flex-column.align-items-center.vh-100
+        .flex-fill.d-flex.flex-column.justify-content-center
+          h3.text-center.text-white.text-shadow.mb-4.
+            {% raw_html "Wallpaper_Heading_#{index}", value="{{ title_var }}" %}
+          p.w-half.text-center.text-white.text-shadow.
+            {% raw_html "Wallpaper_Body_#{index}", value="{{ body-sm_var }}" extra_classes="text-white w-half" %}
+        .res-half.img-clip-rounded.mt-auto.
+          {% set class = "res-half" %}
+          {% module "Image_#{index}" path='/_eflex/components/image' %}

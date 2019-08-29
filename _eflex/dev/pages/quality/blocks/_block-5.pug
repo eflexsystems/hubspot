@@ -1,0 +1,8 @@
+include ../../../components/_feature-4.pug
+.d-flex.flex-column.w-100.border-bottom.p-5
+  h3.text-primary.text-center.mb-4.
+    {% raw_html "Block_5_Title_1", value="{{ heading_var }}" %}
+  .d-flex.justify-content-lg-center.align-items-stretch.flex-lg-row.flex-column
+    +feature-4('5_1')
+    +feature-4('5_2')
+    +feature-4('5_3')

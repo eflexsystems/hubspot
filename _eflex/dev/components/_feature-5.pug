@@ -1,0 +1,8 @@
+//- Components
+//- Feature 5
+
+mixin feature-5(index)
+  .d-flex.flex-column.w-sm.w-lg-lg.m-3.m-lg-0.px-lg-3
+    .icon-xl.text-primary.mx-auto.mb-3(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+    p.text-center
+      | {% raw_html "Feature_#{index}_Heading" value='{{ heading_var }}' %}

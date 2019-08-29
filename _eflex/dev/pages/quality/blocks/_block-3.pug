@@ -1,0 +1,26 @@
+include ../../../components/_feature-4.pug
+include ../../../components/_feature-5.pug
+.d-flex.flex-column.border-bottom.border-gray-light.p-5
+  .d-flex.flex-column.justify-content-center.align-items-center.mb-5
+    h3.text-primary.text-center.mb-4.
+      {% raw_html "Block_3_Title_1", value="{{ heading_var }}" %}
+    p.text-center.w-half.mb-5.
+      {% raw_html "Block_3_Callout_1", value="{{ paragraph_var }}" %}
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+      +feature-4('3_1')
+      +feature-4('3_2')
+      +feature-4('3_3')
+  .d-flex.flex-column.justify-content-center
+    .d-flex.justify-content-center.align-items-center.mb-4
+      +feature-5('3_4')
+      +feature-5('3_5')
+      +feature-5('3_6')
+      +feature-5('3_7')
+      +feature-5('3_8')
+    .d-flex.justify-content-center.align-items-center.mb-5
+      +feature-5('3_9')
+      +feature-5('3_10')
+      +feature-5('3_11')
+      +feature-5('3_12')
+      .text-warning
+        +feature-5('3_13')
