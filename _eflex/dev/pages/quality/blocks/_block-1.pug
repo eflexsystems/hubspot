@@ -1,7 +1,12 @@
 .block-fluid.border-bottom.border-gray-light
-  .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-full.p-5.text-center
-    p.w-lg.
-      {% raw_html "Body_1_1" value='{{ paragraph_var }}' %}
-    .res-half.img-clip-rounded.m-5.
-      {% set class="res-half" %}
-      {% module "Infographic_#{index}" path="/_eflex/components/image" %}
+  .d-flex.flex-lg-row.flex-column.justify-content-around.align-items-center.w-full.p-5
+    .res-half.overflow-hidden.position-relative.m-5
+      .position-absolute.res-half.b-0
+        .position-absolute.b-4.w-100.h-50.bg-purple-dark.opacity-25.rounded-circle
+      | {% set class="res-half position-absolute" %}
+      | {% module "Infographic_#{index}" path="/_eflex/components/image" %}
+    .d-flex.flex-column.w-half.m-3
+      h5.mb-4.
+        {% raw_html "Heading_1_1" value='{{ title_var }}' %}
+      p.
+        {% raw_html "Body_1_1" value='{{ paragraph_var }}' %}

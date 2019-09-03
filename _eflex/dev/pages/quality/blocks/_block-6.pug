@@ -1,17 +1,24 @@
-include ../../../components/_feature-1.pug
-.d-flex.flex-column.align-items-center.w-100.border-bottom.p-5
-  h3.text-primary.w-100.text-center.mb-4.
-    {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
-  h5.w-lg.text-center.mb-4.
-    {% raw_html "Heading_#{index}" value="{{ paragraph_var }}" %}
-  .d-flex.justify-content-center.flex-wrap
-    .d-flex.flex-column
-      +feature-1('6_1')
-      +feature-1('6_2')
-      +feature-1('6_3')
-      +feature-1('6_4')
-    .d-flex.flex-column
-      +feature-1('6_5')
-      +feature-1('6_6')
-      +feature-1('6_7')
-      +feature-1('6_8')
+include ../../../components/_feature-6.pug
+.d-flex.justify-content-center.border-bottom.p-5
+  .d-flex.flex-column.align-items-lg-center.w-lg.w-lg-full
+    h3.text-primary.text-lg-center.mb-4.
+      {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+    h5.text-lg-center.mb-5.
+      {% raw_html "Heading_#{index}" value="{{ paragraph_var }}" %}
+    .d-flex.justify-content-lg-center.flex-wrap
+
+      .d-flex.flex-wrap.justify-content-lg-center
+        .d-flex.flex-column.flex-lg-row.mr-3.mr-lg-0
+          +feature-6('6_1')
+          +feature-6('6_2')
+        .d-flex.flex-column.flex-lg-row
+          +feature-6('6_3')
+          +feature-6('6_4')
+
+      .d-flex.flex-wrap.justify-content-lg-center
+        .d-flex.flex-column.flex-lg-row.mr-3.mr-lg-0
+          +feature-6('6_5')
+          +feature-6('6_6')
+        .d-flex.flex-column.flex-lg-row
+          +feature-6('6_7')
+          +feature-6('6_8')

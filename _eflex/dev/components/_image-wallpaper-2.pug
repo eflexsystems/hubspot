@@ -1,11 +1,12 @@
 //- Components
 //- Image Wallpaper 2
 
+
 mixin image-wallpaper-2(index)
-  .w-full.vh-100
+  .w-full.vh-100.mb-6.mb-lg-0.max-h-full
     // Wallpaper
-    .w-full.vh-100.overflow-hidden.position-absolute.
-      {% set class = "h-100" %}
+    .w-full.vh-100.overflow-hidden.position-absolute.img-inset-tall.
+      {% set class = "vw-100" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-width: 177.77vh" %}
     // Blend Exclusion
     .w-full.vh-100.position-absolute.opacity-60
@@ -16,11 +17,13 @@ mixin image-wallpaper-2(index)
     // Content
     .w-full.vh-100.position-absolute
       .d-flex.flex-column.align-items-center.vh-100
-        .flex-fill.d-flex.flex-column.justify-content-center
-          h3.text-center.text-white.text-shadow.mb-4.
+        .flex-fill.d-flex.flex-column.justify-content-center.align-items-center.p-5
+          h3.text-center.text-white.text-shadow.mb-3.
             {% raw_html "Wallpaper_Heading_#{index}", value="{{ title_var }}" %}
           p.w-half.text-center.text-white.text-shadow.
             {% raw_html "Wallpaper_Body_#{index}", value="{{ body-sm_var }}" extra_classes="text-white w-half" %}
-        .res-half.img-clip-rounded.mt-auto.
-          {% set class = "res-half" %}
-          {% module "Image_#{index}" path='/_eflex/components/image' %}
+          .w-75.p-2.
+            {% cta "CTA_Learn_More_#{index}", label="CTA_Learn_More_#{index}",  guid="#{guid}" %}
+        .mt-auto.position-relative.t-4
+          include _desktop.pug
+          +desktop(index)

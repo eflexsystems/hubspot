@@ -1,3 +1,5 @@
+// Layout Utilities
+
 .block
   height: 45rem
 
@@ -7,3 +9,107 @@
 
 .vh-100
   height: 94vh !important
+
+
+// Set a max height on containers so items dont fall out.
+.max-h-full
+  min-height: 50rem
+  .vh-100
+    min-height: 50rem
+
+
+// Sizes
+
+=static-resolution($desc, $value)
+  $width: $value
+  .res-#{$desc}
+    width: $width / .875 + vw
+    height: $width / 1.555 + vw
+    max-height: ( 9 * $width ) / 16 + rem
+    max-width: $width + rem
+    min-width: $width / 1.45 + rem
+    min-height: $width / 2.62 + rem
+  .w-#{$desc}
+    width: $width vw
+    max-width: $width + rem
+    min-width: $width / 2 + rem
+  .h-#{$desc}
+    height: $width / 1.78 + vw
+    max-height: ( 9 * $width ) / 16 + rem
+    oveflow: ellipse
+
++static-resolution(sm, 12)
++static-resolution(md, 17)
++static-resolution(lg, 24)
+
+@include media-breakpoint-up(lg)
+  +static-resolution(sm, 12)
+  +static-resolution(md, 17.5)
+  +static-resolution(lg, 24)
+
+// Responsive Sizes
+
+=static-resolution-responsive($desc, $value, $size, $min-width)
+  $width: $value
+  .res-#{$size}-#{$desc}
+    @media (min-width: $min-width)
+      width: $width / .875 + vw
+      height: $width / 1.555 + vw
+      max-height: ( 9 * $width ) / 16 + rem
+      max-width: $width + rem
+      min-width: $width / 1.45 + rem
+      min-height: $width / 2.62 + rem
+  .w-#{$size}-#{$desc}
+    @media (min-width: $min-width)
+      width: $width vw
+      max-width: $width + rem
+      min-width: $width / 2 + rem
+  .h-#{$size}-#{$desc}
+    @media (min-width: $min-width)
+      height: $width / 1.78 + vw
+      max-height: ( 9 * $width ) / 16 + rem
+      oveflow: ellipse
+
++static-resolution-responsive(sm, 25, lg, 992px)
++static-resolution-responsive(md, 17, lg, 992px)
++static-resolution-responsive(lg, 24, lg, 992px)
++static-resolution-responsive(half, 42, lg, 992px)
+
+// Sizes (Full)
+
+.res-half, .w-half
+  width: 42vw !important
+  max-width: 42rem
+  min-width: 21rem
+.res-half, .h-half
+  height: 23.5vw !important
+  min-height: 15rem
+
+.res-full, .w-full
+  width: 100vw !important
+.res-full, .h-full
+  height: 42vw !important
+  min-height: 20rem
+  max-height: 42rem
+
+.res-lg-half, .w-lg-half
+  @media (min-width: 992px)
+    width: 42vw !important
+    max-width: 42rem
+    min-width: 21rem
+
+.res-lg-half, .h-lg-half
+  @media (min-width: 992px)
+    height: 23.5vw !important
+    min-height: 15rem
+
+.res-lg-full, .w-lg-full
+  @media (min-width: 992px)
+    width: 100vw !important
+    max-width: initial
+    min-width: initial
+.res-lg-full, .h-lg-full
+  @media (min-width: 992px)
+    height: 42vw !important
+    min-height: 20rem
+    max-height: 42rem

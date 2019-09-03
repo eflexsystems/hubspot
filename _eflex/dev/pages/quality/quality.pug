@@ -6,19 +6,22 @@ block content
   .d-flex.flex-column.justify-content-center.align-items-center.vw-100.overflow-hidden
     .w-full.h-half
       // Image
-      .w-full.h-half.img-clip.position-absolute.img-inset-wide.
+      .w-full.h-half.img-clip.position-absolute.overflow-hidden.
+        {% set class = "w-100 h-auto position-absolute b-0" %}
         {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-height: 52.25vw" %}
       // Black Fade
-      .w-full.h-half.position-absolute
+      .h-half.position-absolute( style="width:90% " )
         .black-fade-opaque-x.w-100.h-100
-      // Blend Multiply
+      // Blend Overlay
       .w-full.h-half.position-absolute
-        .blend-hue-purple.w-100.h-100.opacity-70
+        .blend-overlay-purple.w-100.h-100.opacity-25
       // Content
-      .w-full.h-half.position-absolute.pl-lg-6.pl-0
-        .d-flex.flex-column.justify-content-center.text-lg-left.text-center.h-100.w-100
-          h2.text-purple.text-shadow Quality Management
-          h5.text-white.text-shadow.font-weight-light Prevent defective parts and errors in your assembly process.
+      .w-full.h-half.position-absolute
+        .d-flex.justify-content-center.w-100.h-100
+          .d-flex.flex-column.justify-content-center.align-items-center.align-items-lg-start.text-lg-left.text-center.h-100.w-75
+            h2.text-purple.text-shadow.w-half Quality Management
+            h5.text-white.text-shadow.font-weight-light.w-half.
+              {% raw_html "Page_Subtitle" value='{{ paragraph_var }}' %}
 
   include blocks/_block-1.pug
   include blocks/_block-2.pug

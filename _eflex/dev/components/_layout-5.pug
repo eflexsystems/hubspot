@@ -7,3 +7,5 @@ mixin layout-5(index)
       {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
     p.w-lg.text-lg-left.text-center.
       {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+    .w-75.mx-auto.mx-lg-0.my-3.
+      {% cta "learn_More_CTA_#{index}" label='Learn_More_CTA_#{index}' guid='#{guid}' %}

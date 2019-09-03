@@ -2,10 +2,10 @@
 //- Feature 4
 
 mixin feature-4(index)
-  .w-lg.m-2
+  .w-lg
     .d-flex
-      .icon-xl.text-primary.m-4(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
-      .d-flex.flex-column.mr-4.my-auto.py-4
+      .icon-xl.text-primary.m-lg-4(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+      .d-flex.flex-column.mr-lg-4.my-auto.py-4
         h6.mb-2
           | {% raw_html "Feature_#{index}_Heading" value='{{ heading_var }}' %}
         p.w-lg

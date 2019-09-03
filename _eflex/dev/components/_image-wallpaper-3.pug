@@ -4,24 +4,25 @@
 mixin image-wallpaper-3(index)
   .res-full
     // Image
-    .res-full.img-clip.position-absolute.
-      {% set class = "w-100" %}
+    .res-full.img-clip.position-absolute.overflow-hidden.img-inset-tall.
+      {% set class = "vw-100" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
     // Blend Exclusion
-    .res-full.position-absolute.opacity-60
-      .blend-exclusion-gray.rounded.w-100.h-100
-    // Black Fade
+    .res-full.position-absolute.opacity-50
+      .blend-exclusion-gray.w-100.h-100
+    // Blend Color
     .res-full.position-absolute
-      .black-fade.rounded.w-100.h-100
+      .blend-color-brand-dark.w-100.h-100
+    // Blend Multiply
+    .res-full.position-absolute
+      .blend-multiply-brand-dark.w-100.h-100.opacity-70
     // Content
     .res-full.position-absolute
       .d-flex.flex-column.align-items-center.h-100
         .flex-fill.d-flex.flex-column.justify-content-center.align-items-center
-          h3.text-center.text-white.text-shadow.
+          h3.text-center.text-white.text-shadow.mb-4.
             {% raw_html "Wallpaper_Title_#{index}", value="{{ heading_var }}" %}
           p.w-half.text-center.text-white.text-shadow.
             {% raw_html "Wallpaper_Body_#{index}", value="{{ body-sm_var }}" %}
-          .w-lg.m-5.
+          .w-lg.m-3.m-lg-5.
             {% cta "request_demo" label='Primary CTA' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}
-          p.w-half.text-center.text-white.text-shadow.
-            {% raw_html "Wallpaper_Subheading_#{index}", value="{{ title_var }}" %}

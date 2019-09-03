@@ -1,0 +1,38 @@
+//- Components
+//- Title Solution
+
+mixin title-solution(index)
+  include _image-wallpaper-2.pug
+  .d-flex.flex-column.justify-content-center.align-items-center.vw-100.overflow-hidden
+    .w-full.h-half
+      // Image
+      .w-full.h-half.img-clip.position-absolute.overflow-hidden.
+        {% set class = "w-100 h-auto position-absolute b-0" %}
+        {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-height: 52.25vw" %}
+      // Black Fade
+      .h-half.position-absolute( style="width:90%" )
+        .black-fade-opaque-x.w-100.h-100
+      // Blend Overlay
+      .w-full.h-half.position-absolute
+        .w-100.h-100.opacity-15( class="blend-overlay-" + color )
+      // Content
+      .w-full.h-half.position-absolute
+        .d-flex.justify-content-center.w-100.h-100
+          .d-flex.flex-column.justify-content-center.align-items-center.align-items-lg-start.text-lg-left.text-center.h-100.w-75
+            h2.text-shadow.w-half( class="text-" + color ).
+              {% raw_html "Page_Title" value='{{ heading_var }}' %}
+            h5.text-white.text-shadow.font-weight-light.w-half.
+              {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+  
+  .block-fluid.border-bottom.border-gray-light
+    .d-flex.flex-lg-row.flex-column.justify-content-around.align-items-center.w-full.p-5
+      .res-half.overflow-hidden.position-relative.m-5
+        .position-absolute.res-half.b-0
+          .position-absolute.b-4.w-100.h-50.opacity-25.rounded-circle( class="bg-" + color + "-dark" )
+        | {% set class="res-half position-absolute" %}
+        | {% module "Infographic_#{index}" path="/_eflex/components/image" %}
+      .d-flex.flex-column.w-half.m-3
+        h5.mb-4.
+          {% raw_html "Heading_1_1" value='{{ title_var }}' %}
+        p.
+          {% raw_html "Body_1_1" value='{{ paragraph_var }}' %}

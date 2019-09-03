@@ -1,0 +1,9 @@
+//- home.pug
+extends ../../templates/_template.pug
+
+block content
+  include ../../components/_title-solutions.pug
+  - var color = 'orange'
+  +title-solution('0_1')
+
+  include blocks/_block-1.pug
