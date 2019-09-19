@@ -1,26 +1,3 @@
-//- Hubspot Overrides Partial
-
-// Layout
-.form-d-inline
-  .hs_cos_wrapper form
-    display: flex !important
-  .hs-fieldtype-text
-    width: 100%
-  .hs-fieldtype-text
-    .hs-input
-      @extend .small
-      width: 100%
-      padding: .75rem
-      border-style: solid
-      border-width: .5px
-      border-color: $gray-200
-      border-radius: .15rem 0 0 .15rem
-      color: map-get($theme-colors, 'gray-dark')
-      position: relative
-      bottom: 1rem
-      ::placeholder
-        color: $gray-300
-
 .form
   height: fit-content
   min-width: 35rem
@@ -115,51 +92,45 @@
   #form-prev-2
     margin-right: 13rem !important
 
-@media (max-width: 992px)
+
+// Hubspot Forms
+a.cta_button:hover
+  transform: scale(1.1)
+  -webkit-backface-visibility: hidden
+  background-color: $btn-hover !important
+
+.cta-outline a.cta_button:hover
+  background-color: map-get($theme-colors, 'white') !important
+  color: map-get($theme-colors, 'brand') !important
+
+
+// Mobile Responsiveness
+@media (max-width: 920px)
   .form
     width: 100% !important
     min-width: auto !important
     .hs-form-field
       width: 100% !important
 
-// Hubspot Buttons
-$btn-hover: #5baaea
 
-.hs_submit .hs-button
-  @extend .small
-  margin-top: .5rem
-  padding: .75rem
-  border: none
-  border-radius: 0 .15rem .15rem 0
-  background-color: map-get($theme-colors, 'primary')
-  color: map-get($theme-colors, 'white')
-  white-space: nowrap
+// CHECK IF NEEDED
 
-.hs-button:hover
-  @extend %t-duration
-  background-color: $btn-hover !important
-  transform: scale(1.1)
-
-a.cta_button
-  @extend %t-fix
-
-a.cta_button:hover
-  transform: scale(1.1)
-  -webkit-backface-visibility: hidden
-  background-color: $btn-hover !important
-
-.cta-outline a.cta_button:hover
-  background-color: map-get($theme-colors, 'white') !important
-  color: map-get($theme-colors, 'brand') !important
-
-
-// Hubspot Forms
-
-a.cta_button:hover
-  transform: scale(1.1)
-  -webkit-backface-visibility: hidden
-  background-color: $btn-hover !important
-
-.cta-outline a.cta_button:hover
-  background-color: map-get($theme-colors, 'white') !important
-  color: map-get($theme-colors, 'brand') !important
+.form-d-inline
+  .hs_cos_wrapper form
+    display: flex !important
+  .hs-fieldtype-text
+    width: 100%
+  .hs-fieldtype-text
+    .hs-input
+      @extend .small
+      width: 100%
+      padding: .75rem
+      border-style: solid
+      border-width: .5px
+      border-color: $gray-200
+      border-radius: .15rem 0 0 .15rem
+      color: map-get($theme-colors, 'gray-dark')
+      position: relative
+      bottom: 1rem
+      ::placeholder
+        color: $gray-300

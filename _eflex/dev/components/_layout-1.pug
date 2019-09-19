@@ -7,7 +7,7 @@ mixin layout-1(index)
       {% set class = "img-fluid rounded" %}
       {% module "Image_#{index}" path='/_eflex/components/image' %}
     .d-flex.flex-column.m-5
-      h3.text-primary.text-lg-left.text-center.pb-4.
+      h3.text-lg-left.text-center.pb-4.
         {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
       h5.w-half.text-lg-left.text-center.mb-4.
         {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}

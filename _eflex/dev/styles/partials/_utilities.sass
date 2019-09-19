@@ -1,95 +1,15 @@
-%t-duration
-  transition-duration: .5s
-  *
-    transition-duration: .5s
-
-%appearance-none
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
-
-%t-fix
-  -webkit-backface-visibility: hidden
-  backface-visibility: hidden
-
-%pointer
-  cursor: pointer
-
-.h-opacity
-  &:hover
-    @extend .opacity-65
-
-.h-scale
-  @extemd %pointer
-  transition: .2s ease-in-out
-  &:hover
-    transform: scale(1.025)
-
-.shadow-expand
-  @extend %pointer
-  transition: .2s ease-in-out
-  &:hover
-    box-shadow: 1rem 1rem 2rem #{$black} + '35' !important
-
 .tab-card
   border: 1px solid map-get($theme-colors, 'none')
   &.active
     border: 1px solid map-get($theme-colors, 'primary')
 
-.bottom
-  bottom: 0
-
-.opacity-low
-  opacity: .1
-
-.text-shadow
-  text-shadow: 0.1rem 0.1rem 2rem #1f212190
-
-=overflow($type)
-  .overflow-#{$type}
-    overflow: $type !important
-  .overflow-x-#{$type}
-    overflow: $type !important
-  .overflow-y-#{$type}
-    overflow: $type !important
-  
-+overflow(scroll)
-+overflow(hidden)
-+overflow(visible)
-
-.black-fade
-  background-image: linear-gradient($none 15%, $black )
-  mix-blend-mode: multiply
-
-.black-fade-x
-  background-image: linear-gradient(-90deg,$none 15%, $black )
-  mix-blend-mode: multiply
-
-.black-fade-opaque
-  background-image: linear-gradient($none 0%, $black 100% )
-
-.black-fade-opaque-x
-  background-image: linear-gradient(-90deg,$none 0%, #{$black} + '75' 20%, $black 70% )
-
-.border-box
-  box-sizing: border-box !important
-
-
-// Clipped Image Sizing
-.img-inset-wide
-  img
-    width: 100% !important
-    min-height: 52.25vw
-
-.img-inset-tall
-  img
-    height: 100% !important
-    min-width: 177.77vh
-
-.img-inset-fit
-  img
-    height: 100% !important
-    width: 100% !important
-
-.content-box
-  box-sizing: content-box
+@each $color, $hex in $theme-colors
+  .list-bullets-#{$color}
+    li::before
+      content: "\2022"
+      color: $hex
+      display: inline-block
+      width: 1.5rem
+      margin-left: -1.5rem
+    li
+      margin-left: -1rem

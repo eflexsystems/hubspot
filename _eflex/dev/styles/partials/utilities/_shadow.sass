@@ -1,0 +1,16 @@
+// Utilities
+// Shadow
+
+// Hover Shadow
+.h-shadow
+  @extend %pointer
+  transition: .2s ease-in-out
+  &:hover
+    box-shadow: 1rem 1rem 2rem #{$black} + '35' !important
+
+  
+// Bootstrap Utility Overrides
+.shadow-sm
+  box-shadow: .0625rem .0625rem .375rem #{$black} + '20' !important
+.text-shadow
+  text-shadow: 0.1rem 0.1rem 2rem #1f212190

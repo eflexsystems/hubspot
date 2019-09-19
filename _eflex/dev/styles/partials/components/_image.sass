@@ -1,28 +1,8 @@
-// Videos
-.video_wrap
-  pointer-events: none
-  video
-    width: 100vw
-    min-width: 177.78vh
-    height: 100vh
-    min-height: 56.25vw
+// Components
+// Image
 
-.video-yt
-  height: 41.5vw
-  width: 80vw
-  @include media-breakpoint-up(lg)
-    height: 20vw
-    width: 38.22vw
 
-// Images
-.img-clip-rounded
-  clip-path: inset(0 0 0 0 round .25rem)
-  -webkit-clip-path: inset(0 0 0 0 round .25rem)
-
-.img-clip
-  clip-path: inset(0 0 0 0)
-  -webkit-clip-path: inset(0 0 0 0)
-
+// Image Thumbnail
 .img-thumbnail-tabs
   @media (max-width: 81.25rem)
     max-width: 38rem
@@ -72,6 +52,11 @@
     position: absolute
     bottom: 0
 
+// Image Tab
+.tab-content
+  padding-bottom: 7rem
+
+// Infographic
 .infographic
   transition-duration: .5s
   width: 24vw
@@ -81,9 +66,24 @@
   max-width: 24rem
   max-height: 20rem
 
-a.btn-link
-  transition: transform .2s ease-in-out, color .2s ease-in-out
-  &:hover, &:active, &:focus
-    transform: scale(1.25)
-    color: $curious-blue !important
-    text-decoration: none
+// Mobile Responsiveness
+@media (max-width: 920px)
+  // Image Thumbnail
+  .img-thumbnail-size
+    width: 10.5rem
+    height: 3rem
+
+  .img-thumbnail
+    h5
+      font-size: .75rem
+      line-height: 0
+      margin-top: .875rem
+      margin-left: 0
+    span.icon-arrow-right-sm
+      font-size: 1.75rem !important
+      top: 1rem
+  
+  // Infographic
+  .infographic
+    padding: 1rem !important
+    margin-bottom: 4rem !important

@@ -1,0 +1,29 @@
+// Utilities
+// Sizes
+  
+@each $spacer, $size in $spacers
+  .l-#{$spacer}
+    left: $size
+  .t-#{$spacer}
+    top: $size
+  .r-#{$spacer}
+    right: $size
+  .b-#{$spacer}
+    bottom: $size
+
+@each $size, $length in $sizes
+  .w-lg-#{$size}
+    @media (min-width: 992px)
+      width: $length !important
+  .h-lg-#{$size}
+    @media (min-width: 992px)
+      height: $length !important
+    
+// Mobile Responsiveness
+@media (max-width: 920px)
+  .p-5
+    padding: 1.75rem !important
+  .mb-5, .my-5, .mb-4, .my-4
+    margin-bottom: 1.5rem !important
+  .mt-4, .my-4, .mt-5, .my-5
+    margin-top: 1.5rem !important

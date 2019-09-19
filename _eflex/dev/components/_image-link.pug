@@ -3,7 +3,7 @@
 
 mixin image-link(index)
   .m-2
-    .res-lg.shadow-sm.shadow-expand.h-scale.slick-slide.rounded( class!='{% text \"Image_Link_' + index + '_Display\", value="d-none", no_wrapper=True %}' onclick!="window.location='{% text \"Image_Link_" + index + "_URL\", no_wrapper=True %}'")
+    .res-lg.shadow-sm.h-shadow.h-scale.slick-slide.rounded( class!='{% text \"Image_Link_' + index + '_Display\", value="d-none", no_wrapper=True %}' onclick!="window.location='{% text \"Image_Link_" + index + "_URL\", no_wrapper=True %}'")
       // Image
       .res-lg.img-clip-rounded.position-absolute
         | {% set class='res-lg' %}

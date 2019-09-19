@@ -1,11 +1,13 @@
 include ../../../components/_layout-5.pug
-include ../../../components/_image-lg.pug
+include ../../../components/_image-full.pug
 
-.d-flex.flex-column.justify-content-center.align-items-center.p-5
-  p.text-lg-center.w-lg-half.
-    {% raw_html "Block_2_Callout_1", value="{{ paragraph_var }}" %}
+.d-flex.flex-column.justify-content-center.align-items-center.p-5.p-lg-0.pt-lg-5
+  h3.w-lg-75.
+    {% raw_html "Block_1_Heading_1", value="{{ heading_var }}" %}
 
-.d-flex.justify-content-lg-center.align-items-center
-  .d-flex.flex-lg-row.flex-column.align-items-center
-    +image-lg('2_1')
-    +layout-5('2_1')
+.d-flex.justify-content-center.align-items-center
+  .d-flex.justify-content-center.justify-content-lg-start.align-items-center.w-75.flex-lg-row.flex-column.align-items-start
+    .w-lg-50.h-auto.img-clip-rounded.
+      {% set class = "img-fluid rounded" %}
+      {% module "Image_1_1" path='/_eflex/components/image' %}
+    +layout-5('1_1')

@@ -7,6 +7,12 @@
   width: 100%
   height: max-content
 
+.content-box
+  box-sizing: content-box
+
+.border-box
+  box-sizing: border-box !important
+
 .vh-100
   height: 94vh !important
 
@@ -18,7 +24,7 @@
   
 .min-height-half
   min-height: 26rem !important
-  .w-100
+  .h-100
     min-height: 26rem !important
 
 .min-height-full
@@ -36,7 +42,7 @@
       min-height: 50rem !important
       max-height: 50rem !important
 
-// Sizes
+// Resolution Sizes
 
 =static-resolution($desc, $value)
   $width: $value
@@ -70,7 +76,22 @@
   +static-resolution(md, 22)
   +static-resolution(lg, 30)
 
-// Responsive Sizes
+.res-half, .w-half
+  width: 42vw !important
+  max-width: 42rem
+  min-width: 21rem
+.res-half, .h-half
+  height: 23.5vw !important
+  min-height: 15rem
+
+.res-full, .w-full
+  width: 100vw !important
+.res-full, .h-full
+  height: 42vw !important
+  min-height: 20rem
+  max-height: 42rem
+
+// Responsive Resolution Sizes
 
 =static-resolution-responsive($desc, $value, $size, $min-width)
   $width: $value
@@ -97,23 +118,6 @@
 +static-resolution-responsive(md, 17, lg, 992px)
 +static-resolution-responsive(lg, 24, lg, 992px)
 +static-resolution-responsive(half, 42, lg, 992px)
-
-// Sizes (Full)
-
-.res-half, .w-half
-  width: 42vw !important
-  max-width: 42rem
-  min-width: 21rem
-.res-half, .h-half
-  height: 23.5vw !important
-  min-height: 15rem
-
-.res-full, .w-full
-  width: 100vw !important
-.res-full, .h-full
-  height: 42vw !important
-  min-height: 20rem
-  max-height: 42rem
 
 .res-lg-half, .w-lg-half
   @media (min-width: 992px)

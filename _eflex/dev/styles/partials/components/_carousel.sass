@@ -1,37 +1,5 @@
-.nav-link
-  font-weight: 500
-  cursor: pointer
-  
-.dropdown:hover .dropdown-menu
-  display: block
-
-.dropdown:hover .dropdown-menu, .dropdown-menu
-  margin-top: 0
-
-.btn-primary
-  border-width: 0px
-  transform: scale(1)
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out
-  &:hover
-    transform: scale(1.05)
-    background-color: $tory-blue
-  
-.dropdown-toggle::after
-  content: "" !important
-  vertical-align: initial
-  border: none !important
-
-.tab-content
-  padding-bottom: 7rem
-
-[aria-expanded*="false"] span
-  transform: rotate(0deg)
-  transition: transform .2s linear
-
-[aria-expanded*="true"] span
-  color: $navbar-light-active-color !important
-  transform: rotate(180deg)
-  transition: transform .2s linear
+// Components
+// Carousel
 
 // Responsive Carousel with Multiple Items
 @media (min-width: 768px)
@@ -109,7 +77,6 @@
   .carousel-control-prev
     left: -8rem
 
-
 .carousel
   min-width: 15rem
 
@@ -121,7 +88,3 @@
     max-width: 8rem
     min-height: 2rem
     max-height: 3rem
-
-// Utility overrides
-.shadow-sm
-  box-shadow: .0625rem .0625rem .375rem #{$black} + '20' !important

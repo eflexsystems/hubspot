@@ -1,0 +1,30 @@
+// Utilities
+// Blend Mode
+
+=blend-mode($blend-mode)
+  @each $color, $hex in $theme-colors
+    .blend-#{$blend-mode}-#{$color}
+      background-color: $hex
+      mix-blend-mode: $blend-mode
+
++blend-mode(multiply)
++blend-mode(exclusion)
++blend-mode(difference)
++blend-mode(overlay)
++blend-mode(overlay)
++blend-mode(hue)
++blend-mode(color)
+
+.black-fade
+  background-image: linear-gradient($none 15%, $black )
+  mix-blend-mode: multiply
+
+.black-fade-x
+  background-image: linear-gradient(-90deg,$none 15%, $black )
+  mix-blend-mode: multiply
+
+.black-fade-opaque
+  background-image: linear-gradient($none 0%, $black 100% )
+
+.black-fade-opaque-x
+  background-image: linear-gradient(-90deg,$none 0%, #{$black} + '75' 20%, $black 70% )
