@@ -1,0 +1,28 @@
+//- Components
+//- Image Wallpaper 5
+
+mixin image-wallpaper-5(index)
+  .w-full.h-half.position-relative.min-height-half
+    // Image
+    .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-tall.
+      {% set class = "vw-100 position-relative b-6" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+    // Blend Exclusion
+    .w-100.h-100.position-absolute.opacity-50
+      .blend-exclusion-gray.w-100.h-100
+    // Blend Color
+    .w-100.h-100.position-absolute
+      .blend-color-brand-dark.w-100.h-100
+    // Blend Multiply
+    .w-100.h-100.position-absolute
+      .blend-multiply-brand-dark.w-100.h-100.opacity-70
+    // Content
+    .w-100.h-100.position-absolute
+      .d-flex.flex-column.justify-content-center.align-items-center.h-100
+        .w-50.flex-fill.d-flex.flex-column.justify-content-center.p-5
+          h3.text-white.text-shadow.mb-3.
+            {% raw_html "Wallpaper_Title_#{index}", value="{{ heading_var }}" %}
+          h5.text-white.text-shadow.mb-5.
+            {% raw_html "Wallpaper_Body_#{index}", value="{{ body-sm_var }}" %}
+          .w-lg.
+            {% cta "request_demo" label='Primary CTA' guid='#{guid}' %}

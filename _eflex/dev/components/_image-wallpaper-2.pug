@@ -1,29 +1,24 @@
 //- Components
 //- Image Wallpaper 2
-
+include _layout-5.pug
 
 mixin image-wallpaper-2(index)
-  .w-full.vh-100.mb-6.mb-lg-0.max-h-full
+  .w-full.vh-50.position-relative.min-height-50
     // Wallpaper
-    .w-full.vh-100.overflow-hidden.position-absolute.img-inset-tall.
-      {% set class = "vw-100" %}
+    .w-100.vh-50.overflow-hidden.position-absolute.img-inset-tall.
+      {% set class = "vw-100 position-relative b-6" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-width: 177.77vh" %}
     // Blend Exclusion
-    .w-full.vh-100.position-absolute.opacity-60
+    .w-100.vh-50.position-absolute.opacity-60
       .blend-exclusion-gray.rounded.w-100.h-100
     // Blend Multiply
-    .w-full.vh-100.position-absolute
+    .w-100.vh-50.position-absolute
       .blend-multiply-black.rounded.w-100.h-100.opacity-60
     // Content
-    .w-full.vh-100.position-absolute
-      .d-flex.flex-column.align-items-center.vh-100
-        .flex-fill.d-flex.flex-column.justify-content-center.align-items-center.p-5
-          h3.text-center.text-white.text-shadow.mb-3.
-            {% raw_html "Wallpaper_Heading_#{index}", value="{{ title_var }}" %}
-          p.w-half.text-center.text-white.text-shadow.
-            {% raw_html "Wallpaper_Body_#{index}", value="{{ body-sm_var }}" extra_classes="text-white w-half" %}
-          .w-75.p-2.
-            {% cta "CTA_Learn_More_#{index}", label="CTA_Learn_More_#{index}",  guid="#{guid}" %}
-        .mt-auto.position-relative.t-4
+    .w-100.position-absolute.b-0
+      .w-100.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center
+        .mt-lg-auto.ml-lg-5( style="height: fit-content" )
           include _desktop.pug
           +desktop(index)
+        .text-white.mb-lg-auto.mt-6.mt-lg-3
+          +layout-5(index)

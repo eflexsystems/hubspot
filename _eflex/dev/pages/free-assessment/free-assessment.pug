@@ -1,0 +1,60 @@
+//- free-assessment.pug
+extends ../../templates/_template.pug
+
+block script
+  script( src="{{ get_public_template_url('/_eflex/script/form.js') }}")
+
+block content
+  include ../../components/_title.pug
+  .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
+    .w-100.position-relative( style="height: 61rem")
+      // Image
+      .w-100.h-100.img-clip.position-absolute.overflow-hidden.
+        {% set class = "w-auto h-100 position-absolute #{position}" %}
+        {% module "Wallpaper_0_1" path='/_eflex/components/image', style="min-height: 52.25vw" %}
+      // Blend Color
+      .w-100.h-100.position-absolute
+        .w-100.h-100.blend-color-brand-dark
+      // Blend Multiply
+      .w-100.h-100.position-absolute
+        .w-100.h-100.blend-multiply-brand
+      // Content
+      .w-100.position-absolute
+        .d-flex.flex-lg-row.flex-column.justify-content-center.w-100.h-100.py-5.px-3.pl-lg-5.pl-xl-6
+          .d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.mr-lg-auto.mb-4.mb-lg-0
+            h5.text-shadow.w-100.text-white.text-uppercase.mb-4.
+              {% raw_html "Page_Title" value='{{ heading_var }}' %}
+            h3.text-white.text-shadow.font-weight-bold.text-lg-nowrap.w-100.
+              {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+          
+          .d-flex
+            // Form
+            .form.pt-5.w-half.bg-white.rounded-lg.content-box.position-relative.p-5.ml-lg-auto
+              | {% form "Free Assessment" form_to_use='811a0563-99e9-42bf-881b-dfbfc1c4fdc9', title='Free Assessment' %}
+
+              // Validation Alert
+              #hs-errors-validation-popup.position-absolute.w-lg.bg-red.rounded.opacity-85.r-5( style="bottom: 7rem; display: none;" )
+                .d-flex
+                  .icon-caution.icon-lg.text-white.p-3
+                  p.text-white.text-center.p-3.mb-0 Please go back and complete the required fields.
+
+              .d-flex.w-100
+                // Prev
+                button#form-prev-1.btn-outline-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto.mr-3
+                  .d-flex.justify-content-center.position-relative
+                    .icon-arrow-left-sm.position-absolute.l-0( style = "font-size: 1.5rem")
+                    p.m-0 Back
+                button#form-prev-2.btn-outline-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto.mr-3
+                  .d-flex.justify-content-center.position-relative
+                    .icon-arrow-left-sm.position-absolute.l-0( style = "font-size: 1.5rem")
+                    p.m-0 Back
+
+                // Next
+                button#form-next-1.btn-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto
+                  .d-flex.justify-content-center.position-relative
+                    p.m-0 Next
+                    .icon-arrow-right-sm.position-absolute.r-0( style = "font-size: 1.5rem")
+                button#form-next-2.btn-primary.rounded-pill.w-md.p-2.slick-slide
+                  .d-flex.justify-content-center.position-relative
+                    p.m-0 Next
+                    .icon-arrow-right-sm.position-absolute.r-0( style = "font-size: 1.5rem")

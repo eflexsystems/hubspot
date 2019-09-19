@@ -1,0 +1,11 @@
+include ../../../components/_layout-5.pug
+include ../../../components/_image-lg.pug
+
+.d-flex.flex-column.justify-content-center.align-items-center.p-5
+  p.text-lg-center.w-lg-half.
+    {% raw_html "Block_2_Callout_1", value="{{ paragraph_var }}" %}
+
+.d-flex.justify-content-lg-center.align-items-center
+  .d-flex.flex-lg-row.flex-column.align-items-center
+    +image-lg('2_1')
+    +layout-5('2_1')

@@ -14,6 +14,18 @@
 +blend-mode(hue)
 +blend-mode(color)
 
+
+@each $color, $hex in $theme-colors
+  .list-bullets-#{$color}
+    li::before
+      content: "\2022"
+      color: $hex
+      display: inline-block
+      width: 1.5rem
+      margin-left: -1.5rem
+    li
+      margin-left: -1rem
+
 // Icon Sizes
 
 =icon-size($desc, $value)
@@ -37,6 +49,15 @@
   .opacity-#{$opacity}-hover
     &:hover
       opacity: $opacity / 100
+
+@for $i from 1 through 3
+  $value: $i * 25
+  .scale-#{$value}
+    transform: scale($value / 100)
+  .scale-#{$value + 100}
+    transform: scale(($value + 100) / 100)
+  .vh-#{$value}
+    height: $value + vh
 
 // Positioning
 @each $spacer, $size in $spacers

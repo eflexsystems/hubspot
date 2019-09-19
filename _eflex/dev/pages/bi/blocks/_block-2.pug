@@ -1,0 +1,25 @@
+include ../../../components/_feature-5.pug
+
+.d-flex.flex-column.justify-content-center.align-items-center.bg-gray-100.p-5
+  p.text-lg-center.w-lg-half.
+    {% raw_html "Block_2_Callout_1", value="{{ paragraph_var }}" %}
+
+.d-flex.flex-column.justify-content-start.justify-content-lg-center.mx-auto.mx-lg-0.p-5
+  .d-flex.flex-column
+    h3.text-primary.text-lg-center.w-100.mb-4.
+      {% raw_html "Block_2_Title_1", value="{{ heading_var }}" %}
+    .w-half.align-self-center
+      p.text-center.mb-5.
+        {% raw_html "Block_2_Body_1", value="{{ title_var }}" %}
+  .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.mb-4
+    +feature-5('2_1')
+    +feature-5('2_2')
+    +feature-5('2_3')
+    +feature-5('2_4')
+    +feature-5('2_5')
+  .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center
+    +feature-5('2_6')
+    +feature-5('2_7')
+    +feature-5('2_8')
+    +feature-5('2_9')
+    +feature-5('2_10')

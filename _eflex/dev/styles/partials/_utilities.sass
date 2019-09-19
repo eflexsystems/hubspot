@@ -3,6 +3,11 @@
   *
     transition-duration: .5s
 
+%appearance-none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
 %t-fix
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
@@ -40,12 +45,18 @@
 .text-shadow
   text-shadow: 0.1rem 0.1rem 2rem #1f212190
 
-.overflow-scroll
-  overflow: scroll !important
-
-.overflow-hidden
-  overflow: hidden !important
+=overflow($type)
+  .overflow-#{$type}
+    overflow: $type !important
+  .overflow-x-#{$type}
+    overflow: $type !important
+  .overflow-y-#{$type}
+    overflow: $type !important
   
++overflow(scroll)
++overflow(hidden)
++overflow(visible)
+
 .black-fade
   background-image: linear-gradient($none 15%, $black )
   mix-blend-mode: multiply
@@ -79,3 +90,6 @@
   img
     height: 100% !important
     width: 100% !important
+
+.content-box
+  box-sizing: content-box

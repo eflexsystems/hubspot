@@ -1,0 +1,18 @@
+include ../../../components/_layout-5.pug
+include ../../../components/_image-lg.pug
+
+.d-flex.flex-column.border-bottom.m-5
+  .d-flex.flex-lg-row.flex-column
+    .d-flex.flex-column.justify-content-start.w-half.p-5
+      h5.w-100.text-lg-left.text-center.mb-4.
+        {% raw_html "Heading_1_1" value="{{ heading_var }}" %}
+      p.w-100.text-lg-left.text-center.
+        {% raw_html "Body_1_1" value="{{ body_var }}" %}
+      .w-lg-lg.my-3.
+        {% cta "learn_More_CTA_1_1" label='Learn_More_CTA_1_1' guid='#{guid}' %}
+
+    // Form    
+    .form.w-50.pt-5.
+      {% form "Free Assessment" form_to_use='811a0563-99e9-42bf-881b-dfbfc1c4fdc9', title='Free Assessment' %}
+
+    
