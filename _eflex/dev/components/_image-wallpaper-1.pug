@@ -4,35 +4,30 @@
 include _layout-5.pug
 
 mixin image-wallpaper-1(index)
-  .w-full.vh-100.position-relative.min-height-full
+  .w-100.position-relative
     // Wallpaper
-    .w-100.vh-100.overflow-hidden.position-absolute.img-inset-tall.
+    .w-100.h-100.overflow-hidden.position-absolute.img-inset-tall.
       {% set class = "h-100 position-relative b-6" %}
-      {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-width: 177.77vh" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
     // Blend Exclusion
-    .w-100.vh-100.position-absolute.opacity-60
+    .w-100.h-100.position-absolute.opacity-60
       .blend-exclusion-gray.rounded.w-100.h-100
     // Blend Multiply
-    .w-100.vh-100.position-absolute
+    .w-100.h-100.position-absolute
       .blend-multiply-black.rounded.w-100.h-100.opacity-60
     // Content
-    .w-100.vh-100.position-absolute.b-0
-      .h-100.d-flex.flex-lg-row.flex-column.justify-content-lg-center.align-items-center
-        .d-flex.flex-column.align-items-center.align-self-lg-end.mr-lg-5
-          .mt-5.mt-lg-auto.w-lg.text-center.ml-4.mb-lg-6
-            h3.text-shadow.mb-4.
+    .w-100.h-100
+      .h-100.d-flex.flex-lg-row.flex-column.justify-content-lg-center.align-items-center.p-5.p-lg-0
+        .d-flex.flex-column.align-items-center.align-self-lg-end.align-self-stretch.mr-lg-5
+          .mt-lg-auto.w-lg.w-lg-half.text-lg-center.w-100.p-lg-5.ml-lg-4( style="z-index:1" )
+            h3.text-white.text-shadow.mb-4.
               {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
             p.text-white.
               {% raw_html "Body_#{index}" value="{{ paragraph_var }}" %}
-          .mx-auto.mx-lg-0.mb-n3
+          .py-5.py-lg-0.mx-auto.mx-lg-0.mb-n3
             include _desktop.pug
             +desktop(index)
-        .align-self-lg-end.p-5
-          .d-flex.flex-column.w-lg.mt-5.mb-5
-            h5.text-white.mb-4.
-              {% raw_html "Heading_#{index + 1}" value="{{ heading_var }}" %}
-            p.text-white.w-100.
-              {% raw_html "Body_#{index + 1}" value="{{ paragraph_var }}" %}
+        .align-self-lg-end.p-lg-5.my-lg-auto( style="z-index:1" )
           .d-flex.flex-column.justify-content-center.w-lg.mb-5
             h5.text-white.w-100.mb-4.
               {% raw_html "Heading_#{index + 2}" value="{{ heading_var }}" %}
@@ -43,3 +38,6 @@ mixin image-wallpaper-1(index)
               {% raw_html "Heading_#{index + 3}" value="{{ heading_var }}" %}
             p.text-white.w-100.
               {% raw_html "Body_#{index + 3}" value="{{ paragraph_var }}" %}
+          .w-100
+            .w-lg.mx-auto.
+              {% cta "cta_#{$index}" label='Primary CTA' guid='#{$guid}' %}

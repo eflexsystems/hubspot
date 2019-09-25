@@ -1,13 +1,19 @@
-include ../../../components/_layout-5.pug
-include ../../../components/_image-full.pug
-
-.d-flex.flex-column.justify-content-center.align-items-center.p-5.p-lg-0.pt-lg-5
-  h3.w-lg-75.
+.d-flex.flex-column.justify-content-center.align-items-center.p-5.p-lg-0.pt-lg-6
+  h3.w-lg-75.mb-5.
     {% raw_html "Block_1_Heading_1", value="{{ heading_var }}" %}
 
-.d-flex.justify-content-center.align-items-center
-  .d-flex.justify-content-center.justify-content-lg-start.align-items-center.w-75.flex-lg-row.flex-column.align-items-start
-    .w-lg-50.h-auto.img-clip-rounded.
-      {% set class = "img-fluid rounded" %}
-      {% module "Image_1_1" path='/_eflex/components/image' %}
-    +layout-5('1_1')
+.d-flex.justify-content-center.align-items-center.mb-5
+  .d-flex.w-75.flex-lg-row.flex-column.justify-content-center.justify-content-lg-start.align-items-center.align-items-lg-start
+    .img-zoom-pan.w-lg-50.h-auto.img-clip-rounded.position-relative.py-3
+      | {% set class = "img-fluid rounded m-n4" %}
+      | {% module "Image_1_1" path='/_eflex/components/image' %}
+      .position-absolute.d-flex.justify-content-center.h-opacity-0.w-100.h-100.b-0( style="pointer-events: none" )
+        .icon-xxl.icon-search-sm.text-gray.align-self-center.text-shadow.scale-150.opacity-70
+    // Layout-5
+    .d-flex.flex-column.justify-content-center.w-half.p-5.p-lg-0.px-lg-5.pb-lg-5.ml-lg-auto
+      h5.w-100.text-lg-left.text-center.mb-4.
+        {% raw_html "Heading_1_1" value="{{ heading_var }}" %}
+      p.w-100.text-lg-left.text-center.
+        {% raw_html "Body_1_1" value="{{ body_var }}" %}
+      .w-lg-lg.my-3.
+        {% cta "learn_More_CTA_1_1" label='Learn_More_CTA_1_1' guid='#{guid}' %}

@@ -6,13 +6,13 @@ block script
   script( src="{{ get_public_template_url('/_eflex/script/home-arrow.js') }}")
 
 block content
-  .vh-100.w-full
+  .vh-100.w-100
     // Video
-    .video_wrap.vh-100.w-full.overflow-hidden.position-absolute
-      video( autoplay="autopplay" muted="muted" loop="loop" playsinline)
+    .video_wrap.vh-100.w-100.overflow-hidden.position-absolute.img-clip
+      video.position-fixed( autoplay="autopplay" muted="muted" loop="loop" playsinline)
         source( src="https://cdn2.hubspot.net/hubfs/490686/_site/videos/Digital_Blue.mp4")
     // Content
-    .vh-100.w-full.position-absolute
+    .vh-100.w-100.position-absolute
       .d-flex.flex-column.justify-conbtent-center.h-100.p-5
         h1.text-white.position-relative.font-weight-bold.text-center.text-left.text-shadow.mt-auto
           | {% raw_html "Title" value='The Manufacturing Integrated Platform' %}

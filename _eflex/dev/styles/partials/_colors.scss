@@ -81,6 +81,7 @@ $colors-dark: (
 $theme-colors: (
   "brand": $tory-blue,
   "brand-dark": $prussian-blue,
+  "brand-light": #2f9ef8,
   "primary": map-get($colors, "blue"),
   "secondary": $tia-maria,
   "success": map-get($colors, "green"),

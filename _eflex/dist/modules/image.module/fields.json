@@ -3,7 +3,6 @@
     "id": "328182cf-7c48-da54-873a-08a914fd8854",
     "name": "image_field",
     "label": "Image field",
-    "sortable": false,
     "required": false,
     "locked": false,
     "responsive": false,

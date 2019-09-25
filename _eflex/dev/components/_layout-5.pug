@@ -2,10 +2,10 @@
 //- Layout - 5
 
 mixin layout-5(index)
-  .d-flex.flex-column.justify-content-center.w-half.p-5
-    h5.w-100.text-lg-left.text-center.mb-4.
+  .d-flex.flex-column.justify-content-center.w-lg-half.p-lg-5
+    h5.w-100.mb-4.
       {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
-    p.w-100.text-lg-left.text-center.
+    p.w-100.
       {% raw_html "Body_#{index}" value="{{ body_var }}" %}
     .w-lg-lg.my-3.
       {% cta "learn_More_CTA_#{index}" label='Learn_More_CTA_#{index}' guid='#{guid}' %}
