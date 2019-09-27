@@ -1,0 +1,12 @@
+//- Components
+//- Bullets
+
+mixin bullet(bullets_index)
+  li.
+    {% raw_html "Bullet_#{bullets_index}" value='{{ title_var }}' %}
+
+mixin list(index)
+  ul.d-flex.flex-column
+    - var bullets = 1
+    while bullets <= (n)
+      +bullet(index + '_' + bullets++)

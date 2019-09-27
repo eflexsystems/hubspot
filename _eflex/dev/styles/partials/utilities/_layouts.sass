@@ -1,5 +1,11 @@
 // Layout Utilities
 
+@for $i from 1 through 3
+  .z-index-#{$i}
+    z-index: $i
+  .z-index-n#{$i}
+    z-index: -$i
+
 .block
   height: 45rem
 
@@ -82,6 +88,7 @@
   min-width: 21rem
 .res-half, .h-half
   height: 23.5vw !important
+  max-height: 23.5rem
   min-height: 15rem
 
 .res-full, .w-full

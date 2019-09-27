@@ -1,12 +1,13 @@
 //- free-assessment.pug
 extends ../../templates/_template.pug
+include ../../components/_list.pug
 
 block script
   script( src="{{ get_public_template_url('/_eflex/script/form.js') }}")
 
 block content
   .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
-    .w-100.position-relative( style="height: 61rem")
+    .w-100.position-relative
       // Image
       .w-100.h-100.img-clip.position-absolute.overflow-hidden.
         {% set class = "w-auto h-100 position-absolute #{position}" %}
@@ -18,13 +19,20 @@ block content
       .w-100.h-100.position-absolute
         .w-100.h-100.blend-multiply-brand
       // Content
-      .w-100.position-absolute
+      .w-100
         .d-flex.flex-lg-row.flex-column.justify-content-center.w-100.h-100.py-5.px-3.pl-lg-5.pl-xl-6
-          .d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.mr-lg-auto.mb-4.mb-lg-0
-            h5.text-shadow.w-100.text-white.text-uppercase.mb-4.
+          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.mr-lg-auto.mb-4.mb-lg-0.z-index-1
+            h5.w-100.text-white.text-uppercase.mb-4.
               {% raw_html "Page_Title" value='{{ heading_var }}' %}
-            h3.text-white.text-shadow.font-weight-bold.text-lg-nowrap.w-100.
+            h3.text-white.font-weight-bold.text-lg-nowrap.w-100.
               {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+            p.text-white.w-100.
+              {% raw_html "Page_Body_1_1" value='{{ title_var }}' %}
+            .bullets-white.text-white.w-100.pr-lg-5
+              - var n = 5
+              +list('1')
+            p.text-white.w-100.
+              {% raw_html "Page_Body_1_2" value='{{ title_var }}' %}
           
           .d-flex
             // Form
@@ -35,7 +43,8 @@ block content
               #hs-errors-validation-popup.position-absolute.w-lg.bg-red.rounded.opacity-85.r-5( style="bottom: 7rem; display: none;" )
                 .d-flex
                   .icon-caution.icon-lg.text-white.p-3
-                  p.text-white.text-center.p-3.mb-0 Please go back and complete the required fields.
+                  p.text-white.text-left.w-md.p-3.mb-0 Please go back and complete the required fields.
+                  #hs-errors-validation-x.icon-x-sm.icon-lg.text-white( style="cursor: pointer" )
 
               .d-flex.w-100
                 // Prev

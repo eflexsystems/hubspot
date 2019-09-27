@@ -11,17 +11,19 @@ $( "#form-next-2" ).click(function() {
   $('.form form').on('submit', (e) => {
     if ($('.hs-error-msgs').length) {
       $('#hs-errors-validation-popup').css('display', 'block');
-    }
-    if ($('.hs-form-field').has('.hs-error-msgs').css('display', 'inline-block')) {
-      $('.hs-form-field input').css('border-color', '#cc4744');
-      $('.hs-form-field select').css('border-color', '#cc4744');
-    }
-    if ($('.hs-form-field').has('.hs-error-msgs').css('display', 'inline-block')) {
-      $('.hs-form-field input').css('border-color', '#cc4744');
-      $('.hs-form-field select').css('border-color', '#cc4744');
+      $('#hs-errors-validation-popup #hs-errors-validation-x').click(function() {
+        $('#hs-errors-validation-popup').css('display', 'none');
+      });
+      $('#hs-errors-validation-popup').delay(5000).fadeOut('slow');
+    } else {
+      $('#form-prev-2').css( "display", "none" );
     }
   });
 });
+
+if ($('.form form').has('.hs-error-msgs')) {
+  $(this).children('.hs-form-field input').css('border-color', 'red');
+}
 
 // Prev Button
 $( "#form-prev-1" ).click(function() {

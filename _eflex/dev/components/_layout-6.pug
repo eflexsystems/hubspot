@@ -1,0 +1,9 @@
+//- Components
+//- Layout 6
+
+mixin layout-6(index)
+  .d-flex.flex-column.justify-content-center.align-items-center.bg-gray-100.p-5
+    h3.text-lg-center.w-100.mb-4.
+      {% raw_html "Title_#{$index}", value="{{ heading_var }}" %}
+    h5.text-lg-center.w-lg-half.text-gray-500.
+      {% raw_html "Callout_#{$index}", value="{{ paragraph_var }}" %}

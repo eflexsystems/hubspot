@@ -23,7 +23,7 @@ mixin title-solution(index)
               {% raw_html "Page_Title" value='{{ heading_var }}' %}
             h5.text-white.text-shadow.font-weight-light.text-lg-nowrap.w-75.mb-5.
               {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
-            | {% cta "cta_#{$index}" label='Primary CTA' guid='#{$guid}' %}
+            | {% cta "cta_#{index}" label='Primary CTA' guid='#{guid}' %}
   
   .block-fluid.bg-gray-100
     .d-flex.flex-lg-row.flex-column.justify-content-around.align-items-center
