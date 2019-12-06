@@ -15737,6 +15737,2143 @@ strong {
     position: sticky !important;
   }
 }
+.res-xs {
+  width: 9.1428571429vw;
+  height: 5.1446945338vw;
+  max-height: 4.5rem;
+  max-width: 8rem;
+  min-width: 5.5172413793rem;
+  min-height: 3.0534351145rem;
+}
+
+.w-xs {
+  width: 8 vw;
+  max-width: 8rem;
+  min-width: 4rem;
+}
+
+.h-xs {
+  height: 4.4943820225vw;
+  max-height: 4.5rem;
+}
+
+.w-xsx2 {
+  width: 20.5714285714vw;
+  max-width: 18rem;
+}
+
+.h-xsx2 {
+  height: 11.575562701vw;
+  max-height: 10.125rem;
+}
+
+.w-xsx3 {
+  width: 29.7142857143vw;
+  max-width: 26rem;
+}
+
+.h-xsx3 {
+  height: 16.7202572347vw;
+  max-height: 14.625rem;
+}
+
+@media (min-width: 576px) {
+  .res-sm-xs {
+    width: 9.1428571429vw;
+    height: 5.1446945338vw;
+    max-height: 4.5rem;
+    max-width: 8rem;
+    min-width: 5.5172413793rem;
+    min-height: 3.0534351145rem;
+  }
+
+  .w-sm-xs {
+    width: 8 vw;
+    max-width: 8rem;
+    min-width: 4rem;
+  }
+
+  .h-sm-xs {
+    height: 4.4943820225vw;
+    max-height: 4.5rem;
+  }
+
+  .w-xsx2 {
+    width: 20.5714285714vw;
+    max-width: 18rem;
+  }
+
+  .h-xsx2 {
+    height: 11.575562701vw;
+    max-height: 10.125rem;
+  }
+
+  .w-xsx3 {
+    width: 29.7142857143vw;
+    max-width: 26rem;
+  }
+
+  .h-xsx3 {
+    height: 16.7202572347vw;
+    max-height: 14.625rem;
+  }
+}
+@media (min-width: 768px) {
+  .res-md-xs {
+    width: 9.1428571429vw;
+    height: 5.1446945338vw;
+    max-height: 4.5rem;
+    max-width: 8rem;
+    min-width: 5.5172413793rem;
+    min-height: 3.0534351145rem;
+  }
+
+  .w-md-xs {
+    width: 8 vw;
+    max-width: 8rem;
+    min-width: 4rem;
+  }
+
+  .h-md-xs {
+    height: 4.4943820225vw;
+    max-height: 4.5rem;
+  }
+
+  .w-xsx2 {
+    width: 20.5714285714vw;
+    max-width: 18rem;
+  }
+
+  .h-xsx2 {
+    height: 11.575562701vw;
+    max-height: 10.125rem;
+  }
+
+  .w-xsx3 {
+    width: 29.7142857143vw;
+    max-width: 26rem;
+  }
+
+  .h-xsx3 {
+    height: 16.7202572347vw;
+    max-height: 14.625rem;
+  }
+}
+@media (min-width: 992px) {
+  .res-lg-xs {
+    width: 9.1428571429vw;
+    height: 5.1446945338vw;
+    max-height: 4.5rem;
+    max-width: 8rem;
+    min-width: 5.5172413793rem;
+    min-height: 3.0534351145rem;
+  }
+
+  .w-lg-xs {
+    width: 8 vw;
+    max-width: 8rem;
+    min-width: 4rem;
+  }
+
+  .h-lg-xs {
+    height: 4.4943820225vw;
+    max-height: 4.5rem;
+  }
+
+  .w-xsx2 {
+    width: 20.5714285714vw;
+    max-width: 18rem;
+  }
+
+  .h-xsx2 {
+    height: 11.575562701vw;
+    max-height: 10.125rem;
+  }
+
+  .w-xsx3 {
+    width: 29.7142857143vw;
+    max-width: 26rem;
+  }
+
+  .h-xsx3 {
+    height: 16.7202572347vw;
+    max-height: 14.625rem;
+  }
+}
+@media (min-width: 1200px) {
+  .res-xl-xs {
+    width: 9.1428571429vw;
+    height: 5.1446945338vw;
+    max-height: 4.5rem;
+    max-width: 8rem;
+    min-width: 5.5172413793rem;
+    min-height: 3.0534351145rem;
+  }
+
+  .w-xl-xs {
+    width: 8 vw;
+    max-width: 8rem;
+    min-width: 4rem;
+  }
+
+  .h-xl-xs {
+    height: 4.4943820225vw;
+    max-height: 4.5rem;
+  }
+
+  .w-xsx2 {
+    width: 20.5714285714vw;
+    max-width: 18rem;
+  }
+
+  .h-xsx2 {
+    height: 11.575562701vw;
+    max-height: 10.125rem;
+  }
+
+  .w-xsx3 {
+    width: 29.7142857143vw;
+    max-width: 26rem;
+  }
+
+  .h-xsx3 {
+    height: 16.7202572347vw;
+    max-height: 14.625rem;
+  }
+}
+.res-sm {
+  width: 13.7142857143vw;
+  height: 7.7170418006vw;
+  max-height: 6.75rem;
+  max-width: 12rem;
+  min-width: 8.275862069rem;
+  min-height: 4.5801526718rem;
+}
+
+.w-sm {
+  width: 12 vw;
+  max-width: 12rem;
+  min-width: 6rem;
+}
+
+.h-sm {
+  height: 6.7415730337vw;
+  max-height: 6.75rem;
+}
+
+.w-smx2 {
+  width: 30.8571428571vw;
+  max-width: 27rem;
+}
+
+.h-smx2 {
+  height: 17.3633440514vw;
+  max-height: 15.1875rem;
+}
+
+.w-smx3 {
+  width: 44.5714285714vw;
+  max-width: 39rem;
+}
+
+.h-smx3 {
+  height: 25.0803858521vw;
+  max-height: 21.9375rem;
+}
+
+@media (min-width: 576px) {
+  .res-sm-sm {
+    width: 13.7142857143vw;
+    height: 7.7170418006vw;
+    max-height: 6.75rem;
+    max-width: 12rem;
+    min-width: 8.275862069rem;
+    min-height: 4.5801526718rem;
+  }
+
+  .w-sm-sm {
+    width: 12 vw;
+    max-width: 12rem;
+    min-width: 6rem;
+  }
+
+  .h-sm-sm {
+    height: 6.7415730337vw;
+    max-height: 6.75rem;
+  }
+
+  .w-smx2 {
+    width: 30.8571428571vw;
+    max-width: 27rem;
+  }
+
+  .h-smx2 {
+    height: 17.3633440514vw;
+    max-height: 15.1875rem;
+  }
+
+  .w-smx3 {
+    width: 44.5714285714vw;
+    max-width: 39rem;
+  }
+
+  .h-smx3 {
+    height: 25.0803858521vw;
+    max-height: 21.9375rem;
+  }
+}
+@media (min-width: 768px) {
+  .res-md-sm {
+    width: 13.7142857143vw;
+    height: 7.7170418006vw;
+    max-height: 6.75rem;
+    max-width: 12rem;
+    min-width: 8.275862069rem;
+    min-height: 4.5801526718rem;
+  }
+
+  .w-md-sm {
+    width: 12 vw;
+    max-width: 12rem;
+    min-width: 6rem;
+  }
+
+  .h-md-sm {
+    height: 6.7415730337vw;
+    max-height: 6.75rem;
+  }
+
+  .w-smx2 {
+    width: 30.8571428571vw;
+    max-width: 27rem;
+  }
+
+  .h-smx2 {
+    height: 17.3633440514vw;
+    max-height: 15.1875rem;
+  }
+
+  .w-smx3 {
+    width: 44.5714285714vw;
+    max-width: 39rem;
+  }
+
+  .h-smx3 {
+    height: 25.0803858521vw;
+    max-height: 21.9375rem;
+  }
+}
+@media (min-width: 992px) {
+  .res-lg-sm {
+    width: 13.7142857143vw;
+    height: 7.7170418006vw;
+    max-height: 6.75rem;
+    max-width: 12rem;
+    min-width: 8.275862069rem;
+    min-height: 4.5801526718rem;
+  }
+
+  .w-lg-sm {
+    width: 12 vw;
+    max-width: 12rem;
+    min-width: 6rem;
+  }
+
+  .h-lg-sm {
+    height: 6.7415730337vw;
+    max-height: 6.75rem;
+  }
+
+  .w-smx2 {
+    width: 30.8571428571vw;
+    max-width: 27rem;
+  }
+
+  .h-smx2 {
+    height: 17.3633440514vw;
+    max-height: 15.1875rem;
+  }
+
+  .w-smx3 {
+    width: 44.5714285714vw;
+    max-width: 39rem;
+  }
+
+  .h-smx3 {
+    height: 25.0803858521vw;
+    max-height: 21.9375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .res-xl-sm {
+    width: 13.7142857143vw;
+    height: 7.7170418006vw;
+    max-height: 6.75rem;
+    max-width: 12rem;
+    min-width: 8.275862069rem;
+    min-height: 4.5801526718rem;
+  }
+
+  .w-xl-sm {
+    width: 12 vw;
+    max-width: 12rem;
+    min-width: 6rem;
+  }
+
+  .h-xl-sm {
+    height: 6.7415730337vw;
+    max-height: 6.75rem;
+  }
+
+  .w-smx2 {
+    width: 30.8571428571vw;
+    max-width: 27rem;
+  }
+
+  .h-smx2 {
+    height: 17.3633440514vw;
+    max-height: 15.1875rem;
+  }
+
+  .w-smx3 {
+    width: 44.5714285714vw;
+    max-width: 39rem;
+  }
+
+  .h-smx3 {
+    height: 25.0803858521vw;
+    max-height: 21.9375rem;
+  }
+}
+.res-md {
+  width: 20vw;
+  height: 11.2540192926vw;
+  max-height: 9.84375rem;
+  max-width: 17.5rem;
+  min-width: 12.0689655172rem;
+  min-height: 6.679389313rem;
+}
+
+.w-md {
+  width: 17.5 vw;
+  max-width: 17.5rem;
+  min-width: 8.75rem;
+}
+
+.h-md {
+  height: 9.8314606742vw;
+  max-height: 9.84375rem;
+}
+
+.w-mdx2 {
+  width: 45vw;
+  max-width: 39.375rem;
+}
+
+.h-mdx2 {
+  height: 25.3215434084vw;
+  max-height: 22.1484375rem;
+}
+
+.w-mdx3 {
+  width: 65vw;
+  max-width: 56.875rem;
+}
+
+.h-mdx3 {
+  height: 36.575562701vw;
+  max-height: 31.9921875rem;
+}
+
+@media (min-width: 576px) {
+  .res-sm-md {
+    width: 20vw;
+    height: 11.2540192926vw;
+    max-height: 9.84375rem;
+    max-width: 17.5rem;
+    min-width: 12.0689655172rem;
+    min-height: 6.679389313rem;
+  }
+
+  .w-sm-md {
+    width: 17.5 vw;
+    max-width: 17.5rem;
+    min-width: 8.75rem;
+  }
+
+  .h-sm-md {
+    height: 9.8314606742vw;
+    max-height: 9.84375rem;
+  }
+
+  .w-mdx2 {
+    width: 45vw;
+    max-width: 39.375rem;
+  }
+
+  .h-mdx2 {
+    height: 25.3215434084vw;
+    max-height: 22.1484375rem;
+  }
+
+  .w-mdx3 {
+    width: 65vw;
+    max-width: 56.875rem;
+  }
+
+  .h-mdx3 {
+    height: 36.575562701vw;
+    max-height: 31.9921875rem;
+  }
+}
+@media (min-width: 768px) {
+  .res-md-md {
+    width: 20vw;
+    height: 11.2540192926vw;
+    max-height: 9.84375rem;
+    max-width: 17.5rem;
+    min-width: 12.0689655172rem;
+    min-height: 6.679389313rem;
+  }
+
+  .w-md-md {
+    width: 17.5 vw;
+    max-width: 17.5rem;
+    min-width: 8.75rem;
+  }
+
+  .h-md-md {
+    height: 9.8314606742vw;
+    max-height: 9.84375rem;
+  }
+
+  .w-mdx2 {
+    width: 45vw;
+    max-width: 39.375rem;
+  }
+
+  .h-mdx2 {
+    height: 25.3215434084vw;
+    max-height: 22.1484375rem;
+  }
+
+  .w-mdx3 {
+    width: 65vw;
+    max-width: 56.875rem;
+  }
+
+  .h-mdx3 {
+    height: 36.575562701vw;
+    max-height: 31.9921875rem;
+  }
+}
+@media (min-width: 992px) {
+  .res-lg-md {
+    width: 20vw;
+    height: 11.2540192926vw;
+    max-height: 9.84375rem;
+    max-width: 17.5rem;
+    min-width: 12.0689655172rem;
+    min-height: 6.679389313rem;
+  }
+
+  .w-lg-md {
+    width: 17.5 vw;
+    max-width: 17.5rem;
+    min-width: 8.75rem;
+  }
+
+  .h-lg-md {
+    height: 9.8314606742vw;
+    max-height: 9.84375rem;
+  }
+
+  .w-mdx2 {
+    width: 45vw;
+    max-width: 39.375rem;
+  }
+
+  .h-mdx2 {
+    height: 25.3215434084vw;
+    max-height: 22.1484375rem;
+  }
+
+  .w-mdx3 {
+    width: 65vw;
+    max-width: 56.875rem;
+  }
+
+  .h-mdx3 {
+    height: 36.575562701vw;
+    max-height: 31.9921875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .res-xl-md {
+    width: 20vw;
+    height: 11.2540192926vw;
+    max-height: 9.84375rem;
+    max-width: 17.5rem;
+    min-width: 12.0689655172rem;
+    min-height: 6.679389313rem;
+  }
+
+  .w-xl-md {
+    width: 17.5 vw;
+    max-width: 17.5rem;
+    min-width: 8.75rem;
+  }
+
+  .h-xl-md {
+    height: 9.8314606742vw;
+    max-height: 9.84375rem;
+  }
+
+  .w-mdx2 {
+    width: 45vw;
+    max-width: 39.375rem;
+  }
+
+  .h-mdx2 {
+    height: 25.3215434084vw;
+    max-height: 22.1484375rem;
+  }
+
+  .w-mdx3 {
+    width: 65vw;
+    max-width: 56.875rem;
+  }
+
+  .h-mdx3 {
+    height: 36.575562701vw;
+    max-height: 31.9921875rem;
+  }
+}
+.res-lg {
+  width: 27.4285714286vw;
+  height: 15.4340836013vw;
+  max-height: 13.5rem;
+  max-width: 24rem;
+  min-width: 16.5517241379rem;
+  min-height: 9.1603053435rem;
+}
+
+.w-lg, .form .hs-button.primary {
+  width: 24 vw;
+  max-width: 24rem;
+  min-width: 12rem;
+}
+
+.h-lg {
+  height: 13.4831460674vw;
+  max-height: 13.5rem;
+}
+
+.w-lgx2 {
+  width: 61.7142857143vw;
+  max-width: 54rem;
+}
+
+.h-lgx2 {
+  height: 34.7266881029vw;
+  max-height: 30.375rem;
+}
+
+.w-lgx3 {
+  width: 89.1428571429vw;
+  max-width: 78rem;
+}
+
+.h-lgx3 {
+  height: 50.1607717042vw;
+  max-height: 43.875rem;
+}
+
+@media (min-width: 576px) {
+  .res-sm-lg {
+    width: 27.4285714286vw;
+    height: 15.4340836013vw;
+    max-height: 13.5rem;
+    max-width: 24rem;
+    min-width: 16.5517241379rem;
+    min-height: 9.1603053435rem;
+  }
+
+  .w-sm-lg {
+    width: 24 vw;
+    max-width: 24rem;
+    min-width: 12rem;
+  }
+
+  .h-sm-lg {
+    height: 13.4831460674vw;
+    max-height: 13.5rem;
+  }
+
+  .w-lgx2 {
+    width: 61.7142857143vw;
+    max-width: 54rem;
+  }
+
+  .h-lgx2 {
+    height: 34.7266881029vw;
+    max-height: 30.375rem;
+  }
+
+  .w-lgx3 {
+    width: 89.1428571429vw;
+    max-width: 78rem;
+  }
+
+  .h-lgx3 {
+    height: 50.1607717042vw;
+    max-height: 43.875rem;
+  }
+}
+@media (min-width: 768px) {
+  .res-md-lg {
+    width: 27.4285714286vw;
+    height: 15.4340836013vw;
+    max-height: 13.5rem;
+    max-width: 24rem;
+    min-width: 16.5517241379rem;
+    min-height: 9.1603053435rem;
+  }
+
+  .w-md-lg {
+    width: 24 vw;
+    max-width: 24rem;
+    min-width: 12rem;
+  }
+
+  .h-md-lg {
+    height: 13.4831460674vw;
+    max-height: 13.5rem;
+  }
+
+  .w-lgx2 {
+    width: 61.7142857143vw;
+    max-width: 54rem;
+  }
+
+  .h-lgx2 {
+    height: 34.7266881029vw;
+    max-height: 30.375rem;
+  }
+
+  .w-lgx3 {
+    width: 89.1428571429vw;
+    max-width: 78rem;
+  }
+
+  .h-lgx3 {
+    height: 50.1607717042vw;
+    max-height: 43.875rem;
+  }
+}
+@media (min-width: 992px) {
+  .res-lg-lg {
+    width: 27.4285714286vw;
+    height: 15.4340836013vw;
+    max-height: 13.5rem;
+    max-width: 24rem;
+    min-width: 16.5517241379rem;
+    min-height: 9.1603053435rem;
+  }
+
+  .w-lg-lg {
+    width: 24 vw;
+    max-width: 24rem;
+    min-width: 12rem;
+  }
+
+  .h-lg-lg {
+    height: 13.4831460674vw;
+    max-height: 13.5rem;
+  }
+
+  .w-lgx2 {
+    width: 61.7142857143vw;
+    max-width: 54rem;
+  }
+
+  .h-lgx2 {
+    height: 34.7266881029vw;
+    max-height: 30.375rem;
+  }
+
+  .w-lgx3 {
+    width: 89.1428571429vw;
+    max-width: 78rem;
+  }
+
+  .h-lgx3 {
+    height: 50.1607717042vw;
+    max-height: 43.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .res-xl-lg {
+    width: 27.4285714286vw;
+    height: 15.4340836013vw;
+    max-height: 13.5rem;
+    max-width: 24rem;
+    min-width: 16.5517241379rem;
+    min-height: 9.1603053435rem;
+  }
+
+  .w-xl-lg {
+    width: 24 vw;
+    max-width: 24rem;
+    min-width: 12rem;
+  }
+
+  .h-xl-lg {
+    height: 13.4831460674vw;
+    max-height: 13.5rem;
+  }
+
+  .w-lgx2 {
+    width: 61.7142857143vw;
+    max-width: 54rem;
+  }
+
+  .h-lgx2 {
+    height: 34.7266881029vw;
+    max-height: 30.375rem;
+  }
+
+  .w-lgx3 {
+    width: 89.1428571429vw;
+    max-width: 78rem;
+  }
+
+  .h-lgx3 {
+    height: 50.1607717042vw;
+    max-height: 43.875rem;
+  }
+}
+.res-xl {
+  width: 36.5714285714vw;
+  height: 20.578778135vw;
+  max-height: 18rem;
+  max-width: 32rem;
+  min-width: 22.0689655172rem;
+  min-height: 12.213740458rem;
+}
+
+.w-xl {
+  width: 32 vw;
+  max-width: 32rem;
+  min-width: 16rem;
+}
+
+.h-xl {
+  height: 17.9775280899vw;
+  max-height: 18rem;
+}
+
+.w-xlx2 {
+  width: 82.2857142857vw;
+  max-width: 72rem;
+}
+
+.h-xlx2 {
+  height: 46.3022508039vw;
+  max-height: 40.5rem;
+}
+
+.w-xlx3 {
+  width: 118.8571428571vw;
+  max-width: 104rem;
+}
+
+.h-xlx3 {
+  height: 66.8810289389vw;
+  max-height: 58.5rem;
+}
+
+@media (min-width: 576px) {
+  .res-sm-xl {
+    width: 36.5714285714vw;
+    height: 20.578778135vw;
+    max-height: 18rem;
+    max-width: 32rem;
+    min-width: 22.0689655172rem;
+    min-height: 12.213740458rem;
+  }
+
+  .w-sm-xl {
+    width: 32 vw;
+    max-width: 32rem;
+    min-width: 16rem;
+  }
+
+  .h-sm-xl {
+    height: 17.9775280899vw;
+    max-height: 18rem;
+  }
+
+  .w-xlx2 {
+    width: 82.2857142857vw;
+    max-width: 72rem;
+  }
+
+  .h-xlx2 {
+    height: 46.3022508039vw;
+    max-height: 40.5rem;
+  }
+
+  .w-xlx3 {
+    width: 118.8571428571vw;
+    max-width: 104rem;
+  }
+
+  .h-xlx3 {
+    height: 66.8810289389vw;
+    max-height: 58.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .res-md-xl {
+    width: 36.5714285714vw;
+    height: 20.578778135vw;
+    max-height: 18rem;
+    max-width: 32rem;
+    min-width: 22.0689655172rem;
+    min-height: 12.213740458rem;
+  }
+
+  .w-md-xl {
+    width: 32 vw;
+    max-width: 32rem;
+    min-width: 16rem;
+  }
+
+  .h-md-xl {
+    height: 17.9775280899vw;
+    max-height: 18rem;
+  }
+
+  .w-xlx2 {
+    width: 82.2857142857vw;
+    max-width: 72rem;
+  }
+
+  .h-xlx2 {
+    height: 46.3022508039vw;
+    max-height: 40.5rem;
+  }
+
+  .w-xlx3 {
+    width: 118.8571428571vw;
+    max-width: 104rem;
+  }
+
+  .h-xlx3 {
+    height: 66.8810289389vw;
+    max-height: 58.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .res-lg-xl {
+    width: 36.5714285714vw;
+    height: 20.578778135vw;
+    max-height: 18rem;
+    max-width: 32rem;
+    min-width: 22.0689655172rem;
+    min-height: 12.213740458rem;
+  }
+
+  .w-lg-xl {
+    width: 32 vw;
+    max-width: 32rem;
+    min-width: 16rem;
+  }
+
+  .h-lg-xl {
+    height: 17.9775280899vw;
+    max-height: 18rem;
+  }
+
+  .w-xlx2 {
+    width: 82.2857142857vw;
+    max-width: 72rem;
+  }
+
+  .h-xlx2 {
+    height: 46.3022508039vw;
+    max-height: 40.5rem;
+  }
+
+  .w-xlx3 {
+    width: 118.8571428571vw;
+    max-width: 104rem;
+  }
+
+  .h-xlx3 {
+    height: 66.8810289389vw;
+    max-height: 58.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .res-xl-xl {
+    width: 36.5714285714vw;
+    height: 20.578778135vw;
+    max-height: 18rem;
+    max-width: 32rem;
+    min-width: 22.0689655172rem;
+    min-height: 12.213740458rem;
+  }
+
+  .w-xl-xl {
+    width: 32 vw;
+    max-width: 32rem;
+    min-width: 16rem;
+  }
+
+  .h-xl-xl {
+    height: 17.9775280899vw;
+    max-height: 18rem;
+  }
+
+  .w-xlx2 {
+    width: 82.2857142857vw;
+    max-width: 72rem;
+  }
+
+  .h-xlx2 {
+    height: 46.3022508039vw;
+    max-height: 40.5rem;
+  }
+
+  .w-xlx3 {
+    width: 118.8571428571vw;
+    max-width: 104rem;
+  }
+
+  .h-xlx3 {
+    height: 66.8810289389vw;
+    max-height: 58.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .res-xs {
+    width: 11.4285714286vw;
+    height: 6.4308681672vw;
+    max-height: 5.625rem;
+    max-width: 10rem;
+    min-width: 6.8965517241rem;
+    min-height: 3.8167938931rem;
+  }
+
+  .w-xs {
+    width: 10 vw;
+    max-width: 10rem;
+    min-width: 5rem;
+  }
+
+  .h-xs {
+    height: 5.6179775281vw;
+    max-height: 5.625rem;
+  }
+
+  .w-xsx2 {
+    width: 25.7142857143vw;
+    max-width: 22.5rem;
+  }
+
+  .h-xsx2 {
+    height: 14.4694533762vw;
+    max-height: 12.65625rem;
+  }
+
+  .w-xsx3 {
+    width: 37.1428571429vw;
+    max-width: 32.5rem;
+  }
+
+  .h-xsx3 {
+    height: 20.9003215434vw;
+    max-height: 18.28125rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 576px) {
+  .res-sm-xs {
+    width: 11.4285714286vw;
+    height: 6.4308681672vw;
+    max-height: 5.625rem;
+    max-width: 10rem;
+    min-width: 6.8965517241rem;
+    min-height: 3.8167938931rem;
+  }
+
+  .w-sm-xs {
+    width: 10 vw;
+    max-width: 10rem;
+    min-width: 5rem;
+  }
+
+  .h-sm-xs {
+    height: 5.6179775281vw;
+    max-height: 5.625rem;
+  }
+
+  .w-xsx2 {
+    width: 25.7142857143vw;
+    max-width: 22.5rem;
+  }
+
+  .h-xsx2 {
+    height: 14.4694533762vw;
+    max-height: 12.65625rem;
+  }
+
+  .w-xsx3 {
+    width: 37.1428571429vw;
+    max-width: 32.5rem;
+  }
+
+  .h-xsx3 {
+    height: 20.9003215434vw;
+    max-height: 18.28125rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 768px) {
+  .res-md-xs {
+    width: 11.4285714286vw;
+    height: 6.4308681672vw;
+    max-height: 5.625rem;
+    max-width: 10rem;
+    min-width: 6.8965517241rem;
+    min-height: 3.8167938931rem;
+  }
+
+  .w-md-xs {
+    width: 10 vw;
+    max-width: 10rem;
+    min-width: 5rem;
+  }
+
+  .h-md-xs {
+    height: 5.6179775281vw;
+    max-height: 5.625rem;
+  }
+
+  .w-xsx2 {
+    width: 25.7142857143vw;
+    max-width: 22.5rem;
+  }
+
+  .h-xsx2 {
+    height: 14.4694533762vw;
+    max-height: 12.65625rem;
+  }
+
+  .w-xsx3 {
+    width: 37.1428571429vw;
+    max-width: 32.5rem;
+  }
+
+  .h-xsx3 {
+    height: 20.9003215434vw;
+    max-height: 18.28125rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 992px) {
+  .res-lg-xs {
+    width: 11.4285714286vw;
+    height: 6.4308681672vw;
+    max-height: 5.625rem;
+    max-width: 10rem;
+    min-width: 6.8965517241rem;
+    min-height: 3.8167938931rem;
+  }
+
+  .w-lg-xs {
+    width: 10 vw;
+    max-width: 10rem;
+    min-width: 5rem;
+  }
+
+  .h-lg-xs {
+    height: 5.6179775281vw;
+    max-height: 5.625rem;
+  }
+
+  .w-xsx2 {
+    width: 25.7142857143vw;
+    max-width: 22.5rem;
+  }
+
+  .h-xsx2 {
+    height: 14.4694533762vw;
+    max-height: 12.65625rem;
+  }
+
+  .w-xsx3 {
+    width: 37.1428571429vw;
+    max-width: 32.5rem;
+  }
+
+  .h-xsx3 {
+    height: 20.9003215434vw;
+    max-height: 18.28125rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 1200px) {
+  .res-xl-xs {
+    width: 11.4285714286vw;
+    height: 6.4308681672vw;
+    max-height: 5.625rem;
+    max-width: 10rem;
+    min-width: 6.8965517241rem;
+    min-height: 3.8167938931rem;
+  }
+
+  .w-xl-xs {
+    width: 10 vw;
+    max-width: 10rem;
+    min-width: 5rem;
+  }
+
+  .h-xl-xs {
+    height: 5.6179775281vw;
+    max-height: 5.625rem;
+  }
+
+  .w-xsx2 {
+    width: 25.7142857143vw;
+    max-width: 22.5rem;
+  }
+
+  .h-xsx2 {
+    height: 14.4694533762vw;
+    max-height: 12.65625rem;
+  }
+
+  .w-xsx3 {
+    width: 37.1428571429vw;
+    max-width: 32.5rem;
+  }
+
+  .h-xsx3 {
+    height: 20.9003215434vw;
+    max-height: 18.28125rem;
+  }
+}
+@media (min-width: 2175px) {
+  .res-sm {
+    width: 18.2857142857vw;
+    height: 10.2893890675vw;
+    max-height: 9rem;
+    max-width: 16rem;
+    min-width: 11.0344827586rem;
+    min-height: 6.106870229rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-sm {
+    width: 16 vw;
+    max-width: 16rem;
+    min-width: 8rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-sm {
+    height: 8.9887640449vw;
+    max-height: 9rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-smx2 {
+    width: 41.1428571429vw;
+    max-width: 36rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-smx2 {
+    height: 23.1511254019vw;
+    max-height: 20.25rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-smx3 {
+    width: 59.4285714286vw;
+    max-width: 52rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-smx3 {
+    height: 33.4405144695vw;
+    max-height: 29.25rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 576px) {
+  .res-sm-sm {
+    width: 18.2857142857vw;
+    height: 10.2893890675vw;
+    max-height: 9rem;
+    max-width: 16rem;
+    min-width: 11.0344827586rem;
+    min-height: 6.106870229rem;
+  }
+
+  .w-sm-sm {
+    width: 16 vw;
+    max-width: 16rem;
+    min-width: 8rem;
+  }
+
+  .h-sm-sm {
+    height: 8.9887640449vw;
+    max-height: 9rem;
+  }
+
+  .w-smx2 {
+    width: 41.1428571429vw;
+    max-width: 36rem;
+  }
+
+  .h-smx2 {
+    height: 23.1511254019vw;
+    max-height: 20.25rem;
+  }
+
+  .w-smx3 {
+    width: 59.4285714286vw;
+    max-width: 52rem;
+  }
+
+  .h-smx3 {
+    height: 33.4405144695vw;
+    max-height: 29.25rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 768px) {
+  .res-md-sm {
+    width: 18.2857142857vw;
+    height: 10.2893890675vw;
+    max-height: 9rem;
+    max-width: 16rem;
+    min-width: 11.0344827586rem;
+    min-height: 6.106870229rem;
+  }
+
+  .w-md-sm {
+    width: 16 vw;
+    max-width: 16rem;
+    min-width: 8rem;
+  }
+
+  .h-md-sm {
+    height: 8.9887640449vw;
+    max-height: 9rem;
+  }
+
+  .w-smx2 {
+    width: 41.1428571429vw;
+    max-width: 36rem;
+  }
+
+  .h-smx2 {
+    height: 23.1511254019vw;
+    max-height: 20.25rem;
+  }
+
+  .w-smx3 {
+    width: 59.4285714286vw;
+    max-width: 52rem;
+  }
+
+  .h-smx3 {
+    height: 33.4405144695vw;
+    max-height: 29.25rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 992px) {
+  .res-lg-sm {
+    width: 18.2857142857vw;
+    height: 10.2893890675vw;
+    max-height: 9rem;
+    max-width: 16rem;
+    min-width: 11.0344827586rem;
+    min-height: 6.106870229rem;
+  }
+
+  .w-lg-sm {
+    width: 16 vw;
+    max-width: 16rem;
+    min-width: 8rem;
+  }
+
+  .h-lg-sm {
+    height: 8.9887640449vw;
+    max-height: 9rem;
+  }
+
+  .w-smx2 {
+    width: 41.1428571429vw;
+    max-width: 36rem;
+  }
+
+  .h-smx2 {
+    height: 23.1511254019vw;
+    max-height: 20.25rem;
+  }
+
+  .w-smx3 {
+    width: 59.4285714286vw;
+    max-width: 52rem;
+  }
+
+  .h-smx3 {
+    height: 33.4405144695vw;
+    max-height: 29.25rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 1200px) {
+  .res-xl-sm {
+    width: 18.2857142857vw;
+    height: 10.2893890675vw;
+    max-height: 9rem;
+    max-width: 16rem;
+    min-width: 11.0344827586rem;
+    min-height: 6.106870229rem;
+  }
+
+  .w-xl-sm {
+    width: 16 vw;
+    max-width: 16rem;
+    min-width: 8rem;
+  }
+
+  .h-xl-sm {
+    height: 8.9887640449vw;
+    max-height: 9rem;
+  }
+
+  .w-smx2 {
+    width: 41.1428571429vw;
+    max-width: 36rem;
+  }
+
+  .h-smx2 {
+    height: 23.1511254019vw;
+    max-height: 20.25rem;
+  }
+
+  .w-smx3 {
+    width: 59.4285714286vw;
+    max-width: 52rem;
+  }
+
+  .h-smx3 {
+    height: 33.4405144695vw;
+    max-height: 29.25rem;
+  }
+}
+@media (min-width: 2175px) {
+  .res-md {
+    width: 25.1428571429vw;
+    height: 14.1479099678vw;
+    max-height: 12.375rem;
+    max-width: 22rem;
+    min-width: 15.1724137931rem;
+    min-height: 8.3969465649rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-md {
+    width: 22 vw;
+    max-width: 22rem;
+    min-width: 11rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-md {
+    height: 12.3595505618vw;
+    max-height: 12.375rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-mdx2 {
+    width: 56.5714285714vw;
+    max-width: 49.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-mdx2 {
+    height: 31.8327974277vw;
+    max-height: 27.84375rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-mdx3 {
+    width: 81.7142857143vw;
+    max-width: 71.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-mdx3 {
+    height: 45.9807073955vw;
+    max-height: 40.21875rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 576px) {
+  .res-sm-md {
+    width: 25.1428571429vw;
+    height: 14.1479099678vw;
+    max-height: 12.375rem;
+    max-width: 22rem;
+    min-width: 15.1724137931rem;
+    min-height: 8.3969465649rem;
+  }
+
+  .w-sm-md {
+    width: 22 vw;
+    max-width: 22rem;
+    min-width: 11rem;
+  }
+
+  .h-sm-md {
+    height: 12.3595505618vw;
+    max-height: 12.375rem;
+  }
+
+  .w-mdx2 {
+    width: 56.5714285714vw;
+    max-width: 49.5rem;
+  }
+
+  .h-mdx2 {
+    height: 31.8327974277vw;
+    max-height: 27.84375rem;
+  }
+
+  .w-mdx3 {
+    width: 81.7142857143vw;
+    max-width: 71.5rem;
+  }
+
+  .h-mdx3 {
+    height: 45.9807073955vw;
+    max-height: 40.21875rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 768px) {
+  .res-md-md {
+    width: 25.1428571429vw;
+    height: 14.1479099678vw;
+    max-height: 12.375rem;
+    max-width: 22rem;
+    min-width: 15.1724137931rem;
+    min-height: 8.3969465649rem;
+  }
+
+  .w-md-md {
+    width: 22 vw;
+    max-width: 22rem;
+    min-width: 11rem;
+  }
+
+  .h-md-md {
+    height: 12.3595505618vw;
+    max-height: 12.375rem;
+  }
+
+  .w-mdx2 {
+    width: 56.5714285714vw;
+    max-width: 49.5rem;
+  }
+
+  .h-mdx2 {
+    height: 31.8327974277vw;
+    max-height: 27.84375rem;
+  }
+
+  .w-mdx3 {
+    width: 81.7142857143vw;
+    max-width: 71.5rem;
+  }
+
+  .h-mdx3 {
+    height: 45.9807073955vw;
+    max-height: 40.21875rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 992px) {
+  .res-lg-md {
+    width: 25.1428571429vw;
+    height: 14.1479099678vw;
+    max-height: 12.375rem;
+    max-width: 22rem;
+    min-width: 15.1724137931rem;
+    min-height: 8.3969465649rem;
+  }
+
+  .w-lg-md {
+    width: 22 vw;
+    max-width: 22rem;
+    min-width: 11rem;
+  }
+
+  .h-lg-md {
+    height: 12.3595505618vw;
+    max-height: 12.375rem;
+  }
+
+  .w-mdx2 {
+    width: 56.5714285714vw;
+    max-width: 49.5rem;
+  }
+
+  .h-mdx2 {
+    height: 31.8327974277vw;
+    max-height: 27.84375rem;
+  }
+
+  .w-mdx3 {
+    width: 81.7142857143vw;
+    max-width: 71.5rem;
+  }
+
+  .h-mdx3 {
+    height: 45.9807073955vw;
+    max-height: 40.21875rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 1200px) {
+  .res-xl-md {
+    width: 25.1428571429vw;
+    height: 14.1479099678vw;
+    max-height: 12.375rem;
+    max-width: 22rem;
+    min-width: 15.1724137931rem;
+    min-height: 8.3969465649rem;
+  }
+
+  .w-xl-md {
+    width: 22 vw;
+    max-width: 22rem;
+    min-width: 11rem;
+  }
+
+  .h-xl-md {
+    height: 12.3595505618vw;
+    max-height: 12.375rem;
+  }
+
+  .w-mdx2 {
+    width: 56.5714285714vw;
+    max-width: 49.5rem;
+  }
+
+  .h-mdx2 {
+    height: 31.8327974277vw;
+    max-height: 27.84375rem;
+  }
+
+  .w-mdx3 {
+    width: 81.7142857143vw;
+    max-width: 71.5rem;
+  }
+
+  .h-mdx3 {
+    height: 45.9807073955vw;
+    max-height: 40.21875rem;
+  }
+}
+@media (min-width: 2175px) {
+  .res-lg {
+    width: 34.2857142857vw;
+    height: 19.2926045016vw;
+    max-height: 16.875rem;
+    max-width: 30rem;
+    min-width: 20.6896551724rem;
+    min-height: 11.4503816794rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-lg, .form .hs-button.primary {
+    width: 30 vw;
+    max-width: 30rem;
+    min-width: 15rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-lg {
+    height: 16.8539325843vw;
+    max-height: 16.875rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-lgx2 {
+    width: 77.1428571429vw;
+    max-width: 67.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-lgx2 {
+    height: 43.4083601286vw;
+    max-height: 37.96875rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-lgx3 {
+    width: 111.4285714286vw;
+    max-width: 97.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-lgx3 {
+    height: 62.7009646302vw;
+    max-height: 54.84375rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 576px) {
+  .res-sm-lg {
+    width: 34.2857142857vw;
+    height: 19.2926045016vw;
+    max-height: 16.875rem;
+    max-width: 30rem;
+    min-width: 20.6896551724rem;
+    min-height: 11.4503816794rem;
+  }
+
+  .w-sm-lg {
+    width: 30 vw;
+    max-width: 30rem;
+    min-width: 15rem;
+  }
+
+  .h-sm-lg {
+    height: 16.8539325843vw;
+    max-height: 16.875rem;
+  }
+
+  .w-lgx2 {
+    width: 77.1428571429vw;
+    max-width: 67.5rem;
+  }
+
+  .h-lgx2 {
+    height: 43.4083601286vw;
+    max-height: 37.96875rem;
+  }
+
+  .w-lgx3 {
+    width: 111.4285714286vw;
+    max-width: 97.5rem;
+  }
+
+  .h-lgx3 {
+    height: 62.7009646302vw;
+    max-height: 54.84375rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 768px) {
+  .res-md-lg {
+    width: 34.2857142857vw;
+    height: 19.2926045016vw;
+    max-height: 16.875rem;
+    max-width: 30rem;
+    min-width: 20.6896551724rem;
+    min-height: 11.4503816794rem;
+  }
+
+  .w-md-lg {
+    width: 30 vw;
+    max-width: 30rem;
+    min-width: 15rem;
+  }
+
+  .h-md-lg {
+    height: 16.8539325843vw;
+    max-height: 16.875rem;
+  }
+
+  .w-lgx2 {
+    width: 77.1428571429vw;
+    max-width: 67.5rem;
+  }
+
+  .h-lgx2 {
+    height: 43.4083601286vw;
+    max-height: 37.96875rem;
+  }
+
+  .w-lgx3 {
+    width: 111.4285714286vw;
+    max-width: 97.5rem;
+  }
+
+  .h-lgx3 {
+    height: 62.7009646302vw;
+    max-height: 54.84375rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 992px) {
+  .res-lg-lg {
+    width: 34.2857142857vw;
+    height: 19.2926045016vw;
+    max-height: 16.875rem;
+    max-width: 30rem;
+    min-width: 20.6896551724rem;
+    min-height: 11.4503816794rem;
+  }
+
+  .w-lg-lg {
+    width: 30 vw;
+    max-width: 30rem;
+    min-width: 15rem;
+  }
+
+  .h-lg-lg {
+    height: 16.8539325843vw;
+    max-height: 16.875rem;
+  }
+
+  .w-lgx2 {
+    width: 77.1428571429vw;
+    max-width: 67.5rem;
+  }
+
+  .h-lgx2 {
+    height: 43.4083601286vw;
+    max-height: 37.96875rem;
+  }
+
+  .w-lgx3 {
+    width: 111.4285714286vw;
+    max-width: 97.5rem;
+  }
+
+  .h-lgx3 {
+    height: 62.7009646302vw;
+    max-height: 54.84375rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 1200px) {
+  .res-xl-lg {
+    width: 34.2857142857vw;
+    height: 19.2926045016vw;
+    max-height: 16.875rem;
+    max-width: 30rem;
+    min-width: 20.6896551724rem;
+    min-height: 11.4503816794rem;
+  }
+
+  .w-xl-lg {
+    width: 30 vw;
+    max-width: 30rem;
+    min-width: 15rem;
+  }
+
+  .h-xl-lg {
+    height: 16.8539325843vw;
+    max-height: 16.875rem;
+  }
+
+  .w-lgx2 {
+    width: 77.1428571429vw;
+    max-width: 67.5rem;
+  }
+
+  .h-lgx2 {
+    height: 43.4083601286vw;
+    max-height: 37.96875rem;
+  }
+
+  .w-lgx3 {
+    width: 111.4285714286vw;
+    max-width: 97.5rem;
+  }
+
+  .h-lgx3 {
+    height: 62.7009646302vw;
+    max-height: 54.84375rem;
+  }
+}
+@media (min-width: 2175px) {
+  .res-xl {
+    width: 38.8571428571vw;
+    height: 21.8649517685vw;
+    max-height: 19.125rem;
+    max-width: 34rem;
+    min-width: 23.4482758621rem;
+    min-height: 12.9770992366rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-xl {
+    width: 34 vw;
+    max-width: 34rem;
+    min-width: 17rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-xl {
+    height: 19.1011235955vw;
+    max-height: 19.125rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-xlx2 {
+    width: 87.4285714286vw;
+    max-width: 76.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-xlx2 {
+    height: 49.1961414791vw;
+    max-height: 43.03125rem;
+  }
+}
+@media (min-width: 2175px) {
+  .w-xlx3 {
+    width: 126.2857142857vw;
+    max-width: 110.5rem;
+  }
+}
+@media (min-width: 2175px) {
+  .h-xlx3 {
+    height: 71.0610932476vw;
+    max-height: 62.15625rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 576px) {
+  .res-sm-xl {
+    width: 38.8571428571vw;
+    height: 21.8649517685vw;
+    max-height: 19.125rem;
+    max-width: 34rem;
+    min-width: 23.4482758621rem;
+    min-height: 12.9770992366rem;
+  }
+
+  .w-sm-xl {
+    width: 34 vw;
+    max-width: 34rem;
+    min-width: 17rem;
+  }
+
+  .h-sm-xl {
+    height: 19.1011235955vw;
+    max-height: 19.125rem;
+  }
+
+  .w-xlx2 {
+    width: 87.4285714286vw;
+    max-width: 76.5rem;
+  }
+
+  .h-xlx2 {
+    height: 49.1961414791vw;
+    max-height: 43.03125rem;
+  }
+
+  .w-xlx3 {
+    width: 126.2857142857vw;
+    max-width: 110.5rem;
+  }
+
+  .h-xlx3 {
+    height: 71.0610932476vw;
+    max-height: 62.15625rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 768px) {
+  .res-md-xl {
+    width: 38.8571428571vw;
+    height: 21.8649517685vw;
+    max-height: 19.125rem;
+    max-width: 34rem;
+    min-width: 23.4482758621rem;
+    min-height: 12.9770992366rem;
+  }
+
+  .w-md-xl {
+    width: 34 vw;
+    max-width: 34rem;
+    min-width: 17rem;
+  }
+
+  .h-md-xl {
+    height: 19.1011235955vw;
+    max-height: 19.125rem;
+  }
+
+  .w-xlx2 {
+    width: 87.4285714286vw;
+    max-width: 76.5rem;
+  }
+
+  .h-xlx2 {
+    height: 49.1961414791vw;
+    max-height: 43.03125rem;
+  }
+
+  .w-xlx3 {
+    width: 126.2857142857vw;
+    max-width: 110.5rem;
+  }
+
+  .h-xlx3 {
+    height: 71.0610932476vw;
+    max-height: 62.15625rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 992px) {
+  .res-lg-xl {
+    width: 38.8571428571vw;
+    height: 21.8649517685vw;
+    max-height: 19.125rem;
+    max-width: 34rem;
+    min-width: 23.4482758621rem;
+    min-height: 12.9770992366rem;
+  }
+
+  .w-lg-xl {
+    width: 34 vw;
+    max-width: 34rem;
+    min-width: 17rem;
+  }
+
+  .h-lg-xl {
+    height: 19.1011235955vw;
+    max-height: 19.125rem;
+  }
+
+  .w-xlx2 {
+    width: 87.4285714286vw;
+    max-width: 76.5rem;
+  }
+
+  .h-xlx2 {
+    height: 49.1961414791vw;
+    max-height: 43.03125rem;
+  }
+
+  .w-xlx3 {
+    width: 126.2857142857vw;
+    max-width: 110.5rem;
+  }
+
+  .h-xlx3 {
+    height: 71.0610932476vw;
+    max-height: 62.15625rem;
+  }
+}
+@media (min-width: 2175px) and (min-width: 1200px) {
+  .res-xl-xl {
+    width: 38.8571428571vw;
+    height: 21.8649517685vw;
+    max-height: 19.125rem;
+    max-width: 34rem;
+    min-width: 23.4482758621rem;
+    min-height: 12.9770992366rem;
+  }
+
+  .w-xl-xl {
+    width: 34 vw;
+    max-width: 34rem;
+    min-width: 17rem;
+  }
+
+  .h-xl-xl {
+    height: 19.1011235955vw;
+    max-height: 19.125rem;
+  }
+
+  .w-xlx2 {
+    width: 87.4285714286vw;
+    max-width: 76.5rem;
+  }
+
+  .h-xlx2 {
+    height: 49.1961414791vw;
+    max-height: 43.03125rem;
+  }
+
+  .w-xlx3 {
+    width: 126.2857142857vw;
+    max-width: 110.5rem;
+  }
+
+  .h-xlx3 {
+    height: 71.0610932476vw;
+    max-height: 62.15625rem;
+  }
+}
+.res-half, .w-half {
+  width: 42vw !important;
+  max-width: 42rem;
+  min-width: 21rem;
+}
+
+.res-half, .h-half {
+  height: 23.5vw !important;
+  max-height: 23.5rem;
+  min-height: 15rem;
+}
+
+.res-full, .w-full {
+  width: 100% !important;
+}
+
+.res-full, .h-full {
+  height: 28vw !important;
+  min-height: 20rem !important;
+}
+
+@media (min-width: 992px) {
+  .res-lg-half, .w-lg-half {
+    width: 42vw;
+    max-width: 42rem;
+    min-width: 21rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .res-lg-half, .h-lg-half {
+    height: 23.5vw;
+    min-height: 15rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .res-lg-full, .w-lg-full {
+    width: 100vw;
+    max-width: initial;
+    min-width: initial;
+  }
+}
+
+@media (min-width: 992px) {
+  .res-lg-full, .h-lg-full {
+    height: 42vw;
+    min-height: 20rem;
+    max-height: 42rem;
+  }
+}
+
+.min-w-auto {
+  min-width: auto;
+}
+
+.max-w-auto {
+  max-width: auto;
+}
+
+.min-h-auto {
+  min-height: auto;
+}
+
+.max-h-auto {
+  max-height: auto;
+}
+
 .blend-multiply-brand {
   background-color: #0c65b1;
   mix-blend-mode: multiply;
@@ -18588,1035 +20725,6 @@ strong {
 
 .image-link-2, .form select, .h-shadow {
   cursor: pointer;
-}
-
-.res-xs {
-  width: 9.1428571429vw;
-  height: 5.1446945338vw;
-  max-height: 4.5rem;
-  max-width: 8rem;
-  min-width: 5.5172413793rem;
-  min-height: 3.0534351145rem;
-}
-
-.w-xs {
-  width: 8 vw;
-  max-width: 8rem;
-  min-width: 4rem;
-}
-
-.h-xs {
-  height: 4.4943820225vw;
-  max-height: 4.5rem;
-  oveflow: ellipse;
-}
-
-.w-xsx2 {
-  width: 20.5714285714vw;
-  max-width: 18rem;
-}
-
-.h-xsx2 {
-  height: 11.575562701vw;
-  max-height: 10.125rem;
-}
-
-.w-xsx3 {
-  width: 29.7142857143vw;
-  max-width: 26rem;
-}
-
-.h-xsx3 {
-  height: 16.7202572347vw;
-  max-height: 14.625rem;
-}
-
-.res-sm {
-  width: 13.7142857143vw;
-  height: 7.7170418006vw;
-  max-height: 6.75rem;
-  max-width: 12rem;
-  min-width: 8.275862069rem;
-  min-height: 4.5801526718rem;
-}
-
-.w-sm {
-  width: 12 vw;
-  max-width: 12rem;
-  min-width: 6rem;
-}
-
-.h-sm {
-  height: 6.7415730337vw;
-  max-height: 6.75rem;
-  oveflow: ellipse;
-}
-
-.w-smx2 {
-  width: 30.8571428571vw;
-  max-width: 27rem;
-}
-
-.h-smx2 {
-  height: 17.3633440514vw;
-  max-height: 15.1875rem;
-}
-
-.w-smx3 {
-  width: 44.5714285714vw;
-  max-width: 39rem;
-}
-
-.h-smx3 {
-  height: 25.0803858521vw;
-  max-height: 21.9375rem;
-}
-
-.res-md {
-  width: 20vw;
-  height: 11.2540192926vw;
-  max-height: 9.84375rem;
-  max-width: 17.5rem;
-  min-width: 12.0689655172rem;
-  min-height: 6.679389313rem;
-}
-
-.w-md {
-  width: 17.5 vw;
-  max-width: 17.5rem;
-  min-width: 8.75rem;
-}
-
-.h-md {
-  height: 9.8314606742vw;
-  max-height: 9.84375rem;
-  oveflow: ellipse;
-}
-
-.w-mdx2 {
-  width: 45vw;
-  max-width: 39.375rem;
-}
-
-.h-mdx2 {
-  height: 25.3215434084vw;
-  max-height: 22.1484375rem;
-}
-
-.w-mdx3 {
-  width: 65vw;
-  max-width: 56.875rem;
-}
-
-.h-mdx3 {
-  height: 36.575562701vw;
-  max-height: 31.9921875rem;
-}
-
-.res-lg {
-  width: 27.4285714286vw;
-  height: 15.4340836013vw;
-  max-height: 13.5rem;
-  max-width: 24rem;
-  min-width: 16.5517241379rem;
-  min-height: 9.1603053435rem;
-}
-
-.w-lg, .form .hs-button.primary {
-  width: 24 vw;
-  max-width: 24rem;
-  min-width: 12rem;
-}
-
-.h-lg {
-  height: 13.4831460674vw;
-  max-height: 13.5rem;
-  oveflow: ellipse;
-}
-
-.w-lgx2 {
-  width: 61.7142857143vw;
-  max-width: 54rem;
-}
-
-.h-lgx2 {
-  height: 34.7266881029vw;
-  max-height: 30.375rem;
-}
-
-.w-lgx3 {
-  width: 89.1428571429vw;
-  max-width: 78rem;
-}
-
-.h-lgx3 {
-  height: 50.1607717042vw;
-  max-height: 43.875rem;
-}
-
-.res-xl {
-  width: 36.5714285714vw;
-  height: 20.578778135vw;
-  max-height: 18rem;
-  max-width: 32rem;
-  min-width: 22.0689655172rem;
-  min-height: 12.213740458rem;
-}
-
-.w-xl {
-  width: 32 vw;
-  max-width: 32rem;
-  min-width: 16rem;
-}
-
-.h-xl {
-  height: 17.9775280899vw;
-  max-height: 18rem;
-  oveflow: ellipse;
-}
-
-.w-xlx2 {
-  width: 82.2857142857vw;
-  max-width: 72rem;
-}
-
-.h-xlx2 {
-  height: 46.3022508039vw;
-  max-height: 40.5rem;
-}
-
-.w-xlx3 {
-  width: 118.8571428571vw;
-  max-width: 104rem;
-}
-
-.h-xlx3 {
-  height: 66.8810289389vw;
-  max-height: 58.5rem;
-}
-
-@media (min-width: 2175px) {
-  .res-xs {
-    width: 11.4285714286vw;
-    height: 6.4308681672vw;
-    max-height: 5.625rem;
-    max-width: 10rem;
-    min-width: 6.8965517241rem;
-    min-height: 3.8167938931rem;
-  }
-
-  .w-xs {
-    width: 10 vw;
-    max-width: 10rem;
-    min-width: 5rem;
-  }
-
-  .h-xs {
-    height: 5.6179775281vw;
-    max-height: 5.625rem;
-    oveflow: ellipse;
-  }
-
-  .w-xsx2 {
-    width: 25.7142857143vw;
-    max-width: 22.5rem;
-  }
-
-  .h-xsx2 {
-    height: 14.4694533762vw;
-    max-height: 12.65625rem;
-  }
-
-  .w-xsx3 {
-    width: 37.1428571429vw;
-    max-width: 32.5rem;
-  }
-
-  .h-xsx3 {
-    height: 20.9003215434vw;
-    max-height: 18.28125rem;
-  }
-
-  .res-sm {
-    width: 18.2857142857vw;
-    height: 10.2893890675vw;
-    max-height: 9rem;
-    max-width: 16rem;
-    min-width: 11.0344827586rem;
-    min-height: 6.106870229rem;
-  }
-
-  .w-sm {
-    width: 16 vw;
-    max-width: 16rem;
-    min-width: 8rem;
-  }
-
-  .h-sm {
-    height: 8.9887640449vw;
-    max-height: 9rem;
-    oveflow: ellipse;
-  }
-
-  .w-smx2 {
-    width: 41.1428571429vw;
-    max-width: 36rem;
-  }
-
-  .h-smx2 {
-    height: 23.1511254019vw;
-    max-height: 20.25rem;
-  }
-
-  .w-smx3 {
-    width: 59.4285714286vw;
-    max-width: 52rem;
-  }
-
-  .h-smx3 {
-    height: 33.4405144695vw;
-    max-height: 29.25rem;
-  }
-
-  .res-md {
-    width: 25.1428571429vw;
-    height: 14.1479099678vw;
-    max-height: 12.375rem;
-    max-width: 22rem;
-    min-width: 15.1724137931rem;
-    min-height: 8.3969465649rem;
-  }
-
-  .w-md {
-    width: 22 vw;
-    max-width: 22rem;
-    min-width: 11rem;
-  }
-
-  .h-md {
-    height: 12.3595505618vw;
-    max-height: 12.375rem;
-    oveflow: ellipse;
-  }
-
-  .w-mdx2 {
-    width: 56.5714285714vw;
-    max-width: 49.5rem;
-  }
-
-  .h-mdx2 {
-    height: 31.8327974277vw;
-    max-height: 27.84375rem;
-  }
-
-  .w-mdx3 {
-    width: 81.7142857143vw;
-    max-width: 71.5rem;
-  }
-
-  .h-mdx3 {
-    height: 45.9807073955vw;
-    max-height: 40.21875rem;
-  }
-
-  .res-lg {
-    width: 34.2857142857vw;
-    height: 19.2926045016vw;
-    max-height: 16.875rem;
-    max-width: 30rem;
-    min-width: 20.6896551724rem;
-    min-height: 11.4503816794rem;
-  }
-
-  .w-lg, .form .hs-button.primary {
-    width: 30 vw;
-    max-width: 30rem;
-    min-width: 15rem;
-  }
-
-  .h-lg {
-    height: 16.8539325843vw;
-    max-height: 16.875rem;
-    oveflow: ellipse;
-  }
-
-  .w-lgx2 {
-    width: 77.1428571429vw;
-    max-width: 67.5rem;
-  }
-
-  .h-lgx2 {
-    height: 43.4083601286vw;
-    max-height: 37.96875rem;
-  }
-
-  .w-lgx3 {
-    width: 111.4285714286vw;
-    max-width: 97.5rem;
-  }
-
-  .h-lgx3 {
-    height: 62.7009646302vw;
-    max-height: 54.84375rem;
-  }
-
-  .res-xl {
-    width: 38.8571428571vw;
-    height: 21.8649517685vw;
-    max-height: 19.125rem;
-    max-width: 34rem;
-    min-width: 23.4482758621rem;
-    min-height: 12.9770992366rem;
-  }
-
-  .w-xl {
-    width: 34 vw;
-    max-width: 34rem;
-    min-width: 17rem;
-  }
-
-  .h-xl {
-    height: 19.1011235955vw;
-    max-height: 19.125rem;
-    oveflow: ellipse;
-  }
-
-  .w-xlx2 {
-    width: 87.4285714286vw;
-    max-width: 76.5rem;
-  }
-
-  .h-xlx2 {
-    height: 49.1961414791vw;
-    max-height: 43.03125rem;
-  }
-
-  .w-xlx3 {
-    width: 126.2857142857vw;
-    max-width: 110.5rem;
-  }
-
-  .h-xlx3 {
-    height: 71.0610932476vw;
-    max-height: 62.15625rem;
-  }
-}
-.res-half, .w-half {
-  width: 42vw !important;
-  max-width: 42rem;
-  min-width: 21rem;
-}
-
-.res-half, .h-half {
-  height: 23.5vw !important;
-  max-height: 23.5rem;
-  min-height: 15rem;
-}
-
-.res-full, .w-full {
-  width: 100% !important;
-}
-
-.res-full, .h-full {
-  height: 28vw !important;
-  min-height: 20rem !important;
-}
-
-@media (min-width: 768px) {
-  .res-md-xs {
-    width: 9.1428571429vw;
-    height: 5.1446945338vw;
-    max-height: 4.5rem;
-    max-width: 8rem;
-    min-width: 5.5172413793rem;
-    min-height: 3.0534351145rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-xs {
-    width: 8 vw;
-    max-width: 8rem;
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-xs {
-    height: 4.4943820225vw;
-    max-height: 4.5rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-xsx2 {
-    width: 20.5714285714vw;
-    max-width: 18rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-xsx2 {
-    height: 11.575562701vw;
-    max-height: 10.125rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-xsx3 {
-    width: 29.7142857143vw;
-    max-width: 26rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-xsx3 {
-    height: 16.7202572347vw;
-    max-height: 14.625rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .res-md-sm {
-    width: 9.1428571429vw;
-    height: 5.1446945338vw;
-    max-height: 4.5rem;
-    max-width: 8rem;
-    min-width: 5.5172413793rem;
-    min-height: 3.0534351145rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-sm {
-    width: 8 vw;
-    max-width: 8rem;
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-sm {
-    height: 4.4943820225vw;
-    max-height: 4.5rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-smx2 {
-    width: 20.5714285714vw;
-    max-width: 18rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-smx2 {
-    height: 11.575562701vw;
-    max-height: 10.125rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-smx3 {
-    width: 29.7142857143vw;
-    max-width: 26rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-smx3 {
-    height: 16.7202572347vw;
-    max-height: 14.625rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .res-md-md {
-    width: 13.7142857143vw;
-    height: 7.7170418006vw;
-    max-height: 6.75rem;
-    max-width: 12rem;
-    min-width: 8.275862069rem;
-    min-height: 4.5801526718rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-md {
-    width: 12 vw;
-    max-width: 12rem;
-    min-width: 6rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-md {
-    height: 6.7415730337vw;
-    max-height: 6.75rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-mdx2 {
-    width: 30.8571428571vw;
-    max-width: 27rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-mdx2 {
-    height: 17.3633440514vw;
-    max-height: 15.1875rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-mdx3 {
-    width: 44.5714285714vw;
-    max-width: 39rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-mdx3 {
-    height: 25.0803858521vw;
-    max-height: 21.9375rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .res-md-lg {
-    width: 19.4285714286vw;
-    height: 10.9324758842vw;
-    max-height: 9.5625rem;
-    max-width: 17rem;
-    min-width: 11.724137931rem;
-    min-height: 6.4885496183rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-lg {
-    width: 17 vw;
-    max-width: 17rem;
-    min-width: 8.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-lg {
-    height: 9.5505617978vw;
-    max-height: 9.5625rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-lgx2 {
-    width: 43.7142857143vw;
-    max-width: 38.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-lgx2 {
-    height: 24.5980707395vw;
-    max-height: 21.515625rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-lgx3 {
-    width: 63.1428571429vw;
-    max-width: 55.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-lgx3 {
-    height: 35.5305466238vw;
-    max-height: 31.078125rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .res-md-half {
-    width: 27.4285714286vw;
-    height: 15.4340836013vw;
-    max-height: 13.5rem;
-    max-width: 24rem;
-    min-width: 16.5517241379rem;
-    min-height: 9.1603053435rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-half {
-    width: 24 vw;
-    max-width: 24rem;
-    min-width: 12rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-half {
-    height: 13.4831460674vw;
-    max-height: 13.5rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-halfx2 {
-    width: 61.7142857143vw;
-    max-width: 54rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-halfx2 {
-    height: 34.7266881029vw;
-    max-height: 30.375rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .w-md-halfx3 {
-    width: 89.1428571429vw;
-    max-width: 78rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .h-md-halfx3 {
-    height: 50.1607717042vw;
-    max-height: 43.875rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-xs {
-    width: 9.1428571429vw;
-    height: 5.1446945338vw;
-    max-height: 4.5rem;
-    max-width: 8rem;
-    min-width: 5.5172413793rem;
-    min-height: 3.0534351145rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-xs {
-    width: 8 vw;
-    max-width: 8rem;
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-xs {
-    height: 4.4943820225vw;
-    max-height: 4.5rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-xsx2 {
-    width: 20.5714285714vw;
-    max-width: 18rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-xsx2 {
-    height: 11.575562701vw;
-    max-height: 10.125rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-xsx3 {
-    width: 29.7142857143vw;
-    max-width: 26rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-xsx3 {
-    height: 16.7202572347vw;
-    max-height: 14.625rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-sm {
-    width: 28.5714285714vw;
-    height: 16.077170418vw;
-    max-height: 14.0625rem;
-    max-width: 25rem;
-    min-width: 17.2413793103rem;
-    min-height: 9.5419847328rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-sm {
-    width: 25 vw;
-    max-width: 25rem;
-    min-width: 12.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-sm {
-    height: 14.0449438202vw;
-    max-height: 14.0625rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-smx2 {
-    width: 64.2857142857vw;
-    max-width: 56.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-smx2 {
-    height: 36.1736334405vw;
-    max-height: 31.640625rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-smx3 {
-    width: 92.8571428571vw;
-    max-width: 81.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-smx3 {
-    height: 52.2508038585vw;
-    max-height: 45.703125rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-md {
-    width: 19.4285714286vw;
-    height: 10.9324758842vw;
-    max-height: 9.5625rem;
-    max-width: 17rem;
-    min-width: 11.724137931rem;
-    min-height: 6.4885496183rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-md {
-    width: 17 vw;
-    max-width: 17rem;
-    min-width: 8.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-md {
-    height: 9.5505617978vw;
-    max-height: 9.5625rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-mdx2 {
-    width: 43.7142857143vw;
-    max-width: 38.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-mdx2 {
-    height: 24.5980707395vw;
-    max-height: 21.515625rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-mdx3 {
-    width: 63.1428571429vw;
-    max-width: 55.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-mdx3 {
-    height: 35.5305466238vw;
-    max-height: 31.078125rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-lg {
-    width: 27.4285714286vw;
-    height: 15.4340836013vw;
-    max-height: 13.5rem;
-    max-width: 24rem;
-    min-width: 16.5517241379rem;
-    min-height: 9.1603053435rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-lg {
-    width: 24 vw;
-    max-width: 24rem;
-    min-width: 12rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-lg {
-    height: 13.4831460674vw;
-    max-height: 13.5rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-lgx2 {
-    width: 61.7142857143vw;
-    max-width: 54rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-lgx2 {
-    height: 34.7266881029vw;
-    max-height: 30.375rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-lgx3 {
-    width: 89.1428571429vw;
-    max-width: 78rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-lgx3 {
-    height: 50.1607717042vw;
-    max-height: 43.875rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-half {
-    width: 48vw;
-    height: 27.0096463023vw;
-    max-height: 23.625rem;
-    max-width: 42rem;
-    min-width: 28.9655172414rem;
-    min-height: 16.0305343511rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-half {
-    width: 42 vw;
-    max-width: 42rem;
-    min-width: 21rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-half {
-    height: 23.595505618vw;
-    max-height: 23.625rem;
-    oveflow: ellipse;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-halfx2 {
-    width: 108vw;
-    max-width: 94.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-halfx2 {
-    height: 60.7717041801vw;
-    max-height: 53.15625rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .w-lg-halfx3 {
-    width: 156vw;
-    max-width: 136.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .h-lg-halfx3 {
-    height: 87.7813504823vw;
-    max-height: 76.78125rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-half, .w-lg-half {
-    width: 42vw !important;
-    max-width: 42rem;
-    min-width: 21rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-half, .h-lg-half {
-    height: 23.5vw !important;
-    min-height: 15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-full, .w-lg-full {
-    width: 100vw !important;
-    max-width: initial;
-    min-width: initial;
-  }
-}
-
-@media (min-width: 992px) {
-  .res-lg-full, .h-lg-full {
-    height: 42vw !important;
-    min-height: 20rem;
-    max-height: 42rem;
-  }
-}
-
-.min-w-auto {
-  min-width: auto !important;
-}
-
-.max-w-auto {
-  max-width: auto !important;
-}
-
-.min-h-auto {
-  min-height: auto !important;
-}
-
-.max-h-auto {
-  max-height: auto !important;
 }
 
 .h-shadow {
