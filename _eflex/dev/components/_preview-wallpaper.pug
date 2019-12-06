@@ -1,20 +1,23 @@
 script( src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous") 
 
-.vh-100.w-full
+.vh-100.w-100
   // Video
-  .video_wrap.vh-100.w-full.overflow-hidden.position-absolute
+  .video_wrap.vh-100.w-100.overflow-hidden.position-absolute.img-clip
+    //- Removed Fixed Position
     video( autoplay="autopplay" muted="muted" loop="loop" playsinline)
       source( src="https://cdn2.hubspot.net/hubfs/490686/_site/videos/Digital_Blue.mp4")
   // Content
-  .vh-100.w-full.position-absolute
-    .d-flex.flex-column.justify-conbtent-center.h-100.p-5
+  .d-flex.flex-column.vh-100.w-100.position-absolute
+    .d-flex.flex-column.justify-conbtent-center.flex-fill.p-5
       h1.text-white.position-relative.font-weight-bold.text-center.text-left.text-shadow.mt-auto
         | {% raw_html "Title" value='The Manufacturing Integrated Platform' %}
         .position-absolute.d-flex.justify-content-center.w-100.t-0
           .position-relative.d-none.d-lg-block( style="left: 19rem; top: -2.75rem")
             | {% image "MIP_Logo" label='MIP Logo Partial', alt='MIP Logo', src='https://cdn2.hubspot.net/hubfs/490686/_site/photos/logos/Logo_mip-partial.png', style="width: 4rem" %}
-      h5.text-white.text-center.font-weight-normal.text-shadow
-        | {% raw_html "Callout" value='The next-generation of process control and smart manufacturing.' %}
+      h5.text-white.text-center.font-weight-normal.text-shadow.mb-5
+        | {% raw_html "Callout_1" value='The next-generation of process control and smart manufacturing.' %}
+      p.text-white.text-center.font-weight-normal.text-shadow.font-weight-semibold.w-lg.align-self-center.border-left.border-right.border-white.px-4
+        | {% raw_html "Callout_2" value='Nominated by Assembly Magazine for 2019 New Product of the Year – Factory of the Future' %}
       .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.mt-5.m-0
         .w-lg.m-2.
           {% cta "request_demo" label='Primary CTA' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}

@@ -4,17 +4,22 @@
 // Clipped Image Sizing
 
 // Landscape Image
-.img-inset-wide
-  img
-    width: 100% !important
-    min-height: 100% !important
-    min-width: 34rem
-
-// Portrait Image
 .img-inset-tall
+  .hs_cos_wrapper
+    height: 100% !important
   img
+    width: auto !important
     height: 100% !important
     min-width: 100vw !important
+
+.img-inset-wide
+  .hs_cos_wrapper
+    height: 100% !important
+  img
+    width: auto !important
+    height: auto !important
+    min-height: 100% !important
+    min-width: 100% !important
 
 .img-inset-fit
   img
@@ -28,3 +33,7 @@
 .img-clip
   clip-path: inset(0 0 0 0)
   -webkit-clip-path: inset(0 0 0 0)
+
+.img-clip-circle
+  clip-path: inset(0 0 0 0 round 50%)
+  -webkit-clip-path: inset(0 0 0 0 round 50%)

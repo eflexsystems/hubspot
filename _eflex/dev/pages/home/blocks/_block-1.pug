@@ -1,29 +1,10 @@
 //- home.pug block-1
-.block-fluid.row.justify-content-around.align-items-center.border-bottom.bg-white.p-5.m-0
-  .col-lg-5.col-12.d-flex.flex-column.align-items-center.justify-content-center.my-5
-    .w-lg-half
-      h3.text-brand.font-weight-bold.mb-4
-        | {% raw_html "Block_1_Title" value='{{ heading_var }}' %}
-      h5.mb-4
-        | {% raw_html "Block_1_Heading" value='{{ title_var }}' %}
-      p
-        | {% raw_html "Block_1_Body_1" value="{{ body_var }}" %}
-      .w-md.my-5
-        | {% cta "learn_more_1" label='Learn_More_CTA_1' guid='639be663-ac04-4c60-b271-2e7c357ce739' %}
-  .col-lg-5.col-12.d-flex.flex-column.align-items-lg-center.my-5.p-0
-    .w-md.w-lg-half.mx-auto.mx-lg-0
-      mixin img-banner(index)
-        .w-md.w-lg-half.d-flex.flex-column.mb-5
-          .row.no-gutters.mb-4
-            .col.img-banner
-              .
-                {% set class="img-fluid" %}
-                {% module "Block_1_Image_#{index}" path='/_eflex/components/image' %}
-          h5
-            | {% raw_html "Block_1_Heading_#{index}" value="{{ heading_var }}" %}
-          p
-            | {% raw_html "Block_1_Body_#{index + 1}" value="{{ paragraph_var }}" %}
-      
-      - var n = 1
-      while n <= 3
-        +img-banner(n++)
+
+include ../../../components/_feature-7.pug
+include ../../../components/_layout-3.pug
+.d-flex.justify-content-center.align-items-center.align-items-lg-start.flex-lg-row.flex-column.p-5.border-bottom
+  +layout-3('1_1')
+  .d-flex.flex-column
+    +feature-7('1_2')
+    +feature-7('1_3')
+    +feature-7('1_4')

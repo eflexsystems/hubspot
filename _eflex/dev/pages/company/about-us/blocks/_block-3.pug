@@ -1,0 +1,22 @@
+include ../../../../components/_layout-5.pug
+include ../../../../components/_image-lg.pug
+.d-flex.flex-column.justify-content-center.align-items-center.my-5
+  .d-flex
+    .d-flex.flex-column.p-lg-5
+      // Alt Layout-5
+      - var index = '3_1'
+      .d-flex.flex-column.justify-content-center.w-lg-lg.m-5.m-lg-0.mb-lg-4
+        h5.w-100.mb-4.
+          {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
+        p.w-100.
+          {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+      // Alt Layout-5
+      - var index = '3_3'
+      .d-flex.flex-column.justify-content-center.w-lg-lg.m-5.m-lg-0
+        h5.w-100.mb-4.
+          {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
+        p.w-100.
+          {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+    +layout-5('3_2')
+  +image-lg('3_1')
+

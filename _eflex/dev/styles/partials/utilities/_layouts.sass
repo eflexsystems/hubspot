@@ -1,5 +1,25 @@
 // Layout Utilities
 
+
+// Parallax
+.parallax
+  @extend .vh-100
+  perspective: 1px
+  perspective-origin-x: 100%
+  overflow-y: auto !important
+  overflow-x: hidden
+
+.parallax-layer
+  position: absolute
+  transform-origin-x: 100%
+
+.parallax-base
+  transform: translateZ(0)
+
+.parallax-back
+  transform: translateZ(-3px) scale(4)
+
+// Display Utilities
 @for $i from 1 through 3
   .z-index-#{$i}
     z-index: $i
@@ -20,130 +40,21 @@
   box-sizing: border-box !important
 
 .vh-100
-  height: 94vh !important
+  height: 91vh !important
 
-// Set a max height on containers so items dont fall out.
-.min-height-50
-  min-height: 42rem
-  .vh-50
-    min-height: 42rem
-  
-.min-height-half
-  min-height: 26rem !important
-  .h-100
-    min-height: 26rem !important
-
-.min-height-full
-  min-height: 65rem !important
-  max-height: 75rem !important
-  .vh-100
-    min-height: 65rem !important
-    max-height: 75rem !important
-
-@media (min-width: 992px)
-  .min-height-full
-    min-height: 50rem !important
-    max-height: 50rem !important
-    .vh-100
-      min-height: 50rem !important
-      max-height: 50rem !important
-
-// Resolution Sizes
-
-=static-resolution($desc, $value)
-  $width: $value
-  .res-#{$desc}
-    width: $width / .875 + vw
-    height: $width / 1.555 + vw
-    max-height: ( 9 * $width ) / 16 + rem
-    max-width: $width + rem
-    min-width: $width / 1.45 + rem
-    min-height: $width / 2.62 + rem
-  .w-#{$desc}
-    width: $width vw
-    max-width: $width + rem
-    min-width: $width / 2 + rem
-  .h-#{$desc}
-    height: $width / 1.78 + vw
-    max-height: ( 9 * $width ) / 16 + rem
-    oveflow: ellipse
-
-+static-resolution(sm, 12)
-+static-resolution(md, 17)
-+static-resolution(lg, 24)
-
-@include media-breakpoint-up(lg)
-  +static-resolution(sm, 12)
-  +static-resolution(md, 17.5)
-  +static-resolution(lg, 24)
-
-@media (min-width: $breakpoint-xxl)
-  +static-resolution(sm, 16)
-  +static-resolution(md, 22)
-  +static-resolution(lg, 30)
-
-.res-half, .w-half
-  width: 42vw !important
-  max-width: 42rem
-  min-width: 21rem
-.res-half, .h-half
-  height: 23.5vw !important
-  max-height: 23.5rem
-  min-height: 15rem
-
-.res-full, .w-full
-  width: 100vw !important
-.res-full, .h-full
-  height: 42vw !important
-  min-height: 20rem
-  max-height: 42rem
-
-// Responsive Resolution Sizes
-
-=static-resolution-responsive($desc, $value, $size, $min-width)
-  $width: $value
-  .res-#{$size}-#{$desc}
-    @media (min-width: $min-width)
-      width: $width / .875 + vw
-      height: $width / 1.555 + vw
-      max-height: ( 9 * $width ) / 16 + rem
-      max-width: $width + rem
-      min-width: $width / 1.45 + rem
-      min-height: $width / 2.62 + rem
-  .w-#{$size}-#{$desc}
-    @media (min-width: $min-width)
-      width: $width vw
-      max-width: $width + rem
-      min-width: $width / 2 + rem
-  .h-#{$size}-#{$desc}
-    @media (min-width: $min-width)
-      height: $width / 1.78 + vw
-      max-height: ( 9 * $width ) / 16 + rem
-      oveflow: ellipse
-
-+static-resolution-responsive(sm, 25, lg, 992px)
-+static-resolution-responsive(md, 17, lg, 992px)
-+static-resolution-responsive(lg, 24, lg, 992px)
-+static-resolution-responsive(half, 42, lg, 992px)
-
-.res-lg-half, .w-lg-half
+.vh-lg-100
   @media (min-width: 992px)
-    width: 42vw !important
-    max-width: 42rem
-    min-width: 21rem
+    height: 94vh !important
 
-.res-lg-half, .h-lg-half
+.position-lg-fixed
   @media (min-width: 992px)
-    height: 23.5vw !important
-    min-height: 15rem
+    position: fixed
 
-.res-lg-full, .w-lg-full
-  @media (min-width: 992px)
-    width: 100vw !important
-    max-width: initial
-    min-width: initial
-.res-lg-full, .h-lg-full
-  @media (min-width: 992px)
-    height: 42vw !important
-    min-height: 20rem
-    max-height: 42rem
+
+// Responsive Position Utilities
+@each $breakpoint in map-keys($grid-breakpoints)
+  @include media-breakpoint-up($breakpoint)
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+    @each $position in $positions
+      .position#{$infix}-#{$position}
+        position: $position !important

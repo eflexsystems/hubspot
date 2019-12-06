@@ -1,0 +1,37 @@
+//- Components
+//- Image Wallpaper 5
+
+include _image-half.pug
+include _layout-5.pug
+mixin image-wallpaper-6(index)
+  .w-100.position-relative
+    // Image
+    .w-100.h-100.overflow-hidden.position-absolute.img-inset-wide.
+      {% set class = "position-absolute" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+    // Blend Exclusion
+    .w-100.h-100.position-absolute.opacity-50
+      .blend-exclusion-gray.w-100.h-100
+    // Blend Color
+    .w-100.h-100.position-absolute
+      .blend-color-brand-dark.w-100.h-100
+    // Blend Multiply
+    .w-100.h-100.position-absolute
+      .blend-multiply-brand-dark.w-100.h-100.opacity-70
+    // Content
+    .w-75.h-100.mx-auto
+      .d-flex.justify-content-center.align-items-center.flex-lg-row.flex-column
+        .text-white.z-index-2
+          .d-flex.flex-column.justify-content-center.h-100.mx-5.mt-6.m-lg-5
+            h5.text-white.font-weight-regular.w-100.mb-0.
+              {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
+            h1.w-100.w-lg( class="text-" + color ).
+              {% raw_html "Body_#{index}" value="{{ heading_var }}" %}
+        .text-white.z-index-2
+          .d-flex.flex-column.justify-content-center.h-100.m-5
+            h3.text-white.w-lg.mb-4.
+              {% raw_html "Heading_#{index + 1}" value="{{ heading_var }}" %}
+            p.w-100.w-lg.
+              {% raw_html "Body_#{index + 1}" value="{{ body_var }}" %}
+            .w-lg-md.my-3.
+              {% cta "learn_More_CTA_#{index + 1}" label='Learn_More_CTA_#{index}' guid='#{guid}' %}

@@ -1,11 +1,11 @@
 .form
   height: fit-content
-  min-width: 35rem
-  min-height: 44rem
+  width: 45vw !important
+  max-width: 50vw
   form
     margin-bottom: 0
   .hs-form
-    min-height: 39rem !important
+    min-height: 33rem !important
     position: relative
   .form-title
     @extend .h5
@@ -40,9 +40,12 @@
     width: 100%
     input
       margin-top: 5px
+      min-width: auto
     p
       color: map-get($theme-colors, 'brand')
       @extend .font-weight-semibold
+  .hs-form-checkbox-display input, .hs-form-radio-display input // Checkbox
+    min-width: auto
   
   // Select
   select
@@ -71,6 +74,8 @@
     position: absolute
     right: 0
     top: -0.55rem
+    &:focus
+      outline: none
   .hs_submit .hs-button // Override Padding
     padding: .55rem
   .hs_submit
@@ -85,12 +90,11 @@
   ul.no-list
     margin: 0
 
-  // Form Display
-  #form-prev-1, #form-prev-2, #form-next-2, .hs_what_to_demo, .hs_when_does_your_next_project_start, .hs_blog_default_hubspot_blog_subscription, .legal-consent-container, .hs-button.primary
-    display: none
-
   #form-prev-2
     margin-right: 13rem !important
+    @media (min-width: $breakpoint-xxl)
+      margin-right: 16rem !important
+      margin-top: -0.2rem
 
 
 // Hubspot Forms
@@ -108,12 +112,17 @@ a.cta_button:hover
 @media (max-width: 920px)
   .form
     width: 100% !important
+    max-width: 100% !important
     min-width: auto !important
     .hs-form-field
       width: 100% !important
 
+// Specific Form Styles
+.form .hs_what_to_demo, .form .hs_when_does_your_next_project_start,
+.form .hs_blog_default_hubspot_blog_subscription, .form .legal-consent-container, .form .hs-button.primary
+  display: none
 
-// CHECK IF NEEDED
+// ***CHECK IF NEEDED
 
 .form-d-inline
   .hs_cos_wrapper form

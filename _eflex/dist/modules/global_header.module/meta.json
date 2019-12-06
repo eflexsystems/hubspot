@@ -1,7 +1,6 @@
 {
   "content_tags": [],
   "css_assets": [],
-  "editable_contexts": [],
   "external_js": [],
   "extra_classes": "",
   "global": true,
@@ -13,9 +12,7 @@
   "js_assets": [],
   "other_assets": [],
   "placement_rules": [],
-  "purchased": false,
   "smart_type": "NOT_SMART",
-  "tags": [],
   "module_id": 8958400,
   "is_available_for_new_content": true
 }

@@ -57,28 +57,17 @@
     "default": "Request a Demo"
   },
   {
-    "id": "da630169-3306-2067-8e58-2162f454a4c8",
-    "name": "link_1_1",
-    "label": "Link_1_1",
+    "id": "71664101-39e5-112d-6eef-198225c8b764",
+    "name": "link_1_1_href",
+    "label": "Link_1_1_Href",
     "required": false,
     "locked": true,
-    "supported_types": [
-      "EXTERNAL",
-      "CONTENT",
-      "FILE",
-      "EMAIL_ADDRESS",
-      "BLOG"
-    ],
-    "type": "link",
-    "default": {
-      "url": {
-        "content_id": null,
-        "type": "EXTERNAL",
-        "href": ""
-      },
-      "open_in_new_tab": false,
-      "no_follow": false
-    }
+    "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://www.eflexsystems.com/request-a-demo"
   },
   {
     "id": "806e6f65-eb90-4d8d-8d7c-169ff4b444e7",
@@ -91,6 +80,19 @@
     "show_emoji_picker": false,
     "type": "text",
     "default": "Contact Us"
+  },
+  {
+    "id": "a2f13503-996d-71f9-7eaa-3710a4ed0d37",
+    "name": "link_1_2_href",
+    "label": "Link_1_2_Href",
+    "required": false,
+    "locked": true,
+    "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://www.eflexsystems.com/contact"
   },
   {
     "id": "28dc23d7-a9cd-38a2-a57b-2ea477146d7a",
@@ -108,9 +110,9 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
-        "type": "EXTERNAL",
-        "href": ""
+        "type": "CONTENT",
+        "href": null,
+        "content_id": 5086381805
       },
       "open_in_new_tab": false,
       "no_follow": false
@@ -129,6 +131,19 @@
     "default": "Solutions"
   },
   {
+    "id": "18a57cc4-bec3-d0f7-9ab8-f84f5f122fa2",
+    "name": "link_1_3_href",
+    "label": "Link_1_3_Href",
+    "required": false,
+    "locked": true,
+    "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://www.eflexsystems.com/platform-solutions"
+  },
+  {
     "id": "929ca07c-eb6c-a3e8-a906-57bd6843c3ea",
     "name": "link_1_3",
     "label": "Link_1_3",
@@ -144,9 +159,9 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
-        "type": "EXTERNAL",
-        "href": ""
+        "type": "CONTENT",
+        "href": null,
+        "content_id": 8949344939
       },
       "open_in_new_tab": false,
       "no_follow": false
@@ -165,6 +180,19 @@
     "default": "Company"
   },
   {
+    "id": "54612be5-1435-8212-d07f-c8baea21af1d",
+    "name": "link_1_4_href",
+    "label": "Link_1_4_Href",
+    "required": false,
+    "locked": true,
+    "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://www.eflexsystems.com/about/about-eflex-systems"
+  },
+  {
     "id": "dc5e3fe8-d159-6726-2a98-146efe100d42",
     "name": "link_1_4",
     "label": "Link_1_4",
@@ -180,9 +208,9 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
-        "type": "EXTERNAL",
-        "href": ""
+        "type": "CONTENT",
+        "href": null,
+        "content_id": 17408873089
       },
       "open_in_new_tab": false,
       "no_follow": false
@@ -201,6 +229,19 @@
     "default": "Blog"
   },
   {
+    "id": "806e397b-dd6d-4c11-f149-d540fa20b975",
+    "name": "link_1_5_href",
+    "label": "Link_1_5_Href",
+    "required": false,
+    "locked": true,
+    "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://www.eflexsystems.com/lean-manufacturing-blog"
+  },
+  {
     "id": "1bb3c8da-281f-7376-9f13-c8710e6ad0ab",
     "name": "link_1_5",
     "label": "Link_1_5",
@@ -216,9 +257,9 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
         "type": "EXTERNAL",
-        "href": ""
+        "href": "https://www.eflexsystems.com/lean-manufacturing-blog",
+        "content_id": null
       },
       "open_in_new_tab": false,
       "no_follow": false
@@ -240,9 +281,9 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
-        "type": "EXTERNAL",
-        "href": ""
+        "type": "CONTENT",
+        "href": null,
+        "content_id": 6041294366
       },
       "open_in_new_tab": false,
       "no_follow": false
@@ -261,16 +302,17 @@
     "default": "Media"
   },
   {
-    "id": "cbca90dd-bcb0-a5b5-fbee-5e2254b6ccab",
-    "name": "link_1_7_text",
-    "label": "Link_1_7_Text",
+    "id": "6138d3f9-8602-efbb-dba9-b705fdb82976",
+    "name": "link_1_6_href",
+    "label": "Link_1_6_Href",
     "required": false,
     "locked": true,
     "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
     "allow_new_line": false,
     "show_emoji_picker": false,
     "type": "text",
-    "default": "Support"
+    "default": "https://www.eflexsystems.com/newsroom"
   },
   {
     "id": "db4a3f0f-b836-bb6e-5dab-8e9ef3c0b65e",
@@ -288,12 +330,37 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
-        "type": "EXTERNAL",
-        "href": ""
+        "type": "CONTENT",
+        "href": null,
+        "content_id": 5159577939
       },
       "open_in_new_tab": false,
       "no_follow": false
     }
+  },
+  {
+    "id": "c8bc6853-003b-12d9-90ba-64af215423c0",
+    "name": "link_1_7_href",
+    "label": "Link_1_7_Href",
+    "required": false,
+    "locked": true,
+    "validation_regex": "",
+    "placeholder": "https://www.eflexsystems.com",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://www.eflexsystems.com/contact-customer-support"
+  },
+  {
+    "id": "cbca90dd-bcb0-a5b5-fbee-5e2254b6ccab",
+    "name": "link_1_7_text",
+    "label": "Link_1_7_Text",
+    "required": false,
+    "locked": true,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Support"
   }
 ]

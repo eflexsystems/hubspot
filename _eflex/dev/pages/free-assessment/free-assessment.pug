@@ -9,24 +9,24 @@ block content
   .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
     .w-100.position-relative
       // Image
-      .w-100.h-100.img-clip.position-absolute.overflow-hidden.
-        {% set class = "w-auto h-100 position-absolute #{position}" %}
-        {% module "Wallpaper_0_1" path='/_eflex/components/image', style="min-height: 52.25vw" %}
+      .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.
+        {% set class = "position-absolute #{position}" %}
+        {% module "Wallpaper_0_1" path='/_eflex/components/image' %}
       // Blend Color
       .w-100.h-100.position-absolute
-        .w-100.h-100.blend-color-brand-dark
+        .w-100.h-100.blend-color-white
       // Blend Multiply
       .w-100.h-100.position-absolute
-        .w-100.h-100.blend-multiply-brand
+        .w-100.h-100.blend-multiply-primary
       // Content
       .w-100
         .d-flex.flex-lg-row.flex-column.justify-content-center.w-100.h-100.py-5.px-3.pl-lg-5.pl-xl-6
-          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.mr-lg-auto.mb-4.mb-lg-0.z-index-1
-            h5.w-100.text-white.text-uppercase.mb-4.
+          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.z-index-1.mb-4.mb-lg-0.mx-lg-auto.mt-lg-6
+            h5.w-100.text-orange.mb-2.
               {% raw_html "Page_Title" value='{{ heading_var }}' %}
-            h3.text-white.font-weight-bold.text-lg-nowrap.w-100.
+            h3.text-white.font-weight-bold.text-lg-nowrap.w-100.mb-5.
               {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
-            p.text-white.w-100.
+            p.text-white.w-100.mb-0.
               {% raw_html "Page_Body_1_1" value='{{ title_var }}' %}
             .bullets-white.text-white.w-100.pr-lg-5
               - var n = 5
@@ -34,9 +34,9 @@ block content
             p.text-white.w-100.
               {% raw_html "Page_Body_1_2" value='{{ title_var }}' %}
           
-          .d-flex
+          .d-flex.ml-lg-auto
             // Form
-            .form.pt-5.w-half.bg-white.rounded-lg.content-box.position-relative.p-5.ml-lg-auto
+            #free_assessment.form.pt-5.w-half.bg-white.rounded-lg.content-box.position-relative.p-5
               | {% form "Free Assessment" form_to_use='811a0563-99e9-42bf-881b-dfbfc1c4fdc9', title='Free Assessment' %}
 
               // Validation Alert

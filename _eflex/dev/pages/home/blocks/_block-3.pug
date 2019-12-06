@@ -1,22 +1,9 @@
 //- home.pug block-3
-.block-fluid.row.no-gutters.justify-content-around.border-bottom.p-5.m-0
-  .col-lg-6.col-12.d-flex.justify-content-center.align-items-center.mb-5
-    .video-ytp
-      iframe.shadow.rounded( 
-        width="100%" 
-        height="100%" 
-        src="https://www.youtube.com/embed/NhEhaEqkAAk" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen="allowfullscreen"
-      )
-  .col-lg-5.col-12.d-flex.flex-column.align-items-center.justify-content-center.mb-5
-    .w-half
-      h3.text-lg-left.text-center.mb-4
-        | {% raw_html "Block_3_Title" value="{{ heading_var }}" %}
-      h5.w-half.text-lg-left.text-center.mb-4
-        | {% raw_html "Block_3_Heading" value="{{ heading_var }}" %}
-      p.w-half.text-lg-left.text-center
-        | {% raw_html "Block_3_Body" value="{{ body_var }}" %}
-      .w-md.mx-auto.mx-lg-0.my-5
-        | {% cta "CTA_Learn-More_#{index}" label='CTA_Learn-More_#{index}' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
+
+include ../../../components/_layout-3.pug
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.mx-5.py-5.border-bottom
+  .res-half
+    video( width="100%" height="100%" controls)
+      source(src="https://cdn2.hubspot.net/hubfs/490686/_site/videos/Video_JEM.mp4" type="video/mp4")
+  .ml-lg-5
+    +layout-3('3_2')

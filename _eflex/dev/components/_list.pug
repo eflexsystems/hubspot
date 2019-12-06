@@ -2,11 +2,11 @@
 //- Bullets
 
 mixin bullet(bullets_index)
-  li.
+  li.p.
     {% raw_html "Bullet_#{bullets_index}" value='{{ title_var }}' %}
 
 mixin list(index)
-  ul.d-flex.flex-column
+  ul.d-flex.flex-column.my-4
     - var bullets = 1
     while bullets <= (n)
       +bullet(index + '_' + bullets++)

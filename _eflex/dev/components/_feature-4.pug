@@ -8,5 +8,5 @@ mixin feature-4(index)
       .d-flex.flex-column.mr-lg-4.my-auto.py-4
         h6.mb-3
           | {% raw_html "Feature_#{index}_Heading" value='{{ heading_var }}' %}
-        p.w-lg.line-height-sm( style="hyphens: auto;" )
+        p.w-lg.line-height-sm
           | {% raw_html "Feature_#{index}_Text" value='{{ body-sm_var }}' %}

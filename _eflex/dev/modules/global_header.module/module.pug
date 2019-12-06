@@ -1,6 +1,6 @@
 //- global_header.pug 
 
-#global_header.navbar.navbar-expand-lg.navbar-light.bg-white.fixed-top.row.no-gutters.justify-content-center.p-4.p-lg-3
+#global_header.navbar.navbar-expand-lg.navbar-light.bg-white.fixed-top.row.no-gutters.justify-content-center.p-4.p-lg-3( style="box-shadow: 0px 0px 25px #00274e10" )
   .logo.d-flex.flex-column.justify-content-center.pr-lg-3( onclick='window.location="https://www.eflexsystems.com"')
     | {% image "eFlex_Logo" label='eFlex Systems Logo', alt='eFlex Systems Logo', src='https://cdn2.hubspot.net/hubfs/490686/Logos/eFlexSystems-logo.png', style="width:100%" %}
   button.navbar-toggler.ml-auto( type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
@@ -15,7 +15,7 @@
                 {% if module.nav_link_small_#{index}_link.url.type is equalto "EMAIL_ADDRESS" %}
                   {% set href = "mailto:" + href %}
                 {% endif %}
-                <a class="link p-0 text-gray-dark" style="cursor: pointer"
+                <a class="header-link p-0 text-gray-dark" style="cursor: pointer"
                 {% if module.nav_link_small_#{index}_link.open_in_new_tab %}target="_blank"{% endif %} href="{{ module.nav_link_small_#{index}_url.href }}"
                 {% if module.nav_link_small_#{index}_link.no_follow %}rel="nofollow"{% endif %}
                 >
@@ -27,8 +27,8 @@
             +nav-link-small(n++, 'mr-3')
             small.text-gray.mr-3.d-lg-inline-block.d-none |
           .d-flex
-            small.link.text-gray-dark.mr-2 Call Us:
-            a.link.text-gray-dark.small.h-opacity.m-0(href='tel:18334633539')
+            small.header-link.text-gray-dark.mr-2 Call Us:
+            a.header-link.text-gray-dark.small.h-opacity.m-0(href='tel:18334633539')
               | 833-463-3539
       .d-flex.flex-lg-row.flex-column.align-items-center.my-1
         ul.navbar-nav.w-100.mr-lg-3.ml-lg-auto

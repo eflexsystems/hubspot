@@ -24,7 +24,7 @@
           | {% inline_text field="heading_1" value="{{ module.heading_1 }}", extra_classes="font-weight-bold w-lg text-uppercase small mb-3" %}
           p.m-0.small {{ site_settings.company_name }}
           p.m-0.small {{ site_settings.company_street_address_1 }}
-          p.m-0.small {{ site_settings.company_city }}, {{ site_settings.company_state }} 38306
+          p.m-0.small {{ site_settings.company_city }}, {{ site_settings.company_state }} 48306
         .d-flex.flex-column.mb-5
           | {% inline_text field="heading_2" value="{{ module.heading_2 }}", extra_classes="font-weight-bold w-lg text-uppercase small mb-3" %}
           | {% raw %}
@@ -39,16 +39,11 @@
         .d-flex.flex-column.text-white
           .
             {% inline_text field="heading_3" value="{{ module.heading_3 }}", extra_classes="font-weight-bold w-lg text-uppercase small mb-3" %}
-            {# Link 1 #}
-            {% set href = module.link_1_1.url.href %}
-            {% if module.link_1_1.url.type is equalto "EMAIL_ADDRESS" %}
-            {% set href = "mailto:" + href %}
-            {% endif %}
           div
             mixin footer-link(index)
               div
                 .
-                  <a href="{{ href }}" class="link small text-white"
+                  <a href="{{ module.link_1_#{index}_href }}" class="link small text-white"
                   {% if module.link_1_#{index}.open_in_new_tab %}target="_blank"{% endif %}
                   {% if module.link_1_#{index}.no_follow %}rel="nofollow"{% endif %}
                   >
@@ -68,7 +63,7 @@
       small.m-0.mx-auto.mx-sm-0 © Copyright 2019 eFlex Systems
     .col-sm.col-12.d-flex.justify-content-center.justify-content-sm-left
       .
-        <a class="small text-gray mr-2 ml-sm-auto" style="cursor: pointer" onclick="window.location='{% text "Footer_TnS_URL", no_wrapper=True %}'">Terms and Services</a>
+        <a class="small text-gray mr-2 ml-sm-auto" style="cursor: pointer" href="https://www.eflexsystems.com/privacy-policy">Terms and Services</a>
       small.mr-2 |
       .
-        <a class="small text-gray" style="cursor: pointer" onclick="window.location='{% text "Footer_Privacy_Policy_URL", no_wrapper=True %}'">Privacy Policy</a>
+        <a class="small text-gray" style="cursor: pointer" href="https://www.eflexsystems.com/privacy-policy">Privacy Policy</a>

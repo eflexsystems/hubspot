@@ -1,6 +1,9 @@
 // Components
 // Image
 
+img.w-100
+  width: 101% !important
+
 // Image Zoom Pan
 .img-zoom-pan
   &:hover
@@ -49,14 +52,6 @@
   width: 22rem
   height: 4rem
 
-.img-banner
-  @extend .img-clip-rounded
-  height: 10vw
-  max-height: 3.75rem
-  img
-    position: absolute
-    bottom: 0
-
 // Image Tab
 .tab-content
   padding-bottom: 7rem
@@ -70,6 +65,32 @@
   min-height: 10rem
   max-width: 24rem
   max-height: 20rem
+
+// Image Link - Portrait
+.image-link-2
+  @extend %cursor-pointer
+  img
+    @extend .grayscale
+  
+  &:hover
+    *
+      color: map-get($theme-colors, 'primary') !important
+    img
+      transition-duration: 0.5s
+      -webkit-filter: none
+      filter: none
+    .bg-white
+      @extend .bg-primary
+    .icon
+      color: map-get($theme-colors, 'white') !important
+
+// Lazy Loading
+.lazy-loading
+  opacity: 0
+
+.lazy-loaded
+  transition: opacity .8s ease-out
+  opacity: 1
 
 // Mobile Responsiveness
 @media (max-width: 920px)

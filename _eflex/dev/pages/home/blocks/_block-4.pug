@@ -1,33 +1,15 @@
 //- home.pug block-4
 
-.block-fluid.row.no-gutters.justify-content-around.border-bottom.p-5.m-0.w-100.overflow-hidden
-  .col-lg-5.col-12.d-flex.flex-column.align-items-center.my-4.mx-auto
-    .w-half
-      h3.text-lg-left.text-center.mb-4
-        .
-          {% raw_html "Block_4_Title" value="{{ heading_var }}" %}
-      .row.my-4
-        .col
-          .
-            {% set class = "res-half img-fluid rounded my-4" %} 
-            {% module "Block_4_Image_01" path='/_eflex/components/image' %}
-      p.text-lg-left.text-center
-        .
-          {% raw_html "Block_4_Body_1" value="{{ body_var }}" %}
-      .w-md.mx-lg-0.mx-auto.my-5
-        .
-          {% cta "Try_Now_CTA" label='Try_Now_CTA' guid='579d2e2a-505a-4d9c-b13e-79a80f41081d' %}
-  .col-lg-5.col-12.d-flex.flex-column.align-items-left.justify-content-center.my-5
-    mixin feature_home_b4(index)
-      .row.justify-content-center.no-gutters.m-0.my-2
-        .w-md.
-          {% set class = "res-md rounded w-100 h-100 mr-lg-4 my-2" %} {% module "Block_4_Image_0#{index + 1}" path='/_eflex/components/image' %}
-        .col-lg.col-12.my-2
-          .w-lg.d-flex.flex-column.align-items-center.text-lg-left.text-center.mx-auto
-            .w-md.ml-xl-3
-              h5.mb-2 {% raw_html "Block_4_Heading_#{index}" value="{{ heading_var }}"  %}
-              p.w-md {% raw_html "Block_4_Body_#{index + 1}" value="{{ paragraph_var }}" extra_classes="w-md" %}
-  
-    - var n = 1
-    while n <= 3
-      +feature_home_b4(n++)
+include ../../../components/_feature-8.pug
+include ../../../components/_layout-7.pug
+.d-flex.justify-content-center.align-items-center.flex-column.p-5.border-bottom
+  .d-flex.flex-column.justify-content-start
+    - var index = '4_1'
+    h3.text-lg-left.text-center.mb-4.m-lg-4.
+      {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+    .d-flex.flex-column.flex-lg-row
+      +layout-7('4_1')
+      .d-flex.flex-column.m-1
+        +feature-8('4_2')
+        +feature-8('4_3')
+        +feature-8('4_4')

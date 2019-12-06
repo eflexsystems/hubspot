@@ -1,0 +1,12 @@
+include ../../../../components/_image-lg.pug
+
+.d-flex.flex-lg-row.justify-content-center.align-items-start.my-5
+  - var index = '1_1'
+  .d-flex.flex-column.m-5
+    h3.mb-4.
+      {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+    p.w-half.
+      {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+    .w-lg.mx-auto.mx-lg-0.my-3.
+      {% cta "cta_#{index}" label='cta_#{index}' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
+  +image-lg('1_1')
