@@ -1,0 +1,17 @@
+// Utilities
+// Overflow
+  
+=overflow($type)
+  .overflow-#{$type}
+    overflow: $type !important
+  .overflow-x-#{$type}
+    overflow: $type !important
+  .overflow-y-#{$type}
+    overflow: $type !important
+  
++overflow(scroll)
++overflow(hidden)
++overflow(visible)
+
+.overflow-ellipsis
+  text-overflow: ellipsis

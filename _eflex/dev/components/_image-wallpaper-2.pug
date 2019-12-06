@@ -1,0 +1,24 @@
+//- Components
+//- Image Wallpaper 2
+include _layout-5.pug
+
+mixin image-wallpaper-2(index)
+  .w-full.position-relative
+    // Wallpaper
+    .w-100.h-100.overflow-hidden.position-absolute.img-inset-wide.
+      {% set class = "position-absolute" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-width: 177.77vh" %}
+    // Blend Exclusion
+    .w-100.h-100.position-absolute.opacity-60
+      .blend-exclusion-gray.rounded.w-100.h-100
+    // Blend Multiply
+    .w-100.h-100.position-absolute
+      .blend-multiply-black.rounded.w-100.h-100.opacity-60
+    // Content
+    .w-100.b-0
+      .w-100.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center
+        .mt-lg-auto.ml-lg-5( style="height: fit-content" )
+          include _desktop.pug
+          +desktop(index)
+        .text-white.mb-lg-auto.mt-6.mt-lg-3.z-index-1
+          +layout-5(index)

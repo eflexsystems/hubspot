@@ -17,7 +17,9 @@
   "author": "Ryan Jewell",
   "license": "ISC",
   "dependencies": {
+    "@hubspot/cms-cli": "0.0.22",
     "bootstrap": "^4.3.1",
+    "jquery-parallax.js": "^1.5.0",
     "pug-cli2": "^1.0.0-alpha6.1"
   }
 }

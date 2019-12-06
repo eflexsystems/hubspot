@@ -1,32 +1,39 @@
-[ {
-  "id" : "0cd19604-c436-b33b-9c61-cf493f59c0ac",
-  "name" : "link_field",
-  "label" : "Link field",
-  "sortable" : false,
-  "required" : false,
-  "locked" : false,
-  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-  "type" : "link",
-  "default" : {
-    "url" : {
-      "type" : "EXTERNAL",
-      "href" : "eflexsystems.com",
-      "content_id" : null
-    },
-    "open_in_new_tab" : false,
-    "no_follow" : false
+[
+  {
+    "id": "0cd19604-c436-b33b-9c61-cf493f59c0ac",
+    "name": "link_field",
+    "label": "Link field",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "type": "link",
+    "default": {
+      "url": {
+        "type": "EXTERNAL",
+        "href": "eflexsystems.com",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "91b2651d-e591-83cb-138b-e71f4258b91d",
+    "name": "text_field",
+    "label": "Text field",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "placeholder": "Link Label",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Default"
   }
-}, {
-  "id" : "91b2651d-e591-83cb-138b-e71f4258b91d",
-  "name" : "text_field",
-  "label" : "Text field",
-  "sortable" : false,
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "placeholder" : "Link Label",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Default"
-} ]
+]

@@ -2,15 +2,37 @@
 extends ../../templates/_template.pug
 
 block content
-  .flex-fill.d-flex.justify-content-center.flex-column.pt-lg-3
-    mixin callout-icon(block, index)
-      .w-lg.border.border-gray-light.m-2
-        .d-flex
-          .icon-cobot.icon-xl.text-primary.m-4(class!="'{% text \"Block_" + block + "_Callout_" + index + "_Icon\", no_wrapper=True %}'")
-          small.my-auto.mr-4
-            | {% raw_html "Block_#{block}_Callout_#{index}_Text" value='{{ title_var }}' %}
+
+  mixin divider(text)
+    p.pb-3.m-5.border-bottom.font-italic= text
+
+  style.
+    .brightness-toggle button:hover {
+      opacity: 1;
+    }
+  
+  script( src="{{ get_public_template_url('/_eflex/script/components.js') }}")
+  script( src="{{ get_public_template_url('/_eflex/script/lazy-images.js') }}")
+  .flex-fill.d-flex.justify-content-center.flex-column
+    .brightness-toggle.fixed-top.w-sm.d-flex.flex-column.m-5.ml-auto
+      button.btn.btn-primary.rounded-pill.opacity-50( style="margin-top: 5.5rem") Toggle Brightness
     
-    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      +callout-icon(3, 1)
-      +callout-icon(3, 1)
-      +callout-icon(3, 1)
+    ul.nav.nav-tabs.mt-5( id="myTab" role="tablist" )
+      li.nav-item
+        a.nav-link( id="sg-1-tab" data-toggle="tab" href="#sg-1" role="tab" aria-controls="sg-1" aria-selected="false" ) Styles
+      li.nav-item
+        a.nav-link( id="sg-2-tab" data-toggle="tab" href="#sg-2" role="tab" aria-controls="sg-2" aria-selected="true" ) Components
+      li.nav-item
+        a.nav-link.active( id="sg-3-tab" data-toggle="tab" href="#sg-3" role="tab" aria-controls="sg-3" aria-selected="false" ) Layouts
+      li.nav-item
+        a.nav-link( id="sg-4-tab" data-toggle="tab" href="#sg-4" role="tab" aria-controls="sg-4" aria-selected="false" ) Parallax
+
+    .tab-content( id="sg-content" )
+      .tab-pane.fade( id="sg-1" role="tabpanel" aria-labelledby="sg-1-tab" )
+        include tabs/_tab-1.pug
+      .tab-pane.fade( id="sg-2" role="tabpanel" aria-labelledby="sg-2-tab" )
+        include tabs/_tab-2.pug
+      .tab-pane.fade.show.active( id="sg-3" role="tabpanel" aria-labelledby="sg-3-tab" )
+        include tabs/_tab-3.pug
+      .tab-pane.fade( id="sg-4" role="tabpanel" aria-labelledby="sg-4-tab" )
+        include tabs/_tab-4.pug

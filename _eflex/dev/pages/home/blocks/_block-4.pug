@@ -1,51 +1,15 @@
 //- home.pug block-4
 
-.block-fluid.row.no-gutters.justify-content-around.border-bottom.p-5.m-0
-  .col-lg-5.col-12.d-flex.flex-column.align-items-center.my-4.mx-auto
-    .w-xl
-      h3.text-primary.text-lg-left.text-center.mb-4
-        .
-          {% raw_html "Block_4_Title" value="{{ heading_var }}" %}
-      .row.my-4
-        .col
-          .
-            {% set class = "res-xl img-fluid rounded my-4" %} 
-            {% module "Block_4_Image_01" path='/_eflex/components/image' %}
-      p.text-lg-left.text-center
-        .
-          {% raw_html "Block_4_Body_1" value="{{ body_var }}" %}
-      .w-md.mx-lg-0.mx-auto.my-5
-        .
-          {% cta "Try_Now_CTA" label='Try_Now_CTA' guid='579d2e2a-505a-4d9c-b13e-79a80f41081d' %}
-  .col-lg-5.col-12.d-flex.flex-column.align-items-left.justify-content-center.my-5
-    .row.justify-content-lg-start.justify-content-center.no-gutters.m-0.my-2
-      .
-        {% set class = "res-md rounded w-100 h-100 mr-lg-4 my-2" %} {% module "Block_4_Image_02" path='/_eflex/components/image' %}
-      .col-lg.col-12.my-2
-        .d-flex.flex-column.align-items-center.align-items-lg-start.text-lg-left.text-center
-          h5
-            .
-              {% raw_html "Block_4_Heading_1" value="{{ heading_var }}" %}
-          p.w-md {% raw_html "Block_4_Body_2" value="{{ paragraph_var }}" extra_classes="w-md" %}
-    .row.justify-content-lg-start.justify-content-center.no-gutters.m-0.my-2
-      .
-        {% set class = "res-md rounded w-100 h-100 mr-lg-4 my-2" %} {% module "Block_4_Image_03" path='/_eflex/components/image' %}
-      .col-lg.col-12.my-2
-        .d-flex.flex-column.align-items-lg-start.align-items-center.text-lg-left.text-center
-          h5
-            .
-              {% raw_html "Block_4_Heading_2" value="{{ heading_var }}" %}
-          p.w-md 
-            . 
-              {% raw_html "Block_4_Body_3" value="{{ paragraph_var }}" extra_classes="w-md" %}
-    .row.justify-content-lg-start.justify-content-center.no-gutters.m-0.my-2
-      .
-        {% set class = "res-md rounded w-100 h-100 mr-lg-4 my-2" %} {% module "Block_4_Image_04" path='/_eflex/components/image' %}
-      .col-lg.col-12.my-2
-        .d-flex.flex-column.align-items-center.align-items-lg-start.text-lg-left.text-center
-          h5
-            .
-              {% raw_html "Block_4_Heading_3" value="{{ heading_var }}" %}
-          p.w-md
-            .
-              {% raw_html "Block_4_Body_4" value="{{ paragraph_var }}" extra_classes="w-md" %}
+include ../../../components/_feature-8.pug
+include ../../../components/_layout-7.pug
+.d-flex.justify-content-center.align-items-center.flex-column.p-5.border-bottom
+  .d-flex.flex-column.justify-content-start
+    - var index = '4_1'
+    h3.text-lg-left.text-center.mb-4.m-lg-4.
+      {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+    .d-flex.flex-column.flex-lg-row
+      +layout-7('4_1')
+      .d-flex.flex-column.m-1
+        +feature-8('4_2')
+        +feature-8('4_3')
+        +feature-8('4_4')

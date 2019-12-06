@@ -1,22 +1,18 @@
 {
-  "contains_overridable_hubl_tags" : true,
-  "content_tags" : [ ],
-  "css_assets" : [ ],
-  "editable_contexts" : [ ],
-  "external_js" : [ ],
-  "extra_classes" : "",
-  "global" : false,
-  "help_text" : "",
-  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "js_assets" : [ ],
-  "label" : "link",
-  "other_assets" : [ ],
-  "placement_rules" : [ ],
-  "purchased" : false,
-  "smart_type" : "NOT_SMART",
-  "tags" : [ ],
-  "portal_id" : 490686,
-  "id" : 11194829394,
-  "module_id" : 8594847,
-  "is_available_for_new_content" : true
+  "content_tags": [],
+  "css_assets": [],
+  "external_js": [],
+  "extra_classes": "",
+  "global": false,
+  "host_template_types": [
+    "PAGE",
+    "BLOG_POST",
+    "BLOG_LISTING"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "placement_rules": [],
+  "smart_type": "NOT_SMART",
+  "module_id": 8958237,
+  "is_available_for_new_content": true
 }

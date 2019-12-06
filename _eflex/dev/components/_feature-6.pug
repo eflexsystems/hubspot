@@ -1,0 +1,11 @@
+//- Components
+//- Feature 6
+
+mixin feature-6(index)
+  .w-md.border.border-gray-light.rounded.pb-5.pb-xl-0.my-2.m-lg-2
+    .d-flex.flex-column.align-items-center.w-md.m-4.m-lg-5
+      .icon-xxl.text-primary.mb-4(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+      h6.text-center.w-100
+        | {% raw_html "Feature_#{index}_Heading" value='{{ heading_var }}' %}
+      small.text-center.w-100
+        | {% raw_html "Feature_#{index}_Body" value='{{ title_var }}' %}

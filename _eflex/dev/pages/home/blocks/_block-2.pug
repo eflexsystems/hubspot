@@ -1,82 +1,117 @@
 //- home.pug block-2
-.block-fluid.row.justify-content-center.border-bottom.p-5.m-0.my-5
-  .row.justify-content-center.w-100
-    .col
-      .row.no-gutters.mb-4
-        .col
-          h3.text-center.text-primary.m-2
-            | {% raw_html "Block_2_Title" value="{{ heading_var }}" %}
-      .row.no-gutters.mb-5
-        .col-12
-          h5.text-center.mr-2.my-0
-            | {% raw_html "Block_2_Heading_1" value="{{ heading_var }}" %}
-  .row.no-gutters
-    .col
-      nav.d-flex.justify-content-lg-around.justify-content-center.flex-wrap.my-5
-        .nav.nav-tabs.img-thumbnail-tabs.border-none.d-flex.flex-column.align-items-center.mb-4( id="myTab" role="tablist")
-          mixin nav-tabs(heading, id, color, index)
-            if active
-              a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.m-lg-2.active( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id aria-selected="selected" onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
-                | {% set class = "img-thumbnail-size position-absolute opacity-10 img-fluid" %} {% module "Thumbnail_#{index}" path='/_eflex/components/image' %}
-                .img-thumbnail-size.position-absolute.opacity-0( class='blend-multiply-'+color)
-                .black-fade.img-thumbnail-size.opacity-10.position-absolute
-                h5.text-blue-dark.font-weight-bold.position-absolute.p-3= heading
-                .w-100.align-items-center.h-100.position-absolute
-                  span.icon-arrow-right-sm.text-white.ml-auto
-            else
-              a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.m-lg-2( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
-                | {% set class = "img-thumbnail-size position-absolute opacity-10 img-fluid" %} {% module "Thumbnail_#{index}" path='/_eflex/components/image' %}
-                .img-thumbnail-size.position-absolute.opacity-0( class='blend-multiply-'+color)
-                .black-fade.img-thumbnail-size.opacity-10.position-absolute
-                h5.text-blue-dark.font-weight-bold.position-absolute.p-3= heading
-                .w-100.align-items-center.h-100.position-absolute
-                  span.icon-arrow-right-sm.text-white.ml-auto
 
-          - active = true
-          +nav-tabs('Andon', 'andon', 'red', '1')
-          - active = false
-          +nav-tabs('Maintenance', 'pm', 'orange', '2')
-          +nav-tabs('OEE', 'oee', 'yellow', '3')
-          +nav-tabs('Kitting', 'kitting', 'teal', '4')
-          +nav-tabs('Track & Trace', 'tnt', 'green', '5')
-          +nav-tabs('Work Instructions', 'jem', 'cyan', '6')
-          +nav-tabs('Business Intelligence', 'bi', 'blue', '7')
-          +nav-tabs('Quality Management', 'quality', 'purple', '8')
+include ../../../components/_image.pug
+.d-none.d-lg-block
+  .block-fluid.row.justify-content-center.border-bottom.mx-2.mx-lg-5.w-100.overflow-hidden.py-5
+    .row.justify-content-center.w-100
+      .col
+        .row.no-gutters.mb-4
+          .col
+            h3.text-center.text-primary.m-2
+              | {% raw_html "Block_2_Title" value="{{ heading_var }}" %}
+        .row.no-gutters.mb-5
+          .col-12
+            h5.text-center.mr-2.my-0
+              | {% raw_html "Block_2_Heading_1" value="{{ heading_var }}" %}
+    .row.no-gutters
+      .col
+        nav.vertical-pills.d-flex.justify-content-lg-around.justify-content-center.flex-wrap.mt-5
 
-        .tab-content.d-flex.flex-column.justify-content-center.align-items-center.pl-lg-5.mb-5.my-4( id="nav-tabContent" style="max-width:34rem; width:80%;" )
-          mixin nav-tab-contents(id, index, color)
-            if active
-              .tab-pane.active.show( id=id role="tabpanel" aria-labelledby=id+'-tab')
-                h3.text-center.text-primary.font-weight-bold.mx-n2( class="text-" + color + "-dark")
-                  | {% raw_html "Block_2_Tab_Title_#{index}" value="{{ heading_var }}" %}
-                h5.text-center.mb-3
-                  | {% raw_html "Block_2_Tab_Heading_#{index}" value="{{ heading_var }}" %}
-                .infographic.mx-auto.mb-3
-                  | {% set class = "w-100 h-100" %}
-                  | {% module "Thumbnail_Content_Image_#{index}" path="/_eflex/components/image" %}
-                .text-center.h-md
-                  p
-                    | {% raw_html "Block_2_Tab_Body_#{index}"  value="{{ paragraph_var }}" %}
-            else
-              .tab-pane( id=id role="tabpanel" aria-labelledby=id+'-tab')
-                h3.text-center.text-primary.font-weight-bold.mx-n2( class="text-" + color + "-dark")
-                  | {% raw_html "Block_2_Tab_Title_#{index}" value="{{ heading_var }}" %}
-                h5.text-center.mb-3
-                  | {% raw_html "Block_2_Tab_Heading_#{index}" value="{{ heading_var }}" %}
-                .infographic.mx-auto.mb-3
-                  | {% set class = "w-100 h-100" %}
-                  | {% module "Thumbnail_Content_Image_#{index}" path="/_eflex/components/image" %}
-                .text-center.h-md
-                  p
-                    | {% raw_html "Block_2_Tab_Body_#{index}"  value="{{ paragraph_var }}" %}
-          
-          - active = true
-          +nav-tab-contents('andon', '1', 'red')
-          - active = false
-          +nav-tab-contents('pm', '2', 'orange')
-          +nav-tab-contents('oee', '3', 'yellow')
-          +nav-tab-contents('kitting', '4', 'teal')
-          +nav-tab-contents('tnt', '5','green')
-          +nav-tab-contents('jem', '6', 'cyan')
-          +nav-tab-contents('bi', '7', 'blue')
-          +nav-tab-contents('quality', '8', 'purple')
+          //- Navtabs
+          .nav.nav-tabs.img-thumbnail-tabs.border-none.d-flex.flex-column.align-items-center.mb-4( id="myTab" role="tablist")
+            mixin nav-tabs(heading, id, color, index)
+              if active
+                a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.m-lg-2.active( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id aria-selected="selected" onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
+                  .position-absolute.opacity-10
+                    | {% set class = "img-thumbnail-size position-absolute" %} 
+                    +image('Thumbnail_2_' + index)
+                  .img-thumbnail-size.position-absolute.opacity-0( class='blend-multiply-'+color)
+                  .black-fade.img-thumbnail-size.opacity-10.position-absolute
+                  h5.text-blue-dark.font-weight-bold.position-absolute.p-3= heading
+                  .img-thumbnail-size.align-items-center.position-absolute
+                    span.icon-arrow-right-sm.text-white.ml-auto
+              else
+                a.img-thumbnail.img-thumbnail-size.slick-slide.nav-item.nav-link.p-0.m-1.m-lg-2( id=id+'-tab' href='#'+id data-toggle='tab' role='tab' aria-controls=id onclick!="window.location='{% text \"Thumbnail_URL_" + index + "\", no_wrapper=True %}'")
+                  .position-absolute.opacity-10
+                    | {% set class = "img-thumbnail-size position-absolute" %}
+                    +image('Thumbnail_2_' + index)
+                  .img-thumbnail-size.position-absolute.opacity-0( class='blend-multiply-'+color)
+                  .black-fade.img-thumbnail-size.opacity-10.position-absolute
+                  h5.text-blue-dark.font-weight-bold.position-absolute.p-3= heading
+                  .img-thumbnail-size.align-items-center.position-absolute
+                    span.icon-arrow-right-sm.text-white.ml-auto
+
+            - active = true
+            +nav-tabs('Andon', 'andon', 'red', '1')
+            - active = false
+            +nav-tabs('Maintenance', 'pm', 'orange', '2')
+            +nav-tabs('OEE', 'oee', 'yellow', '3')
+            +nav-tabs('Kitting', 'kitting', 'teal', '4')
+            +nav-tabs('Track & Trace', 'tnt', 'green', '5')
+            +nav-tabs('Work Instructions', 'jem', 'cyan', '6')
+            +nav-tabs('Business Intelligence', 'bi', 'blue', '7')
+            +nav-tabs('Quality Management', 'quality', 'purple', '8')
+
+          //- Navtab Contents
+          .tab-content.d-flex.flex-column.justify-content-center.align-items-center.pl-lg-5.mb-5.my-4( id="nav-tabContent" style="max-width:34rem; width:80%;" )
+            mixin nav-tab-contents(id, index, color)
+              if active
+                .tab-pane.active.show( id=id role="tabpanel" aria-labelledby=id+'-tab')
+                  h3.text-center.text-primary.font-weight-bold.mx-n2( class="text-" + color + "-dark")
+                    | {% raw_html "Block_2_Tab_Title_#{index}" value="{{ heading_var }}" %}
+                  h5.text-center.mb-3
+                    | {% raw_html "Block_2_Tab_Heading_#{index}" value="{{ heading_var }}" %}
+                  .infographic.mx-auto.mb-3
+                    | {% set class = "infographic" %}
+                    +image('2_' + index)
+                  .text-center.h-md
+                    p
+                      | {% raw_html "Block_2_Tab_Body_#{index}"  value="{{ paragraph_var }}" %}
+              else
+                .tab-pane( id=id role="tabpanel" aria-labelledby=id+'-tab')
+                  h3.text-center.text-primary.font-weight-bold.mx-n2( class="text-" + color + "-dark")
+                    | {% raw_html "Block_2_Tab_Title_#{index}" value="{{ heading_var }}" %}
+                  h5.text-center.mb-3
+                    | {% raw_html "Block_2_Tab_Heading_#{index}" value="{{ heading_var }}" %}
+                  .infographic.mx-auto.mb-3
+                    | {% set class = "infographic" %}
+                    +image('2_' + index)
+                  .text-center.h-md
+                    p
+                      | {% raw_html "Block_2_Tab_Body_#{index}"  value="{{ paragraph_var }}" %}
+            
+            - active = true
+            +nav-tab-contents('andon', '1', 'red')
+            - active = false
+            +nav-tab-contents('pm', '2', 'orange')
+            +nav-tab-contents('oee', '3', 'yellow')
+            +nav-tab-contents('kitting', '4', 'teal')
+            +nav-tab-contents('tnt', '5','green')
+            +nav-tab-contents('jem', '6', 'cyan')
+            +nav-tab-contents('bi', '7', 'blue')
+            +nav-tab-contents('quality', '8', 'purple')
+
+include ../../../components/_layout-4.pug
+.d-block.d-lg-none
+  .d-flex.flex-column
+  mixin solutions(index, color)
+    .d-flex.align-items-center.flex-lg-row.flex-column
+      .d-flex.flex-column.justify-content-center.align-items-center.m-5
+        h3.w-half.text-lg-center.mb-4( class="text-" + color + "-dark").
+          {% raw_html "Block_2_Tab_Title_#{index}" value="{{ heading_var }}" %}
+        h5.w-half.text-lg-center.mb-4.
+          {% raw_html "Block_2_Tab_Heading_#{index}" value="{{ heading_var }}" %}
+        p.w-half.text-lg-center.
+          {% raw_html "Block_2_Tab_Body_#{index}" value="{{ paragraph_var }}" %}
+        .w-half.w-lg-lg.mx-lg-auto.mx-lg-0.my-3.
+          {% cta "CTA_#{index}" label='CTA_#{index}' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
+
+  +solutions('1', 'red')
+  +solutions('2', 'orange')
+  +solutions('3', 'yellow')
+  +solutions('4', 'teal')
+  +solutions('5','green')
+  +solutions('6', 'cyan')
+  +solutions('7', 'blue')
+  +solutions('8', 'purple')
+      

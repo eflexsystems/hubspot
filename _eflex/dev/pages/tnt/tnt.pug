@@ -1,0 +1,12 @@
+//- home.pug
+extends ../../templates/_template.pug
+
+block content
+  include ../../components/_title-solutions.pug
+  - var color = 'green'
+  - var position = 't-0'
+  +title-solution('0_1')
+
+  include blocks/_block-1.pug
+  include blocks/_block-2.pug
+  include blocks/_block-3.pug

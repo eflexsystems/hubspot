@@ -1,0 +1,14 @@
+//- bi.pug
+extends ../../templates/_template.pug
+
+block content
+  include ../../components/_title-solutions.pug
+  - var color = 'blue'
+  - var position = 'mt-lg-n6'
+  +title-solution('0_1')
+
+  include blocks/_block-1.pug
+  include blocks/_block-2.pug
+  include blocks/_block-3.pug
+
+  script( src="{{ get_public_template_url('/_eflex/script/zoom-pan.js') }}")

@@ -1,35 +1,20 @@
 //- home.pug block-5
+
 .block-fluid.row.border-bottom.p-5.m-0
   .col.my-5
     .row.mb-4
       .col-12
-        h3.text-primary.text-center
+        h3.text-center
           .
             {% raw_html "Block_5_Title" value="{{ heading_var }}" %}
-    .d-flex.flex-column.flex-lg-row.justify-content-center.align-items-center
+         
+    include ../../../components/_image-link-1.pug
+    .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+      - var n = 6
+      while n >= 1
+        +image-link-1(n--)
 
-      mixin news-tile(index)
-        
-        //- Beware this onclick attribute - very meta
-        .hover-scale.slick-slide.res-lg.position-relative.m-4( onclick!="window.location='{% text \"News_URL_" + index + "\" , no_wrapper=True %}'")
-          div.res-lg.img-clip.rounded
-            .
-              {% set class = "w-100 h-100 res-lg rounded" %}
-              {% module "Block_5_Image_#{index}" path='/_eflex/components/image' %}
-          .black-fade.res-lg.rounded.position-absolute.bottom
-          .position-absolute.bottom.d-flex.flex-column.justify-column.justify-content-end.w-100.h-100.p-lg-4.p-3
-            p.font-weight-light.text-white.text-shadow.m-0.w-100
-              .
-                {% raw_html "News_Date_#{index}" value="{{ date_var }}" %}
-            h6.font-weight-bold.text-white.text-shadow.mb-0.w-100
-              .
-                {% raw_html "News_Title_#{index}" value="{{ title_var }}" %}
-
-      - var n = 1
-      while n <= 3
-        +news-tile(n++)
-
-    .w-half.mx-auto
+    .w-100
       .w-md.mx-auto.my-5
         .
           {% cta "View_All_Updates" label='View_All_Updates_CTA' guid='3f3ce9fc-aab8-4138-96d1-955dd95e42f8' %}

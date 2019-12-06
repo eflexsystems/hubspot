@@ -1,0 +1,12 @@
+//- Components
+//- Desktop
+mixin desktop(index)
+  .position-relative.overflow-hidden.img-inset-fit.mb-4.mb-lg-0( style="width: 47vw; min-width: 18rem; max-width: 42rem; top: 5.5%;" )
+    | {% set class = "" %}
+    | {% image "Desktop_#{index}" label='Desktop_#{index}', alt='eFlex Desktop', src='https://cdn2.hubspot.net/hubfs/490686/_site/photos/Screen_Desktop.png' %}
+    .position-absolute.w-100.h-100.t-0
+      .position-relative.mx-auto.img-inset-fit.overflow-hidden( style="width: 39vw; min-width: 14.9364rem; max-width: 34.851rem; height: 22.6vw; min-height: 8.55rem; max-height: 20rem; top: 9.8%;" )
+        .position-absolute.w-50.opacity-5( style="transform: rotate(-26deg); top: -39%; right: -20.5%; height: 150%; background-image: linear-gradient(white 15%, #00000000 60%); mix-blend-mode: lighten" )
+        | {% image "Desktop_Screen_#{index}" label='Desktop_Screen_#{index}', alt='eFlex Desktop Screen' %}
+        // Placeholder
+        .position-absolute.h-100.w-100.bg-green.opacity-50.t-0.z-index-n2

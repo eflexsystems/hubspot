@@ -1,0 +1,18 @@
+// Utilities
+// Scale
+
+@for $i from 1 through 3
+  $value: $i * 25
+  .scale-#{$value}
+    transform: scale($value / 100)
+  .scale-#{$value + 100}
+    transform: scale(($value + 100) / 100)
+  .vh-#{$value}
+    height: $value + vh
+
+// Hover Scale
+.h-scale
+  @extemd %cursor-pointer
+  transition: .2s ease-in-out
+  &:hover
+    transform: scale(1.025)

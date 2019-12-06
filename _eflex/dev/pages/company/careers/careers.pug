@@ -1,0 +1,14 @@
+//- careers.pug
+extends ../../../templates/_template.pug
+
+block content
+  include ../../../components/_image-wallpaper-7.pug
+  +image-wallpaper-7('0_1')
+  .d-flex.flex-lg-row.justify-content-center.align-items-start.bg-gray-100.py-5
+    h4.w-100.text-brand.text-center.
+      {% raw_html "Body_0_1" value="{{ paragraph_var }}" %}
+
+  include blocks/_block-1.pug
+  include blocks/_block-2.pug
+  include blocks/_block-3.pug
+  include blocks/_block-4.pug

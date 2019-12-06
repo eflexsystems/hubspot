@@ -1,0 +1,19 @@
+// Utilities
+// Opacity
+
+@for $i from 0 through 20
+  $opacity: $i * 5
+  .opacity-#{$opacity}
+    opacity: $opacity / 100
+  .opacity-#{$opacity}-hover
+    &:hover
+      opacity: $opacity / 100
+
+// Hover Opacity
+.h-opacity
+  &:hover
+    @extend .opacity-65
+
+.h-opacity-0
+  &:hover
+    @extend .opacity-0

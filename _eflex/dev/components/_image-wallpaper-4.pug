@@ -1,0 +1,26 @@
+//- Components
+//- Image Wallpaper 4
+
+mixin image-wallpaper-4(index)
+  .w-100.position-relative
+    // Image
+    .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.
+      {% set class = "position-absolute" %}
+      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+    // Blend Exclusion
+    .w-100.h-100.position-absolute.opacity-50
+      .blend-exclusion-gray.w-100.h-100
+    // Blend Color
+    .w-100.h-100.position-absolute
+      .blend-color-brand-dark.w-100.h-100
+    // Blend Multiply
+    .w-100.h-100.position-absolute
+      .blend-multiply-brand-dark.w-100.h-100
+    // Content
+    .w-100.h-100
+      .d-flex.flex-column.align-items-center.h-100.p-5
+        .flex-fill.d-flex.flex-column.justify-content-center.align-items-center.z-index-2
+          h3.text-center.text-white.text-shadow.mb-4.
+            {% raw_html "Wallpaper_Title_#{index}", value="{{ heading_var }}" %}
+          p.w-half.text-center.text-white.text-shadow.
+            {% raw_html "Wallpaper_Body_#{index}", value="{{ body-sm_var }}" %}

@@ -1,0 +1,12 @@
+include ../../../components/_feature-4.pug
+.d-flex.justify-content-center.w-100
+  .d-flex.flex-column.justify-content-center.align-items-center.w-lg.w-lg-full.border-bottom.p-5.mx-lg-6
+    .d-flex.flex-column.align-items-lg-center.mb-5
+      h3.text-lg-center.mb-4.
+        {% raw_html "Block_1_Title_1", value="{{ heading_var }}" %}
+      p.text-lg-center.w-lg.
+        {% raw_html "Block_1_Callout_1", value="{{ paragraph_var }}" %}
+    .d-flex.justify-content-lg-center.align-items-stretch.flex-lg-row.flex-column
+      +feature-4('1_1')
+      +feature-4('1_2')
+      +feature-4('1_3')

@@ -1,0 +1,145 @@
+.form
+  height: fit-content
+  width: 45vw !important
+  max-width: 50vw
+  form
+    margin-bottom: 0
+  .hs-form
+    min-height: 33rem !important
+    position: relative
+  .form-title
+    @extend .h5
+
+  // Input
+  $min-width: 16rem
+  fieldset
+    max-width: 100% !important
+  .hs-fieldtype-text
+    min-width: $min-width
+  .hs-input
+    @extend %t-duration
+    width: 100%
+    min-width: $min-width
+    padding: .75rem
+    border: .5px solid $gray-200
+    border-radius: 0
+    &:focus
+      outline: none
+      border-color: map-get($theme-colors, 'primary')
+  .no-list
+    padding-left: 0 // Native Override
+  .hs-error-msg, span.hs-form-required // Input Validation
+    color: map-get($theme-colors, 'red')
+  .hs-input
+    margin-right: 0.5rem
+  ul.inputs-list
+    padding-left: 0
+  .hs-form-checkbox // Checkox Container
+    width: 100%
+  .hs-form-booleancheckbox-display // Checkbox Container
+    width: 100%
+    input
+      margin-top: 5px
+      min-width: auto
+    p
+      color: map-get($theme-colors, 'brand')
+      @extend .font-weight-semibold
+  .hs-form-checkbox-display input, .hs-form-radio-display input // Checkbox
+    min-width: auto
+  
+  // Select
+  select
+    @extend %appearance-none, %cursor-pointer
+    height: 3.25rem
+    width: 100% !important
+    background-color: $none
+    background-image: url("https://cdn2.hubspot.net/hubfs/490686/_site/public/icons/arrow-down-sm.svg")
+    background-position: 97% 50%
+    background-repeat: no-repeat
+    background-size: 2rem
+
+  // Text Area
+  textarea
+    transition: none
+    width: 100% !important
+
+  // Button
+  .actions
+    position: relative // hs-button parent
+  .hs-button.primary // Button Style
+    @extend .w-lg, .float-right
+    font-size: 1rem
+    border-radius: 3rem
+    padding: .75rem
+    position: absolute
+    right: 0
+    top: -0.55rem
+    &:focus
+      outline: none
+  .hs_submit .hs-button // Override Padding
+    padding: .55rem
+  .hs_submit
+    position: absolute
+    bottom: 0
+    right: 0
+  button // Override ::focus
+    &:focus
+      outline: none
+  .hs-form-field
+    @extend .my-2
+  ul.no-list
+    margin: 0
+
+  #form-prev-2
+    margin-right: 13rem !important
+    @media (min-width: $breakpoint-xxl)
+      margin-right: 16rem !important
+      margin-top: -0.2rem
+
+
+// Hubspot Forms
+a.cta_button:hover
+  transform: scale(1.1)
+  -webkit-backface-visibility: hidden
+  background-color: $btn-hover !important
+
+.cta-outline a.cta_button:hover
+  background-color: map-get($theme-colors, 'white') !important
+  color: map-get($theme-colors, 'brand') !important
+
+
+// Mobile Responsiveness
+@media (max-width: 920px)
+  .form
+    width: 100% !important
+    max-width: 100% !important
+    min-width: auto !important
+    .hs-form-field
+      width: 100% !important
+
+// Specific Form Styles
+.form .hs_what_to_demo, .form .hs_when_does_your_next_project_start,
+.form .hs_blog_default_hubspot_blog_subscription, .form .legal-consent-container, .form .hs-button.primary
+  display: none
+
+// ***CHECK IF NEEDED
+
+.form-d-inline
+  .hs_cos_wrapper form
+    display: flex !important
+  .hs-fieldtype-text
+    width: 100%
+  .hs-fieldtype-text
+    .hs-input
+      @extend .small
+      width: 100%
+      padding: .75rem
+      border-style: solid
+      border-width: .5px
+      border-color: $gray-200
+      border-radius: .15rem 0 0 .15rem
+      color: map-get($theme-colors, 'gray-dark')
+      position: relative
+      bottom: 1rem
+      ::placeholder
+        color: $gray-300

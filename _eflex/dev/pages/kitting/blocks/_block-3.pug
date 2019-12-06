@@ -1,0 +1,18 @@
+include ../../../components/_layout-1.pug
+include ../../../components/_layout-2.pug
+include ../../../components/_layout-5.pug
+include ../../../components/_desktop.pug
+.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.my-5
+  +layout-5('3_1')
+  .scale-75( style="clip-path: inset(0 0 17% 0)")
+    +desktop('3_1')
+.bg-gray-100.my-5
+  +layout-1('3_2')
+.my-5
+  +layout-2('3_3')
+.bg-gray-100.my-5
+  +layout-1('3_4')
+.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.mt-5
+  +layout-5('3_5')
+  .scale-75( style="clip-path: inset(0 0 17% 0)")
+    +desktop('3_5')

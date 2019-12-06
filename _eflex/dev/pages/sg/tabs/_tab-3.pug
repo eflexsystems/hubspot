@@ -1,0 +1,94 @@
++divider('Preview Wallpaper')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  include ../../../components/_preview-wallpaper.pug
+
++divider('Lazy Load Test')
+.d-flex.justify-content-around.flex-wrap
+  // Image
+  mixin thing(index)
+    .res-lg.img-clip-rounded.m-3
+      | {% set class='res-lg' %}
+      | {% module "Image_Link_000#{index}_Image" path='/_eflex/components/image' %}
+
+  - var n = 1
+  while n <= 21
+    +thing(n++)
+
+include ../../../components/_layout-1.pug
++divider('Layout 1')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-1('5_1')
+
+include ../../../components/_layout-2.pug
++divider('Layout 2')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-2('6_1')
+
+include ../../../components/_layout-3.pug
++divider('Layout 3')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-3('8_1')
+  +layout-3('9_1')
+
+include ../../../components/_layout-4.pug
++divider('Layout 4')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-4('10_1')
+
+include ../../../components/_layout-5.pug
++divider('Layout 5')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-5('10_2')
+  +layout-5('10_2')
+  +layout-5('10_2')
+
+include ../../../components/_layout-6.pug
++divider('Layout 6')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-6('10_3')
+
+include ../../../components/_layout-7.pug
++divider('Layout 7')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +layout-7('10_6')
+  +layout-7('10_7')
+
+include ../../../components/_title-solutions.pug
++divider('Title Solutions')
+- var color = 'primary'
++title-solution('11_0')
+
+include ../../../components/_image-wallpaper-1.pug
++divider('Image Wallpaper 1')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-1('11_1')
+
+include ../../../components/_image-wallpaper-2.pug
++divider('Image Wallpaper 2')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-2('11_2')
+
+include ../../../components/_image-wallpaper-3.pug
++divider('Image Wallpaper 3')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-3('11_3')
+
+include ../../../components/_image-wallpaper-4.pug
++divider('Image Wallpaper 4')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-4('11_4')
+
+include ../../../components/_image-wallpaper-5.pug
++divider('Image Wallpaper 5')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-5('11_5')
+
+include ../../../components/_image-wallpaper-6.pug
++divider('Image Wallpaper 6')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-6('12_1')
+
+include ../../../components/_image-wallpaper-7.pug
++divider('Image Wallpaper 7')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-7('13_1')

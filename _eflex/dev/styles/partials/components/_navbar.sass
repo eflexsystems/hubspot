@@ -1,0 +1,44 @@
+// Components
+// Navtab
+
+.vertical-tabs
+  .tab-pane
+    p
+      @include media-breakpoint-up(lg)
+        margin-left: auto !important
+        margin-right: auto !important
+
+@media (max-width: 920px)    
+  .nav-tabs
+    height: 16.1rem !important
+    width: 22rem !important
+  
+  // Navigation Bar
+  .navbar-brand
+    font-size: 1rem !important
+
+  // Navigation Menu
+  .dropdown-bg
+    box-shadow: none !important
+
+  .hs_cos_wrapper
+    .hs-menu-wrapper
+      ul
+        padding-left: 0 !important
+
+  .navbar-collapse
+    height: 100vh
+    overflow-y: scroll
+    overflow-x: hidden
+
+  .nav-link
+    font-weight: 500
+    cursor: pointer
+
+
+// Navs
+
+a.nav-link
+  color: map-get($theme-colors, 'gray-500')
+  &.active
+    color: map-get($theme-colors, 'primary')

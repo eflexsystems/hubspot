@@ -1,0 +1,94 @@
+include ../../../components/_feature-1.pug
++divider('Feature 1')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-1('1_1')
+  +feature-1('1_2')
+  +feature-1('1_3')
+
+include ../../../components/_feature-2.pug
++divider('Feature 2')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-2('2_1')
+  +feature-2('2_2')
+
+include ../../../components/_feature-3.pug
++divider('Feature 3')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-3('3_1')
+  +feature-3('3_2')
+  +feature-3('3_3')
+
+include ../../../components/_feature-4.pug
++divider('Feature 4')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-4('3_4')
+  +feature-4('3_5')
+  +feature-4('3_6')
+
+include ../../../components/_feature-5.pug
++divider('Feature 5')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-5('3_4')
+  +feature-5('3_5')
+  +feature-5('3_6')
+
+include ../../../components/_feature-6.pug
++divider('Feature 6')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-6('6_4')
+  +feature-6('6_5')
+  +feature-6('6_6')
+
+include ../../../components/_feature-7.pug
++divider('Feature 7')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +feature-7('7_1')
+  +feature-7('7_2')
+  +feature-7('7_3')
+
+include ../../../components/_feature-8.pug
++divider('Feature 8')
+.d-flex.justify-content-lg-center.align-items-center.flex-column.m-5
+  +feature-8('8_1')
+  +feature-8('8_2')
+  +feature-8('8_3')
+
+include ../../../components/_feature-8.pug
++divider('')
+.d-flex.justify-content-lg-center.align-items-center.flex-column.m-5
+  +feature-8('8_1')
+  +feature-8('8_2')
+  +feature-8('8_3')
+
+include ../../../components/_image-link-1.pug
++divider('Image Link 1')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
+  +image-link-1('4_1')
+  +image-link-1('4_2')
+  +image-link-1('4_3')
+
+include ../../../components/_image-link-2.pug
++divider('Image Link 2')
+.d-flex.justify-content-lg-around.align-items-center.flex-lg-row.flex-column.m-5
+  +image-link-2('5_1')
+  +image-link-2('5_2')
+  +image-link-2('5_3')
+
+include ../../../components/_image-sm.pug
+include ../../../components/_image-md.pug
+include ../../../components/_image-lg.pug
+include ../../../components/_image-half.pug
++divider('Image Sizes')
+.d-flex.flex-wrap.justify-content-lg-center.align-items-start.flex-lg-row.flex-column.m-lg-5
+  .d-flex.flex-column
+    p.pl-5.m-0 Small
+    +image-sm('12_1')
+  .d-flex.flex-column
+    p.pl-5.m-0 Medium
+    +image-md('12_2')
+  .d-flex.flex-column
+    p.pl-5.m-0 Large
+    +image-lg('12_3')
+  .d-flex.flex-column
+    p.pl-5.m-0 Half
+    +image-half('12_4')

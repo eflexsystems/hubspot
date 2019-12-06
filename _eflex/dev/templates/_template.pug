@@ -1,30 +1,33 @@
 //- template.pug
-block values
-  .
-    {% set body_var = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi." %}
-    {% set heading_var = "Lorem Ipsum Dolor" %}
-    {% set title_var = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit." %}
-    {% set paragraph_var = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna." %}
-    {% set date_var = "September 99, 9999" %}
 
+.
+  <!--
+  templateType: page
+  isAvailableForNewContent: true
+  -->
+
+include _utilities.pug
+
+doctype html
 html
   head
     meta( charset='utf-8')
     title {{ content.html_title }}
     meta( name='description' content='{{ content.meta_desctiption }}')
+    meta( name="author" content="eFlex Systems")
     | {{ standard_header_includes }}
     link( href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet")
     link( href!="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel='stylesheet')
   
   body
-
     | {% module "global_header" path='/_eflex/components/global_header', label="global_header" %}
-    div(style="margin-top:3.5rem")
+    div(style="margin-top:5.5rem")
       block content
     | {% module "global_footer" path='/_eflex/components/global_footer', label="global_footer" %}
     | {{ standard_footer_includes }}
     
-script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
-script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+script(src='https://code.jquery.com/jquery-3.3.1.min.js')
 script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
+script(src="{{ get_public_template_url('/_eflex/script/lazy-images.js') }}")
 script(src="{{ get_public_template_url('/_eflex/script/script.js') }}")
+block script

@@ -1,0 +1,115 @@
+// Components
+// Image
+
+img.w-100
+  width: 101% !important
+
+// Image Zoom Pan
+.img-zoom-pan
+  &:hover
+    div[style*="pointer-events: none"]
+      @extend %t-duration, .opacity-0
+
+// Image Thumbnail
+.img-thumbnail-tabs
+  @media (max-width: 81.25rem)
+    max-width: 38rem
+  @media (max-width: 43.75rem)
+    max-width: 26.875rem
+
+.img-thumbnail
+  @extend .img-clip-rounded, %t-fix, %t-duration
+  border: none !important
+  h5
+    font-size: 1.25rem
+    margin-left: .25rem
+    margin-top: .25rem
+  span.icon-arrow-right-sm
+    position: absolute
+    right: 0
+    top: .75rem
+    transform: .5s ease-in-out
+    opacity: 0
+    font-size: 3rem
+    margin-right: 3rem
+
+.img-thumbnail:hover, .img-thumbnail.active
+  box-shadow: 0 6px 20px 8px #00000035
+  transform: scale(1.1)
+  h5
+    @extend .text-white
+  .d-none
+    display: flex !important
+  span.icon-arrow-right-sm
+    transform: .5s ease-in-out
+    margin-right: 0rem
+    opacity: 1
+  *
+    opacity: 1
+
+.img-thumbnail-size
+  @extend .rounded
+  width: 22rem
+  height: 4rem
+
+// Image Tab
+.tab-content
+  padding-bottom: 7rem
+
+// Infographic
+.infographic
+  transition-duration: .5s
+  width: 24vw
+  height: 24vw
+  min-width: 17rem
+  min-height: 10rem
+  max-width: 24rem
+  max-height: 20rem
+
+// Image Link - Portrait
+.image-link-2
+  @extend %cursor-pointer
+  img
+    @extend .grayscale
+  
+  &:hover
+    *
+      color: map-get($theme-colors, 'primary') !important
+    img
+      transition-duration: 0.5s
+      -webkit-filter: none
+      filter: none
+    .bg-white
+      @extend .bg-primary
+    .icon
+      color: map-get($theme-colors, 'white') !important
+
+// Lazy Loading
+.lazy-loading
+  opacity: 0
+
+.lazy-loaded
+  transition: opacity .8s ease-out
+  opacity: 1
+
+// Mobile Responsiveness
+@media (max-width: 920px)
+  // Image Thumbnail
+  .img-thumbnail-size
+    width: 10.5rem
+    height: 3rem
+
+  .img-thumbnail
+    h5
+      font-size: .75rem
+      line-height: 0
+      margin-top: .875rem
+      margin-left: 0
+    span.icon-arrow-right-sm
+      font-size: 1.75rem !important
+      top: 1rem
+  
+  // Infographic
+  .infographic
+    padding: 1rem !important
+    margin-bottom: 4rem !important

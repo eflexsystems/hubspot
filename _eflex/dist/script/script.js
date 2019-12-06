@@ -59,4 +59,4 @@ if (hasTouch()) {
             }
         }
     } catch (ex) {}
-}
+  }

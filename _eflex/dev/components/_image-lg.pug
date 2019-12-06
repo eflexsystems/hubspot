@@ -1,0 +1,9 @@
+//- Components
+//- Image - Size: Large
+
+//- Single Image
+
+mixin image-lg(index)
+  .res-half.img-clip-rounded.mb-5.mb-lg-0.p-5.
+    {% set class = "h-auto w-100 m-auto" %}
+    {% module "Image_#{index}" path='/_eflex/components/image' %}
