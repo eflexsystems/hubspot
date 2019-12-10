@@ -14,8 +14,7 @@
 
   .hs-menu-wrapper 
     .hs-menu-item
-      margin-top: .5rem
-      margin-bottom: .5rem
+      margin: .5rem
       a
         color: $gray-700
         &:hover
@@ -50,6 +49,9 @@
       display: none
 
   @media (max-width: 992px)
+    .dropdown-menu
+      padding: 0
+
     .dropdown-menu .hs_cos_wrapper_type_inline_text
       margin-top: 1rem
       margin-left: 0
@@ -70,17 +72,21 @@
     a#cta_button_490686_4b0f6943-4c1f-4b9b-914b-4bc5acfce5e0
       width: 100%
       text-align: left
-      border-radius: .25rem
-      padding: 1rem 0 1rem 1rem
+      border-radius: 0 !important
+      padding: 1.5rem
       box-sizing: border-box !important
+      &:hover
+        transform: none
     
     .nav-link
-      background-color: map-get($theme-colors, 'primary') + unquote('20')
-      border-radius: .25rem
+      background-color: map-get($theme-colors, 'gray-100')
     
+    .nav-link .text-brand
+      color: map-get($theme-colors, 'gray-800') !important
+      text-transform: capitalize !important
+
     .navbar .header-link
       font-size: 1rem
-
 
   @media (min-width: 1300px)
     

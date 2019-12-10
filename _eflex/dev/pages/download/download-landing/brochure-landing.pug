@@ -1,0 +1,24 @@
+//- kitting-brochure-landing.pug
+extends ../../../templates/_template.pug
+include ../../../components/_list.pug
+
+block script
+  script( src="{{ get_public_template_url('/_eflex/script/form.js') }}")
+
+block content
+  .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
+    // Content
+    .w-75
+      .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100.py-5.px-3.pl-lg-5.pl-xl-6
+        .w-half.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.z-index-1.mb-6.mb-lg-0.mx-lg-auto.mr-lg-4
+          h3.w-half.font-weight-bold.text-lg-nowrap.mb-2.
+            {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+          h5.w-half.mb-5.
+            {% raw_html "Page_Title" value='{{ heading_var }}' %}
+          p.w-half.mb-5.pr-lg-5.
+            {% raw_html "Page_Body_1_1" value='{{ title_var }}' %}
+          .w-lg-md.w-lg.my-4.
+            {% cta "learn_more" label='Learn_More_CTA_2' guid='f6743762-72eb-43ba-9d76-2c425e77cefa' %}
+        .w-lg.img-clip.overflow-hidden.img-inset-wide.mx-lg-auto.
+          {% set class = "h-100 w-100" %}
+          {% module "Image_01", label="Image_01", path='/_eflex/components/image' %}

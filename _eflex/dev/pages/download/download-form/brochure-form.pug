@@ -1,6 +1,6 @@
-//- kitting-brochure.pug
-extends ../../../../templates/_template.pug
-include ../../../../components/_list.pug
+//- kitting-brochure-form.pug
+extends ../../../templates/_template.pug
+include ../../../components/_list.pug
 
 block script
   script( src="{{ get_public_template_url('/_eflex/script/form.js') }}")
@@ -9,7 +9,7 @@ block content
   .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
     .w-100.position-relative
       // Image
-      .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.
+      .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.opacity-50.
         {% set class = "position-absolute #{position}" %}
         {% module "Wallpaper_0_1" path='/_eflex/components/image' %}
       // Blend Color
@@ -17,7 +17,7 @@ block content
         .w-100.h-100.blend-color-white
       // Blend Multiply
       .w-100.h-100.position-absolute
-        .w-100.h-100.blend-multiply-primary
+        .w-100.h-100.blend-multiply-brand-dark
       // Content
       .w-100
         .d-flex.flex-lg-row.flex-column.justify-content-center.w-100.h-100.py-5.px-3.pl-lg-5.pl-xl-6
@@ -31,10 +31,6 @@ block content
             .bullets-white.text-white.w-half
               - var n = 5
               +list('1')
-            // Image
-            .w-half.img-clip.overflow-hidden.pr-5.
-              {% set class = "w-100 h-100" %}
-              {% module "Image_1_1" path='/_eflex/components/image' %}
             
           .d-flex.mx-auto.mx-lg-0.ml-lg-auto
             // Form
@@ -50,10 +46,6 @@ block content
 
               .d-flex.w-100
                 // Prev
-                button#form-prev-1.btn-outline-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto.mr-3
-                  .d-flex.justify-content-center.position-relative
-                    .icon-arrow-left-sm.position-absolute.l-0( style = "font-size: 1.5rem")
-                    p.m-0 Back
                 button#form-prev-2.btn-outline-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto.mr-3
                   .d-flex.justify-content-center.position-relative
                     .icon-arrow-left-sm.position-absolute.l-0( style = "font-size: 1.5rem")
@@ -61,10 +53,6 @@ block content
 
                 // Next
                 button#form-next-1.btn-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto
-                  .d-flex.justify-content-center.position-relative
-                    p.m-0 Next
-                    .icon-arrow-right-sm.position-absolute.r-0( style = "font-size: 1.5rem")
-                button#form-next-2.btn-primary.rounded-pill.w-md.p-2.slick-slide
                   .d-flex.justify-content-center.position-relative
                     p.m-0 Next
                     .icon-arrow-right-sm.position-absolute.r-0( style = "font-size: 1.5rem")

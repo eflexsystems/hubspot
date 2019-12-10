@@ -21265,7 +21265,6 @@ img.w-100 {
   }
 
   .navbar-collapse {
-    height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
   }
