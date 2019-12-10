@@ -8,7 +8,7 @@ mixin image-wallpaper-6(index)
     // Image
     .w-100.h-100.overflow-hidden.position-absolute.img-inset-wide.
       {% set class = "position-absolute" %}
-      {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+      {% module "Wallpaper_#{index}", label="Wallpaper_#{index}", path='/_eflex/components/image' %}
     // Blend Exclusion
     .w-100.h-100.position-absolute.opacity-50
       .blend-exclusion-gray.w-100.h-100
@@ -22,16 +22,16 @@ mixin image-wallpaper-6(index)
     .w-75.h-100.mx-auto
       .d-flex.justify-content-center.align-items-center.flex-lg-row.flex-column
         .text-white.z-index-2
-          .d-flex.flex-column.justify-content-center.h-100.mx-5.mt-6.m-lg-5
+          .d-flex.flex-column.justify-content-center.h-100.mx-5
             h5.text-white.font-weight-regular.w-100.mb-0.
-              {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
-            h1.w-100.w-lg( class="text-" + color ).
-              {% raw_html "Body_#{index}" value="{{ heading_var }}" %}
+              {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
+            h1.w-100( class="text-" + color ).
+              {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ heading_var }}" %}
         .text-white.z-index-2
           .d-flex.flex-column.justify-content-center.h-100.m-5
             h3.text-white.w-lg.mb-4.
-              {% raw_html "Heading_#{index + 1}" value="{{ heading_var }}" %}
+              {% raw_html "Heading_#{index + 1}", label="Heading_#{index + 1}", value="{{ heading_var }}" %}
             p.w-100.w-lg.
-              {% raw_html "Body_#{index + 1}" value="{{ body_var }}" %}
+              {% raw_html "Body_#{index + 1}", label="Body_#{index + 1}", value="{{ body_var }}" %}
             .w-lg-md.my-3.
-              {% cta "learn_More_CTA_#{index + 1}" label='Learn_More_CTA_#{index}' guid='#{guid}' %}
+              {% cta "learn_More_CTA_#{index + 1}", label='Learn_More_CTA_#{index}', guid='#{guid}' %}
