@@ -60,3 +60,8 @@ if (hasTouch()) {
         }
     } catch (ex) {}
   }
+
+// Disable Background Scrolling
+$('.navbar-toggler').click(function() {
+  $('body').toggleClass('overflow-hidden');
+});

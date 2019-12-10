@@ -81,9 +81,12 @@
     .nav-link
       background-color: map-get($theme-colors, 'gray-100')
     
-    .nav-link .text-brand
-      color: map-get($theme-colors, 'gray-800') !important
-      text-transform: capitalize !important
+      & .text-brand
+        color: map-get($theme-colors, 'gray-800') !important
+        text-transform: capitalize !important
+      
+      &:hover .text-brand
+        color: map-get($theme-colors, 'white') !important
 
     .navbar .header-link
       font-size: 1rem

@@ -85,6 +85,9 @@
     color: #323535 !important;
     text-transform: capitalize !important;
   }
+  #global_header .nav-link:hover .text-brand {
+    color: #ffffff !important;
+  }
   #global_header .navbar .header-link {
     font-size: 1rem;
   }

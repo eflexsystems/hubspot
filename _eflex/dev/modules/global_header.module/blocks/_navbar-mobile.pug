@@ -1,11 +1,11 @@
 .d-lg-none.d-flex.flex-column.align-items-center
-  ul.navbar-nav.w-100.mr-lg-3.ml-lg-auto
+  ul.navbar-nav.w-100.mr-lg-3.ml-lg-auto.overflow-hidden
     mixin nav-item(index)
       if active
         li.nav-item.active.text-nowrap.dropdown.mx-lg-3
           .d-flex.flex-column.position-relative
             .
-              <a class="d-flex nav-link p-4 p-lg-0 collapse dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+              <a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
               {% if module.nav_item_#{index}_url.open_in_new_tab %}target="_blank"{% endif %}
               {% if module.nav_item_#{index}_url.no_follow %}rel="nofollow"{% endif %}
               >
@@ -38,6 +38,6 @@
     - var n = 2
     while n <= 4
       +nav-item(n++)
-
-  .w-lg-md.m-lg-0.w-100
-    | {% cta "free_demo" label='Primary CTA' guid='9de805d8-7399-4436-bf15-7250f18da14d', extra_classes="w-100 text-center" %}
+    
+    .w-lg-md.m-lg-0.w-100
+      | {% cta "free_demo" label='Primary CTA' guid='9de805d8-7399-4436-bf15-7250f18da14d', extra_classes="w-100 text-center" %}
