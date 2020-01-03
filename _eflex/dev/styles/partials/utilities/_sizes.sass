@@ -10,6 +10,36 @@
     right: $size
   .b-#{$spacer}
     bottom: $size
+  // Negative Sizes
+  .l-n#{$spacer}
+    left: $size * -1
+  .t-n#{$spacer}
+    top: $size * -1
+  .r-n#{$spacer}
+    right: $size * -1
+  .b-n#{$spacer}
+    bottom: $size * -1
+
+@for $i from 1 through 3
+  $size-percent: $i * 25
+  .l-#{$size-percent}
+    left: percentage($size-percent / 100)
+  .t-#{$size-percent}
+    top: percentage($size-percent / 100)
+  .r-#{$size-percent}
+    right: percentage($size-percent / 100)
+  .b-#{$size-percent}
+    bottom: percentage($size-percent / 100)
+  // Negative Sizes
+  .l-n#{$size-percent}
+    left: percentage($size-percent / -100)
+  .t-n#{$size-percent}
+    top: percentage($size-percent / -100)
+  .r-n#{$size-percent}
+    right: percentage($size-percent / -100)
+  .b-n#{$size-percent}
+    bottom: percentage($size-percent / -100)
+
 
 @each $size, $length in $sizes
   .w-lg-#{$size}

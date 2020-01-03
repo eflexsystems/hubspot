@@ -22,15 +22,18 @@ block content
       .w-100
         .d-flex.flex-lg-row.flex-column.justify-content-center.w-100.h-100.py-5.px-3.pl-lg-5.pl-xl-6
           .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.h-100.z-index-1.mb-6.mb-lg-0.mx-lg-auto
-            h5.w-half.text-orange.mb-2.
-              {% raw_html "Page_Title" value='{{ heading_var }}' %}
-            h3.w-half.text-white.font-weight-bold.text-lg-nowrap.mb-5.
-              {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+            h5.w-half.text-white.mb-2.
+              {% raw_html "Page_Title", label="Page_Title", value='{{ heading_var }}' %}
+            h3.w-half.text-orange.font-weight-bold.text-lg-nowrap.mb-5.
+              {% raw_html "Page_Subtitle", label="Page_Subtitle", value='{{ title_var }}' %}
             p.text-white.w-half.mb-0.pr-lg-5.
-              {% raw_html "Page_Body_1_1" value='{{ title_var }}' %}
-            .bullets-white.text-white.w-half
+              {% raw_html "Page_Body_1_1", label="Page_Body_1_1", value='{{ title_var }}' %}
+            .bullets-orange.h6.text-white.w-half.mb-5
               - var n = 5
               +list('1')
+            p.text-white.w-half.mb-0.pr-lg-5.
+              {% raw_html "Page_Body_1_2", label="Page_Body_1_2", value='{{ title_var }}' %}
+            
             
           .d-flex.mx-auto.mx-lg-0.ml-lg-auto
             // Form

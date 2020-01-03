@@ -7,11 +7,11 @@
     .carousel-inner.row.justify-content-md-center.w-100.mx-auto( role="listbox")
       mixin logo(index)
         if active
-          .carousel-item.col-md-2.active
-            | {% module "Logo_#{index}" path='/_eflex/components/image' label="Logo_#{index}" extra_classes="d-flex justify-content-center d-block opacity-85" %}
+          .carousel-item.col-md-2.h-xs.active( style="min-height: 3rem" )
+            | {% module "Logo_#{index}" path='/_eflex/components/image' label="Logo_#{index}" extra_classes="d-flex justify-content-center opacity-85" %}
         else
-          .carousel-item.col-md-2
-            | {% module "Logo_#{index}" path='/_eflex/components/image' label="Logo_#{index}" extra_classes="d-flex justify-content-center d-block opacity-85" %}
+          .carousel-item.col-md-2.h-xs( style="min-height: 3rem" )
+            | {% module "Logo_#{index}" path='/_eflex/components/image' label="Logo_#{index}" extra_classes="d-flex justify-content-center opacity-85" %}
 
       - var active = true
       +logo(1)

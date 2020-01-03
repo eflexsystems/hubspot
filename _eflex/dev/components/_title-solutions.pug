@@ -7,8 +7,8 @@ mixin title-solution(index)
     .h-100.d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
       .w-100.h-100.position-relative
         // Image
-        .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.
-          {% set class = "h-100 w-auto position-absolute position-lg-fixed #{position}" %}
+        .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.
+          {% set class = "h-100 w-auto position-absolute r-0 position-lg-fixed #{position}" %}
           {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
         // Blend Overlay
         .w-100.h-100.position-absolute

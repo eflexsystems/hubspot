@@ -4,8 +4,8 @@
 mixin image-wallpaper-5(index)
   .w-100.position-relative
     // Image
-    .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.
-      {% set class = "position-absolute" %}
+    .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.
+      {% set class = "position-absolute r-0 #{position}" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
     // Blend Exclusion
     .w-100.h-100.position-absolute.opacity-50

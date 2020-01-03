@@ -49,6 +49,7 @@
 +resolution-size(md, 17.5)
 +resolution-size(lg, 24)
 +resolution-size(xl, 32)
++resolution-size(xxl, 50)
 
 // Sales request to make sizes larger for xxl breakpoint.
 @media (min-width: $breakpoint-xxl)
@@ -57,6 +58,7 @@
   +resolution-size(md, 22)
   +resolution-size(lg, 30)
   +resolution-size(xl, 34)
+  +resolution-size(xxl, 62)
 
 
 // Half and Full Sizes do not react the same way.
@@ -99,13 +101,13 @@
 
 // Auto Sizes
 .min-w-auto
-  min-width: auto 
+  min-width: auto !important
 
 .max-w-auto
-  max-width: auto 
+  max-width: auto !important
 
 .min-h-auto
-  min-height: auto 
+  min-height: auto !important
 
 .max-h-auto
-  max-height: auto 
+  max-height: auto !important

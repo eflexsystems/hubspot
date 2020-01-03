@@ -4,11 +4,11 @@
 include _image-half.pug
 .d-flex.align-items-center.flex-lg-row.flex-column
   mixin layout-7(index)
-    .d-flex.flex-lg-column.flex-row.flex-wrap
+    .d-flex.flex-lg-column.flex-row.flex-wrap.justify-content-center.justify-content-lg-start
       .mx-auto.mx-lg-0
         +image-half(index)
-      .d-flex.flex-column.p-4.p-lg-0
+      .d-flex.flex-column.p-4.p-lg-0.mb-6.mb-lg-0
         p.w-half.mb-0.m-lg-4.
           {% raw_html "Body_#{index}" value="{{ body_var }}" %}
-        .w-lg-md.w-half.my-3.m-lg-4.
+        .w-lg.my-3.m-lg-4.
           {% cta "learn_more" label='Learn_More_CTA_2' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}

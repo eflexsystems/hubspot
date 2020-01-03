@@ -8,21 +8,26 @@ block content
   .vh-100.w-100
     // Video
     .video_wrap.vh-100.w-100.overflow-hidden.position-absolute.img-clip.z-index-n2
-      video( autoplay="autopplay" muted="muted" loop="loop" playsinline class="position-fixed")
+      video.d-md-block.d-none( autoplay="autopplay" muted="muted" loop="loop" playsinline class="position-fixed")
         source( src="https://cdn2.hubspot.net/hubfs/490686/_site/videos/Digital_Blue.mp4")
+      // Video - Reduced Mobile Size
+      video.d-block.d-lg-none( autoplay="autopplay" muted="muted" loop="loop" playsinline class="position-fixed" preload="auto")
+        source( src="https://cdn2.hubspot.net/hubfs/490686/_site/videos/Digital_Blue_Mobile.mp4")
+
+
     // Content
     .d-flex.flex-column.vh-100.w-100.position-absolute
       .d-flex.flex-column.justify-conbtent-center.flex-fill.p-5
-        h1.text-white.position-relative.font-weight-bold.text-center.text-left.text-shadow.mt-auto
+        h1.text-white.position-relative.font-weight-bold.text-center.text-left.text-shadow.mt-lg-auto
           | {% raw_html "Title" value='The Manufacturing Integrated Platform' %}
           .position-absolute.d-flex.justify-content-center.w-100.t-0
             .position-relative.d-none.d-lg-block( style="left: 19rem; top: -2.75rem")
               | {% image "MIP_Logo" label='MIP Logo Partial', alt='MIP Logo', src='https://cdn2.hubspot.net/hubfs/490686/_site/photos/logos/Logo_mip-partial.png', style="width: 4rem" %}
         h5.text-white.text-center.font-weight-normal.text-shadow.mb-5
           | {% raw_html "Callout_1" value='The next-generation of process control and smart manufacturing.' %}
-        p.text-white.text-center.font-weight-normal.text-shadow.font-weight-semibold.w-lg.align-self-center.border-left.border-right.border-white.px-4
+        p.text-white.text-center.font-weight-normal.text-shadow.font-weight-semibold.w-lg.align-self-center.border-left.border-right.border-white.px-4.my-5.my-lg-0
           | {% raw_html "Callout_2" value='Nominated by Assembly Magazine for 2019 New Product of the Year – Factory of the Future' %}
-        .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.mt-5.m-0
+        .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.my-5.m-0.t-fix
           .w-lg.m-2.
             {% cta "request_demo" label='Primary CTA' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}
           .w-lg.cta-outline.m-2.

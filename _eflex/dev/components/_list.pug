@@ -2,8 +2,8 @@
 //- Bullets
 
 mixin bullet(bullets_index)
-  li.p.
-    {% raw_html "Bullet_#{bullets_index}" value='{{ title_var }}' %}
+  li.p.d-flex.mb-2.
+    {% raw_html "Bullet_#{bullets_index}", label="Bullet_#{bullets_index}", value='{{ title_var }}' %}
 
 mixin list(index)
   ul.d-flex.flex-column.my-4

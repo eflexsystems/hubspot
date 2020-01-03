@@ -1,0 +1,30 @@
+include ../../../components/_image-half.pug
+include ../../../components/_layout-5.pug
+
+.d-flex.flex-column
+  .d-flex.flex-lg-row.flex-column.w-100.overflow-hidden
+
+    // Mixin (Change Positions Responsively)
+    mixin text(index)
+      .d-flex.flex-column.justify-content-center.w-half.p-5.d-none.d-lg-block
+        h5.w-100.mb-4.
+          {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
+        p.w-100.
+          {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ paragraph_var }}" %}
+        .w-100.mx-auto.mx-lg-0
+          .w-lg.my-3.
+            {% cta "learn_More_CTA_#{index}" label='Learn_More_CTA_#{index}' guid='#{guid}' %}
+    
+    // < d-lg
+    .d-block.d-lg-none
+      +text('3_1')
+
+    // Image
+    - var index = '3_1'
+    .w-xxl.img-clip.
+      {% set class = "w-100 h-auto" %}
+      {% module "Image_3_1", label="Image_3_1", path='/_eflex/components/image' %}
+    
+    // > d-lg
+    .d-none.d-lg-block.mx-auto
+      +text('3_1')

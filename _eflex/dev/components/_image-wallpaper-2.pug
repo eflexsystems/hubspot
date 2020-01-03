@@ -5,8 +5,8 @@ include _layout-5.pug
 mixin image-wallpaper-2(index)
   .w-full.position-relative
     // Wallpaper
-    .w-100.h-100.overflow-hidden.position-absolute.img-inset-wide.
-      {% set class = "position-absolute" %}
+    .w-100.h-100.overflow-hidden.position-absolute.r-0.img-inset-wide.
+      {% set class = "position-absolute r-0 #{position}" %}
       {% module "Wallpaper_#{index}" path='/_eflex/components/image', style="min-width: 177.77vh" %}
     // Blend Exclusion
     .w-100.h-100.position-absolute.opacity-60

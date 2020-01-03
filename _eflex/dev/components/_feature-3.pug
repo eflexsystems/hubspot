@@ -3,9 +3,9 @@
 
 mixin feature-3(index)
   .w-md.m-4
-    .d-flex.flex-column
-      .icon-xl.text-primary.my-3(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
-      h6.
+    .d-flex.flex-column.align-items-center.text-center
+      .icon-xl.text-primary.mb-4(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+      h6.w-100.
         {% raw_html "Feature_#{index}_Heading" value='{{ heading_var }}' %}
       small.
         {% raw_html "Feature_#{index}_Body" value='{{ title_var }}' %}
