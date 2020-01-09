@@ -7,3 +7,11 @@
   &:hover
     color: map-get($theme-colors, 'primary')
     text-decoration: none
+
+.link-secondary, a.link-secondary:not([href]):not([tabindex])
+  color: $body-color
+  text-decoration: underline
+  @extend .cursor-pointer
+  &:hover
+    color: map-get($theme-colors, 'gray-300')
+    color: map-get($theme-colors, 'primary')

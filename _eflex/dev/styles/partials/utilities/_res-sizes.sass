@@ -64,10 +64,13 @@
 // Half and Full Sizes do not react the same way.
 .res-half, .w-half
   width: 42vw !important
+.res-half, .w-half, .res-xxl, .w-xxl
   max-width: 42rem
   min-width: 21rem
+
 .res-half, .h-half
   height: 23.5vw !important
+.res-half, .h-half, .res-xxl, .h-xxl
   max-height: 23.5rem
   min-height: 15rem
 
@@ -103,11 +106,11 @@
 .min-w-auto
   min-width: auto !important
 
-.max-w-auto
-  max-width: auto !important
+.max-w-unset
+  max-width: unset !important
 
 .min-h-auto
   min-height: auto !important
 
-.max-h-auto
-  max-height: auto !important
+.max-h-unset
+  max-height: unset !important

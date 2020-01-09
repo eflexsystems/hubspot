@@ -11562,7 +11562,7 @@ button.bg-black:focus {
   margin-right: 1.5rem !important;
 }
 
-.mb-4,
+.mb-4, .form .form-title,
 .my-4 {
   margin-bottom: 1.5rem !important;
 }
@@ -18228,12 +18228,18 @@ strong {
 }
 .res-half, .w-half {
   width: 42vw !important;
+}
+
+.res-half, .w-half, .res-xxl, .w-xxl {
   max-width: 42rem;
   min-width: 21rem;
 }
 
 .res-half, .h-half {
   height: 23.5vw !important;
+}
+
+.res-half, .h-half, .res-xxl, .h-xxl {
   max-height: 23.5rem;
   min-height: 15rem;
 }
@@ -18282,16 +18288,16 @@ strong {
   min-width: auto !important;
 }
 
-.max-w-auto {
-  max-width: auto !important;
+.max-w-unset {
+  max-width: unset !important;
 }
 
 .min-h-auto {
   min-height: auto !important;
 }
 
-.max-h-auto {
-  max-height: auto !important;
+.max-h-unset {
+  max-height: unset !important;
 }
 
 .blend-multiply-brand {
@@ -21281,7 +21287,7 @@ strong {
     padding: 1.75rem !important;
   }
 
-  .mb-5, .my-5, .mb-4, .my-4 {
+  .mb-5, .my-5, .mb-4, .form .form-title, .my-4 {
     margin-bottom: 1.5rem !important;
   }
 
@@ -21349,7 +21355,7 @@ strong {
   -ms-backface-visbibility: hidden;
 }
 
-.image-link-2, .form select, .h-shadow, .cursor-pointer, .link, a.link:not([href]):not([tabindex]) {
+.image-link-2, .form select, .h-shadow, .cursor-pointer, .link-secondary, a.link-secondary:not([href]):not([tabindex]), .link, a.link:not([href]):not([tabindex]) {
   cursor: pointer;
 }
 
@@ -21366,6 +21372,10 @@ strong {
 
 .text-shadow {
   text-shadow: 0.1rem 0.1rem 2rem #1f212190;
+}
+
+.text-shadow-none {
+  text-shadow: none;
 }
 
 .overflow-scroll {
@@ -21583,16 +21593,25 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
   transition: transform 0.2s linear;
 }
 
+@media (max-width: 992px) {
+  .form-responsive {
+    width: 100vw;
+  }
+}
+@media (min-width: 992px) {
+  .form-responsive {
+    width: 50vw !important;
+  }
+}
+
 .form {
-  height: fit-content;
-  width: 45vw !important;
-  max-width: 50vw;
+  min-height: 40rem;
 }
 .form form {
   margin-bottom: 0;
 }
 .form .hs-form {
-  min-height: 33rem !important;
+  height: 100%;
   position: relative;
 }
 .form fieldset {
@@ -21662,7 +21681,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
   padding: 0.75rem;
   position: absolute;
   right: 0;
-  top: -0.55rem;
+  top: 2.45rem;
 }
 .form .hs-button.primary:focus {
   outline: none;
@@ -21704,6 +21723,7 @@ a.cta_button:hover {
 
 @media (max-width: 920px) {
   .form {
+    height: fit-content !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: auto !important;
@@ -21719,7 +21739,6 @@ a.cta_button:hover {
 
 .form .hs_state .hs-input {
   width: 100% !important;
-  margin-bottom: 1rem !important;
 }
 
 .form-d-inline .hs_cos_wrapper form {
@@ -21851,6 +21870,15 @@ img.w-100 {
 .link:hover, a.link:not([href]):not([tabindex]):hover {
   color: #2b90e2;
   text-decoration: none;
+}
+
+.link-secondary, a.link-secondary:not([href]):not([tabindex]) {
+  color: #636466;
+  text-decoration: underline;
+}
+.link-secondary:hover, a.link-secondary:not([href]):not([tabindex]):hover {
+  color: #d5d6d3;
+  color: #2b90e2;
 }
 
 @media (min-width: 992px) {
