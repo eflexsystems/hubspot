@@ -1,8 +1,9 @@
 // Components
 // Image
 
-.link
+.link, a.link:not([href]):not([tabindex])
   color: map-get($theme-colors, 'gray-500')
+  @extend .cursor-pointer
   &:hover
     color: map-get($theme-colors, 'primary')
     text-decoration: none

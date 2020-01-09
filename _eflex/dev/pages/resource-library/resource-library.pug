@@ -1,10 +1,21 @@
 //- resource-library.pug
 extends ../../templates/_template.pug
 
+
+block script
+  script( src="{{ get_public_template_url('/_eflex/script/video.js') }}")
+
 block content
 
+  // Video Blocks - No Display (Sub-Content)
+  include tabs/_sub-content.pug
+  - var video = 'jem-preview'
+  +video-theater-block('4_1')
+  - var video = 'demo-assembly-show-2019'
+  +video-theater-block('4_2')
+
   .m-3
-    .border-bottom.border-gray-500.w-lg-75.py-5.mx-5.mx-lg-auto
+    .border-bottom.border-gray-500.w-lg-75.py-5.mx-2.mx-lg-auto
       h3.mb-4.
         {% raw_html "Title_1_1", label="Title_1_1", value='{{ heading_var }}' %}
       p.m-0.
@@ -22,7 +33,7 @@ block content
             {% raw_html "Filter_Tab_#{index}_Text", label="Filter_Tab_#{index}_Text", value='{{ heading_var }}' %}
 
     // Mixin Use
-    ul.nav.flex-md-row.flex-column.justify-content-center.mx-5.py-3( id='resource-library-tabs' role='tablist' )
+    ul.nav.flex-md-row.flex-column.justify-content-center.mx-2.mx-lg-5.py-3( id='resource-library-tabs' role='tablist' )
       - var active = true
       +resource-tab('1_1', 'resource-all')
       - var active = false
@@ -33,17 +44,18 @@ block content
 
     // Resource - Mixin Declaration
     mixin resource(index)
-      .my-5
+      .my-5.mx-auto.mx-lg-0
         .mb-4
           .img-clip.res-lg.mb-5.mb-lg-0.h-scale.slick-slide( onclick!="window.location='{% text \"Resource_" + index + "_Href\", label=\'Resource_" + index + "_Href\', no_wrapper=True %}'" style="cursor: pointer").
             {% set class = "res-lg w-auto min-w-auto mx-auto" %}
             {% module "Image_#{index}", label="Image_#{index}", path='/_eflex/components/image' extra_classes="d-flex" %}
-        .res-lg.h-auto.min-h-auto.p-2
+        .res-lg.h-auto.min-h-auto.text-center.text-lg-left.p-2
           h5.font-weight-normal
             a.link( href!='{% text \"Resource_' + index + '_Href\", label=\'Resource_' + index + '_Href\', value="https://www.eflexsystems.com", no_wrapper=True %}' ).
               {% raw_html "Resource_#{index}_Heading", label="Resource_#{index}_Heading", value='{{ title_var }}' %}
           p.font-weight-semibold.text-primary.mb-0.
             {% raw_html "Resource_#{index}_Description", label="Resource_#{index}_Description", value='#{description}' %}
+
     
     .tab-content.mx-auto.w-lgx3( id='tabContent' )
       .tab-pane.fade.show.active( id='resource-all' role='tabpanel' aria-labelledby='resource-all-tab' )

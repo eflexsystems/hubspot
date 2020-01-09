@@ -1,7 +1,25 @@
 // Resource Library
-// Tab 4 (Videos)
+// Tab 4 (Videos)        
+
+// Resource Video - Mixin Declaration
+mixin resource-video(index)
+    .my-5.mx-auto.mx-lg-0
+        .mb-4
+            .img-clip.res-lg.mb-5.mb-lg-0.h-scale.slick-slide( style="cursor: pointer" class='video-theater-toggle-'+video).
+                {% set class = "res-lg w-auto min-w-auto mx-auto" %}
+                {% module "Image_#{index}", label="Image_#{index}", path='/_eflex/components/image' extra_classes="d-flex" %}
+        .res-lg.h-auto.min-h-auto.text-center.text-lg-left.p-2
+            h5.font-weight-normal
+                a.link( class='video-theater-toggle-link-'+video ).
+                    {% raw_html "Resource_#{index}_Heading", label="Resource_#{index}_Heading", value='{{ title_var }}' %}
+            p.font-weight-semibold.text-primary.mb-0.
+                {% raw_html "Resource_#{index}_Description", label="Resource_#{index}_Description", value='#{description}' %}
+
 
 // Resource - Mixin Use
 - var description = 'Video'
-+resource('4_1')
-+resource('4_2')
+
+  - var video = 'jem-preview'
+  +resource-video('4_1')
+  - var video = 'demo-assembly-show-2019'
+  +resource-video('4_2')

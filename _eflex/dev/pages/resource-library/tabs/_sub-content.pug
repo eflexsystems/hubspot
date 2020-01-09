@@ -1,0 +1,13 @@
+// Resource Library
+// Sub Content
+
+// Video Theater Modal - Mixin
+mixin video-theater-block(index)
+    .video-theater.d-none.position-fixed.z-index-2( class='video-theater-'+video)
+        .position-absolute.vw-100.vh-100
+            .w-100.h-100.bg-black.opacity-85
+        .position-absolute.vw-100.vh-100.d-flex.flex-column.justify-content-center.align-items-center
+            .d-flex.flex-column.align-items-end
+                .icon.icon-xl.icon-x-sm.text-white.cursor-pointer.h-opacity
+                video( width="100%" height="100%" controls poster!='{% text \"Resource_' + index + '_Placeholder_Poster\", label=\'Resource_' + index + '_Placeholder_Poster\', no_wrapper=True %}')
+                    source(src!='{% text \"Resource_' + index + '_File_URL\", label=\'Resource_' + index + '_File_URL\', no_wrapper=True %}' type="video/mp4")
