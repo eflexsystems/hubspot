@@ -1,103 +1,48 @@
-//- Parallax
+// Tab 4
+// Image Wallpaper
 
-.p-5
-  h3 Parallax Test
-  p The gray box simulates the body tag.
-.d-flex.flex-column.mb-5
-  .parallax.w-100.bg-gray-200.vh-100.w-100
-    .parallax-layer.parallax-back.w-100.h-100.opacity-60.t-0
-      .w-100.h-100.position-relative
-        // Image
-        | {% set class = "w-100 h-auto" %}
-        | {% module "Wallpaper" path='/_eflex/components/image' %}
-    .parallax-layer.parallax-base.w-100
-      .d-flex.flex-column
-        .d-flex.flex-column.p-5
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-        .w-100.d-flex.flex-column.bg-gray-200.p-5
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-          h3 Parallax Base
-        .d-flex.flex-column.p-5
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
-          h3.text-white.text-shadow Parallax Base
+append script
+  script.
+    $("img.position-fixed").removeClass("position-fixed");
+    $("img.position-lg-fixed").removeClass("position-lg-fixed");
 
-.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.mb-5
-  .parallax.w-100.bg-gray-100( style="height: 20rem" )
-    .image-plx.parallax-layer.parallax-back.opacity-60( style="padding: 20rem 0" )
-      h3 Parallax Back
-    .content-plx.parallax-layer.parallax-base( style="padding: 20rem 0" )
-      h3 Parallax Base
+include ../../../components/wallpapers/_title-solutions.pug
++divider('Title Solutions')
+- var color = 'blue'
++title-solution('11_0')
 
+include ../../../components/wallpapers/_image-wallpaper-1.pug
++divider('Image Wallpaper 1')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-1('11_1')
 
-//-
-  mixin title-solution(index)
-    include _image-wallpaper-2.pug
-    .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
-      .w-100.h-half.position-relative
-        // Image
-        .w-100.h-half.img-clip.position-absolute.overflow-hidden.img-inset-wide.
-          {% set class = "w-100 h-auto position-absolute #{position}" %}
-          {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
-        // Black Fade
-        .h-100.position-absolute( style="width:90%" )
-          .black-fade-opaque-x.w-100.h-100
-        // Blend Overlay
-        .w-100.h-100.position-absolute
-          .w-100.h-100.opacity-15( class="blend-overlay-" + color )
-        // Content
-        .w-100.h-100.position-absolute
-          .d-flex.justify-content-center.w-100.h-100
-            .d-flex.flex-column.justify-content-center.align-items-center.align-items-lg-start.h-100.w-75.ml-n5.ml-lg-0
-              h2.text-shadow.w-75( class="text-" + color ).
-                {% raw_html "Page_Title" value='{{ heading_var }}' %}
-              h5.text-white.text-shadow.font-weight-light.text-lg-nowrap.w-75.mb-5.
-                {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
-              | {% cta "cta_#{index}" label='Primary CTA' guid='#{guid}' %}
-    
-    .block-fluid.bg-gray-100
-      .d-flex.flex-lg-row.flex-column.justify-content-around.align-items-center
-        .w-100.d-flex.flex-lg-row.flex-column.justify-content-center.overflow-hidden.mt-5.mt-lg-0
-          .w-half.h-half.overflow-visible.position-relative.mx-auto.mx-lg-0.my-5.my-lg-0.mr-lg-5( style = "max-width: 40rem")
-            .position-absolute.h-100.w-100.b-0.mt-5.mt-lg-0
-              .position-absolute.w-100.h-50.opacity-25.rounded-circle( class="bg-" + color + "-dark" style="bottom: -0.5rem")
-            | {% set class="h-100 w-100 scale-125 position-absolute" %}
-            | {% module "Infographic_#{index}" path="/_eflex/components/image" style="top: 3%" %}
-          .d-flex.justify-content-center.w-lg-half.ml-xl-6
-            .d-flex.flex-column.justify-content-center.align-items-center.mt-5.my-lg-4.p-5.p-lg-0
-              h3.text-center.mb-4.
-                {% raw_html "Heading_#{index}" value='{{ title_var }}' %}
-              p.w-lg-half.text-center.
-                {% raw_html "Body_#{index}" value='{{ paragraph_var }}' %}
+include ../../../components/wallpapers/_image-wallpaper-2.pug
++divider('Image Wallpaper 2')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-2('11_2')
+
+include ../../../components/wallpapers/_image-wallpaper-3.pug
++divider('Image Wallpaper 3')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-3('11_3')
+
+include ../../../components/wallpapers/_image-wallpaper-4.pug
++divider('Image Wallpaper 4')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-4('11_4')
+
+include ../../../components/wallpapers/_image-wallpaper-5.pug
++divider('Image Wallpaper 5')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-5('11_5')
+
+include ../../../components/wallpapers/_image-wallpaper-6.pug
++divider('Image Wallpaper 6')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-6('12_1')
+
+include ../../../components/wallpapers/_image-wallpaper-7.pug
+- color
++divider('Image Wallpaper 7')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-7('13_1')

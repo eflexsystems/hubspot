@@ -5,6 +5,7 @@
     width: 50vw !important
   
 .form
+  height: fit-content
   min-height: 40rem
   form
     margin-bottom: 0
@@ -38,16 +39,20 @@
     margin-right: 0.5rem
   ul.inputs-list
     padding-left: 0
+    margin-bottom: 0
   .hs-form-checkbox // Checkox Container
     width: 100%
   .hs-form-booleancheckbox-display // Checkbox Container
+    cursor: pointer
     width: 100%
     input
       margin-top: 5px
       min-width: auto
-    p
+    p, strong
       color: map-get($theme-colors, 'brand')
+      font-style: normal
       @extend .font-weight-semibold
+
   .hs-form-checkbox-display input, .hs-form-radio-display input // Checkbox
     min-width: auto
   

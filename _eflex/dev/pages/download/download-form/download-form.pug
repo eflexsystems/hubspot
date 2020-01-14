@@ -3,13 +3,13 @@ extends ../../../templates/_template.pug
 include ../../../components/_list.pug
 
 block script
-  script( src="{{ get_public_template_url('/_eflex/script/form.js') }}")
+  script( src="{{ get_public_template_url('/_eflex/script/form-2-steps.js') }}")
 
 block content
   .d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
     .w-100.position-relative
       // Image
-      .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.opacity-10.
+      .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.opacity-20.
         {% set class = "position-absolute #{position}" %}
         {% module "Wallpaper_0_1" path='/_eflex/components/image' %}
       // Blend Color
@@ -17,18 +17,18 @@ block content
         .w-100.h-100.blend-color-white
       // Blend Multiply
       .w-100.h-100.position-absolute
-        .w-100.h-100.blend-multiply-brand
+        .w-100.h-100.blend-multiply-brand-dark
       // Content
       .w-100
         .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100.pl-lg-5.pl-xl-6
           .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-lg.h-100.z-index-1.m-6
             h6.w-100.text-white.font-italic.mb-2.
               {% raw_html "Page_Title", label="Page_Title", value='{{ heading_var }}' %}
-            h2.w-100.text-white.font-weight-bold.text-lg-nowrap.mb-5.
+            h2.w-100.text-orange.font-weight-bold.text-lg-nowrap.mb-5.
               {% raw_html "Page_Subtitle", label="Page_Subtitle", value='{{ title_var }}' %}
             p.text-white.w-100.mb-0.
               {% raw_html "Page_Body_1_1", label="Page_Body_1_1", value='{{ title_var }}' %}
-            .bullets-orange.h6.text-white.w-lg
+            .bullets-orange.h6.text-white.w-lg(class!='{% text \"Bullets_Display\", value="d-block", label=\"Bullets_Display (d-none or d-block)\", no_wrapper=True %}')
               - var n = 5
               +list('1')
             p.text-white.w-lg.mb-0.

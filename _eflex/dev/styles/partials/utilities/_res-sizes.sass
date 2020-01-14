@@ -23,10 +23,13 @@
         min-height: $width / 2.62 + rem
       .w#{$infix}-#{$desc}
         width: $width vw 
+      .w#{$infix}-#{$desc}, .max-w#{$infix}-#{$desc}
         max-width: $width + rem
+      .w#{$infix}-#{$desc}, .min-w#{$infix}-#{$desc}
         min-width: $width / 2 + rem
       .h#{$infix}-#{$desc}
-        height: $width / 1.78 + vw 
+        height: $width / 1.78 + vw
+      .h#{$infix}-#{$desc}, .max-h#{$infix}-#{$desc}
         max-height: ( 9 * $width ) / 16 + rem
 
       // x 2
@@ -50,6 +53,7 @@
 +resolution-size(lg, 24)
 +resolution-size(xl, 32)
 +resolution-size(xxl, 50)
++resolution-size(xxxl, 75)
 
 // Sales request to make sizes larger for xxl breakpoint.
 @media (min-width: $breakpoint-xxl)
@@ -59,6 +63,7 @@
   +resolution-size(lg, 30)
   +resolution-size(xl, 34)
   +resolution-size(xxl, 62)
+  +resolution-size(xxxl, 75)
 
 
 // Half and Full Sizes do not react the same way.

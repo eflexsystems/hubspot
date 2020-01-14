@@ -1,24 +1,6 @@
 // Utilities
 // Layout Utilities
 
-// Parallax
-.parallax
-  @extend .vh-100
-  perspective: 1px
-  perspective-origin-x: 100%
-  overflow-y: auto !important
-  overflow-x: hidden
-
-.parallax-layer
-  position: absolute
-  transform-origin-x: 100%
-
-.parallax-base
-  transform: translateZ(0)
-
-.parallax-back
-  transform: translateZ(-3px) scale(4)
-
 // Display Utilities
 @for $i from 1 through 3
   .z-index-#{$i}

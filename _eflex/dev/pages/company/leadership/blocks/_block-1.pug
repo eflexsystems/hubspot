@@ -1,8 +1,16 @@
-include ../../../../components/_layout-5.pug
-include ../../../../components/_image-lg.pug
-.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.bg-gray-100.py-5
-  +image-lg('1_1')
-  - var index = '1_1'
-  .d-flex.flex-column.justify-content-center.w-lg-half.m-5.m-lg-0.p-lg-5
-    p.w-100.
-      {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+include ../../../../components/layouts/_layout-5.pug
+.row.no-gutters.bg-gray-100
+  .col-lg.col-12.d-flex
+    .w-100.h-100.img-clip.max-h-xxl.
+      {% set class = "h-auto w-100" %}
+      {% module "Image_#{index}" path='/_eflex/components/image' %}
+    // Blend Exclusion
+    .w-100.h-100.position-absolute
+      .blend-exclusion-gray.rounded.w-100.h-100.opacity-35
+
+  // Body
+  .col-lg.col-12.d-flex.justify-content-center.align-items-center
+    .d-flex.flex-column
+      h4.text-brand.mb-4 Our Culture
+      p.w-lg-lg.p-5.p-lg-0.
+        {% raw_html "Body_1_1" value="{{ body_var }}" %}

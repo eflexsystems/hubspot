@@ -9,7 +9,7 @@ mixin title-solution(index)
         // Image
         .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.
           {% set class = "h-100 w-auto position-absolute r-0 position-lg-fixed #{position}" %}
-          {% module "Wallpaper_#{index}" path='/_eflex/components/image' %}
+          {% module "Wallpaper_#{index}", label="Wallpaper_#{index}", path='/_eflex/components/image' %}
         // Blend Overlay
         .w-100.h-100.position-absolute
           .w-100.h-100.opacity-30( class="blend-overlay-" + color )
@@ -22,9 +22,9 @@ mixin title-solution(index)
           .d-flex.justify-content-center.w-100.h-100
             .d-flex.flex-column.justify-content-center.align-items-center.align-items-lg-start.h-100.w-75.ml-n5.ml-lg-0
               h1.text-shadow.w-75( class="text-" + color ).
-                {% raw_html "Page_Title" value='{{ heading_var }}' %}
+                {% raw_html "Page_Title", label="Page_Title", value='{{ heading_var }}' %}
               h5.text-white.text-shadow.font-weight-light.text-lg-nowrap.w-75.mb-5.
-                {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+                {% raw_html "Page_Subtitle", label="Page_Subtitle", value='{{ title_var }}' %}
               .w-75
                 .w-md.mr-auto.mr-lg-0
                   | {% cta "cta_#{index}" label='Primary CTA' guid='#{guid}' %}
@@ -36,10 +36,10 @@ mixin title-solution(index)
             .position-absolute.h-100.w-100.b-0.mt-5.mt-lg-0
               .position-absolute.w-100.h-50.opacity-25.rounded-circle( class="bg-" + color + "-dark" style="bottom: -0.5rem")
             | {% set class="h-100 w-100 scale-125 position-absolute" %}
-            | {% module "Infographic_#{index}" path="/_eflex/components/image" style="top: 3%" %}
+            | {% module "Infographic_#{index}", label="Infographic_#{index}", path="/_eflex/components/image" style="top: 3%" %}
           .d-flex.justify-content-center.w-lg-half.ml-xl-6
             .d-flex.flex-column.justify-content-center.align-items-center.mt-5.my-lg-4.p-5.p-lg-0
               h3.text-center.mb-4.
-                {% raw_html "Heading_#{index}" value='{{ title_var }}' %}
+                {% raw_html "Heading_#{index}", label="Heading_#{index}", value='{{ title_var }}' %}
               p.w-lg-half.text-center.
-                {% raw_html "Body_#{index}" value='{{ paragraph_var }}' %}
+                {% raw_html "Body_#{index}", label="Body_#{index}", value='{{ paragraph_var }}' %}

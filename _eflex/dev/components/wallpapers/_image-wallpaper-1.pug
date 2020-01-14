@@ -1,7 +1,7 @@
 //- Components
 //- Image Wallpaper 1
 
-include _layout-5.pug
+include ../layouts/_layout-5.pug
 
 mixin image-wallpaper-1(index)
   .w-100.position-relative
@@ -25,7 +25,7 @@ mixin image-wallpaper-1(index)
             p.text-white.
               {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ paragraph_var }}" %}
           .py-5.py-lg-0.mx-auto.mx-lg-0.mb-n3
-            include _desktop.pug
+            include ../_desktop.pug
             +desktop(index)
         .align-self-lg-end.p-lg-5.my-lg-auto( style="z-index:1" )
           .d-flex.flex-column.justify-content-center.w-lg.mb-5

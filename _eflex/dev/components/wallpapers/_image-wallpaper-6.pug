@@ -1,8 +1,8 @@
 //- Components
 //- Image Wallpaper 5
 
-include _image-half.pug
-include _layout-5.pug
+include ../images/_image-half.pug
+include ../layouts/_layout-5.pug
 mixin image-wallpaper-6(index)
   .w-100.position-relative
     // Image
@@ -17,16 +17,16 @@ mixin image-wallpaper-6(index)
       .blend-color-brand-dark.w-100.h-100
     // Blend Multiply
     .w-100.h-100.position-absolute
-      .blend-multiply-brand-dark.w-100.h-100.opacity-70
+      .blend-multiply-brand-dark.w-100.h-100.opacity-85
     // Content
     .w-75.h-100.mx-auto
       .d-flex.justify-content-center.align-items-center.flex-lg-row.flex-column.p-5.p-lg-0
         .text-white.z-index-2
           .d-flex.flex-column.justify-content-center.h-100.my-4.my-lg-0.mx-lg-5
             h5.text-white.font-weight-regular.w-lg.w-100.mb-0.
-              {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
+              {% raw_html "Heading_#{index}", label="Heading_#{index}", value="eFlex Brochure" %}
             h1.w-100( class="text-" + color ).
-              {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ heading_var }}" %}
+              {% raw_html "Body_#{index}", label="Body_#{index}", value="PRODUCT" %}
         .text-white.z-index-2
           .d-flex.flex-column.justify-content-center.h-100.m-lg-5
             h3.text-white.w-lg.mb-4.

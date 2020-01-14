@@ -1,0 +1,27 @@
+//- Components
+//- Image Link 2
+
+
+// 'popup-modal.js' must be included with this component.
+
+mixin image-link-2(index)
+  .image-link-2.d-flex.flex-column.justify-content-center.align-items-center.h-scale.slick-slide.mb-5.m-lg-4.t-fix( id="image_link_"+index )
+    .position-relative.mb-4( style="width: 15rem; height: 15rem;" )
+      // Black Fade
+      .w-100.h-100.img-clip-circle.position-absolute.t-fix
+        .w-100.h-100.gray-200-fade( style="transform: rotate(180deg)" )
+      // Image
+      .w-100.h-100.img-clip-circle.position-absolute.t-fix
+        .img-clip.w-100.h-100
+          | {% set class='w-100 h-auto' %}
+          | {% module "Image_Link_#{index}_Image", label="Image_Link_#{index}_Image", path='/_eflex/components/image' extra_classes='t-fix' %}
+      // Button
+      .position-absolute.d-flex.justify-content-center.align-items-center.bg-white.rounded-circle.b-3.r-3( style="width: 3rem; height: 3rem;" )
+        .icon.icon-xl.icon-arrow-right-sm
+
+      div( style="" )
+    .d-flex.flex-column.w-sm
+      h6.font-weight-bold.mb-2.
+        {% raw_html "Image_Link_Name_#{index}", label="Image_Link_Name_#{index}", value="Joe Schmoe" %}
+      h6.text-gray-500.font-weight-normal.
+        {% raw_html "Image_Link_Position_#{index}", label="Image_Link_Position_#{index}", value="Default Position" %}
