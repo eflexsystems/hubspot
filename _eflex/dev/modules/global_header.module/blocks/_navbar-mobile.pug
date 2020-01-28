@@ -1,8 +1,8 @@
-.d-lg-none.d-flex.flex-column.align-items-center( style="height: 57.5vh" )
-  ul.navbar-nav.w-100.mr-lg-3.ml-lg-auto
+.d-lg-none.d-flex.flex-column.align-items-center( style="height: 77vh" )
+  ul.navbar-nav.w-100.mr-lg-3.ml-lg-auto( style='padding-bottom: 60rem')
     mixin nav-item(index)
       if active
-        li.nav-item.active.text-nowrap.dropdown.mx-lg-3
+        li.nav-item.active.text-nowrap.dropdown.position-relative.mx-lg-3
           .d-flex.flex-column.position-relative
             .
               <a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
@@ -16,6 +16,11 @@
               .dropdown-bg.bg-white.px-3.pl-3.pl-lg-0.py-lg-5.rounded.shadow
                 .
                   {% simple_menu menu_tree="{{ module.ni_#{index}_simple_menu_1 }}" %}
+
+          //- Down Arrow        
+          .nav-link-arrow.position-absolute.t-0.w-100.h-100z-index-2( style='pointer-events: none')
+            .d-flex.justify-content-end.align-items-center.w-100.h-100
+              span.icon-arrow-down-sm.icon-xl.p-3
       else
         li.nav-item.text-nowrap.dropdown.mx-lg-3
           .d-flex.flex-column.position-relative
@@ -30,6 +35,11 @@
             .dropdown-menu.bg-none.p-lg-0( aria-labelledby='navBar')
               .dropdown-bg.bg-white.px-3.pl-3.pl-lg-0.py-lg-5.rounded.shadow.
                 {% simple_menu menu_tree="{{ module.ni_#{index}_simple_menu_1 }}" %}
+
+          //- Down Arrow
+          .position-absolute.t-0.w-100.h-100.z-index-2( style='pointer-events: none')
+            .d-flex.justify-content-end.align-items-center.w-100.h-100
+              span.icon-arrow-down-sm.icon-xl.p-3
 
     - var active = true 
     +nav-item(1)

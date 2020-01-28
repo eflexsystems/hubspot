@@ -5,10 +5,10 @@ mixin layout-4(index)
   .d-flex.align-items-center.flex-lg-row.flex-column
     .d-flex.flex-column.justify-content-center.align-items-center.m-5
       h3.w-half.text-lg-center.mb-4.
-        {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+        {% raw_html "Title_#{index}", label="Title_#{index}", value="{{ heading_var }}" %}
       h5.w-half.text-lg-center.mb-4.
-        {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
+        {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
       p.w-half.text-lg-center.
-        {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+        {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ body_var }}" %}
       .w-half.w-lg-lg.mx-lg-auto.mx-lg-0.my-3.
-        {% cta "learn_more_2" label='Learn_More_CTA_2' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
+        {% cta "learn_more_2", label='Learn_More_CTA_2', guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}

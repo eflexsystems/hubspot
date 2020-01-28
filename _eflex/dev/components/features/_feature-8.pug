@@ -8,6 +8,6 @@ mixin feature-8(index)
       +image-md(index)
     .d-flex.flex-column.w-md.m-3
       h5.mb-2.
-        {% raw_html "Feature_#{index}_Heading" value="{{ heading_var }}"  %}
+        {% raw_html "Feature_#{index}_Heading", label="Feature_#{index}_Heading", value="{{ heading_var }}"  %}
       p.
-        {% raw_html "Feature_#{index}_Body" value="{{ paragraph_var }}" extra_classes="w-md" %}
+        {% raw_html "Feature_#{index}_Body", label="Feature_#{index}_Body", value="{{ paragraph_var }}" extra_classes="w-md" %}

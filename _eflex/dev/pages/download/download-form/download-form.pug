@@ -20,8 +20,8 @@ block content
         .w-100.h-100.blend-multiply-brand-dark
       // Content
       .w-100
-        .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100.pl-lg-5.pl-xl-6
-          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-lg.h-100.z-index-1.m-6
+        .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100
+          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-lg.h-100.z-index-1.mx-auto
             h6.w-100.text-white.font-italic.mb-2.
               {% raw_html "Page_Title", label="Page_Title", value='{{ heading_var }}' %}
             h2.w-100.text-orange.font-weight-bold.text-lg-nowrap.mb-5.
@@ -35,7 +35,7 @@ block content
               {% raw_html "Page_Body_1_2", label="Page_Body_1_2", value='{{ title_var }}' %}
             
             
-          .form-responsive.d-flex.mx-auto.mx-lg-0.ml-lg-auto
+          .form-responsive.d-flex.mx-auto.mx-lg-0
             // Form
             #download_request.d-flex.flex-column.justify-content-center.form.w-100.vh-100.max-w-unset.w-lg-half.bg-white.content-box.position-relative.p-5.pt-5
               | {% form "Download Request" form_to_use='bad83811-531c-41e2-976a-18114e475497', title='Download Request' extra_classes='pb-5' %}

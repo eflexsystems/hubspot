@@ -1,0 +1,138 @@
+.py-6.bg-gray-100
+    mixin pricing-block(index)
+        .col-lg-3.col-sm-6.col-xs-12.p-2.max-w-lg
+            .d-flex.flex-column.align-items-center.h-100.position-relative
+
+                // Background
+                .position-absolute.h-100.w-100.rounded.shadow
+                    .w-100.h-100.rounded(class='bg-'+bgColor)
+                
+                // Content
+                .d-flex.flex-column.align-items-center.w-100.h-100.position-relative.z-index-1.p-3.p-xl-5.pt-5
+                    h5.text-center.w-100.border-bottom.pb-5.mb-5( class='text-'+primaryTextColor).
+                        {% raw_html "Plan_#{index}_Title", label="Plan_#{index}_Title", value='Basic' %}
+                    
+                    // Price
+                    .w-100.border-bottom.pb-5.mb-3.mx-n5
+                        .d-flex.align-items-end.justify-content-center.align-contents-center.mb-5
+                            h2.mb-1( class='text-'+primaryTextColor) $
+                            h2.mb-1.mr-3( class='text-'+primaryTextColor).
+                                {% raw_html "Plan_#{index}_Rate", label="Plan_#{index}_Rate", value='99' %}
+                            .d-flex.flex-column
+                                p.font-weight-bold.position-relative.t-2.mb-0( class='text-'+primaryTextColor).
+                                        {% raw_html "Plan_#{index}_Unit_Top", label="Plan_#{index}_Unit", value='month' %}
+                                .d-flex.mb-lg-2.mb-1
+                                    p.mb-0.mr-1( class='text-'+primaryTextColor) per
+                                    p.font-weight-bold.mb-0( class='text-'+primaryTextColor).
+                                        {% raw_html "Plan_#{index}_Unit_Bottom", label="Plan_#{index}_Unit", value='station' %}
+                        #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
+                            {% cta "cta" label='Configuration' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                        #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
+                            {% cta "cta" label='Configuration' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
+                        
+                    // Plan Features
+                    .w-100.h-100.mb-5
+                        .mb-5( class!='d-'+'{% raw_html \"Display_'+plan+'_Feature_Quantity\", label=\"Display_'+plan+'_Feature_Quantity\", value="6", no_wrapper=True  %}'+'-block')
+                            if includesPlan
+                                .border-bottom.pb-4.mb-5
+                                    each item in includedPlans
+                                        .d-flex.align-items-center
+                                            .icon-xl.icon-check-thick-sm.text-primary.mr-2.
+                                            p.font-weight-semibold.w-100.mb-0( class='text-'+primaryTextColor)
+                                                | All 
+                                                b #{item} 
+                                                | Features
+                                                
+                            .pb-4.mb-5
+                                - var n = 1
+                                while n < 20
+                                    - var index = n++
+                                    .d-flex.align-items-center( class='d-'+index)
+                                        .icon-xl.icon-check-thick-sm.text-primary.mr-2
+                                        p.font-weight-semibold.w-100.mb-0.
+                                            {% raw_html "Feature_#{plan}_#{index}", label="Feature_#{plan}_#{index}", value='Default Feature' %}
+
+                    .w-100
+                        .w-md.my-2.mx-auto
+                                button.btn.btn-md.font-weight-semibold.w-100.py-3( class='btn-'+primaryTextColor ) Request Demo
+                        .w-md.my-2.mx-auto
+                                button.btn.btn-md.font-weight-semibold.w-100.py-3( class='btn-outline-'+primaryTextColor ) Contact Us
+
+
+    .row.no-gutters.justify-content-center.m-3.m-xl-5
+        // Pricing Block 1
+        - var plan = 'Standard'
+        - var includesPlan = false
+        - var bgColor = 'white'
+        - var primaryTextColor = 'primary'
+        +pricing-block('1_1')
+
+        // Pricing Block 2
+        - var plan = 'Advanced'
+        - var includesPlan = true
+        - var includedPlans = ['Standard']
+        - var bgColor = 'white'
+        - var primaryTextColor = 'primary'
+        +pricing-block('1_2')
+
+        // Pricing Block 3
+        - var plan = 'Professional'
+        - var includesPlan = true
+        - var includedPlans = ['Standard', 'Advanced']
+        - var bgColor = 'white'
+        - var primaryTextColor = 'primary'
+        +pricing-block('1_3')
+
+
+        //- Enterprise Modules
+
+        - var plan = 'Addons'
+        - var includesPlan = false
+        - var bgColor = 'primary'
+        - var borderColor = 'brand'
+        - var primaryTextColor = 'white'
+        - var secondaryTextColor = 'white'
+
+        .col-lg-3.col-sm-6.col-xs-12.p-2.max-w-lg
+            .d-flex.flex-column.align-items-center.h-100.position-relative
+
+                // Background
+                .position-absolute.h-100.w-100.rounded.shadow
+                    .w-100.h-100.rounded(class='bg-'+bgColor)
+                
+                // Content
+                .d-flex.flex-column.align-items-center.w-100.h-100.position-relative.z-index-1.p-3.p-xl-5.pt-5
+                    h5.text-center.w-100.border-bottom.pb-5.mb-5( class='text-'+primaryTextColor +' border-'+borderColor).
+                        {% raw_html "Plan_#{index}_Title", label="Plan_#{index}_Title", value='Optional Add-Ons' %}
+                    
+                    // Price
+                    .w-100.border-bottom.pb-5.mb-5( class='border-'+borderColor )
+                        .d-flex.align-items-end.justify-content-center.align-contents-center.mb-2
+                            p.text-center.mx-3.mb-5( class='text-'+primaryTextColor ) Enterprise modules can be added to any <span class='font-weight-bold'>Advanced</span> or <span class='font-weight-bold'>Professional</span> Plan.
+                        #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
+                            {% cta "cta" label='Configuration' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                        #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
+                            {% cta "cta" label='Configuration' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
+                        
+                    // Plan Features
+                    .w-100.h-100.mb-5( class!='d-'+'{% raw_html \"Display_'+plan+'_Feature_Quantity\", label=\"Display_'+plan+'_Feature_Quantity\", value="6", no_wrapper=True  %}'+'-block')
+                        // Add-Ons
+                        .position-relative.r-2.pb-4.mb-5
+                            - var n = 1
+                            while n < 20
+                                - var index = n++
+                                .d-flex.align-items-center.mb-3( class='d-'+index)
+                                    .icon-lg.icon-plus-sm.mr-1( class='text-'+secondaryTextColor )
+                                    p.font-weight-semibold.w-100.mb-0( class='text-'+secondaryTextColor).
+                                        {% raw_html "Feature_#{plan}_#{index}", label="Feature_#{plan}_#{index}", value='Default Feature' %}
+
+                    .w-100
+                        #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
+                            {% cta "cta" label='Configuration' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                        #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
+                            {% cta "cta" label='Configuration' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
+    
+    // Disclaimer
+    .row.no-gutters.justify-content-center
+        h6.w-100.text-center.
+            {% raw_html "Disclaimer_2", label="Disclaimer_2", value='* All Packages include installation and training. An annual license and ten stations is required at minimum.' %}

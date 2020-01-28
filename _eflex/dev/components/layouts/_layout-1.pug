@@ -8,11 +8,11 @@ mixin layout-1(index)
       +image-half(index)
     .d-flex.flex-column.w-lg-half.m-5.m-lg-0.p-lg-5
       h3.w-100.text-lg-left.text-center.pb-4.
-        {% raw_html "Title_#{index}" value="{{ heading_var }}" %}
+        {% raw_html "Title_#{index}", label="Title_#{index}", value="{{ heading_var }}" %}
       h5.w-100.text-lg-left.text-center.mb-4.
-        {% raw_html "Heading_#{index}" value="{{ heading_var }}" %}
+        {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
       p.w-100.text-lg-left.text-center.
-        {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+        {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ body_var }}" %}
       .w-100.mx-auto.mx-lg-0
         .w-lg-lg.my-3.
-          {% cta "cta_#{index}" label='cta_#{index}' guid='#{guid}' %}
+          {% cta "cta_#{index}", label='cta_#{index}', guid='#{guid}' %}

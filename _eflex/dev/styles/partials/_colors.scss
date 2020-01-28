@@ -75,13 +75,14 @@ $colors-dark: (
   "green-dark": $forest-green,
   "cyan-dark": $bondi-blue,
   "blue-dark": $tory-blue,
-  "purple-dark": $butterfly-bush
+  "purple-dark": $butterfly-bush,
+  "primary-dark": $tory-blue
 );
 
 $theme-colors: (
   "brand": $tory-blue,
   "brand-dark": $prussian-blue,
-  "brand-light": #2f9ef8,
+  "brand-light": $mystic,
   "primary": map-get($colors, "blue"),
   "secondary": $tia-maria,
   "success": map-get($colors, "green"),

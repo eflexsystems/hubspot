@@ -9,6 +9,6 @@ include ../images/_image-half.pug
         +image-half(index)
       .d-flex.flex-column.p-4.p-lg-0.mb-6.mb-lg-0
         p.w-half.mb-0.m-lg-4.
-          {% raw_html "Body_#{index}" value="{{ body_var }}" %}
+          {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ body_var }}" %}
         .w-lg.my-3.m-lg-4.
           {% cta "learn_more" label='Learn_More_CTA_2' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}

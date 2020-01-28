@@ -6,6 +6,10 @@ append script
     $("img.position-fixed").removeClass("position-fixed");
     $("img.position-lg-fixed").removeClass("position-lg-fixed");
 
++divider('Preview Wallpaper')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  include ../../../components/wallpapers/_preview-wallpaper.pug
+
 include ../../../components/wallpapers/_title-solutions.pug
 +divider('Title Solutions')
 - var color = 'blue'
@@ -42,7 +46,11 @@ include ../../../components/wallpapers/_image-wallpaper-6.pug
   +image-wallpaper-6('12_1')
 
 include ../../../components/wallpapers/_image-wallpaper-7.pug
-- color
 +divider('Image Wallpaper 7')
 .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
   +image-wallpaper-7('13_1')
+
+include ../../../components/wallpapers/_image-wallpaper-8.pug
++divider('Image Wallpaper 8')
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+  +image-wallpaper-8('14_1')
