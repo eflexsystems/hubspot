@@ -15,3 +15,10 @@
   &:hover
     color: map-get($theme-colors, 'gray-300')
     color: map-get($theme-colors, 'primary')
+
+.link-primary, a.link-primary:not([href]):not([tabindex])
+  color: map-get($theme-colors, 'brand')
+  @extend .cursor-pointer
+  &:hover
+    color: map-get($theme-colors, 'brand-dark')
+    text-decoration: none

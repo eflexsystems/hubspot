@@ -13,6 +13,23 @@ block content
     .color-toggle button:focus {
       outline: none;
     }
+
+    .hs_attach_files label {
+      background-color: #00000000;
+      color: #2b90e2;
+      font-weight: 500;
+      border: 1px solid #2b90e2;
+      padding: .75rem;
+      width: 14rem;
+      text-align: center;
+      border-radius: 3rem;
+    }
+
+    .hs_attach_files label:hover {
+      transition-duration: .2s;
+      background-color: #2b90e2;
+      color: white;
+    }
   
   script( src="{{ get_public_template_url('/_eflex/script/components.js') }}")
   script( src="{{ get_public_template_url('/_eflex/script/lazy-images.js') }}")
@@ -46,7 +63,9 @@ block content
             a.nav-link( id="sg-"+index+"-tab" data-toggle="tab" href="#sg-"+index role="tab" aria-controls="sg-"+index  aria-selected="false" ) #{title}
       
       - var title = 'Styles'
+      - var active = true
       +sg-tab('1')
+      - var active = false
 
       - var title = 'Components'
       +sg-tab('2')
@@ -55,18 +74,15 @@ block content
       +sg-tab('3')
 
       - var title = 'Image Wallpaper'
-      - var active = true
       +sg-tab('4')
-      - var active = false
-
     
     // Tab Contents
     .tab-content( id="sg-content" )
-      .tab-pane.fade( id="sg-1" role="tabpanel" aria-labelledby="sg-1-tab" )
+      .tab-pane.fade.show.active( id="sg-1" role="tabpanel" aria-labelledby="sg-1-tab" )
         include tabs/_tab-1.pug
       .tab-pane.fade( id="sg-2" role="tabpanel" aria-labelledby="sg-2-tab" )
         include tabs/_tab-2.pug
       .tab-pane.fade( id="sg-3" role="tabpanel" aria-labelledby="sg-3-tab" )
         include tabs/_tab-3.pug
-      .tab-pane.fade.show.active( id="sg-4" role="tabpanel" aria-labelledby="sg-4-tab" )
+      .tab-pane.fade( id="sg-4" role="tabpanel" aria-labelledby="sg-4-tab" )
         include tabs/_tab-4.pug

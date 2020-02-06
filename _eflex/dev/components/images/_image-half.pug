@@ -5,5 +5,5 @@
 
 mixin image-half(index)
   .res-half.img-clip-rounded.p-5.p-lg-0.m-lg-4.
-    {% set class = "w-100 h-auto rounded" %}
+    {% set class = "w-100 h-auto rounded #{position}" %}
     {% module "Image_#{index}" path='/_eflex/components/image' %}

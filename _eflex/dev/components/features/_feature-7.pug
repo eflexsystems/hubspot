@@ -4,8 +4,8 @@
 mixin feature-7(index)
   .w-half.m-4
     .d-flex.flex-column
-      .h-lg-xs.img-clip-rounded.mb-4.
-        {% set class = "w-100 h-auto" %}
+      .h-lg-xs.img-clip-rounded.position-relative.mb-4.
+        {% set class = "w-100 h-auto position-absolute #{position}" %}
         {% module "Image_#{index}" path='/_eflex/components/image' %}
       h5.
         {% raw_html "Feature_#{index}_Heading", label="Feature_#{index}_Heading", value='{{ heading_var }}' %}

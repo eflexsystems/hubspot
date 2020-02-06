@@ -1,0 +1,50 @@
+include ../../../components/_list.pug
+
+.d-flex.flex-column.justify-content-center.align-items-center.w-100.overflow-hidden
+    .d-flex.flex-lg-row.flex-column.justify-content-center.w-100.position-relative.px-lg-5
+        .d-flex.flex-column.p-5
+            .d-flex.flex-column.mb-4
+                h3 {% raw_html "Heading_1_01", label="Heading_1_01", value='{{ heading_var }}' %}
+                p {% raw_html "Body_1_01", label="Body_1_01", value='{{ title_var }}' %}
+            .d-flex.form-responsive
+                // Form
+                .d-flex.flex-column.justify-content-center.form.w-100.vh-100.max-w-unset.w-lg-half.bg-white.content-box.position-relative
+                    | {% form "Form_1" form_to_use='811a0563-99e9-42bf-881b-dfbfc1c4fdc9', title='Customer Support Ticket Form', extra_classes='pb-5' %}
+
+        .d-flex.flex-column.p-5
+            h3.text-brand.font-weight-bold.w-lg.mb-5 {{ site_settings.company_name }}
+
+            .d-flex.flex-column.border-bottom.pb-5.mb-5
+                .d-flex.flex-column.mb-5
+                    p.font-weight-bold.text-uppercase.mb-3 Main Location
+                    p.mb-0 {{ site_settings.company_street_address_1 }}
+                    p.mb-0 {{ site_settings.company_city }}, {{ site_settings.company_state }} 48306
+                    a.link-primary.mb-0( href='tel:12486515979' ) 248-651-5979
+                    a.link-primary.mb-0( href='https://www.eflexsystems.com' ) eflexsystems.com
+
+                .d-flex.flex-column.mb-5
+                    p.font-weight-bold.text-uppercase.mb-3 Support Team
+                    a.link-primary.mb-0( href='tel:18553992272' ) 855-399-2272
+                    a.link-primary.mb-0( href='mailto: support@eflexsystems.com ') support@eflexsystems.com
+                
+                .d-flex.flex-column
+                    p.font-weight-bold.text-uppercase.mb-3 Sales
+                    a.link-primary.mb-0( href='tel:18334633539' ) 833-463-3539
+                    a.link-primary.mb-0( href='mailto: sales@eflexsystems.com ') sales@eflexsystems.com
+
+            .d-flex.flex-column.border-bottom.pb-5.mb-5
+                .d-flex.flex-column
+                    .icon-timer.icon-xl.mb-3
+                    p.font-weight-bold.text-uppercase.mb-3 Hours of Operation
+                    p.mb-0 9a - 5p (Eastern Standard Time)
+                    p.mb-0 Monday - Friday
+                    p
+                        span.font-italic Support Team 
+                        |  - 24/7
+            
+            .d-flex.flex-column.mb-5
+                p.font-weight-bold.text-uppercase.mb-3 Connect With Us
+                .d-flex.align-items-center
+                    a.btn-link.icon-facebook.icon-lg.text-brand.slick-slide.mr-4(href='https://www.facebook.com/eFlexsystem/')
+                    a.btn-link.icon-twitter.icon-lg.text-brand.slick-slide.mr-4(href='https://twitter.com/eflexsystems')
+                    a.btn-link.icon-linkedin.icon-lg.text-brand.slick-slide.mr-4(href='https://www.linkedin.com/company/eflex-systems')

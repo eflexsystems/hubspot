@@ -1,4 +1,4 @@
-.py-6.bg-gray-100
+.py-5.bg-gray-100
     mixin pricing-block(index)
         .col-lg-3.col-sm-6.col-xs-12.p-2.max-w-lg
             .d-flex.flex-column.align-items-center.h-100.position-relative
@@ -26,9 +26,9 @@
                                     p.font-weight-bold.mb-0( class='text-'+primaryTextColor).
                                         {% raw_html "Plan_#{index}_Unit_Bottom", label="Plan_#{index}_Unit", value='station' %}
                         #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
-                            {% cta "cta" label='Configuration' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                            {% cta "cta_1" label='cta_1' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
                         #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
-                            {% cta "cta" label='Configuration' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
+                            {% cta "cta_2" label='cta_2' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
                         
                     // Plan Features
                     .w-100.h-100.mb-5
@@ -53,10 +53,10 @@
                                             {% raw_html "Feature_#{plan}_#{index}", label="Feature_#{plan}_#{index}", value='Default Feature' %}
 
                     .w-100
-                        .w-md.my-2.mx-auto
-                                button.btn.btn-md.font-weight-semibold.w-100.py-3( class='btn-'+primaryTextColor ) Request Demo
-                        .w-md.my-2.mx-auto
-                                button.btn.btn-md.font-weight-semibold.w-100.py-3( class='btn-outline-'+primaryTextColor ) Contact Us
+                        #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
+                            {% cta "cta_1" label='cta_1' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                        #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
+                            {% cta "cta-2" label='cta_2' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
 
 
     .row.no-gutters.justify-content-center.m-3.m-xl-5
@@ -108,11 +108,12 @@
                     // Price
                     .w-100.border-bottom.pb-5.mb-5( class='border-'+borderColor )
                         .d-flex.align-items-end.justify-content-center.align-contents-center.mb-2
-                            p.text-center.mx-3.mb-5( class='text-'+primaryTextColor ) Enterprise modules can be added to any <span class='font-weight-bold'>Advanced</span> or <span class='font-weight-bold'>Professional</span> Plan.
+                            p.text-center.mx-3.mb-5( class='text-'+primaryTextColor ).
+                                {% raw_html "Addon_Details", label="Addon_Details", value="Add-on modules can be added to any <span class='font-weight-bold'>Advanced</span> or <span class='font-weight-bold'>Professional</span> Plan." %}
                         #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
-                            {% cta "cta" label='Configuration' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                            {% cta "cta_1" label='cta_1' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
                         #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
-                            {% cta "cta" label='Configuration' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
+                            {% cta "cta_2" label='cta_2' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
                         
                     // Plan Features
                     .w-100.h-100.mb-5( class!='d-'+'{% raw_html \"Display_'+plan+'_Feature_Quantity\", label=\"Display_'+plan+'_Feature_Quantity\", value="6", no_wrapper=True  %}'+'-block')
@@ -128,11 +129,34 @@
 
                     .w-100
                         #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
-                            {% cta "cta" label='Configuration' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
+                            {% cta "cta_1" label='cta_1' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
                         #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
-                            {% cta "cta" label='Configuration' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
+                            {% cta "cta_2" label='cta_2' guid='7d023b1a-1731-431c-8d34-b9d25bb4c39b' %}
     
-    // Disclaimer
-    .row.no-gutters.justify-content-center
-        h6.w-100.text-center.
-            {% raw_html "Disclaimer_2", label="Disclaimer_2", value='* All Packages include installation and training. An annual license and ten stations is required at minimum.' %}
+// Disclaimer
+.d-flex.flex-column.justify-content-center.m-5.mx-auto
+    h3.w-100.text-center.
+        {% raw_html "Disclaimer_2", label="Disclaimer_2", value='*All packages include installation, training, and onsite or cloud hosting. *An annual license and ten stations is required at minimum.' %}
+//
+    .w-100.position-relative.h-half
+        // Image
+        .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.opacity-20.
+            {% set class = "position-fixed b-0" %}
+            {% module "Disclaimer_Wallpaper", label="Disclaimer_Wallpaper" path='/_eflex/components/image' %}
+        // Blend Exclusion
+        .w-100.h-100.position-absolute.opacity-50
+            .blend-exclusion-gray.w-100.h-100
+        // Blend Color
+        .w-100.h-100.position-absolute
+            .blend-color-brand-dark.w-100.h-100
+        // Blend Multiply
+        .w-100.h-100.position-absolute
+            .blend-multiply-brand.w-100.h-100.opacity-70
+        // Content
+        .w-100.h-100
+            .d-flex.flex-column.align-items-center.h-100
+                .flex-fill.d-flex.flex-column.align-items-center.z-index-2.m-5
+                    h3.text-center.text-white.text-shadow.mb-4.
+                        {% raw_html "Heading_Wallpaper", value="All Packages Include..." %}
+                    h6.text-center.text-white.text-shadow.mb-4.
+                        {% raw_html "Heading_Wallpaper", value="Installation, training, and onsite or cloud hosting." %}

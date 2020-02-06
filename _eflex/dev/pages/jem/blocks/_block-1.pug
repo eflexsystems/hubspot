@@ -1,0 +1,49 @@
+include ../../../components/layouts/_layout-3.pug
+include ../../../components/images/_image.pug
+
+.d-flex.justify-content-lg-center.align-items-center.flex-column.mx-5.py-5.border-bottom
+    .d-flex.justify-content-center.align-items-center.flex-lg-row.flex-column.mb-5
+        +layout-3('1_1')
+        .h-half.img-clip-rounded.
+            {% set class = 'h-half' %}
+            {% module "Image_1_1", label="Image_1_1", path='/_eflex/components/image' extra_classes='h-100' %}
+    .d-flex.flex-column.mb-5
+        .border-bottom.w-lg.mb-4
+            p.font-italic.mb-2 Complexity Under Control
+        .d-flex.flex-lg-row.flex-column.flex-wrap
+            mixin flowchart(index)
+                .d-flex
+                    span.mr-4(style='width: 3rem; height: 3rem;').
+                        {% set class = "w-100 h-auto rounded" %}
+                        {% module "Graphic_#{index}" label='Graphic_#{index}' path='/_eflex/components/image' %}
+
+                    .d-flex.flex-column
+                        h3.mb-2 #{heading}
+                        p.font-weight-semibold.mb-4 #{subHeading}
+                        ul.pl-0
+                            each item in listItems
+                                li.d-flex.align-items-center
+                                    span.bg-primary.rounded-circle.mr-3( style='padding: .2rem')
+                                    p.mb-0.mr-3 #{item}
+
+            - var heading = 'Configure'
+            - var subHeading = 'Plan & Predict.'
+            - var listItems = ['Activity Layouts', 'Tasks & Resources', 'Equipment Integration', 'Training']
+            +flowchart('1_01')
+
+            - var heading = 'Connect'
+            - var subHeading = 'Understand & React.'
+            - var listItems = ['Real-Time Monitoring', 'Work in Process', 'Operator Engagement', 'Enforce Quality Process']
+            +flowchart('1_02')
+
+            - var heading = 'Control'
+            - var subHeading = 'Record & Improve.'
+            - var listItems = ['100% Time Study', 'Production Image Capture', 'Process Data Archival', 'Party Traceability']
+            +flowchart('1_03')
+
+            - var heading = 'Collect'
+            - var subHeading = 'Record & Improve.'
+            - var listItems = ['100% Time Study', 'Production Image Capture', 'Process Data Archival', 'Party Traceability']
+            +flowchart('1_04')
+        
+        .border-bottom.w-lg-xxl.ml-auto.pt-4
