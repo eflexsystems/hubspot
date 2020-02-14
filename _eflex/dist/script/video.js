@@ -17,4 +17,5 @@ function videoTheaterToggle(video) {
 
 // List Videos Here
 videoTheaterToggle('jem-preview');
+videoTheaterToggle('jem-preview-2');
 videoTheaterToggle('demo-assembly-show-2019');

@@ -2,7 +2,7 @@
 // Carousel
 
 mixin carousel-1(index)
-  #carouselExample.carousel.slide.w-75.my-4( data-ride="carousel" data-interval="2000")
+  .carousel.slide.w-75.my-4( data-ride="carousel" data-interval="2000" id=id)
     .carousel-inner.row.justify-content-md-center.w-100.mx-auto( role="listbox")
       mixin logo(index)
         if active
@@ -28,9 +28,9 @@ mixin carousel-1(index)
       while n <= carouselNumber
         +logo(n++)
 
-    a.carousel-control-prev( href="#carouselExample" role="button" data-slide="prev")
+    a.carousel-control-prev( href='#'+id role="button" data-slide="prev")
       span.icon-arrow-left-sm.icon-xl.text-gray-dark
       span.sr-only Previous
-    a.carousel-control-next.text-faded( href="#carouselExample" role="button" data-slide="next")
+    a.carousel-control-next.text-faded( href='#'+id role="button" data-slide="next")
       span.icon-arrow-right-sm.icon-xl.text-gray-dark
       span.sr-only Next

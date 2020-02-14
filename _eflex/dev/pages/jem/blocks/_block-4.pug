@@ -1,0 +1,11 @@
+include ../../../components/wallpapers/_image-wallpaper-9.pug
+
+.d-flex.flex-column.align-items-center.border-bottom.my-5.p-lg-5.m-lg-5
+    .flex-fill.d-flex.flex-column.justify-content-center.align-items-center.z-index-1.pb-5
+        h1.text-center.text-primary.mb-2.
+            {% raw_html "Wallpaper_Title_4_1", label="Wallpaper_Title_4_1", value="{{ heading_var }}" %}
+        h5.text-center.mb-5.
+            {% raw_html "Wallpaper_Body_4_1", label="Wallpaper_Body_4_1", value="{{ heading_var }}" %}
+        .res-half
+            video.rounded-lg( width="100%" height="100%" controls poster='https://cdn2.hubspot.net/hubfs/490686/_site2/images/Stock Images/Video_Thumbnail_JEM.jpg')
+                source(src="https://cdn2.hubspot.net/hubfs/490686/Videos/Video_JEM-1.mp4" type="video/mp4")

@@ -1,21 +1,13 @@
-include ../../../components/layouts/_layout-3.pug
+include ../../../components/features/_feature-9.pug
 
-.d-flex.flex-column.max-w-lg-xxl.m-5.mx-lg-auto
-    h3.mb-5 Where can digital work instructions be used?
-    .row.no-gutters
-        mixin paragraph(index)            
-            .d-flex.flex-column.w-lg.mb-4
-                h5.mb-3.
-                    {% raw_html "Heading_#{index}" label="Heading_#{index}", value="{{ heading_var }}" %}
-                p.w-lg.
-                    {% raw_html "Body_#{index}" label="Body_#{index}", value="{{ body-lg_var }}" %}
-        
-        .col-lg-6.col-12
-            .d-flex.flex-column
-                +paragraph('3_1')
-                +paragraph('3_2')
-                +paragraph('3_3')
-        .col-lg-6.col-12
-            .d-flex.flex-column
-                +paragraph('3_4')
-                +paragraph('3_5')
+.d-flex.flex-column.border-bottom.my-5.p-lg-5.m-lg-5
+    h3.text-center.m-3.mb-5 Areas utilized by digital work instructions.
+    .d-flex.flex-column.mx-lg-auto
+        .d-flex.flex-lg-row.flex-column.mb-4
+            +feature-9('3_1')
+            +feature-9('3_2')
+            +feature-9('3_4')
+        .d-flex.flex-lg-row.flex-column
+            +feature-9('3_5')
+            +feature-9('3_6')
+            +feature-9('3_7')

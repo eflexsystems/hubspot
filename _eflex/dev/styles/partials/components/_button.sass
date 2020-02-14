@@ -1,6 +1,24 @@
 // Components
 // Buttons
 
+
+.btn-icon
+  @extend .t-fix
+  transition-duration: .2s
+  border: 2px solid white
+  background-color: #00000000
+  width: 7rem
+  height: 7rem
+  border-radius: 50%
+  .icon
+    @extend .icon-xxl, .t-fix
+  &:hover
+    background-color: white
+    .icon
+      color: $body-color !important
+  &:focus
+    outline: none !important
+
 // Hubspot Buttons
 $btn-hover: #5baaea
 

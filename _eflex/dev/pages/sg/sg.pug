@@ -1,6 +1,11 @@
 //- sg.pug - Style Guide
 extends ../../templates/_template.pug
 
+block script
+  script( src="{{ get_public_template_url('/_eflex/script/components.js') }}")
+  script( src="{{ get_public_template_url('/_eflex/script/lazy-images.js') }}")
+  script( src="{{ get_public_template_url('/_eflex/script/script.js') }}")
+
 block content
 
   mixin divider(text)
@@ -30,9 +35,7 @@ block content
       background-color: #2b90e2;
       color: white;
     }
-  
-  script( src="{{ get_public_template_url('/_eflex/script/components.js') }}")
-  script( src="{{ get_public_template_url('/_eflex/script/lazy-images.js') }}")
+
   .flex-fill.d-flex.justify-content-center.flex-column
 
     // Internal Controls
@@ -63,12 +66,13 @@ block content
             a.nav-link( id="sg-"+index+"-tab" data-toggle="tab" href="#sg-"+index role="tab" aria-controls="sg-"+index  aria-selected="false" ) #{title}
       
       - var title = 'Styles'
-      - var active = true
+      
       +sg-tab('1')
-      - var active = false
-
+      
+      - var active = true
       - var title = 'Components'
       +sg-tab('2')
+      - var active = false
 
       - var title = 'Layouts'
       +sg-tab('3')
@@ -78,9 +82,9 @@ block content
     
     // Tab Contents
     .tab-content( id="sg-content" )
-      .tab-pane.fade.show.active( id="sg-1" role="tabpanel" aria-labelledby="sg-1-tab" )
+      .tab-pane.fade( id="sg-1" role="tabpanel" aria-labelledby="sg-1-tab" )
         include tabs/_tab-1.pug
-      .tab-pane.fade( id="sg-2" role="tabpanel" aria-labelledby="sg-2-tab" )
+      .tab-pane.fade.show.active( id="sg-2" role="tabpanel" aria-labelledby="sg-2-tab" )
         include tabs/_tab-2.pug
       .tab-pane.fade( id="sg-3" role="tabpanel" aria-labelledby="sg-3-tab" )
         include tabs/_tab-3.pug

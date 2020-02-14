@@ -1,0 +1,74 @@
+<div class="navbar navbar-expand-lg navbar-light bg-white fixed-top row no-gutters justify-content-center p-0 p-lg-3" id="global_header" style="box-shadow: 0px 0px 25px #00274e10;"><div class="d-flex w-100 p-4 p-lg-0"><div class="logo d-flex flex-column justify-content-center px-lg-3" onclick="window.location=&quot;https://www.eflexsystems.com&quot;">{% image "eFlex_Logo" label='eFlex Systems Logo', alt='eFlex Systems Logo', src='https://cdn2.hubspot.net/hubfs/490686/Logos/eFlexSystems-logo.png', style="width:100%" %}</div><button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div><div class="collapse navbar-collapse flex-fill p-lg-0 mt-auto mr-lg-4" id="navbarSupportedContent"><div class="d-flex flex-column ml-lg-auto"><div class="d-flex ml-lg-auto mb-lg-2"><ul class="d-flex flex-lg-row flex-column m-4 m-lg-0 pl-0"><li class="nav-item text-nowrap small h-opacity mb-1 mr-3">{% if module.nav_link_small_1_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+<a class="header-link p-0 text-gray-dark" style="cursor: pointer"
+{% if module.nav_link_small_1_link.open_in_new_tab %}target="_blank"{% endif %} href="{{ module.nav_link_small_1_url.href }}"
+{% if module.nav_link_small_1_link.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_link_small_1_text" value="{{ module.nav_link_small_1_text }}" extra_classes="text-gray-dark" %}
+</a>
+</li><small class="text-gray mr-3 d-lg-inline-block d-none">|</small><li class="nav-item text-nowrap small h-opacity mb-1 mr-3">{% if module.nav_link_small_2_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+<a class="header-link p-0 text-gray-dark" style="cursor: pointer"
+{% if module.nav_link_small_2_link.open_in_new_tab %}target="_blank"{% endif %} href="{{ module.nav_link_small_2_url.href }}"
+{% if module.nav_link_small_2_link.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_link_small_2_text" value="{{ module.nav_link_small_2_text }}" extra_classes="text-gray-dark" %}
+</a>
+</li><small class="text-gray mr-3 d-lg-inline-block d-none">|</small><div class="d-flex"><small class="header-link text-gray-dark mr-2">Call Us:</small><a class="header-link text-gray-dark small h-opacity m-0" href="tel:18334633539">833-463-3539</a></div></ul></div><div class="d-none d-lg-flex flex-lg-row flex-column align-items-center"><ul class="navbar-nav w-100 mr-lg-3 ml-lg-auto"><li class="nav-item active text-nowrap dropdown mx-lg-4"><div><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_1_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_1_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_1_text" value="{{ module.nav_item_1_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_1_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow">{% simple_menu menu_tree="{{ module.ni_1_simple_menu_1 }}" %}</div></div></div></li><li class="nav-item text-nowrap dropdown mx-lg-4"><div><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_2_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_2_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_2_text" value="{{ module.nav_item_2_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_2_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow" data-toggle="collapse">{% simple_menu menu_tree="{{ module.ni_2_simple_menu_1 }}" %}
+</div></div></div></li><li class="nav-item text-nowrap dropdown mx-lg-4"><div><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_3_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_3_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_3_text" value="{{ module.nav_item_3_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_3_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow" data-toggle="collapse">{% simple_menu menu_tree="{{ module.ni_3_simple_menu_1 }}" %}
+</div></div></div></li><li class="nav-item text-nowrap dropdown mx-lg-4"><div><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_4_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_4_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_4_text" value="{{ module.nav_item_4_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_4_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow" data-toggle="collapse">{% simple_menu menu_tree="{{ module.ni_4_simple_menu_1 }}" %}
+</div></div></div></li></ul><div class="w-lg-md m-lg-0 w-100">{% cta "free_demo" label='Primary CTA' guid='9de805d8-7399-4436-bf15-7250f18da14d', extra_classes="w-100 text-center" %}</div></div><div class="d-lg-none d-flex flex-column align-items-center" style="height: 77vh"><ul class="navbar-nav w-100 mr-lg-3 ml-lg-auto" style="padding-bottom: 60rem"><li class="nav-item active text-nowrap dropdown position-relative mx-lg-3"><div class="d-flex flex-column position-relative"><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+{% if module.nav_item_1_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_1_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_1_text" value="{{ module.nav_item_1_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_1_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow">{% simple_menu menu_tree="{{ module.ni_1_simple_menu_1 }}" %}
+</div></div></div><div class="nav-link-arrow position-absolute t-0 w-100 h-100z-index-2" style="pointer-events: none"><div class="d-flex justify-content-end align-items-center w-100 h-100"><span class="icon-arrow-down-sm icon-xl p-3"></span></div></div></li><li class="nav-item text-nowrap dropdown mx-lg-3"><div class="d-flex flex-column position-relative"><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_2_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_2_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_2_text" label="nav_item_2_text" value="{{ module.nav_item_2_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_2_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow">{% simple_menu menu_tree="{{ module.ni_2_simple_menu_1 }}" %}
+</div></div></div><div class="position-absolute t-0 w-100 h-100 z-index-2" style="pointer-events: none"><div class="d-flex justify-content-end align-items-center w-100 h-100"><span class="icon-arrow-down-sm icon-xl p-3"></span></div></div></li><li class="nav-item text-nowrap dropdown mx-lg-3"><div class="d-flex flex-column position-relative"><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_3_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_3_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_3_text" label="nav_item_3_text" value="{{ module.nav_item_3_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_3_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow">{% simple_menu menu_tree="{{ module.ni_3_simple_menu_1 }}" %}
+</div></div></div><div class="position-absolute t-0 w-100 h-100 z-index-2" style="pointer-events: none"><div class="d-flex justify-content-end align-items-center w-100 h-100"><span class="icon-arrow-down-sm icon-xl p-3"></span></div></div></li><li class="nav-item text-nowrap dropdown mx-lg-3"><div class="d-flex flex-column position-relative"><a class="d-flex nav-link p-4 p-lg-0 dropdown-toggle" id="navBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+{% if module.nav_item_4_url.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.nav_item_4_url.no_follow %}rel="nofollow"{% endif %}
+>
+{% inline_text field="nav_item_4_text" label="nav_item_4_text" value="{{ module.nav_item_4_text }}" extra_classes="p text-brand text-uppercase font-weight-bold" %}
+<a class="position-absolute d-none d-lg-block h-100 w-100 t-0" onclick='window.location="{{ module.nav_item_4_url.href }}"' style="cursor: pointer;" </a>
+</a><div class="dropdown-menu bg-none p-lg-0" aria-labelledby="navBar"><div class="dropdown-bg bg-white px-3 pl-3 pl-lg-0 py-lg-5 rounded shadow">{% simple_menu menu_tree="{{ module.ni_4_simple_menu_1 }}" %}
+</div></div></div><div class="position-absolute t-0 w-100 h-100 z-index-2" style="pointer-events: none"><div class="d-flex justify-content-end align-items-center w-100 h-100"><span class="icon-arrow-down-sm icon-xl p-3"></span></div></div></li><div class="w-lg-md m-lg-0 w-100">{% cta "free_demo" label='Primary CTA' guid='9de805d8-7399-4436-bf15-7250f18da14d', extra_classes="w-100 text-center" %}</div></ul></div></div></div></div>

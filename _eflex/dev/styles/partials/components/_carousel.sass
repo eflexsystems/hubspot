@@ -1,29 +1,122 @@
 // Components
 // Carousel
 
+// Carousel 1
 // Responsive Carousel with Multiple Items
-@media (min-width: 768px)
-  .carousel-inner .active,
-  .carousel-inner .active + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+
+=carousel-1($carouselId)
+  @media (min-width: 768px)
+    #{$carouselId} .carousel-inner .active,
+    #{$carouselId} .carousel-inner .active + .carousel-item,
+    #{$carouselId} .carousel-inner .active + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+      display: block
+
+    #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+      transition: none
+      margin-right: initial
+    
+    #{$carouselId} .carousel-inner .carousel-item-next,
+    #{$carouselId} .carousel-inner .carousel-item-prev
+      position: relative
+      transform: translate3d(0, 0, 0)
+
+    #{$carouselId} .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+      position: absolute
+      top: 0
+      right: -25%
+      z-index: -1
+      display: block
+      visibility: visible
+      
+    /* left or forward direction */
+    #{$carouselId} .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    #{$carouselId} .carousel-item-next.carousel-item-left + .carousel-item,
+    #{$carouselId} .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+      position: relative
+      transform: translate3d(-100%, 0, 0)
+      visibility: visible
+      
+    /* farthest right hidden item must be abso position for animations */
+    #{$carouselId} .carousel-inner .carousel-item-prev.carousel-item-right
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        display: block
+        visibility: visible
+      
+    /* right or prev direction */
+    #{$carouselId} .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    #{$carouselId} .carousel-item-prev.carousel-item-right + .carousel-item,
+    #{$carouselId} .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+    #{$carouselId} .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+      position: relative
+      transform: translate3d(100%, 0, 0)
+      visibility: visible
+      display: block
+      visibility: visible
+  
+    /* Bootstrap 4 Fix */
+    #{$carouselId} .carousel-item
+      margin-right: 0
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+
+    #{$carouselId} .carousel-control-next
+      right: -8rem
+
+    #{$carouselId}  .carousel-control-prev
+      left: -8rem
+
+  #{$carouselId} .carousel
+    min-width: 15rem
+
+  #{$carouselId} .carousel-item
+    img
+      width: 7vw
+      height: 3.75vw
+      min-width: 5.25rem
+      max-width: 8rem
+      min-height: 2rem
+      max-height: 3rem
+
++carousel-1('#carouselTooling')
++carousel-1('#carousel1')
+
+
+
+
+
+
+
+// Carousel 2
+// Responsive Carousel with Multiple Items
+@media (min-width: 992px)
+  #carousel2 .carousel-inner .active
     display: block
 
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+  #carousel2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
     transition: none
     margin-right: initial
   
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev
+  #carousel2 .carousel-inner .carousel-item-next,
+  #carousel2 .carousel-inner .carousel-item-prev
     position: relative
     transform: translate3d(0, 0, 0)
 
-  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+  #carousel2 .carousel-inner .active.carousel-item + .carousel-item
     position: absolute
     top: 0
     right: -25%
@@ -32,18 +125,14 @@
     visibility: visible
     
   /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .carousel-item-next.carousel-item-left + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+  #carousel2 .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  #carousel2 .carousel-item-next.carousel-item-left + .carousel-item
     position: relative
     transform: translate3d(-100%, 0, 0)
     visibility: visible
     
   /* farthest right hidden item must be abso position for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right
+  #carousel2 .carousel-inner .carousel-item-prev.carousel-item-right
       position: absolute
       top: 0
       left: 0
@@ -52,12 +141,8 @@
       visibility: visible
     
   /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .carousel-item-prev.carousel-item-right + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item
+  #carousel2 .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  #carousel2 .carousel-item-prev.carousel-item-right + .carousel-item
     position: relative
     transform: translate3d(100%, 0, 0)
     visibility: visible
@@ -65,22 +150,30 @@
     visibility: visible
  
   /* Bootstrap 4 Fix */
-  .carousel-item
+  #carousel2 .carousel-item
     margin-right: 0
     -webkit-box-align: center
     -ms-flex-align: center
     align-items: center
 
-  .carousel-control-next
-    right: -8rem
+  #carousel2 .carousel-control-next
+    right: -4rem
 
-  .carousel-control-prev
-    left: -8rem
+  #carousel2  .carousel-control-prev
+    left: -4rem
 
-.carousel
+@media (max-width:992px)
+  #carousel2 .carousel-control-next
+    right: -1.5rem
+
+  #carousel2  .carousel-control-prev
+    left: -1.5rem 
+
+#carousel2 .carousel
   min-width: 15rem
 
-.carousel-item
+#carousel2 .carousel-item
+  @extend .t-duration
   img
     width: 7vw
     height: 3.75vw
@@ -88,3 +181,6 @@
     max-width: 8rem
     min-height: 2rem
     max-height: 3rem
+
+#carousel2 .carousel-item.active .bg-white
+  @extend .t-duration, .opacity-100

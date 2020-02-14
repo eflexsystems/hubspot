@@ -53,6 +53,18 @@ include ../../../components/features/_feature-8.pug
   +feature-8('8_2')
   +feature-8('8_3')
 
+include ../../../components/_carousel-1.pug
++divider('Carousel 1')
+.block-fluid.row.no-gutters.justify-content-around.align-items-center.bg-white.p-5.m-0.w-100.overflow-hidden
+  - var carouselNumber = '8'
+  +carousel-1('8_1')
+
+include ../../../components/_carousel-2.pug
++divider('Carousel 2')
+.block-fluid.row.no-gutters.justify-content-around.align-items-center.bg-white.p-5.m-0.w-100.overflow-hidden
+  - var carouselNumber = '8'
+  +carousel-2('8_2')
+
 include ../../../components/_desktop.pug
 +divider('Desktop')
 .d-flex.justify-content-lg-center.align-items-center.flex-column.m-5

@@ -13,11 +13,16 @@
   border: none !important
 
 // Dropdown Arrow
-[aria-expanded*="false"] span
+[aria-expanded*="false"] span.icon-arrow-down-sm
   transform: rotate(0deg)
   transition: transform .2s linear
 
+[aria-expanded*="true"] span.icon-arrow-down-sm
+  transform: rotate(-180deg)
+  transition: transform .2s linear
+
+// Dropdown Label Color
+// Hubspot html modules are nested spans
 [aria-expanded*="true"] span
   color: $navbar-light-active-color !important
-  transform: rotate(180deg)
   transition: transform .2s linear

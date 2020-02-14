@@ -21,27 +21,51 @@ include ../../../components/layouts/_layout-3.pug
             .d-flex.flex-column.align-items-center.h-100
                 .flex-fill.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-start.z-index-2.w-lg-100.p-5.my-5
                     .d-flex.flex-column.h-100.w-md.mr-lg-6
-                        h3.text-white.mb-3.
+                        h3.text-white.mb-4.
                             {% raw_html "Heading_#{index}" label="Heading_#{index}", value="{{ heading_var }}" %}
-                        p.text-white.mb-5.
+                        p.text-white.mb-6.
                             {% raw_html "Body_#{index}" label="Body_#{index}", value="{{ heading_var }}" %}
-                        .w-lg.mt-lg-auto.mb-5.
-                            {% cta "CTA_#{index}" label='CTA_#{index}' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}
                         
-                    .d-flex.flex-lg-column.flex-row.justify-content-center.mt-5.pt-lg-5
+                    .d-flex.flex-lg-column.flex-row.justify-content-center
                         mixin feature(index)
-                            .w-sm.d-flex.flex-column.justify-content-center.m-3
-                                .icon-xl.text-white.text-center.mb-2(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
-                                p.font-italic.text-center.text-white.
+                            .w-md.d-flex.flex-column.justify-content-center.text-white.mr-lg-3.mb-3
+                                .icon-xl.text-center.mb-2(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+                                p.font-italic.text-center.
                                     {% raw_html "Feature_#{index}_Descriptor" label="Feature_#{index}_Descriptor", value="{{ heading_var }}" %}
 
-                        .d-flex.flex-lg-row.flex-column.justify-content-center
-                            +feature('2_1')
-                            +feature('2_2')
-                            +feature('2_3')
-                            +feature('2_4')
-                        .d-flex.flex-lg-row.flex-column.justify-content-center
-                            +feature('2_5')
-                            +feature('2_6')
-                            +feature('2_7')
-                            +feature('2_8')
+
+                        // Desktop > lg
+                        .d-lg-flex.flex-column.d-none
+                            .d-flex.justify-content-center
+                                +feature('2_1')
+                                +feature('2_2')
+                                +feature('2_3')
+                            .d-flex.justify-content-center
+                                +feature('2_4')
+                                +feature('2_5')
+                                +feature('2_6')
+                            .d-flex.justify-content-center
+                                +feature('2_7')
+                                +feature('2_8')
+                                +feature('2_9')
+                        
+                        // Desktop < lg (Mobile)
+                        .d-flex.flex-column.d-lg-none
+                            .d-flex.justify-content-center
+                                +feature('2_1')
+                                +feature('2_2')
+                            .d-flex.justify-content-center
+                                +feature('2_3')
+                                +feature('2_4')
+                            .d-flex.justify-content-center
+                                +feature('2_5')
+                                +feature('2_6')
+                            .d-flex.justify-content-center.mb-5
+                                +feature('2_7')
+                                +feature('2_8')
+                            
+                            - var index = '2_9'
+                            .w-md.d-flex.text-white.justify-content-center.align-items-center.mr-lg-3.mb-3
+                                .icon-xl.text-center.mb-0.mr-2(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+                                p.font-italic.text-center.mb-0.
+                                    {% raw_html "Feature_#{index}_Descriptor" label="Feature_#{index}_Descriptor", value="{{ heading_var }}" %}

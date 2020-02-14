@@ -1,6 +1,5 @@
 //- Components
 //- Image Wallpaper 2
-include ../layouts/_layout-5.pug
 
 mixin image-wallpaper-2(index)
   .w-full.position-relative
@@ -17,8 +16,16 @@ mixin image-wallpaper-2(index)
     // Content
     .w-100.b-0
       .w-100.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center
-        .mt-lg-auto.ml-lg-5( style="height: fit-content" )
+        .mt-5.ml-lg-5( style="height: fit-content" )
           include ../_desktop.pug
           +desktop(index)
-        .text-white.mb-lg-auto.mt-6.mt-lg-3.z-index-1
-          +layout-5(index)
+
+        .z-index-1.my-auto
+          .d-flex.flex-column.justify-content-center.w-lg-half.m-5.m-lg-0.p-lg-5
+            h5.w-100.text-white.mb-4.
+              {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
+            p.w-100.text-white.
+              {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ body_var }}" %}
+            .w-100.mx-auto.mx-lg-0
+              .w-lg-lg.my-3.
+                {% cta "learn_More_CTA_#{index}", label='Learn_More_CTA_#{index}', guid='#{guid}' %}
