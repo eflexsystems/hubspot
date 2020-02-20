@@ -96,4 +96,5 @@ $(document).ready(function () {
   carousel1('#carouselTooling');
   carousel1('#carousel1');
   carousel2('#carousel2');
+  carousel1('#carouselLogos');
 })

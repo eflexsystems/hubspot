@@ -102,14 +102,11 @@
                 
                 // Content
                 .d-flex.flex-column.align-items-center.w-100.h-100.position-relative.z-index-1.p-3.p-xl-5.pt-5
-                    h5.text-center.w-100.border-bottom.pb-5.mb-5( class='text-'+primaryTextColor +' border-'+borderColor).
+                    h5.text-center.w-100.border-bottom.pb-5.mb-5( class='text-'+primaryTextColor +' border-'+borderColor style='margin-bottom: 9rem !important').
                         {% raw_html "Plan_#{index}_Title", label="Plan_#{index}_Title", value='Optional Add-Ons' %}
                     
                     // Price
                     .w-100.border-bottom.pb-5.mb-5( class='border-'+borderColor )
-                        .d-flex.align-items-end.justify-content-center.align-contents-center.mb-2
-                            p.text-center.mx-3.mb-5( class='text-'+primaryTextColor ).
-                                {% raw_html "Addon_Details", label="Addon_Details", value="Add-on modules can be added to any <span class='font-weight-bold'>Advanced</span> or <span class='font-weight-bold'>Professional</span> Plan." %}
                         #cta.w-md.my-2.mx-auto( class='cta-'+primaryTextColor ).
                             {% cta "cta_1" label='cta_1' guid='cce98a38-85bc-4cdd-9bf0-9725d10a2a70' %}
                         #cta.w-md.my-2.mx-auto( class='cta-outline-'+primaryTextColor ).
@@ -137,26 +134,3 @@
 .d-flex.flex-column.justify-content-center.m-5.mx-auto
     h3.w-100.text-center.
         {% raw_html "Disclaimer_2", label="Disclaimer_2", value='*All packages include installation, training, and onsite or cloud hosting. *An annual license and ten stations is required at minimum.' %}
-//
-    .w-100.position-relative.h-half
-        // Image
-        .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.opacity-20.
-            {% set class = "position-fixed b-0" %}
-            {% module "Disclaimer_Wallpaper", label="Disclaimer_Wallpaper" path='/_eflex/components/image' %}
-        // Blend Exclusion
-        .w-100.h-100.position-absolute.opacity-50
-            .blend-exclusion-gray.w-100.h-100
-        // Blend Color
-        .w-100.h-100.position-absolute
-            .blend-color-brand-dark.w-100.h-100
-        // Blend Multiply
-        .w-100.h-100.position-absolute
-            .blend-multiply-brand.w-100.h-100.opacity-70
-        // Content
-        .w-100.h-100
-            .d-flex.flex-column.align-items-center.h-100
-                .flex-fill.d-flex.flex-column.align-items-center.z-index-2.m-5
-                    h3.text-center.text-white.text-shadow.mb-4.
-                        {% raw_html "Heading_Wallpaper", value="All Packages Include..." %}
-                    h6.text-center.text-white.text-shadow.mb-4.
-                        {% raw_html "Heading_Wallpaper", value="Installation, training, and onsite or cloud hosting." %}

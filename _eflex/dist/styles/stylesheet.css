@@ -22433,7 +22433,7 @@ strong {
   opacity: 0.95;
 }
 
-.opacity-100, #carousel2 .carousel-item.active .bg-white {
+.opacity-100, #carousel2 .carousel-item.active .opacity-0, #carousel2 .carousel-item.active .img-zoom-pan:hover div[style*="pointer-events: none"], .img-zoom-pan:hover #carousel2 .carousel-item.active div[style*="pointer-events: none"], #carousel2 .carousel-item.active .h-opacity-0:hover {
   opacity: 1;
 }
 
@@ -22918,10 +22918,10 @@ strong {
   -webkit-clip-path: inset(0 0 0 0 round 50%);
 }
 
-.img-thumbnail, .img-zoom-pan:hover div[style*="pointer-events: none"], .form .hs-input, .hs-button:hover, .t-duration, #carousel2 .carousel-item.active .bg-white, #carousel2 .carousel-item {
+.img-thumbnail, .img-zoom-pan:hover div[style*="pointer-events: none"], .form .hs-input, .hs-button:hover, .t-duration, #carousel2 .carousel-item.active .opacity-0, #carousel2 .carousel-item.active .img-zoom-pan:hover div[style*="pointer-events: none"], .img-zoom-pan:hover #carousel2 .carousel-item.active div[style*="pointer-events: none"], #carousel2 .carousel-item.active .h-opacity-0:hover {
   transition-duration: 0.5s;
 }
-.img-thumbnail *, .img-zoom-pan:hover div[style*="pointer-events: none"] *, .form .hs-input *, .hs-button:hover *, .t-duration *, #carousel2 .carousel-item.active .bg-white *, #carousel2 .carousel-item * {
+.img-thumbnail *, .img-zoom-pan:hover div[style*="pointer-events: none"] *, .form .hs-input *, .hs-button:hover *, .t-duration *, #carousel2 .carousel-item.active .opacity-0 *, #carousel2 .carousel-item.active .img-zoom-pan:hover div[style*="pointer-events: none"] *, .img-zoom-pan:hover #carousel2 .carousel-item.active div[style*="pointer-events: none"] *, #carousel2 .carousel-item.active .h-opacity-0:hover * {
   transition-duration: 0.5s;
 }
 
@@ -23670,7 +23670,6 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
     display: block;
-    visibility: visible;
   }
 
   /* Bootstrap 4 Fix */
@@ -23702,6 +23701,14 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
   max-height: 3rem;
 }
 
+@media (max-width: 768px) {
+  #carouselTooling .carousel-item.active,
+#carouselTooling .carousel-item-prev.carousel-item-right,
+#carouselTooling .carousel-item-next.carousel-item-left {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (min-width: 768px) {
   #carousel1 .carousel-inner .active,
 #carousel1 .carousel-inner .active + .carousel-item,
@@ -23768,7 +23775,6 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
     display: block;
-    visibility: visible;
   }
 
   /* Bootstrap 4 Fix */
@@ -23800,6 +23806,119 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
   max-height: 3rem;
 }
 
+@media (max-width: 768px) {
+  #carousel1 .carousel-item.active,
+#carousel1 .carousel-item-prev.carousel-item-right,
+#carousel1 .carousel-item-next.carousel-item-left {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  #carouselLogos .carousel-inner .active,
+#carouselLogos .carousel-inner .active + .carousel-item,
+#carouselLogos .carousel-inner .active + .carousel-item + .carousel-item,
+#carouselLogos .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+#carouselLogos .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  #carouselLogos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+#carouselLogos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+#carouselLogos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+#carouselLogos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+#carouselLogos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+    margin-right: initial;
+  }
+
+  #carouselLogos .carousel-inner .carousel-item-next,
+#carouselLogos .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #carouselLogos .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  #carouselLogos .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+#carouselLogos .carousel-item-next.carousel-item-left + .carousel-item,
+#carouselLogos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+#carouselLogos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+#carouselLogos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+#carouselLogos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  #carouselLogos .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  #carouselLogos .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+#carouselLogos .carousel-item-prev.carousel-item-right + .carousel-item,
+#carouselLogos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+#carouselLogos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+#carouselLogos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+#carouselLogos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+  }
+
+  /* Bootstrap 4 Fix */
+  #carouselLogos .carousel-item {
+    margin-right: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  #carouselLogos .carousel-control-next {
+    right: -8rem;
+  }
+
+  #carouselLogos .carousel-control-prev {
+    left: -8rem;
+  }
+}
+#carouselLogos .carousel {
+  min-width: 15rem;
+}
+
+#carouselLogos .carousel-item img {
+  width: 7vw;
+  height: 3.75vw;
+  min-width: 5.25rem;
+  max-width: 8rem;
+  min-height: 2rem;
+  max-height: 3rem;
+}
+
+@media (max-width: 768px) {
+  #carouselLogos .carousel-item.active,
+#carouselLogos .carousel-item-prev.carousel-item-right,
+#carouselLogos .carousel-item-next.carousel-item-left {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (min-width: 992px) {
   #carousel2 .carousel-inner .active {
     display: block;
@@ -23863,32 +23982,31 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
 
   #carousel2 .carousel-control-next {
     right: -4rem;
+    width: fit-content;
+    height: fit-content;
   }
 
   #carousel2 .carousel-control-prev {
     left: -4rem;
+    width: fit-content;
+    height: fit-content;
   }
 }
 @media (max-width: 992px) {
   #carousel2 .carousel-control-next {
     right: -1.5rem;
+    width: fit-content;
+    height: fit-content;
   }
 
   #carousel2 .carousel-control-prev {
     left: -1.5rem;
+    width: fit-content;
+    height: fit-content;
   }
 }
 #carousel2 .carousel {
   min-width: 15rem;
-}
-
-#carousel2 .carousel-item img {
-  width: 7vw;
-  height: 3.75vw;
-  min-width: 5.25rem;
-  max-width: 8rem;
-  min-height: 2rem;
-  max-height: 3rem;
 }
 
 .dropdown:hover .dropdown-menu {

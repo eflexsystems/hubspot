@@ -65,7 +65,6 @@
       transform: translate3d(100%, 0, 0)
       visibility: visible
       display: block
-      visibility: visible
   
     /* Bootstrap 4 Fix */
     #{$carouselId} .carousel-item
@@ -91,9 +90,17 @@
       max-width: 8rem
       min-height: 2rem
       max-height: 3rem
+  
+  @media (max-width: 768px)
+    #{$carouselId} .carousel-item.active,
+    #{$carouselId} .carousel-item-prev.carousel-item-right,
+    #{$carouselId} .carousel-item-next.carousel-item-left
+      display: flex
+      justify-content: center
 
 +carousel-1('#carouselTooling')
 +carousel-1('#carousel1')
++carousel-1('#carouselLogos')
 
 
 
@@ -158,29 +165,27 @@
 
   #carousel2 .carousel-control-next
     right: -4rem
+    width: fit-content
+    height: fit-content
 
   #carousel2  .carousel-control-prev
     left: -4rem
+    width: fit-content
+    height: fit-content
 
 @media (max-width:992px)
   #carousel2 .carousel-control-next
     right: -1.5rem
+    width: fit-content
+    height: fit-content
 
   #carousel2  .carousel-control-prev
-    left: -1.5rem 
+    left: -1.5rem
+    width: fit-content
+    height: fit-content
 
 #carousel2 .carousel
   min-width: 15rem
 
-#carousel2 .carousel-item
-  @extend .t-duration
-  img
-    width: 7vw
-    height: 3.75vw
-    min-width: 5.25rem
-    max-width: 8rem
-    min-height: 2rem
-    max-height: 3rem
-
-#carousel2 .carousel-item.active .bg-white
+#carousel2 .carousel-item.active .opacity-0
   @extend .t-duration, .opacity-100
