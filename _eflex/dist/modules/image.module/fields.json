@@ -1,0 +1,18 @@
+[
+  {
+    "id": "328182cf-7c48-da54-873a-08a914fd8854",
+    "name": "image_field",
+    "label": "Image field",
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": true,
+    "type": "image",
+    "default": {
+      "src": "https://cdn2.hubspot.net/hubfs/490686/GettyImages-1014151962.jpg",
+      "alt": "GettyImages-1014151962",
+      "width": 2121,
+      "height": 1414
+    }
+  }
+]

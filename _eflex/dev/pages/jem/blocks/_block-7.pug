@@ -1,4 +1,16 @@
+// WIE & IoT Devices
+
 include ../../../components/wallpapers/_image-wallpaper-2.pug
+include ../../../components/_carousel-1.pug
 .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.mb-5
   - var position = 'w-lg-lg'
   +image-wallpaper-2('7_1')
+
+.py-5.mx-5.border-bottom
+  .block-fluid.row.no-gutters.justify-content-around.align-items-center.bg-white.w-100.overflow-hidden
+    .d-flex.justify-content-center.w-100
+        h6.font-italic.text-center.my-4.
+            {% raw_html "Footnote_6_3" label="Footnote_6_3", value="{{ title_var }}" %}
+    - var id = 'carouselTooling'
+    - var carouselNumber = '8'
+    +carousel-1('6_3')

@@ -26,8 +26,8 @@ mixin image-wallpaper-3(index)
             {% raw_html "Wallpaper_Body_#{index}", label="Wallpaper_Body_#{index}", value="{{ body-sm_var }}" %}
 
           // Responsive Button Display
-          .d-block.d-lg-none.w-half.my-5.my-lg-0.m-lg-5.d-none.
+          #cta.cta-primary.d-block.d-lg-none.w-half.my-5.my-lg-0.m-lg-5.d-none.
             {% cta "CTA_#{index}" label='CTA_#{index}' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}
             
-          .d-none.d-lg-block.w-smx2.my-5.my-lg-0.m-lg-5.d-none.
+          #cta.cta-primary.d-none.d-lg-block.w-smx2.my-5.my-lg-0.m-lg-5.d-none.
             {% cta "CTA_#{index}" label='CTA_#{index}' guid='78df544c-4f22-4120-aacd-56ee4c84b604' %}

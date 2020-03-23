@@ -4,13 +4,11 @@
 .d-flex.align-items-center.flex-lg-row.flex-column.py-6
   - var index = '1_1'
   .d-flex.flex-column.text-center.justify-content-center.m-5.mx-auto
-    .icon-xxl.text-primary.mb-4(class!='{% text \"Feature_' + index + '_Icon\", label=\'Feature_' + index + '_Icon\', value="icon-cobot", no_wrapper=True %}')
-    h3.w-half.font-weight-semibold.text-primary.mb-4.
-      {% raw_html "Heading_#{index}", label="Heading_#{index}", value="{{ heading_var }}" %}
-    h6.w-half.font-weight-normal.mb-5.
-      {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ title_var }}" %}
+    .icon-xxl.text-primary.mb-5(class!='{% text \"Feature_' + index + '_Icon\", label=\'Feature_' + index + '_Icon\', value="icon-tools", no_wrapper=True %}')
+    h3.w-half.font-weight-semibold.text-primary.mb-2.
+      {% raw_html "Heading_#{index}", label="Heading_#{index}", value="404 Page Not Found" %}
+    p.w-half.font-weight-normal.mb-5.
+      {% raw_html "Body_#{index}", label="Body_#{index}", value="Sorry, the page you were looking for at this URL was not found." %}
     .d-flex.flex-lg-row.flex-column.justify-content-center.w-100
-      .w-lg.my-3.m-lg-2.
-        {% cta "CTA_1" label='CTA_1' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
-      .w-lg.my-3.m-lg-2.
-        {% cta "CTA_2" label='CTA_2' guid='14a8c97b-82c1-460d-a985-ab08f7d552d9' %}
+      #cta.cta-primary.rounded-pill.w-lg.my-3.m-lg-2.
+        {% cta "CTA_1" label='CTA' guid='8f559bd8-5647-4f42-abf5-80ff44e976dd' %}

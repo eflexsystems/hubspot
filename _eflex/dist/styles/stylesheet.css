@@ -14835,8 +14835,8 @@ strong {
 }
 @font-face {
   font-family: "icomoon";
-  src: url("https://cdn2.hubspot.net/hubfs/490686/_site2/icons/icomoon.eot?z74re4");
-  src: url("https://cdn2.hubspot.net/hubfs/490686/_site2/icons/icomoon.eot?z74re4#iefix") format("embedded-opentype"), url("https://cdn2.hubspot.net/hubfs/490686/_site2/icons/icomoon.ttf?z74re4") format("truetype"), url("https://cdn2.hubspot.net/hubfs/490686/_site2/icons/icomoon.woff?z74re4") format("woff"), url("https://cdn2.hubspot.net/hubfs/490686/_site2/icons/icomoon.svg?z74re4#icomoon") format("svg");
+  src: url("https://cdn2.hubspot.net/hubfs/490686/_site/Icons/icomoon.eot?z74re4");
+  src: url("https://cdn2.hubspot.net/hubfs/490686/_site/Icons/icomoon.eot?z74re4#iefix") format("embedded-opentype"), url("https://cdn2.hubspot.net/hubfs/490686/_site/Icons/icomoon.ttf?z74re4") format("truetype"), url("https://cdn2.hubspot.net/hubfs/490686/_site/Icons/icomoon.woff?z74re4") format("woff"), url("https://cdn2.hubspot.net/hubfs/490686/_site/Icons/icomoon.svg?z74re4#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -14852,6 +14852,38 @@ strong {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shopping:before {
+  content: "";
+}
+
+.icon-aerospace:before {
+  content: "";
+}
+
+.icon-appliances:before {
+  content: "";
+}
+
+.icon-car:before {
+  content: "";
+}
+
+.icon-devices:before {
+  content: "";
+}
+
+.icon-health:before {
+  content: "";
+}
+
+.icon-heavy-equipment:before {
+  content: "";
+}
+
+.icon-manufacture-beverage:before {
+  content: "";
 }
 
 .icon-improvement:before {
@@ -23610,7 +23642,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
 #carouselTooling .carousel-inner .active + .carousel-item + .carousel-item,
 #carouselTooling .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
 #carouselTooling .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    display: block;
+    display: flex;
   }
 
   #carouselTooling .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
@@ -23633,7 +23665,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     top: 0;
     right: -25%;
     z-index: -1;
-    display: block;
+    display: flex;
     visibility: visible;
   }
 
@@ -23655,7 +23687,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     top: 0;
     left: 0;
     z-index: -1;
-    display: block;
+    display: flex;
     visibility: visible;
   }
 
@@ -23669,7 +23701,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     position: relative;
     transform: translate3d(100%, 0, 0);
     visibility: visible;
-    display: block;
+    display: flex;
   }
 
   /* Bootstrap 4 Fix */
@@ -23715,7 +23747,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
 #carousel1 .carousel-inner .active + .carousel-item + .carousel-item,
 #carousel1 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
 #carousel1 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    display: block;
+    display: flex;
   }
 
   #carousel1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
@@ -23738,7 +23770,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     top: 0;
     right: -25%;
     z-index: -1;
-    display: block;
+    display: flex;
     visibility: visible;
   }
 
@@ -23760,7 +23792,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     top: 0;
     left: 0;
     z-index: -1;
-    display: block;
+    display: flex;
     visibility: visible;
   }
 
@@ -23774,7 +23806,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     position: relative;
     transform: translate3d(100%, 0, 0);
     visibility: visible;
-    display: block;
+    display: flex;
   }
 
   /* Bootstrap 4 Fix */
@@ -23820,7 +23852,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
 #carouselLogos .carousel-inner .active + .carousel-item + .carousel-item,
 #carouselLogos .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
 #carouselLogos .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    display: block;
+    display: flex;
   }
 
   #carouselLogos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
@@ -23843,7 +23875,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     top: 0;
     right: -25%;
     z-index: -1;
-    display: block;
+    display: flex;
     visibility: visible;
   }
 
@@ -23865,7 +23897,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     top: 0;
     left: 0;
     z-index: -1;
-    display: block;
+    display: flex;
     visibility: visible;
   }
 
@@ -23879,7 +23911,7 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     position: relative;
     transform: translate3d(100%, 0, 0);
     visibility: visible;
-    display: block;
+    display: flex;
   }
 
   /* Bootstrap 4 Fix */
@@ -23969,7 +24001,6 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
     display: block;
-    visibility: visible;
   }
 
   /* Bootstrap 4 Fix */
@@ -24009,6 +24040,14 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
   min-width: 15rem;
 }
 
+@media (max-width: 768px) {
+  .carousel-item.active,
+.carousel-item-prev.carousel-item-right,
+.carousel-item-next.carousel-item-left {
+    display: flex;
+    justify-content: center;
+  }
+}
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -24066,6 +24105,9 @@ a.btn-link:hover, a.btn-link:active, a.btn-link:focus {
 }
 .form label {
   margin-bottom: 0.25rem;
+}
+.form .hs-main-font-element {
+  color: #cc4744;
 }
 .form fieldset {
   max-width: 100% !important;

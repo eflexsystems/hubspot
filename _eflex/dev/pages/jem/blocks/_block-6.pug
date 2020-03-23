@@ -1,3 +1,5 @@
+// Smart Work Instructions
+
 include ../../../components/layouts/_layout-5.pug
 include ../../../components/_desktop.pug
 include ../../../components/images/_image-lg.pug
@@ -5,31 +7,18 @@ include ../../../components/wallpapers/_image-wallpaper-4.pug
 include ../../../components/_carousel-1.pug
 
 +image-wallpaper-4('6_1')
-.d-flex.justify-content-lg-center.align-items-center.flex-column.p-5
-    .d-flex.flex-lg-row.flex-column.align-items-center.mx-lg-5
-        .scale-75( style="clip-path: inset(0 0 17% 0)")
-            +desktop('6_1')
-        +layout-5('6_1')
-    .d-flex.flex-lg-row.flex-column.align-items-center.border-bottom.mx-lg-5
+.d-flex.justify-content-lg-center.align-items-center.flex-column.py-5.border-bottom.mx-lg-5
+    .d-flex.flex-column.align-items-center
+        .d-flex.flex-lg-row.flex-column.align-items-center.m-5.m-lg-0
+            .scale-75( style="clip-path: inset(0 0 17% 0)")
+                +desktop('6_1')
+            +layout-5('6_1')
+    .d-flex.flex-lg-row.flex-column.align-items-center.m-5.m-lg-0
         +layout-5('6_2')
         .scale-75( style="clip-path: inset(0 0 17% 0)")
             +desktop('6_2')
-    .d-flex.flex-column.align-items-center.border-bottom.mx-lg-5
-        .d-flex.flex-lg-row.flex-column.align-items-center
+    .d-flex.flex-column.align-items-center
+        .d-flex.flex-lg-row.flex-column.align-items-center.m-5.m-lg-0
             .scale-75( style="clip-path: inset(0 0 17% 0)")
                 +desktop('6_3')
             +layout-5('6_3')
-        .block-fluid.row.no-gutters.justify-content-around.align-items-center.bg-white.w-100.overflow-hidden.mb-5.mt-n3
-            .d-flex.justify-content-center.w-100
-                h6.font-italic.text-center.my-4.
-                    {% raw_html "Footnote_6_3" label="Footnote_6_3", value="{{ title_var }}" %}
-            - var id = 'carouselTooling'
-            - var carouselNumber = '8'
-            +carousel-1('6_3')
-    .d-flex.flex-lg-row.flex-column.align-items-center.border-bottom.mx-lg-5
-        +layout-5('6_4')
-        .scale-75( style="clip-path: inset(0 0 17% 0)")
-            +desktop('6_4')
-    .d-flex.flex-lg-row.flex-column.align-items-center.mx-lg-5
-        +image-lg('6_5')
-        +layout-5('6_5')

@@ -11,7 +11,7 @@ block content
       // Image
       .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.opacity-20.
         {% set class = "position-absolute #{position}" %}
-        {% module "Wallpaper_0_1" path='/_eflex/components/image' %}
+        {% module "Wallpaper_0_1" label="Wallpaper_0_1", path='/_eflex/components/image' %}
       // Blend Color
       .w-100.h-100.position-absolute
         .w-100.h-100.blend-color-white
@@ -21,7 +21,7 @@ block content
       // Content
       .w-100
         .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100
-          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-lg.h-100.z-index-1.mx-auto
+          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-half.h-100.z-index-1.p-3.my-6.my-lg-0.mx-auto
             h6.w-100.text-white.font-italic.mb-2.
               {% raw_html "Page_Title", label="Page_Title", value='{{ heading_var }}' %}
             h2.w-100.text-orange.font-weight-bold.text-lg-nowrap.mb-5.

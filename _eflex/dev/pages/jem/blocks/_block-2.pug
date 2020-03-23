@@ -1,35 +1,24 @@
+// Industries
+
 include ../../../components/layouts/_layout-3.pug
 
-.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column
+.d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.mx-5.py-5.border-bottom
     - var index = '2_1'
     .w-100.position-relative
-        // Image
-        .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.opacity-50.
-            {% set class = "position-absolute r-0 #{position}" %}
-            {% module "Wallpaper_#{index}", label="Wallpaper_Image_#{index}", path='/_eflex/components/image' %}
-        // Blend Exclusion
-        .w-100.h-100.position-absolute.opacity-50
-            .blend-exclusion-gray.w-100.h-100
-        // Blend Color
-        .w-100.h-100.position-absolute
-            .blend-color-brand-dark.w-100.h-100
-        // Blend Multiply
-        .w-100.h-100.position-absolute
-            .blend-multiply-brand-dark.w-100.h-100.opacity-85
         // Content
         .w-100.h-100.z-index-2
             .d-flex.flex-column.align-items-center.h-100
                 .flex-fill.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-start.z-index-2.w-lg-100.p-5.my-5
                     .d-flex.flex-column.h-100.w-md.mr-lg-6
-                        h3.text-white.mb-4.
+                        h3.mb-4.
                             {% raw_html "Heading_#{index}" label="Heading_#{index}", value="{{ heading_var }}" %}
-                        p.text-white.mb-6.
+                        p.mb-6.
                             {% raw_html "Body_#{index}" label="Body_#{index}", value="{{ heading_var }}" %}
                         
                     .d-flex.flex-lg-column.flex-row.justify-content-center
                         mixin feature(index)
-                            .w-md.d-flex.flex-column.justify-content-center.text-white.mr-lg-3.mb-3
-                                .icon-xl.text-center.mb-2(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
+                            .w-md.d-flex.flex-column.justify-content-center.mr-lg-3.mb-3
+                                .icon-xl.text-center.text-primary.mb-2(class!='{% text \"Feature_' + index + '_Icon\", label=\"Feature_' + index + '_Icon\", value="icon-cobot", no_wrapper=True %}')
                                 p.font-italic.text-center.
                                     {% raw_html "Feature_#{index}_Descriptor" label="Feature_#{index}_Descriptor", value="{{ heading_var }}" %}
 

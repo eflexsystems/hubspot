@@ -11,7 +11,7 @@
     #{$carouselId} .carousel-inner .active + .carousel-item + .carousel-item,
     #{$carouselId} .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
     #{$carouselId} .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item
-      display: block
+      display: flex
 
     #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
     #{$carouselId} .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
@@ -31,7 +31,7 @@
       top: 0
       right: -25%
       z-index: -1
-      display: block
+      display: flex
       visibility: visible
       
     /* left or forward direction */
@@ -51,7 +51,7 @@
         top: 0
         left: 0
         z-index: -1
-        display: block
+        display: flex
         visibility: visible
       
     /* right or prev direction */
@@ -64,7 +64,7 @@
       position: relative
       transform: translate3d(100%, 0, 0)
       visibility: visible
-      display: block
+      display: flex
   
     /* Bootstrap 4 Fix */
     #{$carouselId} .carousel-item
@@ -154,7 +154,6 @@
     transform: translate3d(100%, 0, 0)
     visibility: visible
     display: block
-    visibility: visible
  
   /* Bootstrap 4 Fix */
   #carousel2 .carousel-item
@@ -189,3 +188,10 @@
 
 #carousel2 .carousel-item.active .opacity-0
   @extend .t-duration, .opacity-100
+
+@media (max-width: 768px)
+  .carousel-item.active,
+  .carousel-item-prev.carousel-item-right,
+  .carousel-item-next.carousel-item-left
+    display: flex
+    justify-content: center

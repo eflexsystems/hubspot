@@ -7,14 +7,14 @@ mixin carousel-1(index)
       mixin logo(index)
         if active
           .carousel-item.col-md-2.active
-            .d-flex.flex-column
+            .d-flex.flex-column.mx-auto
               .icon-xl.text-primary.m-4.mx-auto(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", label=\"Feature_' + index + '_Icon\", no_wrapper=True %}')
               .h-sm.text-center.
                 {% raw_html "Icon_Label_#{index}", value="{{ heading_var }}" extra_classes="w-100" %}
               
         else
           .carousel-item.col-md-2
-            .d-flex.flex-column
+            .d-flex.flex-column.mx-auto
               .icon-xl.text-primary.m-4.mx-auto(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", label=\"Feature_' + index + '_Icon\", no_wrapper=True %}')
               .h-sm.text-center.
                 {% raw_html "Icon_Label_#{index}", value="{{ heading_var }}", label="Icon_Label_#{index}", extra_classes="w-100" %}

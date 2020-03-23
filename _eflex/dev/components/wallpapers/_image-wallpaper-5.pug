@@ -25,5 +25,5 @@ mixin image-wallpaper-5(index)
           h5.text-white.text-center.text-lg-left.text-shadow.mb-5.
             {% raw_html "Wallpaper_Body_#{index}", label="Wallpaper_Body_#{index}", value="{{ title_var }}" %}
           .w-100
-            .w-md.mx-auto.mx-lg-0.
+            #cta.cta-outline-white.w-md.mx-auto.mx-lg-0.
               {% cta "request_demo" label='Primary CTA' guid='#{guid}' %}

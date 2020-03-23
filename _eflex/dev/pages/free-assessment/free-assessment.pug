@@ -1,4 +1,5 @@
 //- free-assessment.pug
+//- Free Assessment requires a seperate template for 3 steps.
 extends ../../templates/_template.pug
 include ../../components/_list.pug
 
@@ -11,7 +12,7 @@ block content
       // Image
       .w-100.h-100.img-clip.position-absolute.overflow-hidden.img-inset-wide.opacity-30.
         {% set class = "position-absolute #{position}" %}
-        {% module "Wallpaper_0_1" path='/_eflex/components/image' %}
+        {% module "Wallpaper_0_1" label="Wallpaper_0_1", path='/_eflex/components/image' %}
       // Blend Color
       .w-100.h-100.position-absolute
         .w-100.h-100.blend-color-white
@@ -20,22 +21,22 @@ block content
         .w-100.h-100.blend-multiply-brand-dark
       // Content
       .w-100
-        .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100.pl-lg-5.pl-xl-6
-          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-lg.h-100.z-index-1.m-6
+        .d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.w-100.h-100
+          .text-shadow.d-flex.flex-column.justify-content-start.align-items-center.align-items-lg-start.w-half.h-100.z-index-1.p-3.my-6.my-lg-0.mx-auto
             h6.w-100.text-white.font-italic.mb-2.
-              {% raw_html "Page_Title" value='{{ heading_var }}' %}
+              {% raw_html "Page_Title", label="Page_Title", value='{{ heading_var }}' %}
             h2.text-orange.font-weight-bold.text-lg-nowrap.w-100.mb-5.
-              {% raw_html "Page_Subtitle" value='{{ title_var }}' %}
+              {% raw_html "Page_Subtitle", label="Page_Subtitle", value='{{ title_var }}' %}
             p.text-white.w-100.mb-0.
-              {% raw_html "Page_Body_1_1" value='{{ title_var }}' %}
+              {% raw_html "Page_Body_1_1", label="Page_Body_1_1", value='{{ title_var }}' %}
             .bullets-orange.text-white.w-lg(class!='{% text \"Bullets_Display\", value="d-block", label=\"Bullets_Display (d-none or d-block)\", no_wrapper=True %}')
               - var n = 5
               +list('1')
 
-            p.text-white.w-100.
-              {% raw_html "Page_Body_1_2" value='{{ title_var }}' %}
+            p.text-white.w-lg.mb-0.
+              {% raw_html "Page_Body_1_2", label="Page_Body_1_2", value='{{ title_var }}' %}
           
-          .form-responsive.d-flex.mx-auto.mx-lg-0.ml-lg-auto
+          .form-responsive.d-flex.mx-auto.mx-lg-0
             // Form
             #free_assessment.d-flex.flex-column.justify-content-center.form.form-steps.w-100.vh-100.max-w-unset.w-lg-half.bg-white.content-box.position-relative.p-5.pt-5
               | {% form "Free Assessment" form_to_use='811a0563-99e9-42bf-881b-dfbfc1c4fdc9', title='Free Assessment', extra_classes='pb-5' %}

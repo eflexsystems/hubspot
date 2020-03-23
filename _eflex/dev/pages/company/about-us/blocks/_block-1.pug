@@ -1,5 +1,8 @@
 include ../../../../components/layouts/_layout-5.pug
 include ../../../../components/images/_image-lg.pug
-.d-flex.flex-lg-row.flex-column.justify-content-center.align-items-center.my-5
+.d-flex.flex-lg-row.flex-column.justify-content-center.my-5
   +image-lg('1_1')
-  +layout-5('1_1')
+  - var index = '1_1'
+  .d-flex.flex-column.justify-content-center.w-lg-half.my-5.m-lg-0.p-lg-5
+    p.w-100.
+      {% raw_html "Body_#{index}", label="Body_#{index}", value="{{ body_var }}" %}
