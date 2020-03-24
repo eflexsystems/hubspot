@@ -23,8 +23,9 @@ html
   body
     | {% module "global_header" path='/_eflex/components/global_header', label="global_header" %}
     
-    //- Change to 5.5rem after removing COVID-19 Banner
-    div(style="margin-top:7.5rem")
+    //- div(style="margin-top:7.5rem")
+      block content
+    div(style="margin-top:5.5rem;")
       block content
     | {% module "global_footer" path='/_eflex/components/global_footer', label="global_footer" %}
     | {{ standard_footer_includes }}

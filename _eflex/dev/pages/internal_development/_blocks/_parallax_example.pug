@@ -1,0 +1,24 @@
+//- _parallax_example.pug
+
+.row
+    .col
+        h5 Functional Parallax
+        -for (var i = 1; i <= 15; i++)
+            p #{i}
+
+.row.position-relative
+    - var speed = 0.2
+    +image_parallax('https://www.eflexsystems.com/hubfs/_site/Images/Stock%20Images/Stock_26_Factory.png')
+
+    .position-absolute.bg-black.opacity-60.w-100.h-100
+    .position-absolute.d-flex.justify-content-center.align-items-center.w-100.h-100
+    .position-absolute.w-100.h-100
+        .d-flex.flex-column.justify-content-center.align-items-center.w-100.h-100
+            h1.text-white.text-shadow Parallax
+            h5.text-white.text-shadow Working example of parallax from parallax.js.
+
+.row
+    .col
+        h5 Functional Parallax
+        -for (var i = 1; i <= 15; i++)
+            p #{i}
