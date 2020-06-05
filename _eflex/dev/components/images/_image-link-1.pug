@@ -3,11 +3,11 @@
 
 mixin image-link-1(index)
   .m-lg-2
-    .res-lg.shadow-sm.h-shadow.h-scale.slick-slide.rounded.my-3.my-lg-0( class!='{% text \"Image_Link_' + index + '_Display\", value="d-none", no_wrapper=True %}' onclick!="window.location='{% text \"Image_Link_" + index + "_URL\", no_wrapper=True %}'")
+    .res-lg.shadow-sm.h-shadow.h-scale.slick-slide.rounded.my-3.my-lg-0( class!='{% text \"Image_Link_' + index + '_Display\", label=\"Image_Link_' + index + '_Display\", value="d-none", no_wrapper=True %}' onclick!="window.location='{% text \"Image_Link_" + index + "_URL\", no_wrapper=True %}'")
       // Image
       .res-lg.img-clip-rounded.position-absolute
         | {% set class='res-lg' %}
-        | {% module "Image_Link_#{index}_Image" path='/_eflex/components/image' %}
+        | {% module "Image_Link_#{index}_Image", label="Image_Link_#{index}_Image", path='/_eflex/components/image' %}
       // Blend Exclusion
       .res-lg.position-absolute.opacity-25
         .blend-exclusion-gray.rounded.w-100.h-100
@@ -18,6 +18,6 @@ mixin image-link-1(index)
       .res-lg.position-absolute
         .d-flex.flex-column.justify-content-end.w-100.h-100.p-4
           p.font-weight-light.text-white.text-shadow.m-0
-            | {% raw_html "Image_Link_#{index}_Date" value="{{ date_var }}" %}
+            | {% raw_html "Image_Link_#{index}_Date", label="Image_Link_#{index}_Date", value="{{ date_var }}" %}
           h6.font-weight-bold.text-white.text-shadow.mb-0
-            | {% raw_html "Image_Link_#{index}_Title" value="{{ title_var }}" %}
+            | {% raw_html "Image_Link_#{index}_Title", label="Image_Link_#{index}_Title", value="{{ title_var }}" %}

@@ -6,13 +6,12 @@
       .col-12
         h3.text-center
           .
-            {% raw_html "Block_5_Title" value="{{ heading_var }}" %}
+            {% raw_html "Block_5_Title", label="Block_5_Title",  value="{{ heading_var }}" %}
          
     include ../../../components/images/_image-link-1.pug
     .d-flex.justify-content-lg-center.align-items-center.flex-lg-row.flex-column.m-5
-      - var n = 6
-      while n >= 1
-        +image-link-1(n--)
+      -for (var i = 1; i <= 6; i++)
+        +image-link-1('5_'+i)
 
     .w-100
       .w-md.mx-auto.my-5
