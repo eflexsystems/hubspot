@@ -4,7 +4,10 @@
   "description": "eflexsystems.com",
   "main": "index.js",
   "scripts": {
-    "derpp": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-modules": "rm -r _eflex/dist/modules && npx hscms fetch --portal=PROD /_eflex/modules dist/modules",
+    "sync": "npx hscms watch --portal=PROD dist /_eflex",
+    "dev": "npm run clean-modules && npm run sync"
   },
   "repository": {
     "type": "git",
