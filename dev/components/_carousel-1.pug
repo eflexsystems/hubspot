@@ -1,0 +1,39 @@
+// Components
+// Carousel
+
+// 1. Make sure to specify a carousel id when declaring the component mixin.
+// 2. specify that carousel's id in the sass mixin (dev/styles/components/_carousel.sass) and js function (dist/script/script.js).
+
+mixin carousel-1(index)
+  .carousel.slide.w-75.my-4( data-ride="carousel" data-interval="2000" id=id)
+    .carousel-inner.row.justify-content-md-center.w-100.mx-auto( role="listbox")
+      mixin logo(index)
+        if active
+          .carousel-item.col-md-2.active
+            .d-flex.flex-column.mx-auto
+              .icon-xl.text-primary.m-4.mx-auto(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", label=\"Feature_' + index + '_Icon\", no_wrapper=True %}')
+              .h-sm.text-center.
+                {% raw_html "Icon_Label_#{index}", value="{{ heading_var }}" extra_classes="w-100" %}
+              
+        else
+          .carousel-item.col-md-2
+            .d-flex.flex-column.mx-auto
+              .icon-xl.text-primary.m-4.mx-auto(class!='{% text \"Feature_' + index + '_Icon\", value="icon-cobot", label=\"Feature_' + index + '_Icon\", no_wrapper=True %}')
+              .h-sm.text-center.
+                {% raw_html "Icon_Label_#{index}", value="{{ heading_var }}", label="Icon_Label_#{index}", extra_classes="w-100" %}
+              
+
+      - var active = true
+      +logo(1)
+
+      - var active = false
+      - var n = 2
+      while n <= carouselNumber
+        +logo(n++)
+
+    a.carousel-control-prev( href='#'+id role="button" data-slide="prev")
+      span.icon-arrow-left-sm.icon-xl.text-gray-dark
+      span.sr-only Previous
+    a.carousel-control-next.text-faded( href='#'+id role="button" data-slide="next")
+      span.icon-arrow-right-sm.icon-xl.text-gray-dark
+      span.sr-only Next
