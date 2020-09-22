@@ -3,16 +3,24 @@ extends ../templates/_template.pug
 
 block content
     include ../components/_rawHtml.pug
+    include ../components/_cta.pug
+
     .container
         .row
             .col
                 h1
                     +rawHtml ({
                         name: 'title',
-                        value: 'eFlex Systems'
+                        value: 'Manufacturing Integrated Platform'
                     })
                 h5
                     +rawHtml ({
                         name: 'subTitle',
                         value: 'Empowering manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use software solutions, permitting them to become agile, data driven and best in class.'
                     })
+                +cta ({
+                    name: 'primaryCta'
+                })
+                +cta ({
+                    name: 'secondaryCta'
+                })
