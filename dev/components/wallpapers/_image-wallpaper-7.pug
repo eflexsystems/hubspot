@@ -2,7 +2,7 @@
 //- Image Wallpaper 7
 
 mixin image-wallpaper-7(index)
-  .w-100.position-relative.h-half
+  .w-100.position-relative.h-full
     // Image
     .w-100.h-100.img-clip.position-absolute.r-0.overflow-hidden.img-inset-wide.opacity-20.
       {% set class = "position-fixed #{position}" %}
@@ -15,7 +15,7 @@ mixin image-wallpaper-7(index)
       .blend-color-brand-dark.w-100.h-100
     // Blend Multiply
     .w-100.h-100.position-absolute
-      .blend-multiply-brand.w-100.h-100.opacity-70
+      .blend-multiply-brand.w-100.h-100.opacity-40
     // Content
     .w-100.h-100
       .d-flex.flex-column.align-items-center.h-100

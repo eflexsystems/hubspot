@@ -8,7 +8,9 @@
     "clean-modules": "rm -r dist/modules && npx hscms fetch --portal=PROD /_eflex/modules dist/modules",
     "watch": "./watch.sh",
     "sync": "npx hscms watch --portal=PROD dist /_eflex",
-    "dev": "npm run clean-modules && concurrently --kill-others \"npm run watch\" \"npm run sync\""
+    "prod": "npm run clean-modules && concurrently --kill-others \"npm run watch\" \"npm run sync\"",
+    "sync-dev": "hs watch dist _eflex --initial-upload",
+    "dev": "concurrently \"npm run watch\" \"npm run sync-dev\""
   },
   "repository": {
     "type": "git",

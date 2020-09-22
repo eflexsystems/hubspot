@@ -1,6 +1,7 @@
+defaultPortal: DEV
 portals:
-  - portalId: 490686
-    name: PROD
+  - name: PROD
+    portalId: 490686
     authType: oauth2
     auth:
       clientId: 53cc8324-d401-4180-83b3-1a1d9842eae4
@@ -8,7 +9,17 @@ portals:
       scopes:
         - content
       tokenInfo:
-        expiresAt: '2020-09-10T20:46:06.561Z'
+        expiresAt: '2020-09-21T23:27:53.490Z'
         refreshToken: 9d21e3db-56c2-417c-bb10-86fb94ade705
         accessToken: >-
-          CPCk3NDHLhICAgEYvvkdIN_3xAMo6Z0MMhkA3uJgVvD_CX5F318b3-qC7uUXGdbEWgLxOhwAMQBB_wcAAAAAgAAAYHjHKAAAACAAAAAUAAAYQhkA3uJgVvkUB0YetYXhCK0YqeuxJarAd3Rn
+          CLbIxJrLLhICAgEYvvkdIN_3xAMo6Z0MMhkAfQLvQwy2Ky3TdvgsRYl7CcZvs8h3TT0kOhwAMQBB_wcAAAAAgAAAYHjHKAAAACAAAAAUAAAYQhkAfQLvQygLZsm3EVGStNzCh7WoGO49ygXt
+  - name: DEV
+    portalId: 8439350
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CMOJh5rLLhIEAA0ADBi2jIMEIN_3xAMo7ukMMhkAfQLvQ892XjrPqX4CuTVMGiUsbfXSLeESOhwAAARBAAAAeAAAAAAAAAAAgAEAAAAAAATAAMAHQhkAfQLvQ7DL05zGgHo1H8q5VfjZcsineUqf
+        expiresAt: '2020-09-22T00:41:05.990Z'
+    personalAccessKey: >-
+      CiQwZTRjMGZiMy00NWI2LTRlNWYtYTdjMy05NWI1MWM0NzExYTYQtoyDBBjf98QDKhkABeaRggYx5NMe0VEmys6BA090DAoEAW91
