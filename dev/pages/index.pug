@@ -1,0 +1,18 @@
+//- index.pug
+extends ../templates/_template.pug
+
+block content
+    include ../components/_rawHtml.pug
+    .container
+        .row
+            .col
+                h1
+                    +rawHtml ({
+                        name: 'title',
+                        value: 'eFlex Systems'
+                    })
+                h5
+                    +rawHtml ({
+                        name: 'subTitle',
+                        value: 'Empowering manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use software solutions, permitting them to become agile, data driven and best in class.'
+                    })

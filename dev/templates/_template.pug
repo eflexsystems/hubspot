@@ -1,7 +1,7 @@
 //- template.pug
 
 block templateType
-  .
+.
     <!--
     templateType: page
     isAvailableForNewContent: true
@@ -23,10 +23,7 @@ html
   body
     | {% module "global_header" path='/_eflex/components/global_header', label="global_header" %}
     
-    //- div(style="margin-top:7.5rem")
-      block content
-    div(style="margin-top:5.5rem;")
-      block content
+    block content
     | {% module "global_footer" path='/_eflex/components/global_footer', label="global_footer" %}
     | {{ standard_footer_includes }}
     
