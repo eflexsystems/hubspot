@@ -9,15 +9,20 @@ mixin leadership-modal(index)
             .w-100.h-100.bg-white.opacity-75
         // Modal
         .position-absolute.vw-100.vh-100.d-flex.flex-column.align-items-center.p-3
-            .d-flex.flex-column.align-items-end.w-100.w-lg-75.vh-75.max-h-xxxl
+            .d-flex.flex-column.align-items-end.w-100.w-lg-50.vh-75.max-h-xxxl
                 .icon.icon-xl.icon-x-sm.text-gray-600.cursor-pointer.h-opacity
-                .flex-fill.d-flex.w-100.bg-white.shadow.rounded.p-5
-                    .d-flex.flex-column
+                .flex-fill.d-flex.w-100.bg-white.shadow.rounded.position-relative
+
+                    // Image
+                    .d-none.d-lg-block.t-fix.position-relative.b-0(style='width: 24rem')
+                        .img-clip.w-100.h-100
+                            | {% set class='w-100 h-auto' %}
+                            | {% module "Image_Link_2_#{index}_Image", label="Image_Link_2_#{index}_Image", path='/_eflex/components/image' extra_classes='t-fix position-absolute b-0' %}
+                            
+                    .d-flex.flex-column.justify-content-center.w-lg-50.mx-lg-auto.p-5
                         h6.font-weight-bold.mb-2.
                             {% raw_html "Image_Link_Name_2_#{index}", label="Image_Link_Name_2_#{index}", value="Joe Schmoe" %}
-                        h6.text-gray-500.font-weight-normal.
+                        h6.text-gray-500.font-weight-normal.mb-5.
                             {% raw_html "Image_Link_Position_2_#{index}", label="Image_Link_Position_2_#{index}", value="Default Position" %}
-                    .w-100.h-100.img-clip-circle.position-absolute.t-fix
-                        .img-clip.w-100.h-100
-                        | {% set class='w-100 h-auto' %}
-                        | {% module "Image_Link_#{index}_Image", label="Image_Link_2_#{index}_Image", path='/_eflex/components/image' extra_classes='t-fix' %}
+                        p.
+                            {% raw_html "Image_Link_Biography_2_#{index}", label="Image_Link_Biography_2_#{index}", value="Biography here..." %}

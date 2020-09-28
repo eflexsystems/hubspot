@@ -7,6 +7,7 @@
     "locked": false,
     "responsive": false,
     "resizable": true,
+    "show_loading": false,
     "type": "image",
     "default": {
       "src": "https://cdn2.hubspot.net/hubfs/490686/GettyImages-1014151962.jpg",
