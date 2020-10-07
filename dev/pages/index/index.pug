@@ -1,0 +1,69 @@
+//- index.pug
+extends ../../templates/_template.pug
+
+block script
+    //- slick-carousel
+    script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+    script( type='text/javascript' )
+        include ./script.js
+
+block content
+    //- Components being used.
+    include ../../components/_rawHtml.pug
+    include ../../components/_cta.pug
+    
+    //- masthead container
+    .position-relative.w-100( style='height: 40rem' )
+
+        //- Background Image
+        .bg-gray-800.w-100.h-100
+
+        //- Home Content
+        .w-100.h-100.position-absolute(style= 'top: 0')
+            .container.h-100
+                .row.h-100
+                    .col
+                        .d-flex.flex-column.justify-content-around.h-100.p-2.p-md-5
+                            .d-flex.flex-column
+                                h1.display-1.text-uppercase.text-white.text-break.mb-2( style="hyphens: auto" )
+                                    +rawHtml ({
+                                        name: 'title',
+                                        value: 'Solve the <br>Manufacturing <br>Data Gap.'
+                                    })
+
+                                h3.text-white
+                                    +rawHtml ({
+                                        name: 'subTitle',
+                                        value: 'The Manufacturing Integrated Platform.'
+                                    })
+                            .row
+                                .col.col-lg-6
+                                    .row
+                                        .col-12.col-md
+                                            +cta ({
+                                                name: 'primaryCta',
+                                                variant: 'primary',
+                                                class: 'btn-lg w-100'
+                                            })
+
+                                        .col-12.col-md
+                                            +cta ({
+                                                name: 'secondaryCta',
+                                                variant: 'outline-white',
+                                                class: 'btn-lg w-100'
+                                            })
+
+
+    .container
+        .row
+            .col
+                //- Carousel
+                .slick-carousel.p-5
+                    div
+                        h3.bg-gray-100.p-3.mb-0 1
+                    div
+                        h3.bg-gray-300.p-3.mb-0 2
+                    div
+                        h3.bg-gray-100.p-3.mb-0 3
+                    div
+                        h3.bg-gray-300.p-3.mb-0 4

@@ -1,35 +1,60 @@
-//- template.pug
+include _loremipsum.pug
 
 block templateType
-.
-    <!--
-    templateType: page
-    isAvailableForNewContent: true
-    -->
-
-include _utilities.pug
+    .
+        <!--
+        templateType: page
+        isAvailableForNewContent: true
+        -->
 
 doctype html
 html
-  head
-    meta( charset='utf-8')
-    title {{ content.html_title }}
-    meta( name='description' content='{{ content.meta_desctiption }}')
-    meta( name="author" content="eFlex Systems")
-    | {{ standard_header_includes }}
-    link( href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet")
-    link( href!="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel='stylesheet')
-  
-  body
-    | {% module "global_header" path='/_eflex/components/global_header', label="global_header" %}
-    
-    block content
-    | {% module "global_footer" path='/_eflex/components/global_footer', label="global_footer" %}
-    | {{ standard_footer_includes }}
-    
-script(src='https://code.jquery.com/jquery-3.3.1.min.js')
-script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
-script(src="{{ get_public_template_url('/_eflex/script/lazy-images.js') }}")
-script(src="{{ get_public_template_url('/_eflex/script/navbar.js') }}")
-script(src="{{ get_public_template_url('/_eflex/script/script.js') }}")
-block script
+    head
+        //- Metadata
+        meta( charset='UTF-8' )
+        title {{ content.html_title }}
+        meta( name='description' content='{{ content.meta_desctiption }}' )
+        meta( name="author" content="eFlex Systems" )
+
+        //- Hubspot Header
+        | {{ standard_header_includes }}
+
+        //- Fonts
+        link( href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet" )
+        link( href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" )
+
+        //- Global Styles
+        link( href!="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel='stylesheet' )
+
+        //- Template Specific Styles
+        block styles
+            link( href!="./style.css" )
+
+        //- Jquery
+        script( src='https://code.jquery.com/jquery-3.3.1.min.js' )
+
+        //- Bootstrap
+        script( src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous' )
+
+        //- Fontawesome
+        script( src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous" )
+
+    body
+        block content
+
+        //- Hubspot Footer
+        | {{ standard_footer_includes }}
+
+        //- Loading Overlay
+        #loadingOverlay.position-fixed.h-100.w-100( style='top: 0' )
+            .bg-white.position-fixed.h-100.w-100
+            .vw-100.vh-100.d-flex.justify-content-center.align-items-center.position-absolute( style='top: 0')
+                i.fas.fa-circle-notch.fa-3x.fa-spin.text-gray-200
+
+
+        script(type='text/javascript')
+            //- Use the js added to hubspot later
+            include ../script/script.js
+            
+        //- Template Specific Script
+        block script
