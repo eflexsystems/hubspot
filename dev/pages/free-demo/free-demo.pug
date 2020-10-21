@@ -1,9 +1,6 @@
 //- free-demo.pug
 extends ../../templates/_template.pug
 
-block script
-  script( src="{{ get_public_template_url('/_eflex/script/form-3-steps.js') }}")
-
 block content
   include ../../components/_list.pug
 
@@ -49,24 +46,7 @@ block content
                   .icon-caution.icon-lg.text-white.p-3
                   p.text-white.text-left.w-md.p-3.mb-0 Please go back and complete the required fields.
                   #hs-errors-validation-x.icon-x-sm.icon-lg.text-white( style="cursor: pointer" )
-
-              .d-flex.w-100
-                // Prev
-                button#form-prev-1.btn-outline-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto.mr-3
-                  .d-flex.justify-content-center.position-relative
-                    .icon-arrow-left-sm.position-absolute.l-0( style = "font-size: 1.5rem")
-                    p.m-0 Back
-                button#form-prev-2.btn-outline-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto.mr-3
-                  .d-flex.justify-content-center.position-relative
-                    .icon-arrow-left-sm.position-absolute.l-0( style = "font-size: 1.5rem")
-                    p.m-0 Back
-
-                // Next
-                button#form-next-1.btn-primary.rounded-pill.w-md.p-2.slick-slide.ml-auto
-                  .d-flex.justify-content-center.position-relative
-                    p.m-0 Next
-                    .icon-arrow-right-sm.position-absolute.r-0( style = "font-size: 1.5rem")
-                button#form-next-2.btn-primary.rounded-pill.w-md.p-2.slick-slide
-                  .d-flex.justify-content-center.position-relative
-                    p.m-0 Next
-                    .icon-arrow-right-sm.position-absolute.r-0( style = "font-size: 1.5rem")
+                
+              p By clicking Submit, you agree to our 
+                a(href='https://www.eflexsystems.com/privacy-policy' target="_blank")
+                  | Privacy Policy.

@@ -24712,6 +24712,11 @@ a.cta_button:hover {
   display: none;
 }
 
+#free_demo input[type=submit] {
+  top: 0;
+  display: block !important;
+}
+
 .form .hs_state .hs-input, .form .hs-company .hs-input, .form .hs-attach_files .hs-input {
   width: 100% !important;
 }
