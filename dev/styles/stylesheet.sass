@@ -5,8 +5,61 @@
 @import mixins.scss
 @import ../../node_modules/bootstrap/scss/bootstrap
 @import partials/_colors
+@import partials/utilities/_text-wrap
+@import partials/components/carousel
 
-$display1-size: 6rem
 @include respond-below(md)
     .display-1
-        font-size: 4rem
+        font-size: 3rem
+        line-height: 3rem !important
+
+.btn-flat
+    @extend .text-primary
+    &::after
+        font-family: "Font Awesome 5 Free"
+        font-size: .9em
+        font-weight: 900
+        content: "\f054"
+        margin-left: .75rem
+        transition: margin-left .2s linear
+    &:hover
+        &::after
+            margin-left: 1.25rem
+    &:focus
+        outline: none
+
+html[data-scroll='0']
+    #header
+        background-color: #00000000
+        transition-duration: .2s
+        .navbar
+            @extend .navbar-dark
+        &:hover
+            background-color: white
+            .navbar
+                @extend .navbar-light
+            .btn-outline-white
+                @extend .btn-primary
+
+html:not([data-scroll='0'])
+    #header
+        background-color: white
+        transition-duration: .2s
+        .navbar
+            @extend .navbar-light
+        .btn-outline-white
+            @extend .btn-primary
+            
+
+//- Remove default arrow from bootstrap dropdowns
+.dropdown-toggle::after
+    display: none
+
+//- Hubspot Content Optimization System Wrapper
+.hs_cos_wrapper
+
+    //- cta
+    &.hs_cos_wrapper_type_cta
+        &, & *
+            a:after
+                content: '\00a0'

@@ -16,7 +16,7 @@ html
         meta( name='description' content='{{ content.meta_desctiption }}' )
         meta( name="author" content="eFlex Systems" )
 
-        //- Hubspot Header
+        //- Hubspot Header Includes
         | {{ standard_header_includes }}
 
         //- Fonts
@@ -40,9 +40,14 @@ html
         script( src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous" )
 
     body
+
+        //- Header
+        | {% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800" %}
+
+        //- Content
         block content
 
-        //- Hubspot Footer
+        //- Hubspot Footer Includes
         | {{ standard_footer_includes }}
 
         //- Loading Overlay

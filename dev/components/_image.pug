@@ -1,0 +1,3 @@
+// image
+mixin image(args)
+    | {% image "#{args.name}" label="#{args.name}", alt="#{args.alt ? args.alt : null}", src="#{args.src}", extra_classes="#{args.class ? args.class : null}" %}

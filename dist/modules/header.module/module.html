@@ -1,0 +1,31 @@
+<!-- cta-->{%- macro render_link_children(link,depth)-%}
+    {%- if link!= [] && link.label -%}
+        <a class="dropdown-item" href={{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro render_link_item(link,depth)-%}
+    {%- if link != [] && link.label -%}
+
+        {%- if link.children -%}
+            <li class="nav-item dropdown hs-menu-item hs-menu-depth-{{depth}} hs-item-has-children" aria-role="none">
+                <a class="nav-link dropdown-toggle p-3 px-lg-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
+                <div class="dropdown-menu border border-white hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
+                    {%- set depth = depth + 1%}
+                    {%- for sublink in link.children -%}
+                    {{render_link_children(sublink,depth)}}
+                    {%- endfor -%}
+                </div>
+            </li>
+
+        {%- else -%}
+            <li class="nav-item hs-menu-item hs-menu-depth-{{depth}} " aria-role="none">
+                <a class="nav-link p-3 px-lg-4" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+            </li>
+        {%- endif -%}
+    {%- endif -%}
+    
+{%- endmacro -%}
+<div class="fixed-top" id="header"><div class="container"><nav class="navbar navbar-expand-lg p-3 px-lg-5 sc-site-header__menu hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal sc-site-header__menu--{{ module.menu_field }}" aria-label="{{menu_name}} menu"><a class="navbar-brand p-3 bg-primary" href="#"></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>{% set menu = menu(module.menu_field , "site_root").children %}<div class="collapse navbar-collapse" id="navbarHeader"><ul class="navbar-nav" aria-role="menubar">{% for link in menu %}
+{{render_link_item(link,1)}}
+{% endfor %}</ul><div class="ml-auto">{% cta "headerCta" label="headerCta" guid="f45a304e-b763-4049-bff9-b08abe1db12a" extra_classes="outline-white text-uppercase btn-sm text-capitalize p-2 px-3" %}</div></div></nav></div></div>
