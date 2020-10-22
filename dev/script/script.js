@@ -2,6 +2,7 @@ jQuery(window).load(function () {
 
     console.log('Document Ready.');
 
+    // Fade overlay once window is loaded.
     $("#loadingOverlay").fadeOut(400);
 
     // Swap hubspot styles with Bootstrap.

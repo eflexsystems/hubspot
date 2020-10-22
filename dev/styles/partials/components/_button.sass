@@ -1,123 +1,15 @@
-// Components
-// Buttons
+// Button
 
-.btn-icon
-  @extend .t-fix
-  transition-duration: .2s
-  border: 2px solid white
-  background-color: #00000000
-  width: 7rem
-  height: 7rem
-  border-radius: 50%
-  .icon
-    @extend .icon-xxl, .t-fix
-  &:hover
-    background-color: white
-    .icon
-      color: $body-color !important
-  &:focus
-    outline: none !important
-
-// Hubspot Buttons
-$btn-hover: #5baaea
-
-.btn-primary
-  background-color: map-get($theme-colors, 'primary') 
-  color: map-get($theme-colors, 'white')
-  border-width: 0px
-  transform: scale(1)
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out
-  &:hover
-    transform: scale(1.05)
-    background-color: $tory-blue
-
-// Call-to-Action Buttons
-#cta .cta_button
-  font-family: "Titillium Web", sans-serif !important
-  font-size: 1rem !important
-  font-weight: 600 !important
-  border-width: 0px !important
-  border-radius: .25rem !important
-  padding-top: 1rem !important
-  padding-bottom: 1rem !important
-  width: 100% !important
-
-@each $color, $hex in $theme-colors
-  #cta.cta-#{$color} .cta_button
-    background-color: $hex !important
-    color: map-get($theme-colors, 'white' ) !important
-    border-width: 0px !important
-    transform: scale(1) !important
-    transition: transform .2s ease-in-out, background-color .2s ease-in-out !important
+// Button Flat
+.btn-flat
+    @extend .text-primary
+    &::after
+        font-family: "Font Awesome 5 Free"
+        font-size: .8em
+        font-weight: 900
+        content: "\f054"
+        margin-left: .75rem
+        transition: margin-left .2s linear
     &:hover
-      transform: scale(1.05) !important
-      background-color: map-get($theme-colors, $color+'-dark' ) !important
-  
-#cta.cta-white .cta_button
-    background-color: map-get($theme-colors, 'white' )  !important
-    color: map-get($theme-colors, 'primary' ) !important
-    border-width: 0px !important
-    transform: scale(1) !important
-    transition: transform .2s ease-in-out
-    &:hover
-      transform: scale(1.05) !important
-  
-#cta.rounded-pill .cta_button
-  border-radius: 4rem !important
-
-// Outline Buttons
-#cta.cta-outline-primary .cta_button
-  background-color: map-get($theme-colors, 'none') !important
-  color: map-get($theme-colors, 'primary') !important
-  transform: none !important
-  border: solid .5px map-get($theme-colors, 'primary') !important
-  transition: .2s ease-in-out !important
-  &:hover
-    background-color: map-get($theme-colors, 'primary') !important
-    color: map-get($theme-colors, 'white') !important
-
-#cta.cta-outline-white .cta_button
-  background-color: map-get($theme-colors, 'none') !important
-  color: map-get($theme-colors, 'white') !important
-  transform: none !important
-  border: solid .5px map-get($theme-colors, 'white') !important
-  transition: .2s ease-in-out !important
-  &:hover
-    background-color: map-get($theme-colors, 'white') !important
-    color: map-get($theme-colors, 'primary') !important
-
-.hs_submit .hs-button
-  @extend .small
-  margin-top: .5rem
-  padding: .75rem
-  border: none
-  border-radius: 0 .15rem .15rem 0
-  background-color: map-get($theme-colors, 'primary')
-  color: map-get($theme-colors, 'white')
-  white-space: nowrap
-
-.hs-button:hover
-  @extend %t-duration
-  background-color: $btn-hover !important
-  transform: scale(1.1)
-
-a.cta_button
-  @extend %t-fix
-
-.w-lg .cta_button
-  @extend .w-lg
-
-// Button Links
-a.btn-link
-  transition: transform .2s ease-in-out, color .2s ease-in-out
-  &:hover, &:active, &:focus
-    transform: scale(1.1)
-    color: $curious-blue !important
-    text-decoration: none
-
-// Mobile Responsiveness
-@media (max-width: 920px)
-  .btn
-    font-size: 1rem
-    padding-top: 1rem !important
-    padding-bottom: 1rem !important
+        &::after
+            margin-left: 1.25rem

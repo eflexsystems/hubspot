@@ -40,10 +40,25 @@ function toggleNavbarMethod() {
         .on('click', '.dropdown-menu a', toggleDropdown);
 }
 
+//- Override navbar-dark less than lg.
+function overrideNavbarStyle() {
+    if ($(window).width() > 992) {
+        $('#header').addClass('header-interactive');
+    } else {
+        $('#header').removeClass('header-interactive');
+    }
+}
+
 $(document).ready(function () {
 
-    //- If the size is greater than mobile
+    overrideNavbarStyle();
+
     if ($(window).width() > 768) {
         toggleNavbarMethod();
     }
+});
+
+// 
+window.addEventListener('resize', function (event) {
+    overrideNavbarStyle();
 });

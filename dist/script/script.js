@@ -2,6 +2,7 @@ jQuery(window).load(function () {
 
     console.log('Document Ready.');
 
+    // Fade overlay once window is loaded.
     $("#loadingOverlay").fadeOut(400);
 
     // Swap hubspot styles with Bootstrap.
@@ -20,7 +21,7 @@ jQuery(window).load(function () {
         jQuery(".hs_cos_wrapper").removeClass(childClass);
     }
 
-    let nestableClasses = ["w-100", "btn-lg", "btn-sm", "p-0"];
+    let nestableClasses = ["w-100", "btn-lg", "btn-sm", "p-0", "p-2", "px-3", "text-capitalize"];
     nestableClasses.forEach(function (nestableClass) {
         hsWrapperChildAddClass(nestableClass);
     });

@@ -1,43 +1,15 @@
-// Components
-// Navtab
+html[data-scroll='0']
+    #header.header-interactive:not(:hover)
+        background-color: #00000000
+        transition-duration: .2s
+        .navbar
+            @extend .navbar-dark
+        .btn-primary
+            @extend .btn-outline-white
+            background-color: #00000000
 
-.vertical-tabs
-  .tab-pane
-    p
-      @include media-breakpoint-up(lg)
-        margin-left: auto !important
-        margin-right: auto !important
-
-@media (max-width: 920px)    
-  .nav-tabs
-    height: 16.1rem !important
-    width: 22rem !important
-  
-  // Navigation Bar
-  .navbar-brand
-    font-size: 1rem !important
-
-  // Navigation Menu
-  .dropdown-bg
-    box-shadow: none !important
-
-  .hs_cos_wrapper
-    .hs-menu-wrapper
-      ul
-        padding-left: 0 !important
-
-  .navbar-collapse
-    overflow-y: scroll
-    overflow-x: hidden
-
-  .nav-link
-    font-weight: 500
-    cursor: pointer
-
-
-// Navs
-
-a.nav-link
-  color: map-get($theme-colors, 'gray-500')
-  &.active
-    color: map-get($theme-colors, 'primary')
+#header
+    background-color: white
+    transition-duration: .2s
+    .navbar
+        @extend .navbar-light

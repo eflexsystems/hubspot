@@ -51,11 +51,10 @@ html
         | {{ standard_footer_includes }}
 
         //- Loading Overlay
-        #loadingOverlay.position-fixed.h-100.w-100( style='top: 0' )
+        #loadingOverlay.fixed-top.h-100.w-100( style='top: 0; z-index: 1031' )
             .bg-white.position-fixed.h-100.w-100
             .vw-100.vh-100.d-flex.justify-content-center.align-items-center.position-absolute( style='top: 0')
                 i.fas.fa-circle-notch.fa-3x.fa-spin.text-gray-200
-
 
         script(type='text/javascript')
             //- Use the js added to hubspot later
