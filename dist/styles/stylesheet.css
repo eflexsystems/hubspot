@@ -24712,9 +24712,13 @@ a.cta_button:hover {
   display: none;
 }
 
-#free_demo input[type=submit] {
+#free_demo input[type=submit], #free_demo .legal-consent-container {
   top: 0;
   display: block !important;
+}
+
+#free_demo .hs-form-booleancheckbox a {
+  text-decoration: underline;
 }
 
 .form .hs_state .hs-input, .form .hs-company .hs-input, .form .hs-attach_files .hs-input {

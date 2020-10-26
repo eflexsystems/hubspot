@@ -9,10 +9,10 @@ portals:
       scopes:
         - content
       tokenInfo:
-        expiresAt: '2020-10-21T20:55:09.595Z'
+        expiresAt: '2020-10-23T00:37:06.626Z'
         refreshToken: 9d21e3db-56c2-417c-bb10-86fb94ade705
         accessToken: >-
-          CKWvkOrULhICAgEYvvkdIN_3xAMo6Z0MMhkAzqlH6caE3hoaaUvvIPJTqP53eSyOTwXdOiIAMQBB_wcAAAAAgAAAYHjHKAAAACAAAAAUAAAYAAAAwMMfQhkAzqlH6QjB4F_yjtcPnQzk3L3obzG5CP5y
+          CNPO1pnVLhICAgEYvvkdIN_3xAMo6Z0MMhkAuDa1ax67EDPg0Pu_la7mR80cP5fV001xOiMAMQBB_wcAAAAAgAAAYHjHKAAAACAAAAAUAAAYAAAAwMMfBkIZALg2tWsm7poDcPEgYdvzlJyTrUgfFR1koQ
   - name: DEV
     portalId: 8439350
     authType: personalaccesskey
