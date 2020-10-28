@@ -7,6 +7,7 @@
 @import mixins.scss
 @import partials/_colors
 @import partials/utilities/_text-wrap
+@import partials/utilities/_overflow
 
 // Components
 @import partials/components/_button
@@ -19,3 +20,21 @@
     .display-1
         font-size: 3rem
         line-height: 3rem !important
+
+//- Bootstrap Dropdown Slide Effect
+.dropdown .dropdown-menu
+    @extend .p-0
+    transition: none
+    max-height: 0
+    display: block
+    overflow: hidden
+
+.dropdown.show .dropdown-menu
+    transition: all 1s
+    max-height: 100rem
+
+//- Link Secondary
+.link-secondary
+    color: map-get($theme-colors, 'gray-400') !important
+    &:hover
+        color: map-get($theme-colors, 'primary') !important

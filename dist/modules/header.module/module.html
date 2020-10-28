@@ -9,7 +9,7 @@
                 {%- endfor -%}
             </div>
         {%- else -%}
-            <a class="dropdown-item" href={{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+            <a class="dropdown-item" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
@@ -19,10 +19,10 @@
 
         {%- if link.children -%}
             <li class="nav-item dropdown position-static hs-menu-item hs-menu-depth-{{depth}} hs-item-has-children" aria-role="none">
-                <a class="nav-link dropdown-toggle py-3 px-md-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
-                <div class="dropdown-menu border border-white w-100 rounded-0 pt-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
+                <a class="nav-link dropdown-toggle font-weight-bold py-3 px-md-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
+                <div class="dropdown-menu w-100 rounded-0 pt-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
                     <div class="container">
-                        <div class="row no-gutters w-100 px-md-4">
+                        <div class="row no-gutters w-100 px-md-4 pb-4">
                             {%- set depth = depth + 1-%}
                             {%- for sublink in link.children -%}
                                 {{render_link_children(sublink,depth)}}

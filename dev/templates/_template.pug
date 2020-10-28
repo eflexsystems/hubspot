@@ -38,17 +38,24 @@ html
 
         //- Fontawesome
         script( src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous" )
+        link( rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" )
 
     body
 
         //- Header
-        | {% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800" %}
+        | {% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800 d-none d-lg-block" %}
+
+        //- Header Mobile
+        | {% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}
 
         //- Content
         block content
 
         //- Hubspot Footer Includes
         | {{ standard_footer_includes }}
+
+        //- Footer
+        | {% module "module_16038952826172" path="/_eflex/modules/footer", label="footer" %}
 
         //- Loading Overlay
         #loadingOverlay.fixed-top.h-100.w-100( style='top: 0; z-index: 1031' )

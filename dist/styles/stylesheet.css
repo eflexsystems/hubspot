@@ -701,7 +701,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 90%;
   font-weight: 400;
 }
 
@@ -740,7 +740,7 @@ mark,
 
 .blockquote-footer {
   display: block;
-  font-size: 80%;
+  font-size: 90%;
   color: #636466;
 }
 .blockquote-footer::before {
@@ -3146,7 +3146,7 @@ textarea.form-control {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 80%;
+  font-size: 90%;
   color: #2ee577;
 }
 
@@ -3238,7 +3238,7 @@ textarea.form-control {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 80%;
+  font-size: 90%;
   color: #cc4744;
 }
 
@@ -12347,7 +12347,7 @@ button.bg-black:focus {
   margin-left: 5rem !important;
 }
 
-.p-0 {
+.p-0, .dropdown .dropdown-menu {
   padding: 0 !important;
 }
 
@@ -15368,6 +15368,46 @@ h3 {
     white-space: nowrap !important;
   }
 }
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-x-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-y-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-x-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-y-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-x-visible {
+  overflow: visible !important;
+}
+
+.overflow-y-visible {
+  overflow: visible !important;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
 .btn-flat::after {
   font-family: "Font Awesome 5 Free";
   font-size: 0.8em;
@@ -15413,6 +15453,24 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .btn-primary {
     font-size: 3rem;
     line-height: 3rem !important;
   }
+}
+.dropdown .dropdown-menu {
+  transition: none;
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.dropdown.show .dropdown-menu {
+  transition: all 1s;
+  max-height: 100rem;
+}
+
+.link-secondary {
+  color: #a2a2a0 !important;
+}
+.link-secondary:hover {
+  color: #2b90e2 !important;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

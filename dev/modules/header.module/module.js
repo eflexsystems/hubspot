@@ -49,7 +49,17 @@ function overrideNavbarStyle() {
     }
 }
 
+//- Prevent Body Scroll If Navbar Show (Mobile)
+function navbarCollapseShow() {
+    $('.navbar-toggler').click(function (e) {
+        $('body').toggleClass('position-fixed');
+        console.log('collapsed');
+    });
+}
+
 $(document).ready(function () {
+
+    navbarCollapseShow();
 
     overrideNavbarStyle();
 
@@ -60,5 +70,6 @@ $(document).ready(function () {
 
 // 
 window.addEventListener('resize', function (event) {
+
     overrideNavbarStyle();
 });

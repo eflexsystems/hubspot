@@ -1,0 +1,59 @@
+include ../../components/_cta.pug
+
+//- Pug.js iterations
+.
+    {%- macro render_link_children(link,depth)-%}
+        {%- if link!= [] && link.label -%}
+            {%- if link.children -%}
+                <p class="text-gray-400 font-weight-bold p-4 pl-5 mt-4 mb-0">{{link.label}}...</p>
+                {%- set depth = depth + 1-%}
+                {%- for sublink in link.children -%}
+                    {{render_link_children(sublink,depth)}}
+                {%- endfor -%}
+            {%- else -%}
+                <a class="dropdown-item text-primary bg-gray-100 font-weight-bold p-3 pl-5" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+            {%- endif -%}
+        {%- endif -%}
+    {%- endmacro -%}
+
+    {%- macro render_link_item(link,depth)-%}
+        {%- if link != [] && link.label -%}
+
+            {%- if link.children -%}
+                <li class="nav-item dropdown position-static border-bottom border-gray-400 hs-menu-item hs-menu-depth-{{depth}} hs-item-has-children" aria-role="none">
+                    <a class="nav-link dropdown-toggle font-weight-bold p-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
+                    <div class="dropdown-menu w-100 rounded-0 py-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
+                        {%- set depth = depth + 1-%}
+                        {%- for sublink in link.children -%}
+                            {{render_link_children(sublink,depth)}}
+                        {%- endfor -%}
+                    </div>
+                </li>
+
+            {%- else -%}
+                <li class="nav-item hs-menu-item hs-menu-depth-{{depth}} " aria-role="none">
+                    <a class="nav-link font-weight-bold p-4" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+                </li>
+            {%- endif -%}
+        {%- endif -%}
+        
+    {%- endmacro -%}
+
+//- Start of Header Structure
+#header.fixed-top
+    nav.navbar.navbar-expand-lg.position-static.p-0.sc-site-header__menu.hs-menu-wrapper.active-branch.flyouts.hs-menu-flow-horizontal(class='sc-site-header__menu--{{ module.menu_field }}' aria-label='{{menu_name}} menu')
+        a.navbar-brand.p-3.bg-primary.m-4(href='#')
+        button.navbar-toggler.m-4(type='button' data-toggle='collapse' data-target='#navbarHeader' aria-controls='navbarHeader' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        | {% set menu = menu(module.menu_field , "site_root").children %}
+        #navbarHeader.collapse.navbar-collapse.vh-100.overflow-scroll
+            +cta ({
+                name: 'headerCta',
+                guid: 'f8b9429a-a9bd-4e34-a063-f573f8ecbf2d',
+                variant: 'primary',
+                class: 'btn-sm text-capitalize text-left w-100 p-4'
+            })
+            ul.navbar-nav(aria-role='menubar')
+                | {% for link in menu %}
+                | {{render_link_item(link,1)}}
+                | {% endfor %}
