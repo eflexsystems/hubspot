@@ -356,7 +356,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -437,7 +437,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #073c69;
+  color: #2b90e2;
   text-decoration: underline;
 }
 
@@ -632,7 +632,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Hind", sans-serif !important;
   font-weight: 600;
   line-height: 1.1;
@@ -5794,7 +5794,7 @@ fieldset:disabled a.btn {
   text-decoration: none;
 }
 .btn-link:hover {
-  color: #073c69;
+  color: #2b90e2;
   text-decoration: underline;
 }
 .btn-link:focus, .btn-link.focus {
@@ -7476,7 +7476,7 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .navbar .navbar-nav
 }
 .page-link:hover {
   z-index: 2;
-  color: #073c69;
+  color: #2b90e2;
   text-decoration: none;
   background-color: #e1dfdd;
   border-color: #d5d6d3;
@@ -11032,7 +11032,7 @@ button.bg-black:focus {
   display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .slick-carousel .slick-track {
   display: flex !important;
 }
 
@@ -11342,7 +11342,7 @@ button.bg-black:focus {
   align-items: flex-end !important;
 }
 
-.align-items-center {
+.align-items-center, .slick-carousel .slick-track {
   align-items: center !important;
 }
 
@@ -12419,7 +12419,7 @@ button.bg-black:focus {
   padding-left: 0.5rem !important;
 }
 
-.p-3 {
+.p-3, .slick-carousel img {
   padding: 1rem !important;
 }
 
@@ -14814,7 +14814,7 @@ button.bg-black:focus {
 }
 
 .font-weight-light {
-  font-weight: 200 !important;
+  font-weight: 300 !important;
 }
 
 .font-weight-lighter {
@@ -15420,6 +15420,16 @@ h3 {
   margin-left: 1.25rem;
 }
 
+.slick-carousel img {
+  transition: all 0.2s;
+  max-height: 8rem;
+  opacity: 0.65;
+}
+.slick-carousel .slick-center img {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
 .carousel-dots-light .slick-dots li button::before {
   font-size: 0;
   height: 0.4rem;
@@ -15464,6 +15474,7 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .btn-primary {
 .dropdown.show .dropdown-menu {
   transition: all 1s;
   max-height: 100rem;
+  max-width: 100%;
 }
 
 .link-secondary {

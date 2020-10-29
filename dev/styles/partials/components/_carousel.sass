@@ -1,5 +1,20 @@
-// Slick Carousel Dots
+//- Carousel Client Logos
+.slick-carousel
+    .slick-track
+        @extend .d-flex, .align-items-center
 
+    img
+        @extend .p-3
+        transition: all .2s
+        max-height: 8rem
+        opacity: .65
+
+    .slick-center
+        img
+            opacity: 1
+            transform: scale(1.5)
+
+// Slick Carousel Dots
 .carousel-dots-light 
     .slick-dots li button::before
         font-size: 0

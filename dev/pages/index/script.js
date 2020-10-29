@@ -34,7 +34,7 @@ $('#carousel-clients').slick({
             breakpoint: 576, // bootstrap sm
             settings: {
                 arrows: false,
-                centerMode: true,
+                centerMode: false,
                 slidesToShow: 1,
                 infinite: true,
                 autoplay: true,

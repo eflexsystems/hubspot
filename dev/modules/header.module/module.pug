@@ -6,14 +6,14 @@ include ../../components/_cta.pug
         {%- if link!= [] && link.label -%}
             {%- if link.children -%}
                 <div class="col-12 col-lg mb-5 mb-lg-0">
-                    <p class="font-weight-bold text-uppercase border-bottom mx-4 py-3 mb-3">{{link.label}}</p>
+                    <p class="font-weight-bold small text-uppercase border-bottom mx-4 py-3 mb-3">{{link.label}}</p>
                     {%- set depth = depth + 1-%}
                     {%- for sublink in link.children -%}
                         {{render_link_children(sublink,depth)}}
                     {%- endfor -%}
                 </div>
             {%- else -%}
-                <a class="dropdown-item" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+                <a class="dropdown-item small text-truncate py-1" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
             {%- endif -%}
         {%- endif -%}
     {%- endmacro -%}
@@ -24,9 +24,9 @@ include ../../components/_cta.pug
             {%- if link.children -%}
                 <li class="nav-item dropdown position-static hs-menu-item hs-menu-depth-{{depth}} hs-item-has-children" aria-role="none">
                     <a class="nav-link dropdown-toggle font-weight-bold py-3 px-md-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
-                    <div class="dropdown-menu w-100 rounded-0 pt-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
+                    <div class="dropdown-menu w-100 shadow-sm rounded-0 pt-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
                         <div class="container">
-                            <div class="row no-gutters w-100 px-md-4 pb-4">
+                            <div class="row no-gutters w-100 px-md-4 pb-5">
                                 {%- set depth = depth + 1-%}
                                 {%- for sublink in link.children -%}
                                     {{render_link_children(sublink,depth)}}
@@ -46,7 +46,7 @@ include ../../components/_cta.pug
     {%- endmacro -%}
 
 //- Start of Header Structure
-#header.fixed-top
+#header.fixed-top.shadow-sm
     .container
         nav.navbar.navbar-expand-lg.position-static.p-3.px-lg-5.sc-site-header__menu.hs-menu-wrapper.active-branch.flyouts.hs-menu-flow-horizontal(class='sc-site-header__menu--{{ module.menu_field }}' aria-label='{{menu_name}} menu')
             a.navbar-brand.p-3.bg-primary(href='#')

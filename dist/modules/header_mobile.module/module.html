@@ -7,7 +7,7 @@
                 {{render_link_children(sublink,depth)}}
             {%- endfor -%}
         {%- else -%}
-            <a class="dropdown-item text-primary bg-gray-100 font-weight-bold p-3 pl-5" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+            <a class="dropdown-item text-primary bg-gray-100 font-weight-bold d-flex p-3 pl-5" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}<i class="fas fa-caret-right fa-sm ml-auto"></i></a>
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}

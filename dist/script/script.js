@@ -21,7 +21,10 @@ jQuery(window).load(function () {
         jQuery(".hs_cos_wrapper").removeClass(childClass);
     }
 
-    let nestableClasses = ["w-100", "btn-lg", "btn-sm", "p-0", "p-2", "px-3", "p-4", "text-left", "text-capitalize"];
+    let paddingClasses = ["p-0", 'p-1', 'p-2', 'p-3', 'p-4', 'p-5', 'px-0', 'px-1', 'px-2', 'px-3', 'px-4', 'px-5', 'py-0', 'py-1', 'py-2', 'py-3', 'py-4', 'py-5'];
+    let extraneousClasses = ["w-100", "h-100", "btn-lg", "btn-sm", "text-left", "text-capitalize"];
+
+    let nestableClasses = paddingClasses.concat(extraneousClasses);
     nestableClasses.forEach(function (nestableClass) {
         hsWrapperChildAddClass(nestableClass);
     });

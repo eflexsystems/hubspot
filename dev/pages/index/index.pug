@@ -96,7 +96,7 @@ block content
                                                         })
 
     //- Clients Carousel
-    .container
+    .container.py-3
         .row
             .col
                 .p-3.p-md-5
@@ -106,15 +106,15 @@ block content
                             - var src = 'https://f.hubspotusercontent00.net/hubfs/8439350/Logos/Client%20Logos/Logo_' + clients[i] + '.svg'
                             - var alt = 'eFlex Trusted Customer Logo for ' + clients[i]
 
-                            .d-flex.justify-content-center.align-items-center.p-3.m-3( style="width: 10rem; height: 6rem;" )
+                            .d-flex.justify-content-center.align-items-center.m-4
                                 +image ({
                                     name: name,
                                     src: src,
-                                    alt: alt,
+                                    alt: alt
                                 })
 
     //- Main Features
-    .container
+    .container.py-3
         .row
             //- Main Features Image
             .col-12.col-lg.my-auto
@@ -148,41 +148,78 @@ block content
                             +cta ({
                                 name: 'cta_mainFeatures',
                                 variant: 'flat',
-                                class: 'p-0'
+                                class: 'py-3 px-0'
                             })
-    
-    //- Simple Startup
-    .container
-        .row
-            .col-12.col-lg
-                .p-3.p-md-5
-                    h3
+        .p-3.p-md-5
+            .row
+                //- Main Features Golden Trio
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-users-cog.fa-3x.mb-4
+                    h5.text-uppercase
                         +rawHtml ({
-                            name: 'heading_simpleStart',
-                            value: 'MIP is simple to configure— it’s all connected.'
+                            name: 'h1_mainFeatures_bullet',
+                            value: 'Setup.'
+                        })
 
+                    p
+                        +rawHtml ({
+                            name: 'p1_mainFeatures_bullet',
+                            value: 'Easily configure your manufacturing environment. Rebalance lines quickly with drag-n-drop functionality.'
+                        })
+                
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-sliders-h.fa-3x.mb-4
+                    h5.text-uppercase
+                        +rawHtml ({
+                            name: 'h2_mainFeatures_bullet',
+                            value: 'Control.'
                         })
                     
                     p
                         +rawHtml ({
-                            name: 'p1_simpleStart',
-                            value: 'It’s one integrated platform. It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
+                            name: 'p2_mainFeatures_bullet',
+                            value: 'Standardize work instructions and process control. Ensure all steps are complete and quality measures met.'
                         })
+
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-chart-bar.fa-3x.mb-4
+                    h5.text-uppercase
+                        +rawHtml ({
+                            name: 'h3_mainFeatures_bullet',
+                            value: 'Interpret.'
+                        })
+                    
                     p
                         +rawHtml ({
-                            name: 'p2_simpleStart',
-                            value: 'Turn new solutions on instantly. Workflows can be changed iteratively and quickly, as the system learns and reacts.'
+                            name: 'p3_mainFeatures_bullet',
+                            value: 'Collect process data and cycle times down to the task level. Quickly identity problem areas and improvement initiatives.'
                         })
-
-            .col-12.col-lg
-                .p-3.p-md-5
-                    +image ({
-                        name: 'image_simpleStart',
-                        src: 'https://picsum.photos/300/200'
-                    })
+        
+    //- Simple Startup
+    .bg-primary.text-white
+        .container.py-3
+            .row.align-items-center.justify-content-md-center
+                .col-12.col-lg-6
+                    .p-3.p-md-5
+                        h2.text-uppercase.text-white.mb-4
+                            +rawHtml ({
+                                name: 'heading_simpleStart',
+                                value: 'MIP is simple to configure— it’s all connected.'
+                            })
+                        
+                        p.lead
+                            +rawHtml ({
+                                name: 'p1_simpleStart',
+                                value: 'It’s one integrated platform. It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
+                            })
+                        p.lead
+                            +rawHtml ({
+                                name: 'p2_simpleStart',
+                                value: 'Turn new solutions on instantly. Workflows can be changed iteratively and quickly, as the system learns and reacts.'
+                            })
 
     //- Continuous Improvement
-    .container
+    .container.py-3
         .row
             .col-12.col-lg
                 .p-3.p-md-5
