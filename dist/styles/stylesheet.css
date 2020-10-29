@@ -15458,6 +15458,11 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .btn-primary {
   background-color: white;
   transition-duration: 0.2s;
 }
+.parallax-window {
+  height: 50vw;
+  width: 100vw;
+}
+
 @media (max-width: 767px) {
   .display-1 {
     font-size: 3rem;

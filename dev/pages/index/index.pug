@@ -19,9 +19,17 @@ block content
     //- masthead container
     //- Top padding for fixed header module
     .position-relative.w-100.py-5( style='min-height: 40rem' )
+        .parallax-window(
+            data-parallax="scroll" 
+            data-natural-width="1200"
+            data-natural-height="800"
+            data-image-src="https://picsum.photos/1200/800" 
+            data-speed=.2
+            )
 
         //- Background Image
-        .bg-gray-800.w-100.h-100.position-absolute(style= 'top: 0')
+        .w-100.h-100.position-absolute(style= 'top: 0; clip-path: inset(0 0 0 0);')
+            
 
         //- Home Content
         .w-100.h-100
