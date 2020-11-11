@@ -3,14 +3,13 @@
 
 =blend-mode($blend-mode)
   @each $color, $hex in $theme-colors
-    .blend-#{$blend-mode}-#{$color}
+    .bm-#{$blend-mode}-#{$color}
       background-color: $hex
       mix-blend-mode: $blend-mode
 
 +blend-mode(multiply)
 +blend-mode(exclusion)
 +blend-mode(difference)
-+blend-mode(overlay)
 +blend-mode(overlay)
 +blend-mode(hue)
 +blend-mode(color)
