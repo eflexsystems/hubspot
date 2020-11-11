@@ -1,0 +1,14 @@
+// Card
+
+a.custom-card
+    .card
+        clip-path: inset(0 0 0 0)
+    .card-text-overlay
+        @extend .w-100, .h-100, .text-white, .bg-gray-800, .opacity-0, .position-absolute
+        transition: all .4s ease-in-out 0s
+        top: 50%
+    &:hover
+        text-decoration: none
+        .card-text-overlay
+            @extend .opacity-90
+            top: 0%

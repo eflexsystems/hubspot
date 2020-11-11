@@ -12,6 +12,7 @@ block content
     include ../../components/_rawHtml.pug
     include ../../components/_cta.pug
     include ../../components/_image.pug
+    include ../../components/_card.pug
     
     //- make GM smaller and add in later
     - var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
@@ -19,7 +20,7 @@ block content
     //- masthead container
     //- Top padding for fixed header module
     .position-relative.w-100.py-5( style='min-height: 40rem' )
-        .parallax-window(
+        .parallax-window( d
             data-parallax="scroll" 
             data-natural-width="1200"
             data-natural-height="800"
@@ -51,6 +52,7 @@ block content
                                     p.lead.text-white
                                         +rawHtml ({
                                             name: 'desc_masthead',
+                                            class: 'lead text-white',
                                             value: 'The manufacturing industry is poised for massive change and disruption. Beat the competition with eFlex’s Manufacturing Integrated Platform.'
                                         })
 
@@ -63,7 +65,8 @@ block content
                                                 +cta ({
                                                     name: 'secondaryCta',
                                                     variant: 'outline-white',
-                                                    class: 'w-100'
+                                                    class: 'w-100',
+                                                    guid: '253bcfe6-ed67-497a-baff-dcc025793e9b'
                                                 })
                                             .col-12.col-md
                                                 +cta ({
@@ -88,18 +91,22 @@ block content
                                                 .d-flex.align-items-center.h-100
                                                     p.text-white.text-center.p-3
                                                         +rawHtml ({
+                                                            name: 'spotlight1_masthead',
+                                                            class: 'text-white text-center p-3',
                                                             value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
                                                         })
                                                 .d-flex.align-items-center.h-100
                                                     p.text-white.text-center.p-3
                                                         +rawHtml ({
                                                             name: 'spotlight2_masthead',
+                                                            class: 'text-white text-center p-3',
                                                             value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
                                                         })
                                                 .d-flex.align-items-center.h-100
                                                     p.text-white.text-center.p-3
                                                         +rawHtml ({
                                                             name: 'spotlight3_masthead',
+                                                            class: 'text-white text-center p-3',
                                                             value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
                                                         })
 
@@ -129,7 +136,7 @@ block content
                 .p-3.p-md-5
                     +image ({
                         name: 'image_mainFeatures',
-                        src: 'https://picsum.photos/400/300'
+                        src: 'https://picsum.photos/400/200'
                     })
             
             .col-12.col-lg
@@ -142,11 +149,13 @@ block content
                     p.lead
                         +rawHtml ({
                             name: 'p1_mainFeatures',
+                            class: 'lead',
                             value: 'MIP is powered by the MIP Data— providing detailed integrated granular manufacturing process data down to the most basic task level. All in one place.'
                         })
                     p.lead
                         +rawHtml ({
                             name: 'p2_mainFeatures',
+                            class: 'lead',
                             value: 'Intelligent MIP Data enables powerful end-to-end people and data collaboration across the enterprise. Everyone from the front office to the shop floor to the delivery team can see the status of your production line and get real-time actionable insight.'
                         })
                     
@@ -160,13 +169,14 @@ block content
                             })
         .p-3.p-md-5
             .row
-                //- Main Features Golden Trio
+                //- Main Features - Simple Startup Bullets
+                // Seperate These more
                 .col-12.col-lg.py-3.py-lg-0
                     i.fas.fa-users-cog.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h1_mainFeatures_bullet',
-                            value: 'Setup.'
+                            value: 'Configure Easily.'
                         })
 
                     p
@@ -176,77 +186,365 @@ block content
                         })
                 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-sliders-h.fa-3x.mb-4
+                    i.fab.fa-bluetooth.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h2_mainFeatures_bullet',
-                            value: 'Control.'
+                            value: 'Connect IoT Devices.'
                         })
                     
                     p
                         +rawHtml ({
                             name: 'p2_mainFeatures_bullet',
-                            value: 'Standardize work instructions and process control. Ensure all steps are complete and quality measures met.'
+                            value: 'Seamlessly connect any and all devices and equipment. Pull device process data into your plant-wide metrics.'
                         })
 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-chart-bar.fa-3x.mb-4
+                    i.fas.fa-sliders-h.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h3_mainFeatures_bullet',
-                            value: 'Interpret.'
+                            value: 'Control Your Process.'
                         })
                     
                     p
                         +rawHtml ({
                             name: 'p3_mainFeatures_bullet',
-                            value: 'Collect process data and cycle times down to the task level. Quickly identity problem areas and improvement initiatives.'
+                            value: 'Advanced process control supported in high mix or low mix assembly environments.'
                         })
-        
-    //- Simple Startup
-    .bg-primary.text-white
-        .container.py-3
-            .row.align-items-center.justify-content-md-center
-                .col-12.col-lg-6
-                    .p-3.p-md-5
-                        h2.text-uppercase.text-white.mb-4
-                            +rawHtml ({
-                                name: 'heading_simpleStart',
-                                value: 'MIP is simple to configure— it’s all connected.'
-                            })
-                        
-                        p.lead
-                            +rawHtml ({
-                                name: 'p1_simpleStart',
-                                value: 'It’s one integrated platform. It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
-                            })
-                        p.lead
-                            +rawHtml ({
-                                name: 'p2_simpleStart',
-                                value: 'Turn new solutions on instantly. Workflows can be changed iteratively and quickly, as the system learns and reacts.'
-                            })
-
-    //- Continuous Improvement
-    .container.py-3
-        .row
-            .col-12.col-lg
-                .p-3.p-md-5
-                    h3
+                
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-chart-bar.fa-3x.mb-4
+                    h5.text-uppercase
                         +rawHtml ({
-                            name: 'heading_continuousImprovement',
-                            value: 'Always Learning & Improving'
-
+                            name: 'h4_mainFeatures_bullet',
+                            value: 'Collect & Improve.'
                         })
                     
                     p
                         +rawHtml ({
-                            name: 'p1_continuousImprovement',
-                            value: 'MIP will optimize your shop floor end-to-end to produce the best products. Highly granular data supports a system for continuous learning and improving to produce the highest quality products. More productive, empowered shop floor team members. Maximum shop floor operational efficiency. Better shop floor ROI and profitability.'
+                            name: 'p4_mainFeatures_bullet',
+                            value: 'Collect process data and cycle times down to the task level. Quickly identify problem areas and improvement initiatives.'
                         })
-                        
-            .col-12.col-lg
-                .p-3.p-md-5
-                    +image ({
-                        name: 'image_continuousImprovement',
-                        src: 'https://picsum.photos/400/200'
+
+    //- Advanced Process Control
+    .container.py-3
+        .p-3.p-md-5
+            .row.align-items-center
+                .col-12.col-lg-6
+                    h2.display-1.text-uppercase.text-break.text-lg-nowrap.mb-4
+                        +rawHtml ({
+                            name: 'h1_processControl',
+                            value: 'Advanced <br>Process <br>Control.'
+                        })
+
+                    p.lead
+                        +rawHtml ({
+                            name: 'p1_processControl',
+                            class: 'lead',
+                            value: 'Whether your environment is high or low mix assembly, our solutions will fit your process control needs. MIP data gives you a flexible and free-flowing manufacturing landscape.'
+                        })
+
+                .col-12.col-lg-6
+                    .row.mb-4
+                        .col
+                            h3.text-uppercase
+                                +rawHtml ({
+                                    name: 'h2_processControl',
+                                    value: 'Configure BOM Options & Components.'
+                                })
+
+                            p.lead
+                                +rawHtml ({
+                                    name: 'p2_processControl',
+                                    class: 'lead',
+                                    value: 'Easily manage variability and high mix process control with MIP. Our system intuitively reacts to the individual components and options of the BOM without the need to configure every possible variant of the product.'
+                                })
+
+                    .row.mb-4
+                        .col
+                            h3.text-uppercase
+                                +rawHtml ({
+                                    name: 'h3_processControl',
+                                    value: 'Connect any IoT Devices.'
+                                })
+
+                            p.lead
+                                +rawHtml ({
+                                    name: 'p3_processControl',
+                                    class: 'lead',
+                                    value: 'No code necessary. Automatically display the correct build option, associated work instruction, and device controls based on BOM or Model at the station level.'
+                                })
+                    
+                    .row
+                        .col
+                            h3.text-uppercase
+                                +rawHtml ({
+                                    name: 'h4_processControl',
+                                    value: 'Adjust Process Controls Anytime.'
+                                })
+
+                            p.lead
+                                +rawHtml ({
+                                    name: 'p4_processControl',
+                                    class: 'lead',
+                                    value: 'MIP Data gives you a high-level overview of the plant floor. Seamlessly rebalance lines with drag-n-drop, adjust process controls, and attune any sudden discrepancies.'
+                                })
+        
+    //- Platform Capabiltiies
+    .container.py-3
+        .p-3.p-md-5
+            .row.align-items-center.mb-5
+                .col-12.col-lg-6
+                    h2.display-1.text-uppercase.text-break.text-lg-nowrap.mb-4
+                        +rawHtml ({
+                            name: 'heading_capabilities',
+                            value: 'Modular & Agile Solutions'
+                        })
+
+                    p.lead
+                        +rawHtml ({
+                            name: 'p1_capabilities',
+                            value: 'It’s one integrated platform. It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
+                        })
+
+            //- Capabilities - Work Instructions
+            .row.no-gutters
+                .col-12.col-lg-6
+                    +card ({
+                        name: 'card1',
+                        title: 'Work Instructions',
+                        icon: 'fas fa-chart-bar text-primary',
+                        subTitle: 'Paperless Factory'
                     })
+    
+                .col-12.col-lg-6
+                    .row.no-gutters
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card2',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Rework & Repair'
+                            })
+                        
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card3',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Advanced Training'
+                            })
+
+                    .row.no-gutters
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card4',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Work Instruction Editor'
+                            })
+                        
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card5',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Event-Based Work Instructions.'
+                            })
+
+            //- Capabilities - Traceability
+            .row.no-gutters
+                .col-12.col-lg-6
+                    .row.no-gutters
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card6',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Rework & Repair'
+                            })
+                        
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card7',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Digital Twin'
+                            })
+
+                    .row.no-gutters
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card8',
+                                text: 'Incorporate vision systems to inspect and manage images.'
+                            })
+                        
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card9',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Serial Number, Batch, & Lot Marriage'
+                            })
+
+                .col-12.col-lg-6
+                    +card ({
+                        name: 'card10',
+                        title: 'Traceability & Genealogy',
+                        icon: 'fas fa-chart-bar text-primary',
+                        subTitle: 'Compliance & Regulation Requirements'
+                    })
+            
+            //- Capabilities - Business Intelligence
+            .row.no-gutters
+                .col-12.col-lg-6
+                    +card ({
+                        name: 'card11',
+                        title: 'Business Intelligence',
+                        icon: 'fas fa-chart-bar text-primary',
+                        subTitle: 'Powered by MIP Data'
+                    })
+                .col-12.col-lg-6
+                    .row.no-gutters
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card12',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Root Cause Analysis & Continuous Improvement'
+                            })
+                        
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card13',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Andon'
+                            })
+                    .row.no-gutters
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card14',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Production Visibility'
+                            })
+                        
+                        .col-12.col-lg
+                            +card ({
+                                name: 'card15',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Machine Monitoring / OEE'
+                            })
+
+    //- General Flexibility
+    .container.py-3
+        .p-3.p-md-5
+            .row
+                //- Main Features - Simple Startup Bullets
+                // Seperate These more
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-cloud-upload-alt.fa-3x.mb-4
+                    h5.text-uppercase
+                        +rawHtml ({
+                            name: 'h1_flexibility',
+                            value: 'Cloud or Local Storage'
+                        })
+                    p
+                        +rawHtml ({
+                            name: 'p1_flexibility',
+                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+                        })
+
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-desktop.fa-3x.mb-4
+                    h5.text-uppercase
+                        +rawHtml ({
+                            name: 'h2_flexibility',
+                            value: 'Scalable or Mobile'
+                        })
+                    p
+                        +rawHtml ({
+                            name: 'p2_flexibility',
+                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+                        })
+                
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-clipboard-check.fa-3x.mb-4
+                    h5.text-uppercase
+                        +rawHtml ({
+                            name: 'h3_flexibility',
+                            value: 'Flexible Configuration'
+                        })
+                    p
+                        +rawHtml ({
+                            name: 'p3_flexibility',
+                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+                        })
+
+                .col-12.col-lg.py-3.py-lg-0
+                    i.fas.fa-headset.fa-3x.mb-4
+                    h5.text-uppercase
+                        +rawHtml ({
+                            name: 'h4_flexibility',
+                            value: 'Support & Learning'
+                        })
+                    p
+                        +rawHtml ({
+                            name: 'p2_flexibility',
+                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+                        })
+    //- Updates
+    .bg-gray-800
+        .container.py-3
+            .p-3.p-md-5
+                #carousel-updates.slick-carousel.carousel-dots-light.pb-3
+                    mixin update(index)
+                        div
+                            .p-3.p-md-5
+                                .row.align-items-center
+                                    .col-12.col-lg-6
+                                        h2.display-1.text-uppercase.text-white.text-break.mb-0
+                                            +rawHtml ({
+                                                name: 'title_update' + index,
+                                                value: 'Lorem ipsum dolor sit amet consectetur'
+                                            })
+                                    .col-12.col-lg-6
+                                        h4.text-uppercase.text-white
+                                            +rawHtml ({
+                                                name: 'h_update' + index,
+                                                value: 'Lorem Ipsum Dolor Sit.'
+                                            })
+                                        p.lead.text-white.mb-5
+                                            +rawHtml ({
+                                                name: 'p_update' + index,
+                                                value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Lorem ipsum dolor.'
+                                            })
+                                        +cta ({
+                                            name: 'cta_update' + index,
+                                            variant: 'outline-white'
+                                        })
+                    - var n = 1
+                    while n <= 3
+                        +update(n++)   
+    
+    .bg-primary
+        .container.py-3
+            .p-3.p-md-5
+                .row
+                    .col
+                        .p-3.p-md-5
+                            h2.display-1.text-uppercase.text-white.text-break
+                                +rawHtml ({
+                                    name: 'h1_consultation',
+                                    value: 'Learn how you can sweep the competition under the rug.'
+                                })
+                            p.lead.text-white.mb-5
+                                +rawHtml ({
+                                    name: 'p1_consultation',
+                                    value: 'Request a free consultation to learn more about the eFlex advantage!'
+                                })
+                            .row
+                                .col-12.col-lg-auto.mb-3.mb-lg-0
+                                    +cta ({
+                                        name: 'consultationPrimary',
+                                        variant: 'outline-white',
+                                        guid: 'a142c21b-e203-4f53-b6f1-5c0bc51401f9'
+                                    })
+                                .col-12.col-lg-auto
+                                    +cta ({
+                                        name: 'consultationSecondary',
+                                        variant: 'outline-white',
+                                        guid: 'a735e3cd-802c-4460-b5f3-c50dcc2114b0'
+                                    })

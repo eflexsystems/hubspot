@@ -6,11 +6,14 @@
 @import ../../node_modules/bootstrap/scss/bootstrap
 @import mixins.scss
 @import partials/_colors
+@import partials/utilities/_blend-mode
 @import partials/utilities/_text-wrap
 @import partials/utilities/_overflow
+@import partials/utilities/_opacity
 
 // Components
 @import partials/components/_button
+@import partials/components/_card
 @import partials/components/_carousel
 @import partials/components/_dropdown
 @import partials/components/_navbar
@@ -41,3 +44,5 @@
     &:hover
         color: map-get($theme-colors, 'primary') !important
 
+.container
+    max-width: 1400px !important

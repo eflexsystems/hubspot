@@ -43,3 +43,14 @@ $('#carousel-clients').slick({
         }
     ]
 });
+
+$('#carousel-updates').slick({
+    slidesToShow: 1,
+    slidersToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1000
+});
