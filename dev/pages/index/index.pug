@@ -14,101 +14,96 @@ block content
     include ../../components/_image.pug
     include ../../components/_card.pug
     
-    //- make GM smaller and add in later
     - var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
 
-    //- masthead container
-    //- Top padding for fixed header module
-    .position-relative.w-100.py-5( style='min-height: 40rem' )
-        .parallax-window( d
+    //- Masthead Container
+    .position-relative.pt-5( style='min-height: 40rem' )
+
+        //- Home Content
+
+        .container.h-100.py-5
+            .row.h-100
+
+                //- Masthead Introduction
+                .col-12.col-lg-6
+                    .d-flex.flex-column.justify-content-around.h-100
+                        .p-3.p-md-5
+                            .d-flex.flex-column
+                                h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-4( style="hyphens: auto" )
+                                    +rawHtml ({
+                                        name: 'title_masthead',
+                                        value: 'Solve the Manufacturing Data Gap.'
+                                    })
+
+                                p.lead.text-white
+                                    +rawHtml ({ 
+                                        name: 'desc_masthead',
+                                        class: 'lead text-white',
+                                        value: 'The manufacturing industry is poised for massive change and disruption. Beat the competition with eFlex’s Manufacturing Integrated Platform.'
+                                    })
+
+                        //- Masthead CTAs            
+                        .row
+                            .col
+                                .p-3.p-md-5
+                                    .row
+                                        .col-12.col-md.mb-3.mb-lg-0
+                                            +cta ({
+                                                name: 'secondaryCta',
+                                                variant: 'outline-white',
+                                                class: 'w-100',
+                                                guid: '253bcfe6-ed67-497a-baff-dcc025793e9b'
+                                            })
+                                        .col-12.col-md
+                                            +cta ({
+                                                name: 'primaryCta',
+                                                variant: 'primary',
+                                                class: 'w-100'
+                                            })
+                
+                //- Spotlight Widget
+                .col-12.col-lg-6
+                    .row.justify-content-center.h-100
+                        .col.col-lg-10
+                            .d-flex.flex-column.justify-content-end.align-items-center.h-100
+                                h4.text-white.text-uppercase.mb-0
+                                    +rawHtml ({
+                                        name: 'heading_spotlight_masthead',
+                                        value: '2020 Spotlight'
+                                    })
+                                .pb-4.w-100
+                                    .p-3.p-md-4.w-100
+                                        #carousel-spotlight.slick-carousel.carousel-dots-light.w-100.pb-3
+                                            .d-flex.align-items-center.h-100
+                                                p.text-white.text-center.p-3
+                                                    +rawHtml ({
+                                                        name: 'spotlight1_masthead',
+                                                        class: 'text-white text-center p-3',
+                                                        value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+                                                    })
+                                            .d-flex.align-items-center.h-100
+                                                p.text-white.text-center.p-3
+                                                    +rawHtml ({
+                                                        name: 'spotlight2_masthead',
+                                                        class: 'text-white text-center p-3',
+                                                        value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+                                                    })
+                                            .d-flex.align-items-center.h-100
+                                                p.text-white.text-center.p-3
+                                                    +rawHtml ({
+                                                        name: 'spotlight3_masthead',
+                                                        class: 'text-white text-center p-3',
+                                                        value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+                                                    })
+        //- Background Image
+        .parallax-window.position-absolute.h-100.w-100(
+            style='top: 0; box-sizing: border-box;'
             data-parallax="scroll" 
             data-natural-width="1200"
             data-natural-height="800"
             data-image-src="https://picsum.photos/1200/800" 
             data-speed=.2
             )
-
-        //- Background Image
-        .w-100.h-100.position-absolute(style= 'top: 0; clip-path: inset(0 0 0 0);')
-            
-
-        //- Home Content
-        .w-100.h-100
-            
-            .container.h-100.pt-5
-                .row.h-100
-
-                    //- Masthead Introduction
-                    .col-12.col-lg-6
-                        .d-flex.flex-column.justify-content-around.h-100.py-4
-                            .p-3.p-md-5
-                                .d-flex.flex-column
-                                    h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-4( style="hyphens: auto" )
-                                        +rawHtml ({
-                                            name: 'title_masthead',
-                                            value: 'Solve the Manufacturing Data Gap.'
-                                        })
-
-                                    p.lead.text-white
-                                        +rawHtml ({
-                                            name: 'desc_masthead',
-                                            class: 'lead text-white',
-                                            value: 'The manufacturing industry is poised for massive change and disruption. Beat the competition with eFlex’s Manufacturing Integrated Platform.'
-                                        })
-
-                            //- Masthead CTAs            
-                            .row
-                                .col
-                                    .p-3.p-md-5
-                                        .row
-                                            .col-12.col-md.mb-3.mb-lg-0
-                                                +cta ({
-                                                    name: 'secondaryCta',
-                                                    variant: 'outline-white',
-                                                    class: 'w-100',
-                                                    guid: '253bcfe6-ed67-497a-baff-dcc025793e9b'
-                                                })
-                                            .col-12.col-md
-                                                +cta ({
-                                                    name: 'primaryCta',
-                                                    variant: 'primary',
-                                                    class: 'w-100'
-                                                })
-                    
-                    //- Spotlight Widget
-                    .col-12.col-lg-6
-                        .row.justify-content-center.h-100
-                            .col.col-lg-10
-                                .d-flex.flex-column.justify-content-end.align-items-center.h-100
-                                    h4.text-white.text-uppercase.mb-0
-                                        +rawHtml ({
-                                            name: 'heading_spotlight_masthead',
-                                            value: '2020 Spotlight'
-                                        })
-                                    .pb-4.w-100
-                                        .p-3.p-md-4.w-100
-                                            #carousel-spotlight.slick-carousel.carousel-dots-light.w-100.pb-3
-                                                .d-flex.align-items-center.h-100
-                                                    p.text-white.text-center.p-3
-                                                        +rawHtml ({
-                                                            name: 'spotlight1_masthead',
-                                                            class: 'text-white text-center p-3',
-                                                            value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                                                        })
-                                                .d-flex.align-items-center.h-100
-                                                    p.text-white.text-center.p-3
-                                                        +rawHtml ({
-                                                            name: 'spotlight2_masthead',
-                                                            class: 'text-white text-center p-3',
-                                                            value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                                                        })
-                                                .d-flex.align-items-center.h-100
-                                                    p.text-white.text-center.p-3
-                                                        +rawHtml ({
-                                                            name: 'spotlight3_masthead',
-                                                            class: 'text-white text-center p-3',
-                                                            value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                                                        })
 
     //- Clients Carousel
     .container.py-3
