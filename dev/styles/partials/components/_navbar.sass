@@ -13,3 +13,16 @@ html[data-scroll='0']
     transition-duration: .2s
     .navbar
         @extend .navbar-light
+
+//- Bootstrap Dropdown Slide Effect
+.dropdown .dropdown-menu
+    @extend .p-0
+    transition: none
+    max-height: 0
+    display: block
+    overflow: hidden
+
+.dropdown.show .dropdown-menu
+    transition: all 1s
+    max-height: 100rem
+    max-width: 100%
