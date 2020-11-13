@@ -1,3 +1,6 @@
+// Use responsive styling with scrolling
+let scrollResponsiveHeader = true;
+
 $('#carousel-spotlight').slick({
     slidesToShow: 1,
     slidersToScroll: 1,

@@ -1,0 +1,40 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+-->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{{ content.html_title }}</title><meta name="description" content="{{ content.meta_desctiption }}"><meta name="author" content="eFlex Systems">{{ standard_header_includes }}<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel="stylesheet"><link href="./style.css"><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="/node_modules/jquery-parallax.js/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"></head><body>{% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800 d-none d-lg-block" %}
+{% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}<!-- cta--><div class="pt-5"><div class="container d-flex flex-column justify-content-center py-5" style="min-height: 40rem"><div class="row"><div class="col"><div class="p-3 p-lg-5"><div class="row mb-5"><div class="col"><h1 class="display-1"><i class="far fa-sad-cry fa-sm mr-4"></i>404 - Page Not Found.</h1><p class="lead">Sorry, the page you were looking for at the URL was not found.</p></div></div><div class="row"><div class="col-auto">{% cta "" label="" guid="f45a304e-b763-4049-bff9-b08abe1db12a" extra_classes="primary text-uppercase " %}</div><div class="col-auto">{% cta "" label="" guid="f45a304e-b763-4049-bff9-b08abe1db12a" extra_classes="outline-primary text-uppercase " %}</div></div></div></div></div></div></div>{{ standard_footer_includes }}
+{% module "module_16038952826172" path="/_eflex/modules/footer", label="footer" %}<div class="fixed-top h-100 w-100" id="loadingOverlay" style="top: 0; z-index: 1031"><div class="bg-white position-fixed h-100 w-100"></div><div class="vw-100 vh-100 d-flex justify-content-center align-items-center position-absolute" style="top: 0"><i class="fas fa-circle-notch fa-3x fa-spin text-gray-200"></i></div></div><script type="text/javascript">jQuery(window).load(function () {
+
+    console.log('Document Ready.');
+
+    // Fade overlay once window is loaded.
+    $("#loadingOverlay").fadeOut(400);
+
+    // Swap hubspot styles with Bootstrap.
+    jQuery("style").remove();
+    jQuery("[id^=cta_button]").addClass("btn");
+
+    let variants = ["primary", "secondary", "success", "warning", "danger", "info", "light", "dark", "link", "white", "flat"];
+    variants.forEach(function (variant) {
+        jQuery("." + variant + " a").addClass("btn-" + variant);
+        jQuery(".outline-" + variant + " a").addClass("btn-outline-" + variant);
+    });
+
+    // Move classes to nested elements in hubspot modules.
+    function hsWrapperChildAddClass(childClass) {
+        jQuery(".hs_cos_wrapper." + childClass + " a").addClass(childClass);
+        jQuery(".hs_cos_wrapper").removeClass(childClass);
+    }
+
+    let paddingClasses = ["p-0", 'p-1', 'p-2', 'p-3', 'p-4', 'p-5', 'px-0', 'px-1', 'px-2', 'px-3', 'px-4', 'px-5', 'py-0', 'py-1', 'py-2', 'py-3', 'py-4', 'py-5'];
+    let extraneousClasses = ["w-100", "h-100", "btn-lg", "btn-sm", "text-left", "text-capitalize"];
+
+    let nestableClasses = paddingClasses.concat(extraneousClasses);
+    nestableClasses.forEach(function (nestableClass) {
+        hsWrapperChildAddClass(nestableClass);
+    });
+
+    // Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
+    jQuery(".hs-image-widget").addClass("w-100");
+});</script></body></html>

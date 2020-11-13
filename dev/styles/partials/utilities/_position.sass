@@ -1,0 +1,11 @@
+// Utilities
+// text-wrap
+
+@import ../../../../node_modules/bootstrap/scss/_variables.scss
+
+// Reponsive Text Wrap
+@each $grid-breakpoint, $grid-breakpoint-value in $grid-breakpoints
+    @each $position in $positions
+        @media ( min-width: $grid-breakpoint-value )
+            .position-#{$grid-breakpoint}-#{$position}
+                position: $position !important

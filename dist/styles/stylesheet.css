@@ -12040,7 +12040,7 @@ button.bg-black:focus {
   position: static !important;
 }
 
-.position-relative {
+.position-relative, .responsive-clip-path img {
   position: relative !important;
 }
 
@@ -12133,7 +12133,7 @@ button.bg-black:focus {
   width: 100% !important;
 }
 
-.w-auto {
+.w-auto, .responsive-clip-path img {
   width: auto !important;
 }
 
@@ -12153,7 +12153,7 @@ button.bg-black:focus {
   height: 100% !important;
 }
 
-.h-auto {
+.h-auto, .responsive-clip-path img {
   height: auto !important;
 }
 
@@ -16808,6 +16808,131 @@ h3 {
   opacity: 1;
 }
 
+@media (min-width: 0) {
+  .position-xs-static {
+    position: static !important;
+  }
+}
+@media (min-width: 0) {
+  .position-xs-relative {
+    position: relative !important;
+  }
+}
+@media (min-width: 0) {
+  .position-xs-absolute {
+    position: absolute !important;
+  }
+}
+@media (min-width: 0) {
+  .position-xs-fixed {
+    position: fixed !important;
+  }
+}
+@media (min-width: 0) {
+  .position-xs-sticky {
+    position: sticky !important;
+  }
+}
+@media (min-width: 576px) {
+  .position-sm-static {
+    position: static !important;
+  }
+}
+@media (min-width: 576px) {
+  .position-sm-relative {
+    position: relative !important;
+  }
+}
+@media (min-width: 576px) {
+  .position-sm-absolute {
+    position: absolute !important;
+  }
+}
+@media (min-width: 576px) {
+  .position-sm-fixed {
+    position: fixed !important;
+  }
+}
+@media (min-width: 576px) {
+  .position-sm-sticky {
+    position: sticky !important;
+  }
+}
+@media (min-width: 768px) {
+  .position-md-static {
+    position: static !important;
+  }
+}
+@media (min-width: 768px) {
+  .position-md-relative {
+    position: relative !important;
+  }
+}
+@media (min-width: 768px) {
+  .position-md-absolute {
+    position: absolute !important;
+  }
+}
+@media (min-width: 768px) {
+  .position-md-fixed {
+    position: fixed !important;
+  }
+}
+@media (min-width: 768px) {
+  .position-md-sticky {
+    position: sticky !important;
+  }
+}
+@media (min-width: 992px) {
+  .position-lg-static {
+    position: static !important;
+  }
+}
+@media (min-width: 992px) {
+  .position-lg-relative {
+    position: relative !important;
+  }
+}
+@media (min-width: 992px) {
+  .position-lg-absolute {
+    position: absolute !important;
+  }
+}
+@media (min-width: 992px) {
+  .position-lg-fixed {
+    position: fixed !important;
+  }
+}
+@media (min-width: 992px) {
+  .position-lg-sticky {
+    position: sticky !important;
+  }
+}
+@media (min-width: 1200px) {
+  .position-xl-static {
+    position: static !important;
+  }
+}
+@media (min-width: 1200px) {
+  .position-xl-relative {
+    position: relative !important;
+  }
+}
+@media (min-width: 1200px) {
+  .position-xl-absolute {
+    position: absolute !important;
+  }
+}
+@media (min-width: 1200px) {
+  .position-xl-fixed {
+    position: fixed !important;
+  }
+}
+@media (min-width: 1200px) {
+  .position-xl-sticky {
+    position: sticky !important;
+  }
+}
 .btn-flat::after {
   font-family: "Font Awesome 5 Free";
   font-size: 0.8em;
@@ -16917,6 +17042,17 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .btn-primary {
 
 .container {
   max-width: 1400px !important;
+}
+
+.responsive-clip-path {
+  clip-path: inset(0 0 0 0);
+}
+.responsive-clip-path img {
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translatex(-50%) translatey(-50%);
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

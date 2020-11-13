@@ -1,0 +1,188 @@
+//- andon.pug
+extends ../../../templates/_template_solution.pug
+
+append script
+    script( type='text/javascript' )
+        include ./script.js
+
+append content
+    include ../../../components/_cta.pug
+    include ../../../components/_rawHtml.pug
+    include ../../../components/_image.pug
+
+    .container.py-5
+        .row.align-items-center
+            .col
+                .p-3.p-lg-5
+                    h1.display-1.text-uppercase
+                        +rawHtml ({
+                            name: 'h_intro',
+                            value: 'Data-driven Decision-making.'
+                        })
+                    
+                    p.lead
+                        +rawHtml ({
+                            name: 'p_intro',
+                            value: 'Ensuring that every employee, from the shop floor to the front office, is on the same page requires timely, nonstop communication. With eFlex Andon, employees can quickly view production information and company announcements. This allows everyone to receive clear and consistent information, stay informed, and be prepared to take action in response to changing conditions.'
+                        })
+                
+            .col
+                .p-3.p-lg-5
+                    +image ({
+                        name: 'image_intro',
+                        src: 'https://picsum.photos/400/200'
+                    })
+
+    //- Key Features
+    .container.py-5
+        .p-3.p-lg-5
+            .row.mb-5
+                .col-12.col-lg-6
+                    h1.display-1.text-uppercase.mb-0
+                        +rawHtml ({
+                            name: 'title_keyFeatures',
+                            value: 'Key Features'
+                        })
+
+            .row.mb-5
+                .col-12.col-lg
+                    h3.text-uppercase
+                        i.fas.fa-chart-bar.mr-3
+                        +rawHtml ({
+                            name: 'h1_keyFeatures',
+                            value: 'Data'
+                        })
+                    
+                    p
+                        +rawHtml ({
+                            name: 'p1_keyFeatures',
+                            value: 'With eFlex MIP data, Andon can display assembly, traceability, OEE, process images and maintenance specific data. Additionally, you can display configurable banners that may include employee announcements, safety updates, and more.'
+                        })
+                
+                .col-12.col-lg
+                    h3.text-uppercase
+                        i.fas.fa-tv.mr-3
+                        +rawHtml ({
+                            name: 'h2_keyFeatures',
+                            value: 'Display Platforms'
+                        })
+                    
+                    p
+                        +rawHtml ({
+                            name: 'p2_keyFeatures',
+                            value: 'Visual content can be presented on any web-capable device such as large overhead displays, any PC connected to the network and mobile devices. This enables information to quickly circulate to the entire organization with streamlined improvement plans.'
+                        })
+                
+            .row.mb-5
+                .col-12.col-lg
+                    h3.text-uppercase
+                        i.fas.fa-sliders-h.mr-3
+                        +rawHtml ({
+                            name: 'h3_keyFeatures',
+                            value: 'Configurable'
+                        })
+                    
+                    p
+                        +rawHtml ({
+                            name: 'p3_keyFeatures',
+                            value: 'With a web-based system, users can quickly configure pages with targeted information such as Production Counts, WIP, Histograms, OEE, and much more. Users can easily visualize historical and real-time plant information.'
+                        })
+                
+                .col-12.col-lg
+                    h3.text-uppercase
+                        i.fas.fa-bullseye.mr-3
+                        +rawHtml ({
+                            name: 'h4_keyFeatures',
+                            value: 'Targeted Information'
+                        })
+                    
+                    p
+                        +rawHtml ({
+                            name: 'p4_keyFeatures',
+                            value: 'Information can be targeted to specific areas or users within the organization such as operators, maintenance, or management. This allows the right information to be displayed to the right people.'
+                        })
+            
+            .row
+                .col-12.col-lg
+                    h3.text-uppercase
+                        i.fas.fa-expand-arrows-alt.mr-3
+                        +rawHtml ({
+                            name: 'h5_keyFeatures',
+                            value: 'Scalable'
+                        })
+                    
+                    p
+                        +rawHtml ({
+                            name: 'p5_keyFeatures',
+                            value: 'With eFlex MIP plant-based or cloud-based data collection, users can configure pages for a specific station or plant, or configure hundreds of pages for the enterprise.'
+                        })
+                
+                .col-12.col-lg
+                    h3.text-uppercase
+                        i.fas.fa-mobile-alt.mr-3
+                        +rawHtml ({
+                            name: 'h6_keyFeatures',
+                            value: 'Mobility'
+                        })
+                    
+                    p
+                        +rawHtml ({
+                            name: 'p6_keyFeatures',
+                            value: 'With responsive design, Andon can be viewed on a variety of web-capable mobile devices such as Android tablets, iPads, and Google Chromebooks.'
+                        })
+
+    //- Configurable Andon
+    .position-relative.pt-lg-5
+        .row.no-gutters
+            .col-12.col-lg-6
+                +image ({
+                    name: 'image_customAndon',
+                    src: 'https://picsum.photos/400/200'
+                })
+
+        .position-lg-absolute.w-100.h-100( style="top: 0;" )
+            .container.h-100.py-5.py-lg-0
+                .row.no-gutters.justify-content-end.align-items-center.h-100
+                    .col-12.col-lg-6
+                        .p-3.p-lg-5
+                            h2.text-uppercase
+                                +rawHtml ({
+                                    name: 'h_configurableAndon',
+                                    value: 'User-Configurable Web Pages'
+                                })
+                            
+                            p
+                                +rawHtml ({
+                                    name: 'p_configurableAndon',
+                                    value: 'From mobile devices to large overhead monitors, continuously communicate user specific information to any web capable device within the plant. Present personalized and relevant information where and when it\'s needed. Andon also assists employees in root-cause analysis and continuous improvement efforts.'
+                                })
+
+    .position-relative
+        //- Background Image
+        .position-absolute.overflow-hidden.h-100.w-100( style='top: 0; box-sizing: border-box; pointer-events: none' )
+            .responsive-clip-path.w-100.h-100
+                +image ({
+                    name: 'image_questions',
+                    src: 'https://picsum.photos/900/500'
+                })
+
+        .container.h-100.py-5
+            .row.h-100
+                .col-12.col-lg-6
+                    .p-3.p-lg-5
+                        h2.display-1.text-white.text-uppercase
+                            +rawHtml ({
+                                name: 'h_questions',
+                                value: 'Have Questions?'
+                            })
+                                
+                        p.lead.text-white.mb-5
+                            +rawHtml ({
+                                name: 'p_questions',
+                                value: 'Contact an eFlex team member to learn more about eFlex Andon or any of our other reliable solutions. Let\'s see how we can best fit your manufacturing needs.'
+                            })
+
+                        +cta ({
+                            name: 'cta_questions',
+                            variant: 'outline-white'
+                        })

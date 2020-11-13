@@ -42,10 +42,12 @@ function toggleNavbarMethod() {
 
 //- Override navbar-dark less than lg.
 function overrideNavbarStyle() {
-    if ($(window).width() > 992) {
-        $('#header').addClass('header-interactive');
-    } else {
-        $('#header').removeClass('header-interactive');
+    if (scrollResponsiveHeader) {
+        if ($(window).width() > 992) {
+            $('#header').addClass('header-interactive');
+        } else {
+            $('#header').removeClass('header-interactive');
+        }
     }
 }
 
@@ -59,13 +61,14 @@ function navbarCollapseShow() {
 
 $(document).ready(function () {
 
+    if ($(window).width() > 768) {
+        toggleNavbarMethod();
+    }
+
     navbarCollapseShow();
 
     overrideNavbarStyle();
 
-    if ($(window).width() > 768) {
-        toggleNavbarMethod();
-    }
 });
 
 // 
