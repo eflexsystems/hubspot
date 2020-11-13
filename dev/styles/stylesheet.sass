@@ -6,6 +6,7 @@
 @import ../../node_modules/bootstrap/scss/bootstrap
 @import mixins.scss
 @import partials/_colors
+@import partials/_mobile
 @import partials/utilities/_blend-mode
 @import partials/utilities/_text-wrap
 @import partials/utilities/_overflow
@@ -17,26 +18,7 @@
 @import partials/components/_card
 @import partials/components/_carousel
 @import partials/components/_dropdown
+@import partials/components/_image
 @import partials/components/_link
 @import partials/components/_navbar
 @import partials/components/_parallax
-
-
-@include respond-below(md)
-    .display-1
-        font-size: 3rem
-        line-height: 3rem !important
-
-.container
-    max-width: 1400px !important
-
-//- Responsive Images so there is never a bleed.
-.responsive-clip-path
-    clip-path: inset(0 0 0 0)
-    img
-        @extend .w-auto, .h-auto, .position-relative
-        min-width: 100%
-        min-height: 100%
-        left: 50%
-        top: 50%
-        transform: translatex(-50%) translatey(-50%)

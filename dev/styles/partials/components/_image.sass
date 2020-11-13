@@ -1,0 +1,12 @@
+//- Image
+    
+//- Use for responsive images so there is never a bleed.
+.responsive-clip-path
+    clip-path: inset(0 0 0 0)
+    img
+        @extend .w-auto, .h-auto, .position-relative
+        min-width: 100%
+        min-height: 100%
+        left: 50%
+        top: 50%
+        transform: translatex(-50%) translatey(-50%)

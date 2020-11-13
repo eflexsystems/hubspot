@@ -1,0 +1,92 @@
+@import '_colors';
+
+$border-width: .5px;
+$border-color: map-get($theme-colors, 'gray-800');
+$body-bg: map-get($theme-colors, 'white');
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px
+);
+
+// Base Typography
+$body-color: $gray-700;
+$font-family-sans-serif: 'Titillium Web', sans-serif !important;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+$font-weight-bold: 600; // strong tag set in _base
+$font-size-base: 1rem;
+$font-size-lg: 1.375rem;
+
+// Secondary Typography
+$input-border-width: .5px;
+$link-color: map-get($theme-colors, 'brand');
+
+// Headings
+$headings-font-family: 'Hind', sans-serif !important;
+$headings-margin-bottom: 1rem;
+$headings-font-weight: 600;
+$h4-font-size: $font-size-base * 1.375;
+$headings-color: $gray-800;
+$headings-line-height: 1.1;
+
+// Display
+$display1-size: 4.5rem;
+$display1-weight: 700;
+$display-line-height: 4rem;
+
+// Lead
+$lead-font-size: $font-size-lg;
+$lead-font-weight: 300;
+
+// Small
+$small-font-size: 90%;
+
+// Inputs
+$input-placeholder-color: $star-dust;
+$input-padding-y: .5rem;
+$input-padding-x: 1rem;
+$input-padding-y-lg: 1rem;
+$input-padding-x-lg: 2rem;
+$input-font-size: .875rem;
+
+// Buttons
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 1.25rem;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-font-weight: $font-weight-bold;
+$btn-font-family: 'Hind', sans-serif !important;
+
+// Dropdowns
+$dropdown-min-width: 16rem;
+$dropdown-padding-y: 2rem;
+$dropdown-border-width: 0;
+$dropdown-link-color: map-get($theme-colors, "gray-dark");
+$dropdown-link-hover-color: map-get($theme-colors, "primary");
+$dropdown-link-hover-bg: $none;
+$dropdown-item-padding-y: .5rem;
+$dropdown-link-active-color: $curious-blue;
+$dropdown-link-active-bg: $none;
+
+// Links
+$link-hover-color: map-get($theme-colors, "primary");
+
+// Navbar
+$navbar-dark-color: $white;
+$navbar-light-color: $headings-color;
+$navbar-light-active-color: map-get($colors, "blue");
+
+// Cards
+$card-border-radius: 0;
+$card-border-width: 0;
+
+// Spacing
+$spacer: 1rem;
+$spacers: ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3), 6: ($spacer * 5));
+
+// Custom Variables
+$breakpoint-xxl: 2175px;
