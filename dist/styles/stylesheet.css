@@ -10422,15 +10422,15 @@ button.bg-gray-dark:focus {
   background-color: #2d2e2f !important;
 }
 
-.bg-white, .carousel-dots-light .slick-dots li button::before {
+.bg-white, .carousel-buttons-light .slick-dots li button::before {
   background-color: #ffffff !important;
 }
 
 a.bg-white:hover, a.bg-white:focus,
 button.bg-white:hover,
-.carousel-dots-light .slick-dots li button:hover::before,
+.carousel-buttons-light .slick-dots li button:hover::before,
 button.bg-white:focus,
-.carousel-dots-light .slick-dots li button:focus::before {
+.carousel-buttons-light .slick-dots li button:focus::before {
   background-color: #e6e6e6 !important;
 }
 
@@ -10684,16 +10684,16 @@ button.bg-gray-700:focus {
   background-color: #2d2e2f !important;
 }
 
-.bg-gray-800, .carousel-dots-dark .slick-dots li button::before, a.custom-card .card-text-overlay {
+.bg-gray-800, .carousel-buttons-dark .slick-dots li button::before, a.custom-card .card-text-overlay {
   background-color: #323535 !important;
 }
 
 a.bg-gray-800:hover, a.custom-card a.card-text-overlay:hover, a.bg-gray-800:focus, a.custom-card a.card-text-overlay:focus,
 button.bg-gray-800:hover,
-.carousel-dots-dark .slick-dots li button:hover::before,
+.carousel-buttons-dark .slick-dots li button:hover::before,
 a.custom-card button.card-text-overlay:hover,
 button.bg-gray-800:focus,
-.carousel-dots-dark .slick-dots li button:focus::before,
+.carousel-buttons-dark .slick-dots li button:focus::before,
 a.custom-card button.card-text-overlay:focus {
   background-color: #191b1b !important;
 }
@@ -10718,7 +10718,7 @@ button.bg-black:focus {
   background-color: #060707 !important;
 }
 
-.bg-white, .carousel-dots-light .slick-dots li button::before {
+.bg-white, .carousel-buttons-light .slick-dots li button::before {
   background-color: #ffffff !important;
 }
 
@@ -10974,7 +10974,7 @@ button.bg-black:focus {
   border-radius: 0.3rem !important;
 }
 
-.rounded-circle, .carousel-dots-dark .slick-dots li button::before, .carousel-dots-light .slick-dots li button::before {
+.rounded-circle, .carousel-buttons-dark .slick-dots li button::before, .carousel-buttons-light .slick-dots li button::before {
   border-radius: 50% !important;
 }
 
@@ -14825,7 +14825,7 @@ button.bg-black:focus {
   font-style: italic !important;
 }
 
-.text-white, a.custom-card .card-text-overlay {
+.text-white, .carousel-buttons-light .slick-arrow::before, a.custom-card .card-text-overlay {
   color: #ffffff !important;
 }
 
@@ -14941,11 +14941,11 @@ a.text-gray-dark:hover, a.text-gray-dark:focus {
   color: #212122 !important;
 }
 
-.text-white, a.custom-card .card-text-overlay {
+.text-white, .carousel-buttons-light .slick-arrow::before, a.custom-card .card-text-overlay {
   color: #ffffff !important;
 }
 
-a.text-white:hover, a.custom-card a.card-text-overlay:hover, a.text-white:focus, a.custom-card a.card-text-overlay:focus {
+a.text-white:hover, .carousel-buttons-light a.slick-arrow:hover::before, a.custom-card a.card-text-overlay:hover, a.text-white:focus, .carousel-buttons-light a.slick-arrow:focus::before, a.custom-card a.card-text-overlay:focus {
   color: #d9d9d9 !important;
 }
 
@@ -15149,11 +15149,11 @@ a.text-gray-700:hover, a.text-gray-700:focus {
   color: #212122 !important;
 }
 
-.text-gray-800 {
+.text-gray-800, .carousel-buttons-dark .slick-arrow::before {
   color: #323535 !important;
 }
 
-a.text-gray-800:hover, a.text-gray-800:focus {
+a.text-gray-800:hover, .carousel-buttons-dark a.slick-arrow:hover::before, a.text-gray-800:focus, .carousel-buttons-dark a.slick-arrow:focus::before {
   color: #0d0e0e !important;
 }
 
@@ -16962,18 +16962,16 @@ a.custom-card:hover .card-text-overlay {
   transform: scale(1.5);
 }
 
-.carousel-dots-light .slick-dots li button::before {
+.carousel-buttons-light .slick-dots li button::before {
   font-size: 0;
   height: 0.4rem;
   width: 0.4rem;
 }
-
-.carousel-dots-dark .slick-dots li button::before {
+.carousel-buttons-dark .slick-dots li button::before {
   font-size: 0;
   height: 0.4rem;
   width: 0.4rem;
 }
-
 .slick-prev:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;

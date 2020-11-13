@@ -18,6 +18,7 @@ $('#carousel-clients').slick({
     slidesToShow: 5,
     slidersToScroll: 1,
     dots: true,
+    arrows: false,
     infinite: true,
     autoplay: true,
     speed: 400,

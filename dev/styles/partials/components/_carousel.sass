@@ -14,20 +14,28 @@
             opacity: 1
             transform: scale(1.5)
 
-// Slick Carousel Dots
-.carousel-dots-light 
-    .slick-dots li button::before
-        font-size: 0
-        height: .4rem
-        width: .4rem
-        @extend .bg-white, .rounded-circle
+// Slick Carousel Buttons
+.carousel-buttons-light 
+    .slick-dots li
+        button::before 
+            font-size: 0
+            height: .4rem
+            width: .4rem
+            @extend .bg-white, .rounded-circle
+    .slick-arrow::before
+        @extend .text-white
 
-.carousel-dots-dark
-    .slick-dots li button::before
-        font-size: 0
-        height: .4rem
-        width: .4rem
-        @extend .bg-gray-800, .rounded-circle
+.carousel-buttons-dark
+    .slick-dots li
+        button::before
+            font-size: 0
+            height: .4rem
+            width: .4rem
+            @extend .bg-gray-800, .rounded-circle
+    .slick-arrow::before
+        @extend .text-gray-800
+
+    
 
 .slick-prev:before
     font-family: "Font Awesome\ 5 Free"

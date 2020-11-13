@@ -73,7 +73,7 @@ block content
                                     })
                                 .pb-4.w-100
                                     .p-3.p-md-4.w-100
-                                        #carousel-spotlight.slick-carousel.carousel-dots-light.w-100.pb-3
+                                        #carousel-spotlight.slick-carousel.carousel-buttons-light.w-100.pb-3
                                             .d-flex.align-items-center.h-100
                                                 p.text-white.text-center.p-3
                                                     +rawHtml ({
@@ -101,7 +101,7 @@ block content
             data-parallax="scroll" 
             data-natural-width="1200"
             data-natural-height="800"
-            data-image-src="https://picsum.photos/1200/800" 
+            data-image-src="https://f.hubspotusercontent00.net/hubfs/8439350/test2.png" 
             data-speed=.2
             )
 
@@ -110,7 +110,7 @@ block content
         .row
             .col
                 .p-3.p-md-5
-                    #carousel-clients.slick-carousel.carousel-dots-dark.pb-3
+                    #carousel-clients.slick-carousel.carousel-buttons-dark.pb-3
                         - for ( var i = 0; i < clients.length; i++ )
                             - var name = 'logoClient' + i
                             - var src = 'https://f.hubspotusercontent00.net/hubfs/8439350/Logos/Client%20Logos/Logo_' + clients[i] + '.svg'
@@ -477,43 +477,48 @@ block content
                         })
                     p
                         +rawHtml ({
-                            name: 'p2_flexibility',
+                            name: 'p4_flexibility',
                             value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
                         })
-    //- Updates
+
+    //- JEM Video
     .bg-gray-800
         .container.py-3
-            .p-3.p-md-5
-                #carousel-updates.slick-carousel.carousel-dots-light.pb-3
-                    mixin update(index)
-                        div
-                            .p-3.p-md-5
-                                .row.align-items-center
-                                    .col-12.col-lg-6
-                                        h2.display-1.text-uppercase.text-white.text-break.mb-0
-                                            +rawHtml ({
-                                                name: 'title_update' + index,
-                                                value: 'Lorem ipsum dolor sit amet consectetur'
-                                            })
-                                    .col-12.col-lg-6
-                                        h4.text-uppercase.text-white
-                                            +rawHtml ({
-                                                name: 'h_update' + index,
-                                                value: 'Lorem Ipsum Dolor Sit.'
-                                            })
-                                        p.lead.text-white.mb-5
-                                            +rawHtml ({
-                                                name: 'p_update' + index,
-                                                value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Lorem ipsum dolor.'
-                                            })
-                                        +cta ({
-                                            name: 'cta_update' + index,
-                                            variant: 'outline-white'
+
+    //- Updates
+    .container.py-3
+        .p-3.p-md-5
+            #carousel-updates.slick-carousel.carousel-buttons-dark.pb-3
+                mixin update(index)
+                    div
+                        .p-3.p-md-5
+                            .row.align-items-center
+                                .col-12.col-lg-6
+                                    h2.display-1.text-uppercase.text-break.mb-0
+                                        +rawHtml ({
+                                            name: 'title_update' + index,
+                                            value: 'Lorem ipsum dolor sit amet consectetur'
                                         })
-                    - var n = 1
-                    while n <= 3
-                        +update(n++)   
-    
+                                .col-12.col-lg-6
+                                    h4.text-uppercase
+                                        +rawHtml ({
+                                            name: 'h_update' + index,
+                                            value: 'Lorem Ipsum Dolor Sit.'
+                                        })
+                                    p.lead.mb-5
+                                        +rawHtml ({
+                                            name: 'p_update' + index,
+                                            class: 'lead mb-5',
+                                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Lorem ipsum dolor.'
+                                        })
+                                    +cta ({
+                                        name: 'cta_update' + index,
+                                        variant: 'outline-primary'
+                                    })
+                - var n = 1
+                while n <= 3
+                    +update(n++)
+
     .bg-primary
         .container.py-3
             .p-3.p-md-5
