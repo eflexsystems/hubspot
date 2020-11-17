@@ -3,7 +3,7 @@ templateType: page
 isAvailableForNewContent: true
 -->
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>{{ content.html_title }}</title><meta name="description" content="{{ content.meta_desctiption }}"><meta name="author" content="eFlex Systems">{{ standard_header_includes }}<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel="stylesheet"><link href="./style.css"><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="/node_modules/jquery-parallax.js/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"></head><body>{% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800 d-none d-lg-block" %}
-{% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}<!-- raw_html--><!-- cta--><!-- image--><div class="position-relative d-flex flex-column justify-content-center pt-5" style="min-height: 40rem"><div class="container h-100 py-5"><div class="row h-100"><div class="col-12 col-lg-6"><div class="d-flex flex-column justify-content-around h-100"><div class="p-3 p-md-5"><div class="d-flex flex-column"><h1 class="display-1 text-uppercase text-white text-break text-lg-nowrap mb-" style="hyphens: auto">{% raw_html "title_masthead" value="Solution Title", label="title_masthead", extra_classes="" %}</h1><p class="lead text-white mb-5">{% raw_html "desc_masthead" value="Solution sub-title insert here.", label="desc_masthead", extra_classes="lead text-white" %}</p>{% cta "secondaryCta" label="secondaryCta" guid="f45a304e-b763-4049-bff9-b08abe1db12a" extra_classes="outline-white text-uppercase " %}</div></div></div></div></div></div><div class="parallax-window position-absolute h-100 w-100" style="top: 0; box-sizing: border-box; pointer-events: none" data-parallax="scroll" data-natural-width="1200" data-natural-height="800" data-image-src="https://picsum.photos/1200/800" data-speed="0.2"></div></div>{{ standard_footer_includes }}
+{% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}<!-- raw_html--><!-- cta--><!-- image--><div class="position-relative d-flex flex-column justify-content-center pt-5" style="min-height: 40rem"><div class="container h-100 py-5"><div class="row h-100"><div class="col-12 col-lg-6"><div class="d-flex flex-column justify-content-around h-100"><div class="p-3 p-md-5"><div class="d-flex flex-column"><h1 class="display-1 text-uppercase text-white text-break text-lg-nowrap mb-" style="hyphens: auto">{% raw_html "title_masthead" value="Solution Title", label="title_masthead", extra_classes="" %}</h1><p class="lead text-white mb-5">{% raw_html "desc_masthead" value="Solution sub-title insert here.", label="desc_masthead", extra_classes="hs_ancestor lead text-white" %}</p>{% cta "secondaryCta" label="secondaryCta" guid="f45a304e-b763-4049-bff9-b08abe1db12a" extra_classes=" outline-white text-uppercase" %}</div></div></div></div></div></div><div class="parallax-window position-absolute h-100 w-100" style="top: 0; box-sizing: border-box; pointer-events: none" data-parallax="scroll" data-natural-width="1200" data-natural-height="800" data-image-src="https://picsum.photos/800/600" data-speed="0.2"></div></div>{{ standard_footer_includes }}
 {% module "module_16038952826172" path="/_eflex/modules/footer", label="footer" %}<div class="fixed-top h-100 w-100" id="loadingOverlay" style="top: 0; z-index: 1031"><div class="bg-white position-fixed h-100 w-100"></div><div class="vw-100 vh-100 d-flex justify-content-center align-items-center position-absolute" style="top: 0"><i class="fas fa-circle-notch fa-3x fa-spin text-gray-200"></i></div></div><script type="text/javascript">jQuery(window).load(function () {
 
     console.log('Document Ready.');
@@ -21,19 +21,28 @@ isAvailableForNewContent: true
         jQuery(".outline-" + variant + " a").addClass("btn-outline-" + variant);
     });
 
-    // Move classes to nested elements in hubspot modules.
-    function hsWrapperChildAddClass(childClass) {
-        jQuery(".hs_cos_wrapper." + childClass + " a").addClass(childClass);
-        jQuery(".hs_cos_wrapper").removeClass(childClass);
-    }
+    // Pass hs module classes to children
+    function hsChildInheritClass(selector) {
+        const hsExcludedClasses = ['hs_cos_wrapper', 'hs_cos_wrapper_widget', 'hs_cos_wrapper_type_cta', 'hs_cos_wrapper_type_raw_html', 'hs_ancestor'];
 
-    let paddingClasses = ["p-0", 'p-1', 'p-2', 'p-3', 'p-4', 'p-5', 'px-0', 'px-1', 'px-2', 'px-3', 'px-4', 'px-5', 'py-0', 'py-1', 'py-2', 'py-3', 'py-4', 'py-5'];
-    let extraneousClasses = ["w-100", "h-100", "btn-lg", "btn-sm", "text-left", "text-capitalize"];
+        const ancestorElements = document.getElementsByClassName('hs_ancestor ' + selector);
+        for (var i = 0; i < ancestorElements.length; i++) {
+            const ancestorClasses = ancestorElements[i].classList;
+            for (var j = 0; j < ancestorClasses.length; j++) {
+                const ancestorClass = ancestorClasses[j];
 
-    let nestableClasses = paddingClasses.concat(extraneousClasses);
-    nestableClasses.forEach(function (nestableClass) {
-        hsWrapperChildAddClass(nestableClass);
-    });
+                if (hsExcludedClasses.includes(ancestorClass)) { }
+                else {
+                    console.log(ancestorClass);
+                    jQuery('.' + selector + '.hs_ancestor.' + ancestorClass + ' a').addClass(ancestorClass);
+                    jQuery('.' + selector + '.hs_ancestor.' + ancestorClass).removeClass(ancestorClass);
+                }
+            }
+        }
+    };
+
+    // Select cta modules
+    hsChildInheritClass('hs_cos_wrapper_type_cta');
 
     // Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
     jQuery(".hs-image-widget").addClass("w-100");

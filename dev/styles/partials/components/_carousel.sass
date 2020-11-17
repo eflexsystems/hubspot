@@ -2,19 +2,20 @@
 .slick-carousel
     .slick-track
         @extend .d-flex, .align-items-center
-
-    img
-        @extend .p-3
-        transition: all .2s
-        max-height: 8rem
-        opacity: .65
-
-    .slick-center
+        
+    &.image-carousel
         img
-            opacity: 1
-            transform: scale(1.5)
+            @extend .p-3
+            transition: all .2s
+            max-height: 8rem
+            opacity: .65
 
-// Slick Carousel Buttons
+        .slick-center
+            img
+                opacity: 1
+                transform: scale(1.5)
+
+// Slick Carousel Buttons Light
 .carousel-buttons-light 
     .slick-dots li
         button::before 
@@ -25,6 +26,7 @@
     .slick-arrow::before
         @extend .text-white
 
+// Slick Carousel Buttons Dark
 .carousel-buttons-dark
     .slick-dots li
         button::before
@@ -35,8 +37,7 @@
     .slick-arrow::before
         @extend .text-gray-800
 
-    
-
+//- Font Awesome Carousel Arrows
 .slick-prev:before
     font-family: "Font Awesome\ 5 Free"
     font-weight: 900
