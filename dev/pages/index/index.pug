@@ -62,39 +62,39 @@ block content
                                                 })
                     
                     //- Spotlight Widget
-                    .col-12.col-lg-6
-                        .row.justify-content-center.h-100
-                            .col.col-lg-10
-                                .d-flex.flex-column.justify-content-end.align-items-center.h-100
-                                    h4.text-white.text-uppercase.mb-0
-                                        +rawHtml ({
-                                            name: 'heading_spotlight_masthead',
-                                            value: '2020 Spotlight'
-                                        })
-                                    .pb-4.w-100
-                                        .p-3.p-md-4.w-100
-                                            #carousel-spotlight.slick-carousel.carousel-buttons-light.w-100.pb-3
-                                                .d-flex.align-items-center.h-100
-                                                    p.text-white.text-center.p-3
-                                                        +rawHtml ({
-                                                            name: 'spotlight1_masthead',
-                                                            class: 'text-white text-center p-3',
-                                                            value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                                                        })
-                                                .d-flex.align-items-center.h-100
-                                                    p.text-white.text-center.p-3
-                                                        +rawHtml ({
-                                                            name: 'spotlight2_masthead',
-                                                            class: 'text-white text-center p-3',
-                                                            value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                                                        })
-                                                .d-flex.align-items-center.h-100
-                                                    p.text-white.text-center.p-3
-                                                        +rawHtml ({
-                                                            name: 'spotlight3_masthead',
-                                                            class: 'text-white text-center p-3',
-                                                            value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                                                        })
+                    //- .col-12.col-lg-6
+                    //-     .row.justify-content-center.h-100
+                    //-         .col.col-lg-10
+                    //-             .d-flex.flex-column.justify-content-end.align-items-center.h-100
+                    //-                 h4.text-white.text-uppercase.mb-0
+                    //-                     +rawHtml ({
+                    //-                         name: 'heading_spotlight_masthead',
+                    //-                         value: '2020 Spotlight'
+                    //-                     })
+                    //-                 .pb-4.w-100
+                    //-                     .p-3.p-md-4.w-100
+                    //-                         #carousel-spotlight.slick-carousel.carousel-buttons-light.w-100.pb-3
+                    //-                             .d-flex.align-items-center.h-100
+                    //-                                 p.text-white.text-center.p-3
+                    //-                                     +rawHtml ({
+                    //-                                         name: 'spotlight1_masthead',
+                    //-                                         class: 'text-white text-center p-3',
+                    //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+                    //-                                     })
+                    //-                             .d-flex.align-items-center.h-100
+                    //-                                 p.text-white.text-center.p-3
+                    //-                                     +rawHtml ({
+                    //-                                         name: 'spotlight2_masthead',
+                    //-                                         class: 'text-white text-center p-3',
+                    //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+                    //-                                     })
+                    //-                             .d-flex.align-items-center.h-100
+                    //-                                 p.text-white.text-center.p-3
+                    //-                                     +rawHtml ({
+                    //-                                         name: 'spotlight3_masthead',
+                    //-                                         class: 'text-white text-center p-3',
+                    //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+                    //-                                     })
             //- Background Image
             .parallax-window.position-absolute.w-auto.h-auto(
                 style='top: 0; box-sizing: border-box; pointer-events: none; min-width: 100%; min-height: 100%;'
@@ -131,7 +131,7 @@ block content
                 .p-3.p-md-5
                     +image ({
                         name: 'image_mainFeatures',
-                        src: 'https://picsum.photos/400/200'
+                        src: 'https://f.hubspotusercontent30.net/hubfs/490686/_site_reclaimed/photos/Interface%20Examples/Devices.png'
                     })
             
             .col-12.col-lg
@@ -166,7 +166,7 @@ block content
                 //- Main Features - Simple Startup Bullets
                 // Seperate These more
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-users-cog.fa-3x.mb-4
+                    i.fas.fa-users-cog.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h1_mainFeatures_bullet',
@@ -180,7 +180,7 @@ block content
                         })
                 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fab.fa-bluetooth.fa-3x.mb-4
+                    i.fab.fa-bluetooth.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h2_mainFeatures_bullet',
@@ -194,7 +194,7 @@ block content
                         })
 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-sliders-h.fa-3x.mb-4
+                    i.fas.fa-sliders-h.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h3_mainFeatures_bullet',
@@ -208,7 +208,7 @@ block content
                         })
                 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-chart-bar.fa-3x.mb-4
+                    i.fas.fa-chart-bar.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h4_mainFeatures_bullet',
@@ -241,7 +241,10 @@ block content
 
                 .col-12.col-lg-6.ml-lg-auto
                     .row.mb-4
-                        .col
+                        .col-12.col-lg-auto
+                            h3
+                                i.fas.fa-newspaper.fa-2x.text-primary
+                        .col-12.col-lg
                             h3.text-uppercase
                                 +rawHtml ({
                                     name: 'h2_processControl',
@@ -256,7 +259,10 @@ block content
                                 })
 
                     .row.mb-4
-                        .col
+                        .col-12.col-lg-auto
+                            h3
+                                i.fas.fa-tachometer-alt.fa-2x.text-primary
+                        .col-12.col-lg
                             h3.text-uppercase
                                 +rawHtml ({
                                     name: 'h3_processControl',
@@ -271,7 +277,10 @@ block content
                                 })
                     
                     .row
-                        .col
+                        .col-12.col-lg-auto
+                            h3
+                                i.fas.fa-sliders-h.fa-2x.text-primary
+                        .col-12.col-lg
                             h3.text-uppercase
                                 +rawHtml ({
                                     name: 'h4_processControl',
@@ -299,8 +308,14 @@ block content
                     p.lead
                         +rawHtml ({
                             name: 'p1_capabilities',
+                            class: 'lead',
                             value: 'It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
                         })
+                .col-12.col-lg-6.ml-lg-auto
+                    +image ({
+                        name: 'image_capabilities',
+                        src: 'https://picsum.photos/400/300/'
+                    })
 
             //- Capabilities - Work Instructions
             .row.no-gutters
@@ -316,18 +331,17 @@ block content
                     .row.no-gutters
                         .col-12.col-lg
                             +card ({
+                                name: 'card3',
+                                src: 'https://picsum.photos/400/200',
+                                title: 'Advanced Training'
+                            })
+                        .col-12.col-lg
+                            +card ({
                                 name: 'card2',
                                 src: 'https://picsum.photos/400/200',
                                 title: 'Rework & Repair'
                             })
                         
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card3',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Advanced Training'
-                            })
-
                     .row.no-gutters
                         .col-12.col-lg
                             +card ({
@@ -347,11 +361,12 @@ block content
             .row.no-gutters
                 .col-12.col-lg-6
                     .row.no-gutters
+
                         .col-12.col-lg
                             +card ({
-                                name: 'card6',
+                                name: 'card9',
                                 src: 'https://picsum.photos/400/200',
-                                title: 'Rework & Repair'
+                                title: 'Serial Number, Batch, & Lot Marriage'
                             })
                         
                         .col-12.col-lg
@@ -370,9 +385,9 @@ block content
                         
                         .col-12.col-lg
                             +card ({
-                                name: 'card9',
+                                name: 'card6',
                                 src: 'https://picsum.photos/400/200',
-                                title: 'Serial Number, Batch, & Lot Marriage'
+                                title: 'Rework & Repair'
                             })
 
                 .col-12.col-lg-6
@@ -429,7 +444,7 @@ block content
                 //- Main Features - Simple Startup Bullets
                 // Seperate These more
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-cloud-upload-alt.fa-3x.mb-4
+                    i.fas.fa-cloud-upload-alt.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h1_flexibility',
@@ -442,7 +457,7 @@ block content
                         })
 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-desktop.fa-3x.mb-4
+                    i.fas.fa-desktop.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h2_flexibility',
@@ -455,7 +470,7 @@ block content
                         })
                 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-clipboard-check.fa-3x.mb-4
+                    i.fas.fa-clipboard-check.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h3_flexibility',
@@ -468,7 +483,7 @@ block content
                         })
 
                 .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-headset.fa-3x.mb-4
+                    i.fas.fa-headset.text-primary.fa-3x.mb-4
                     h5.text-uppercase
                         +rawHtml ({
                             name: 'h4_flexibility',
@@ -552,6 +567,7 @@ block content
                             p.lead.text-white.mb-5
                                 +rawHtml ({
                                     name: 'p1_consultation',
+                                    class: 'text-white lead mb-5',
                                     value: 'Request a free consultation to learn more about the eFlex advantage!'
                                 })
                             .row
