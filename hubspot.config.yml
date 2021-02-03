@@ -9,17 +9,17 @@ portals:
       scopes:
         - content
       tokenInfo:
-        expiresAt: '2020-09-21T23:27:53.490Z'
+        expiresAt: '2021-02-04T01:07:32.512Z'
         refreshToken: 9d21e3db-56c2-417c-bb10-86fb94ade705
         accessToken: >-
-          CLbIxJrLLhICAgEYvvkdIN_3xAMo6Z0MMhkAfQLvQwy2Ky3TdvgsRYl7CcZvs8h3TT0kOhwAMQBB_wcAAAAAgAAAYHjHKAAAACAAAAAUAAAYQhkAfQLvQygLZsm3EVGStNzCh7WoGO49ygXt
+          CPnHm9f2LhICAgEYvvkdIN_3xAMo6Z0MMhkAmmWe68WkbPC2zuW9fvUjd93JkMBO7cbLOiQAMQBB_wcAAAAAgAAAYHjGKAAAACAAAAAUAAAYAAAAwMMfBgFCGQCaZZ7rgeZ1nPbE4SIgKP-LzJl3Wlpwr8A
   - name: DEV
     portalId: 8439350
     authType: personalaccesskey
     auth:
       tokenInfo:
         accessToken: >-
-          CKzT--zdLhIEAA0ADBi2jIMEIN_3xAMo7ukMMhkALyuOp8qoHA9iE6ld_ZjCt8pfnAhX0eXLOh0AAARBAAAAeAAAAAAAAAAAgAEAAAAAAATAAMAHYEIZAC8rjqd06N2yK7Cn9KtiuNl0ZScgwviLOw
-        expiresAt: '2020-11-18T23:09:40.657Z'
+          CIe4zdf2LhIEAA0ADBi2jIMEIN_3xAMo7ukMMhkAmmWe6xBQ-Vi937oIToNT4nUJ5L3SD4aDOh0AAARBAAAAeAAAAAAAAAAAgAEAAAAAAATAAMAHYEIZAJplnusdU_7Aat3f7wVOyQqvz7M-pFgRXw
+        expiresAt: '2021-02-04T02:51:09.709Z'
     personalAccessKey: >-
       CiQwZTRjMGZiMy00NWI2LTRlNWYtYTdjMy05NWI1MWM0NzExYTYQtoyDBBjf98QDKhkABeaRggYx5NMe0VEmys6BA090DAoEAW91

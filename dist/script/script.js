@@ -15,19 +15,28 @@ jQuery(window).load(function () {
         jQuery(".outline-" + variant + " a").addClass("btn-outline-" + variant);
     });
 
-    // Move classes to nested elements in hubspot modules.
-    function hsWrapperChildAddClass(childClass) {
-        jQuery(".hs_cos_wrapper." + childClass + " a").addClass(childClass);
-        jQuery(".hs_cos_wrapper").removeClass(childClass);
-    }
+    // Pass hs module classes to children
+    function hsChildInheritClass(selector) {
+        const hsExcludedClasses = ['hs_cos_wrapper', 'hs_cos_wrapper_widget', 'hs_cos_wrapper_type_cta', 'hs_cos_wrapper_type_raw_html', 'hs_ancestor'];
 
-    let paddingClasses = ["p-0", 'p-1', 'p-2', 'p-3', 'p-4', 'p-5', 'px-0', 'px-1', 'px-2', 'px-3', 'px-4', 'px-5', 'py-0', 'py-1', 'py-2', 'py-3', 'py-4', 'py-5'];
-    let extraneousClasses = ["w-100", "h-100", "btn-lg", "btn-sm", "text-left", "text-capitalize"];
+        const ancestorElements = document.getElementsByClassName('hs_ancestor ' + selector);
+        for (var i = 0; i < ancestorElements.length; i++) {
+            const ancestorClasses = ancestorElements[i].classList;
+            for (var j = 0; j < ancestorClasses.length; j++) {
+                const ancestorClass = ancestorClasses[j];
 
-    let nestableClasses = paddingClasses.concat(extraneousClasses);
-    nestableClasses.forEach(function (nestableClass) {
-        hsWrapperChildAddClass(nestableClass);
-    });
+                if (hsExcludedClasses.includes(ancestorClass)) { }
+                else {
+                    console.log(ancestorClass);
+                    jQuery('.' + selector + '.hs_ancestor.' + ancestorClass + ' a').addClass(ancestorClass);
+                    jQuery('.' + selector + '.hs_ancestor.' + ancestorClass).removeClass(ancestorClass);
+                }
+            }
+        }
+    };
+
+    // Select cta modules
+    hsChildInheritClass('hs_cos_wrapper_type_cta');
 
     // Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
     jQuery(".hs-image-widget").addClass("w-100");
