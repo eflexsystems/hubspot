@@ -1,7 +1,5 @@
 jQuery(window).load(function () {
 
-    console.log('Document Ready.');
-
     // Fade overlay once window is loaded.
     $("#loadingOverlay").fadeOut(400);
 
@@ -27,7 +25,6 @@ jQuery(window).load(function () {
 
                 if (hsExcludedClasses.includes(ancestorClass)) { }
                 else {
-                    console.log(ancestorClass);
                     jQuery('.' + selector + '.hs_ancestor.' + ancestorClass + ' a').addClass(ancestorClass);
                     jQuery('.' + selector + '.hs_ancestor.' + ancestorClass).removeClass(ancestorClass);
                 }

@@ -6,7 +6,7 @@ include ../../components/_cta.pug
         {%- if link!= [] && link.label -%}
             {%- if link.children -%}
                 <div class="col-12 col-lg mb-5 mb-lg-0">
-                    <p class="font-weight-bold small text-uppercase border-bottom mx-4 py-3 mb-3">{{link.label}}</p>
+                    <p class="fw-bold small text-uppercase border-bottom mx-3 py-3 mb-3">{{link.label}}</p>
                     {%- set depth = depth + 1-%}
                     {%- for sublink in link.children -%}
                         {{render_link_children(sublink,depth)}}
@@ -23,7 +23,7 @@ include ../../components/_cta.pug
 
             {%- if link.children -%}
                 <li class="nav-item dropdown position-static hs-menu-item hs-menu-depth-{{depth}} hs-item-has-children" aria-role="none">
-                    <a class="nav-link dropdown-toggle font-weight-bold py-3 px-md-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
+                    <a class="nav-link dropdown-toggle fw-bold py-3 px-md-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ms-1"></i></a>
                     <div class="dropdown-menu shadow-sm w-100 rounded-0 pt-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
                         <div class="container">
                             <div class="row no-gutters w-100 px-md-4 pb-5">
@@ -59,7 +59,7 @@ include ../../components/_cta.pug
                     | {{render_link_item(link,1)}}
                     | {% endfor %}
             
-                .ml-auto
+                .ms-auto
                     +cta ({
                         name: 'headerCta',
                         guid: 'f8b9429a-a9bd-4e34-a063-f573f8ecbf2d',

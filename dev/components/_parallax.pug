@@ -1,0 +1,10 @@
+// parallax
+mixin parallax(args)
+	.parallax-window.position-absolute.w-100.h-100(
+		style='top: 0; box-sizing: border-box; pointer-events: none' 
+		data-parallax="scroll"  
+		data-natural-width=args.dataNaturalWidth ? args.dataNaturalWidth : "1200"
+		data-natural-height=args.dataNaturalHeight ? args.dataNaturalHeight : "800"
+		data-image-src!='{% text \"' + args.name + '\", label=\"' + args.name + '\", value=\"' + (args.dataImageSrc ? args.dataImageSrc : `https://picsum.photos/800/600`) + '\", no_wrapper=True %}' 
+		data-speed=args.dataSpeed ? args.dataSpeed : .2
+	)

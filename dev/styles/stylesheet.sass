@@ -1,18 +1,30 @@
+// stylesheet.sass 
+// Don't change the import order!
+
 //- Libraries
 @import ../../node_modules/slick-carousel/slick/slick.scss
 @import ../../node_modules/slick-carousel/slick/slick-theme.scss
 
-//- Partials
+//- Prepend bootstrap partials
 @import partials/_variables
+@import ../../node_modules/bootstrap/scss/functions
+@import ../../node_modules/bootstrap/scss/variables
+@import ../../node_modules/bootstrap/scss/utilities
+
+// Bootstrap Utilities API
+@import partials/utilities/_utilitiesApi
+
+// Boostrap
 @import ../../node_modules/bootstrap/scss/bootstrap
+
+//- Partials
 @import mixins.scss
 @import partials/_colors
 @import partials/_mobile
-@import partials/utilities/_blend-mode
-@import partials/utilities/_text-wrap
+@import partials/utilities/_blendMode
+@import partials/utilities/_textWrap
 @import partials/utilities/_overflow
-@import partials/utilities/_opacity
-@import partials/utilities/_position
+@import partials/utilities/_bgOpacity
 
 // Components
 @import partials/components/_button

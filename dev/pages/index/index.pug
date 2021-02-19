@@ -13,6 +13,7 @@ block content
     include ../../components/_cta.pug
     include ../../components/_image.pug
     include ../../components/_card.pug
+    include ../../components/_parallax.pug
     
     - var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
 
@@ -95,6 +96,7 @@ block content
                     //-                                         class: 'text-white text-center p-3',
                     //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
                     //-                                     })
+                    
             //- Background Image
             .parallax-window.position-absolute.w-auto.h-auto(
                 style='top: 0; box-sizing: border-box; pointer-events: none; min-width: 100%; min-height: 100%;'
@@ -103,7 +105,7 @@ block content
                 data-natural-height="963"
                 data-image-src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/videoStill_operatorPickLightJem.jpg"
                 data-speed=.2
-                )
+            )
 
     //- Clients Carousel
     .container.py-3
@@ -239,7 +241,7 @@ block content
                             value: 'Whether your environment is high or low mix assembly, our solutions will fit your process control needs. MIP data gives you a flexible and free-flowing manufacturing landscape.'
                         })
 
-                .col-12.col-lg-6.ml-lg-auto
+                .col-12.col-lg-6.ms-lg-auto
                     .row.mb-4
                         .col-12.col-lg-auto
                             h3
@@ -311,7 +313,7 @@ block content
                             class: 'lead',
                             value: 'It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
                         })
-                .col-12.col-lg-6.ml-lg-auto
+                .col-12.col-lg-6.ms-lg-auto
                     +image ({
                         name: 'image_capabilities',
                         src: 'https://picsum.photos/400/300/'

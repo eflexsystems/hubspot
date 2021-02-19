@@ -5,13 +5,13 @@ include ../../components/_cta.pug
     {%- macro render_link_children(link,depth)-%}
         {%- if link!= [] && link.label -%}
             {%- if link.children -%}
-                <p class="text-gray-400 font-weight-bold p-4 pl-5 mt-4 mb-0">{{link.label}}...</p>
+                <p class="text-gray-400 fw-bold p-4 pl-5 mt-4 mb-0">{{link.label}}...</p>
                 {%- set depth = depth + 1-%}
                 {%- for sublink in link.children -%}
                     {{render_link_children(sublink,depth)}}
                 {%- endfor -%}
             {%- else -%}
-                <a class="dropdown-item text-primary bg-gray-100 font-weight-bold d-flex p-3 pl-5" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}<i class="fas fa-caret-right fa-sm ml-auto"></i></a>
+                <a class="dropdown-item text-primary bg-gray-100 fw-bold d-flex p-3 pl-5" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}<i class="fas fa-caret-right fa-sm ms-auto"></i></a>
             {%- endif -%}
         {%- endif -%}
     {%- endmacro -%}
@@ -21,7 +21,7 @@ include ../../components/_cta.pug
 
             {%- if link.children -%}
                 <li class="nav-item dropdown position-static border-bottom border-gray-400 hs-menu-item hs-menu-depth-{{depth}} hs-item-has-children" aria-role="none">
-                    <a class="nav-link dropdown-toggle font-weight-bold p-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ml-1"></i></a>
+                    <a class="nav-link dropdown-toggle fw-bold p-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ms-1"></i></a>
                     <div class="dropdown-menu w-100 rounded-0 py-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
                         {%- set depth = depth + 1-%}
                         {%- for sublink in link.children -%}
@@ -32,7 +32,7 @@ include ../../components/_cta.pug
 
             {%- else -%}
                 <li class="nav-item hs-menu-item hs-menu-depth-{{depth}} " aria-role="none">
-                    <a class="nav-link font-weight-bold p-4" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
+                    <a class="nav-link fw-bold p-4" href="{{link.url if link.url else '#'}}" aria-role="menuitem">{{link.label}}</a>
                 </li>
             {%- endif -%}
         {%- endif -%}

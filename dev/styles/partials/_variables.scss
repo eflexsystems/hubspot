@@ -1,15 +1,15 @@
 @import '_colors';
 
-$border-width: .5px;
+$border-width: 0.5px;
 $border-color: map-get($theme-colors, 'gray-800');
 $body-bg: map-get($theme-colors, 'white');
 
 // Container
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1400px
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1400px,
 );
 
 // Base Typography
@@ -22,7 +22,7 @@ $font-size-base: 1rem;
 $font-size-lg: 1.375rem;
 
 // Secondary Typography
-$input-border-width: .5px;
+$input-border-width: 0.5px;
 $link-color: map-get($theme-colors, 'brand');
 
 // Headings
@@ -34,9 +34,16 @@ $headings-color: $gray-800;
 $headings-line-height: 1.1;
 
 // Display
-$display1-size: 4.5rem;
-$display1-weight: 700;
 $display-line-height: 4rem;
+$display-font-weight: 700;
+$display-font-sizes: (
+	1: 4.5rem,
+	2: 4rem,
+	3: 3.5rem,
+	4: 3rem,
+	5: 2.5rem,
+	6: 2.25rem,
+);
 
 // Lead
 $lead-font-size: $font-size-lg;
@@ -47,11 +54,11 @@ $small-font-size: 90%;
 
 // Inputs
 $input-placeholder-color: $star-dust;
-$input-padding-y: .5rem;
+$input-padding-y: 0.5rem;
 $input-padding-x: 1rem;
 $input-padding-y-lg: 1rem;
 $input-padding-x-lg: 2rem;
-$input-font-size: .875rem;
+$input-font-size: 0.875rem;
 
 // Buttons
 $btn-padding-x: 1.5rem;
@@ -65,20 +72,20 @@ $btn-font-family: 'Hind', sans-serif !important;
 $dropdown-min-width: 16rem;
 $dropdown-padding-y: 2rem;
 $dropdown-border-width: 0;
-$dropdown-link-color: map-get($theme-colors, "gray-dark");
-$dropdown-link-hover-color: map-get($theme-colors, "primary");
+$dropdown-link-color: map-get($theme-colors, 'gray-dark');
+$dropdown-link-hover-color: map-get($theme-colors, 'primary');
 $dropdown-link-hover-bg: $none;
-$dropdown-item-padding-y: .5rem;
+$dropdown-item-padding-y: 0.5rem;
 $dropdown-link-active-color: $curious-blue;
 $dropdown-link-active-bg: $none;
 
 // Links
-$link-hover-color: map-get($theme-colors, "primary");
+$link-hover-color: map-get($theme-colors, 'primary');
 
 // Navbar
 $navbar-dark-color: $white;
 $navbar-light-color: $headings-color;
-$navbar-light-active-color: map-get($colors, "blue");
+$navbar-light-active-color: map-get($colors, 'blue');
 
 // Cards
 $card-border-radius: 0;
@@ -86,7 +93,25 @@ $card-border-width: 0;
 
 // Spacing
 $spacer: 1rem;
-$spacers: ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3), 6: ($spacer * 5));
+$spacers: (
+	0: 0,
+	1: (
+		$spacer * 0.25,
+	),
+	2: (
+		$spacer * 0.5,
+	),
+	3: $spacer,
+	4: (
+		$spacer * 1.5,
+	),
+	5: (
+		$spacer * 3,
+	),
+	6: (
+		$spacer * 5,
+	),
+);
 
 // Custom Variables
 $breakpoint-xxl: 2175px;

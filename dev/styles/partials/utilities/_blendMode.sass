@@ -1,0 +1,15 @@
+// Utilities
+// Blend Mode
+
+=blend-mode($blend-mode)
+	@each $color, $hex in $theme-colors
+		.bm-#{$blend-mode}-#{$color}
+			background-color: $hex
+			mix-blend-mode: $blend-mode
+
++blend-mode(multiply)
++blend-mode(exclusion)
++blend-mode(difference)
++blend-mode(overlay)
++blend-mode(hue)
++blend-mode(color)

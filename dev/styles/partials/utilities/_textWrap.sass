@@ -1,0 +1,10 @@
+// Utilities
+// text-wrap
+
+// Reponsive Text Wrap
+@each $grid-breakpoint, $grid-breakpoint-value in $grid-breakpoints
+	@media ( min-width: $grid-breakpoint-value )
+		.text-#{$grid-breakpoint}-wrap
+			white-space: normal !important
+		.text-#{$grid-breakpoint}-nowrap
+			white-space: nowrap !important

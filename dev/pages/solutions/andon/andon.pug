@@ -1,15 +1,11 @@
 //- andon.pug
-extends ../../../templates/_template_solution.pug
+extends ../../../templates/_template_masthead.pug
 
 append script
     script( type='text/javascript' )
         include ./script.js
 
 append content
-    include ../../../components/_cta.pug
-    include ../../../components/_rawHtml.pug
-    include ../../../components/_image.pug
-
     .container.py-5
         .row.align-items-center
             .col
@@ -47,7 +43,7 @@ append content
             .row.mb-5
                 .col-12.col-lg
                     h3.text-uppercase
-                        i.fas.fa-chart-bar.text-primary.mr-3
+                        i.fas.fa-chart-bar.text-primary.me-3
                         +rawHtml ({
                             name: 'h1_keyFeatures',
                             value: 'Data'
@@ -61,7 +57,7 @@ append content
                 
                 .col-12.col-lg
                     h3.text-uppercase
-                        i.fas.fa-tv.text-primary.mr-3
+                        i.fas.fa-tv.text-primary.me-3
                         +rawHtml ({
                             name: 'h2_keyFeatures',
                             value: 'Display Platforms'
@@ -76,7 +72,7 @@ append content
             .row.mb-5
                 .col-12.col-lg
                     h3.text-uppercase
-                        i.fas.fa-sliders-h.text-primary.mr-3
+                        i.fas.fa-sliders-h.text-primary.me-3
                         +rawHtml ({
                             name: 'h3_keyFeatures',
                             value: 'Configurable'
@@ -90,7 +86,7 @@ append content
                 
                 .col-12.col-lg
                     h3.text-uppercase
-                        i.fas.fa-bullseye.text-primary.mr-3
+                        i.fas.fa-bullseye.text-primary.me-3
                         +rawHtml ({
                             name: 'h4_keyFeatures',
                             value: 'Targeted Information'
@@ -105,7 +101,7 @@ append content
             .row
                 .col-12.col-lg
                     h3.text-uppercase
-                        i.fas.fa-expand-arrows-alt.text-primary.mr-3
+                        i.fas.fa-expand-arrows-alt.text-primary.me-3
                         +rawHtml ({
                             name: 'h5_keyFeatures',
                             value: 'Scalable'
@@ -119,7 +115,7 @@ append content
                 
                 .col-12.col-lg
                     h3.text-uppercase
-                        i.fas.fa-mobile-alt.text-primary.mr-3
+                        i.fas.fa-mobile-alt.text-primary.me-3
                         +rawHtml ({
                             name: 'h6_keyFeatures',
                             value: 'Mobility'
@@ -140,7 +136,7 @@ append content
                     src: 'https://picsum.photos/400/200'
                 })
 
-        .position-lg-absolute.w-100.h-100( style="top: 0;" )
+        .position-absolute.w-100.h-100( style="top: 0;" )
             .container.h-100.py-5.py-lg-0
                 .row.no-gutters.justify-content-end.align-items-center.h-100
                     .col-12.col-lg-6

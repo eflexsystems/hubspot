@@ -4,7 +4,7 @@
         {%- if link!= [] && link.label -%}
             {%- if link.children -%}
                 <div class="col-12 col-lg mb-5 mb-lg-0">
-                    <p class="font-weight-bold text-uppercase small border-bottom mx-4 py-3 mb-3">{{link.label}}</p>
+                    <p class="fw-bold text-uppercase small border-bottom mx-4 py-3 mb-3">{{link.label}}</p>
                     {%- set depth = depth + 1-%}
                     {%- for sublink in link.children -%}
                         {{render_link_children(sublink,depth)}}
@@ -24,7 +24,7 @@
                 <div class="p-3 p-md-5">
                     <ul class="nav flex-column sc-site-header__menu hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal sc-site-header__menu--{{ module.menu_field }}" aria-label="{{menu_name}} menu" aria-role="menubar">
                         {%- if link.children -%}
-                            <p class="text-white small font-weight-bold">{{link.label}}</p>
+                            <p class="text-white small fw-bold">{{link.label}}</p>
                             {%- set depth = depth + 1 -%}
                             {%- for sublink in link.children -%}
                                 {{render_link_children(sublink,depth)}}
@@ -49,20 +49,20 @@
                 .d-flex.flex-column.h-100
                     
                     .p-3.p-md-5.text-gray-400
-                        p.text-white.small.font-weight-bold
-                            i.fas.fa-map-marker-alt.text-primary.mr-2
+                        p.text-white.small.fw-bold
+                            i.fas.fa-map-marker-alt.text-primary.me-2
                             | Location
                         p.small.mb-1 {{ site_settings.company_name }}
                         p.small.mb-1 {{ site_settings.company_street_address_1 }}
                         p.small.mb-1 {{ site_settings.company_city }}, {{ site_settings.company_state }} 48306
 
                     .p-3.p-md-5
-                        p.text-white.small.font-weight-bold Contact Sales
+                        p.text-white.small.fw-bold Contact Sales
                         p.small.mb-1
-                            i.fas.fa-phone-volume.text-primary.mr-2
+                            i.fas.fa-phone-volume.text-primary.me-2
                             a.nav-link.link-secondary.d-inline.p-0( href='tel:+1-833-463-3539' ) 1-833-463-3539
                         p.small.mb-1
-                            i.fas.fa-envelope.text-primary.mr-2
+                            i.fas.fa-envelope.text-primary.me-2
                             a.nav-link.link-secondary.d-inline.p-0( href='mailto: sales@eflexsystems.com' ) sales@eflexsystems.com
                     
             | {% set menu = menu(module.menu_field , "site_root").children %}
@@ -79,19 +79,19 @@
                     .p-3.px-md-5
                         .row
                             .col-12.col-md
-                                p.font-weight-bold.text-white.mb-0 eflex systems
+                                p.fw-bold.text-white.mb-0 eflex systems
                             
                             //- Copyright
                             .col-12.col-md
                                 p.small.text-md-center.mb-0
-                                    i.far.fa-copyright.mr-1
+                                    i.far.fa-copyright.me-1
                                     | Copyright {{year}} eFlex Systems
                     
                 //- Social Media
                 .col-6.col-md-4
                     .p-3.px-md-5
                         .d-flex.justify-content-end
-                            a( href='https://www.facebook.com/eFlexsystem/' )
+                            a( href='https://www.facebook.com/eFlexsystems/' )
                                 button.btn.link-secondary.p-2
                                     i.fab.fa-facebook-square.fa-lg
                             a( href='https://www.linkedin.com/company/eflex-systems' )

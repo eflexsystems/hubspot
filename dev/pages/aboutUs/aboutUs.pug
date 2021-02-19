@@ -1,0 +1,136 @@
+//- aboutUs.pug
+extends ../../templates/_template_masthead.pug
+
+append variables
+	- var mastheadHeight = '30rem'
+
+block masthead
+	//- Home Content
+	.container.h-100.z-1.py-5
+		.row.h-100
+
+			//- Masthead Introduction
+			.col-12.col-lg-6
+				.d-flex.flex-column.justify-content-center.h-100
+					.p-3.p-md-5
+						.d-flex.flex-column
+							h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-0( style="hyphens: auto" )
+								+rawHtml ({
+									name: 'title_masthead',
+									value: 'About Us'
+								})
+
+append content
+
+	//- What we do
+	.container.py-5
+		.row.align-items-center.justify-content-between
+			.col-4
+				.p-3.p-lg-5
+					h3.text-gray-400.text-uppercase
+						+rawHtml ({
+							name: 'h1_whatWeDo',
+							value: 'What we do?'
+						})
+					
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+						+rawHtml ({
+							name: 'h2_whatWeDo',
+							value: 'Innovate Simplify & Improve'
+						})
+				
+			.col-8
+				.p-3.p-lg-5
+					p.lead
+						+rawHtml ({
+							name: 'p_whatWeDo',
+							class: 'lead',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
+						})
+
+	.position-relative.text-white.bg-gray-800-o-75.py-5
+		.container.py-5
+			.row.align-items-center.justify-content-center
+				.col-6
+					.p-3.p-lg-5
+						h3.text-white.text-center.fw-light( style='line-height: 2.75rem' )
+							+rawHtml ({
+								name: 'p1_whatWeDo',
+								value: 'Our mission is to provide our customers with the flexibility and efficiency to realize sustainable, world-class manufacturing.'
+							})
+
+		+parallax ({
+			name: 'imageSrc_whatWeDo',
+			dataImageSrc: 'https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Stock%20Images/Stock_9%20Factory%20Floor.jpg',
+			dataNaturalWidth: '1756',
+			dataNaturalHeight: '1171'
+		})
+
+	//- Who we are
+	.container.py-5
+		.row.align-items-center
+			.col-4
+				.p-3.p-lg-5
+					h3.text-gray-400.text-uppercase
+						+rawHtml ({
+							name: 'h1_whoWeAre',
+							value: 'Who we are?'
+						})
+					
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+						+rawHtml ({
+							name: 'h2_whoWeAre',
+							value: 'Engineers Coders & Visionaries'
+						})
+				
+			.col-8
+				.p-3.p-lg-5
+					p.lead
+						+rawHtml ({
+							name: 'p_whoWeAre',
+							class: 'lead',
+							value: 'Our team has grown from the manufacturing floor up, with engineering and process management backgrounds.  We truly understand manufacturing ecosystems and can help you realize your digitalization goals!'
+						})
+
+	//- Our Office
+	.container-fluid.g-0
+		.row.g-0
+			.col-12.col-lg.bg-gray-800
+				iframe( src="https://snazzymaps.com/embed/292068" width="100%" height="600px" style="border:none;" )
+			
+			.col-12.col-lg-6.bg-gray-800.p-5
+				.d-flex.flex-column.h-100.justify-content-center.p-3.p-lg-5
+					h1.text-white.text-uppercase.text-break.text-lg-nowrap.mb-5 Our Office
+					h4.fw-light.mb-4
+						a.nav-link.link-light.d-flex.p-0( href='http://maps.google.com/?q=210 W Tienken Rd, Rochester Hills, Michigan 38306' )
+							i.fas.fa-map-marker-alt.text-primary.me-3
+							span
+								| 210 W Tienken Rd
+								br
+								| Rochester Hills, MI 38306
+					h4.fw-light.mb-4
+						a.nav-link.link-light.p-0( href='mailto: sales@eflexsystems.com' )
+							i.fas.fa-envelope.text-primary.me-3
+							| sales@eflexsystems.com
+					h4.fw-light.mb-4
+						a.nav-link.link-light.p-0( href='tel:+1-833-463-3539' )
+							i.fas.fa-phone-volume.text-primary.me-3
+							| +1 833 463 3539
+	
+
+	//- Leadership
+	.container.py-5
+		.row.align-items-center
+			.col
+				.p-3.p-lg-5
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+						+rawHtml ({
+							name: 'h1_leadership',
+							value: 'Meet Our Leadership'
+						})
+
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+						+rawHtml ({
+							name: 'p1_leadership',
+							value: 'Meet Our Leadership'
+						})

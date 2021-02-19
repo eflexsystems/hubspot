@@ -1,0 +1,8 @@
+// Utilities
+// Background-color Opacity
+
+@for $i from 0 through 4
+	$bg-opacity: $i * 25
+	@each $color, $hex in $theme-colors
+		.bg-#{$color}-o-#{$bg-opacity}
+			background-color: rgba($hex, $bg-opacity / 100)
