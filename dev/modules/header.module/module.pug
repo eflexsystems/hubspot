@@ -26,7 +26,7 @@ include ../../components/_cta.pug
                     <a class="nav-link dropdown-toggle fw-bold py-3 px-md-4" href="#" id="{{link.label.replace(' ', '').toLowerCase()}}Dropdown" role="button" data-toggle="dropdown" aria-haspupup="true" aria-expanded="false">{{link.label}}<i class="fas fa-caret-down fa-sm ms-1"></i></a>
                     <div class="dropdown-menu shadow-sm w-100 rounded-0 pt-0 m-0 hs-menu-item hs-menu-depth-{{depth}}" aria-labelledby="{{link.label.replace(' ', '').toLowerCase()}}Dropdown">
                         <div class="container">
-                            <div class="row no-gutters w-100 px-md-4 pb-5">
+                            <div class="row g-0 w-100 px-md-4 pb-5">
                                 {%- set depth = depth + 1-%}
                                 {%- for sublink in link.children -%}
                                     {{render_link_children(sublink,depth)}}

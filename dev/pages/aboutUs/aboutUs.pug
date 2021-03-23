@@ -20,6 +20,9 @@ block masthead
 									value: 'About Us'
 								})
 
+prepend content
+	include ../../components/_card.pug
+
 append content
 
 	//- What we do
@@ -33,7 +36,7 @@ append content
 							value: 'What we do?'
 						})
 					
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap.mb-0
 						+rawHtml ({
 							name: 'h2_whatWeDo',
 							value: 'Innovate Simplify & Improve'
@@ -41,23 +44,47 @@ append content
 				
 			.col-8
 				.p-3.p-lg-5
-					p.lead
+					p.lead.mb-0
 						+rawHtml ({
-							name: 'p_whatWeDo',
+							name: 'p1_whatWeDo',
 							class: 'lead',
-							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
+							value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
 						})
+		
+		//- What we do: Our Advantage
+		.row.align-items-center.p-3.p-lg-5
+			.col
+				h3.text-gray-400.text-uppercase.mb-5
+					+rawHtml ({
+						name: 'h_ourFounding',
+						value: 'Why We Do It?'
+					})
+				p.col-n.col-n-lg-2
+					+rawHtml ({
+						name: 'p_ourFounding',
+						value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
+					})
 
+	//- Mission Statement
 	.position-relative.text-white.bg-gray-800-o-75.py-5
 		.container.py-5
 			.row.align-items-center.justify-content-center
-				.col-6
-					.p-3.p-lg-5
-						h3.text-white.text-center.fw-light( style='line-height: 2.75rem' )
-							+rawHtml ({
-								name: 'p1_whatWeDo',
-								value: 'Our mission is to provide our customers with the flexibility and efficiency to realize sustainable, world-class manufacturing.'
-							})
+				.col-7
+					.p-3.p-lg-5.d-flex
+						i.fas.fa-quote-left.fa-3x
+						figure.mx-5
+							blockquote.blockquote
+								h3.text-white.text-center.fw-light.lh-base.mb-4
+									+rawHtml ({
+										name: 'p_missionStatement',
+										value: 'Our mission is to provide our customers with the flexibility and efficiency to realize sustainable, world-class manufacturing.'
+									})
+							figcaption.blockquote-footer
+								h5.text-white.text-center.fw-light
+									| George Jewell - 
+									cite( title='Vice President of eFlex' )
+										| Vice President of eFlex
+						i.fas.fa-quote-right.fa-3x
 
 		+parallax ({
 			name: 'imageSrc_whatWeDo',
@@ -77,7 +104,7 @@ append content
 							value: 'Who we are?'
 						})
 					
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap.mb-0
 						+rawHtml ({
 							name: 'h2_whoWeAre',
 							value: 'Engineers Coders & Visionaries'
@@ -85,12 +112,27 @@ append content
 				
 			.col-8
 				.p-3.p-lg-5
-					p.lead
+					p.lead.mb-0
 						+rawHtml ({
 							name: 'p_whoWeAre',
 							class: 'lead',
 							value: 'Our team has grown from the manufacturing floor up, with engineering and process management backgrounds.  We truly understand manufacturing ecosystems and can help you realize your digitalization goals!'
 						})
+
+		//- What we do: Our Advantage
+		.row.align-items-center.p-3.p-lg-5
+			.col
+				h3.text-gray-400.text-uppercase.mb-5
+					+rawHtml ({
+						name: 'h_ourAdvantage',
+						value: 'What makes us different?'
+					})
+
+				p.col-n.col-n-lg-2
+					+rawHtml ({
+						name: 'p_ourAdvantage',
+						value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
+					})
 
 	//- Our Office
 	.container-fluid.g-0
@@ -120,17 +162,49 @@ append content
 
 	//- Leadership
 	.container.py-5
-		.row.align-items-center
+		.row.align-items-center.text-center
 			.col
 				.p-3.p-lg-5
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+					h1.display-2.text-uppercase.text-break.text-lg-nowrap.mb-4
 						+rawHtml ({
 							name: 'h1_leadership',
 							value: 'Meet Our Leadership'
 						})
-
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+					p.lead.mb-0
 						+rawHtml ({
-							name: 'p1_leadership',
-							value: 'Meet Our Leadership'
+							name: 'p1_whatWeDo',
+							class: 'lead',
+							value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
 						})
+
+		mixin cardtest(n)
+			+card ({
+				name: 'card',
+				src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+				alt: 'John Smith',
+				href: 'https://www.google.com',
+				scale: true,
+				hoverOverlay: 'READ FULL BIO'
+			})
+
+		.p-3.p-lg-5
+			.row.align-items-center.text-center.g-0
+				.col
+					+cardtest(1)
+				.col
+					+cardtest(2)
+				.col
+					+cardtest(3)
+				.col
+					+cardtest(4)
+			.row.align-items-center.text-center.g-0
+				.col
+					+cardtest(5)
+				.col
+					+cardtest(6)
+				.col
+					+cardtest(7)
+				.col
+					+cardtest(8)
+			
+			

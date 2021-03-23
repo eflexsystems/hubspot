@@ -1,9 +1,5 @@
 // stylesheet.sass 
-// Don't change the import order!
-
-//- Libraries
-@import ../../node_modules/slick-carousel/slick/slick.scss
-@import ../../node_modules/slick-carousel/slick/slick-theme.scss
+// WARNING: Don't change the import order!
 
 //- Prepend bootstrap partials
 @import partials/_variables
@@ -25,12 +21,14 @@
 @import partials/utilities/_textWrap
 @import partials/utilities/_overflow
 @import partials/utilities/_bgOpacity
+@import partials/utilities/_colN
+@import partials/utilities/_transition
 
 // Components
-@import partials/components/_button
-@import partials/components/_card
-@import partials/components/_carousel
-@import partials/components/_dropdown
-@import partials/components/_image
-@import partials/components/_link
-@import partials/components/_navbar
+@import ../components/cta/_cta
+@import ../components/card/_card
+@import ../components/carousel/_carousel
+@import ../components/dropdown/_dropdown
+@import ../components/image/_image
+@import ../components/link/_link
+@import ../components/navbar/_navbar

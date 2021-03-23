@@ -2,587 +2,690 @@
 extends ../../templates/_template.pug
 
 block script
-    //- slick-carousel
-    script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
-    script( type='text/javascript' )
-        include ./script.js
+	//- slick-carousel
+	script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+	script( type='text/javascript' )
+		include ./script.js
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" )
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" )
 
 block content
-    //- Components being used.
-    include ../../components/_rawHtml.pug
-    include ../../components/_cta.pug
-    include ../../components/_image.pug
-    include ../../components/_card.pug
-    include ../../components/_parallax.pug
-    
-    - var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
+	//- Components being used.
+	include ../../components/rawHtml/_rawHtml.pug
+	include ../../components/cta/_cta.pug
+	include ../../components/image/_image.pug
+	include ../../components/card/_card.pug
+	include ../../components/parallax/_parallax.pug
+	
+	- var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
 
-    //- Masthead Container
-    .position-relative( style='min-height: 50rem' )
+	//- Masthead Container
+	.position-relative( style='min-height: 50rem' )
+	
+		//- Home Content
+		.position-absolute.h-100.w-100
+			.container.h-100.py-5
+				.row.h-100.pt-5
 
-        //- Home Content
-        .position-absolute.h-100.w-100
-            .container.h-100.py-5
-                .row.h-100.pt-5
+					//- Masthead Introduction
+					.col-12.col-lg-6
+						.d-flex.flex-column.justify-content-around.h-100
+							.p-3.p-md-5
+								.d-flex.flex-column
+									h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-4( style="hyphens: auto" )
+										+rawHtml ({
+											name: 'title_masthead',
+											value: 'Solve the Manufacturing Data Gap.'
+										})
 
-                    //- Masthead Introduction
-                    .col-12.col-lg-6
-                        .d-flex.flex-column.justify-content-around.h-100
-                            .p-3.p-md-5
-                                .d-flex.flex-column
-                                    h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-4( style="hyphens: auto" )
-                                        +rawHtml ({
-                                            name: 'title_masthead',
-                                            value: 'Solve the Manufacturing Data Gap.'
-                                        })
+									p.lead.text-white
+										+rawHtml ({ 
+											name: 'desc_masthead',
+											class: 'lead text-white',
+											value: 'The manufacturing industry is poised for massive change and disruption. Beat the competition with eFlex’s Manufacturing Integrated Platform.'
+										})
 
-                                    p.lead.text-white
-                                        +rawHtml ({ 
-                                            name: 'desc_masthead',
-                                            class: 'lead text-white',
-                                            value: 'The manufacturing industry is poised for massive change and disruption. Beat the competition with eFlex’s Manufacturing Integrated Platform.'
-                                        })
+							//- Masthead CTAs            
+							.row
+								.col
+									.p-3.p-md-5
+										.row
+											.col-12.col-md.mb-3.mb-lg-0
+												+cta ({
+													name: 'secondaryCta',
+													variant: 'outline-white',
+													class: 'w-100',
+													guid: '253bcfe6-ed67-497a-baff-dcc025793e9b'
+												})
+											.col-12.col-md
+												+cta ({
+													name: 'primaryCta',
+													variant: 'primary',
+													class: 'w-100'
+												})
+					
+					//- Spotlight Widget
+					//- .col-12.col-lg-6
+					//-     .row.justify-content-center.h-100
+					//-         .col.col-lg-10
+					//-             .d-flex.flex-column.justify-content-end.align-items-center.h-100
+					//-                 h4.text-white.text-uppercase.mb-0
+					//-                     +rawHtml ({
+					//-                         name: 'heading_spotlight_masthead',
+					//-                         value: '2020 Spotlight'
+					//-                     })
+					//-                 .pb-4.w-100
+					//-                     .p-3.p-md-4.w-100
+					//-                         #carousel-spotlight.slick-carousel.carousel-buttons-light.w-100.pb-3
+					//-                             .d-flex.align-items-center.h-100
+					//-                                 p.text-white.text-center.p-3
+					//-                                     +rawHtml ({
+					//-                                         name: 'spotlight1_masthead',
+					//-                                         class: 'text-white text-center p-3',
+					//-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+					//-                                     })
+					//-                             .d-flex.align-items-center.h-100
+					//-                                 p.text-white.text-center.p-3
+					//-                                     +rawHtml ({
+					//-                                         name: 'spotlight2_masthead',
+					//-                                         class: 'text-white text-center p-3',
+					//-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+					//-                                     })
+					//-                             .d-flex.align-items-center.h-100
+					//-                                 p.text-white.text-center.p-3
+					//-                                     +rawHtml ({
+					//-                                         name: 'spotlight3_masthead',
+					//-                                         class: 'text-white text-center p-3',
+					//-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
+					//-                                     })
+					
+			//- Background Image
+			.parallax-window.position-absolute.w-auto.h-auto(
+				style='top: 0; box-sizing: border-box; pointer-events: none; min-width: 100%; min-height: 100%;'
+				data-parallax="scroll" 
+				data-natural-width="1772"
+				data-natural-height="963"
+				data-image-src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/videoStill_operatorPickLightJem.jpg"
+				data-speed=.2
+			)
 
-                            //- Masthead CTAs            
-                            .row
-                                .col
-                                    .p-3.p-md-5
-                                        .row
-                                            .col-12.col-md.mb-3.mb-lg-0
-                                                +cta ({
-                                                    name: 'secondaryCta',
-                                                    variant: 'outline-white',
-                                                    class: 'w-100',
-                                                    guid: '253bcfe6-ed67-497a-baff-dcc025793e9b'
-                                                })
-                                            .col-12.col-md
-                                                +cta ({
-                                                    name: 'primaryCta',
-                                                    variant: 'primary',
-                                                    class: 'w-100'
-                                                })
-                    
-                    //- Spotlight Widget
-                    //- .col-12.col-lg-6
-                    //-     .row.justify-content-center.h-100
-                    //-         .col.col-lg-10
-                    //-             .d-flex.flex-column.justify-content-end.align-items-center.h-100
-                    //-                 h4.text-white.text-uppercase.mb-0
-                    //-                     +rawHtml ({
-                    //-                         name: 'heading_spotlight_masthead',
-                    //-                         value: '2020 Spotlight'
-                    //-                     })
-                    //-                 .pb-4.w-100
-                    //-                     .p-3.p-md-4.w-100
-                    //-                         #carousel-spotlight.slick-carousel.carousel-buttons-light.w-100.pb-3
-                    //-                             .d-flex.align-items-center.h-100
-                    //-                                 p.text-white.text-center.p-3
-                    //-                                     +rawHtml ({
-                    //-                                         name: 'spotlight1_masthead',
-                    //-                                         class: 'text-white text-center p-3',
-                    //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                    //-                                     })
-                    //-                             .d-flex.align-items-center.h-100
-                    //-                                 p.text-white.text-center.p-3
-                    //-                                     +rawHtml ({
-                    //-                                         name: 'spotlight2_masthead',
-                    //-                                         class: 'text-white text-center p-3',
-                    //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                    //-                                     })
-                    //-                             .d-flex.align-items-center.h-100
-                    //-                                 p.text-white.text-center.p-3
-                    //-                                     +rawHtml ({
-                    //-                                         name: 'spotlight3_masthead',
-                    //-                                         class: 'text-white text-center p-3',
-                    //-                                         value: '2019 New Product of the Year, Factory of the Future Nomination by Assembly Magazine'
-                    //-                                     })
-                    
-            //- Background Image
-            .parallax-window.position-absolute.w-auto.h-auto(
-                style='top: 0; box-sizing: border-box; pointer-events: none; min-width: 100%; min-height: 100%;'
-                data-parallax="scroll" 
-                data-natural-width="1772"
-                data-natural-height="963"
-                data-image-src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/videoStill_operatorPickLightJem.jpg"
-                data-speed=.2
-            )
+	//- Clients Carousel
+	.container.py-3
+		.row
+			.col
+				.p-3.p-md-5
+					#carousel-clients.slick-carousel.image-carousel.carousel-buttons-dark.pb-3
+						- for ( var i = 0; i < clients.length; i++ )
+							- var name = 'logoClient' + i
+							- var src = 'https://f.hubspotusercontent00.net/hubfs/8439350/Logos/Client%20Logos/Logo_' + clients[i] + '.svg'
+							- var alt = 'eFlex Trusted Customer Logo for ' + clients[i]
 
-    //- Clients Carousel
-    .container.py-3
-        .row
-            .col
-                .p-3.p-md-5
-                    #carousel-clients.slick-carousel.image-carousel.carousel-buttons-dark.pb-3
-                        - for ( var i = 0; i < clients.length; i++ )
-                            - var name = 'logoClient' + i
-                            - var src = 'https://f.hubspotusercontent00.net/hubfs/8439350/Logos/Client%20Logos/Logo_' + clients[i] + '.svg'
-                            - var alt = 'eFlex Trusted Customer Logo for ' + clients[i]
+							.d-flex.justify-content-center.align-items-center.m-4
+								+image ({
+									name: name,
+									src: src,
+									alt: alt
+								})
 
-                            .d-flex.justify-content-center.align-items-center.m-4
-                                +image ({
-                                    name: name,
-                                    src: src,
-                                    alt: alt
-                                })
+	//- Main Features
+	.container.py-3
+		.row
+			//- Main Features Image
+			.col-12.col-lg.my-auto
+				.p-3.p-md-5
+					+image ({
+						name: 'image_mainFeatures',
+						src: 'https://f.hubspotusercontent30.net/hubfs/490686/_site_reclaimed/photos/Interface%20Examples/Devices.png'
+					})
+			
+			.col-12.col-lg
+				.p-3.p-md-5
+					h2.text-uppercase
+						+rawHtml ({
+							name: 'heading_mainFeatures',
+							value: 'Increase Throughput. Maximize Quality. Reduce Costs.'
+						})
+					p.lead
+						+rawHtml ({
+							name: 'p1_mainFeatures',
+							class: 'lead',
+							value: 'MIP is powered by the MIP Data— providing detailed integrated granular manufacturing process data down to the most basic task level. All in one place.'
+						})
+					p.lead
+						+rawHtml ({
+							name: 'p2_mainFeatures',
+							class: 'lead',
+							value: 'Intelligent MIP Data enables powerful end-to-end people and data collaboration across the enterprise. Everyone from the front office to the shop floor to the delivery team can see the status of your production line and get real-time actionable insight.'
+						})
+					
+					//- Learn More Button
+					.d-flex.align-items-center
+						+cta ({
+							name: 'cta_mainFeatures',
+							variant: 'flat',
+							class: 'p-0 py-3'
+						})
+		.p-3.p-md-5
+			.row
+				//- Main Features - Simple Startup Bullets
+				// Seperate These more
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-users-cog.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h1_mainFeatures_bullet',
+							value: 'Configure Easily.'
+						})
 
-    //- Main Features
-    .container.py-3
-        .row
-            //- Main Features Image
-            .col-12.col-lg.my-auto
-                .p-3.p-md-5
-                    +image ({
-                        name: 'image_mainFeatures',
-                        src: 'https://f.hubspotusercontent30.net/hubfs/490686/_site_reclaimed/photos/Interface%20Examples/Devices.png'
-                    })
-            
-            .col-12.col-lg
-                .p-3.p-md-5
-                    h2.text-uppercase
-                        +rawHtml ({
-                            name: 'heading_mainFeatures',
-                            value: 'Increase Throughput. Maximize Quality. Reduce Costs.'
-                        })
-                    p.lead
-                        +rawHtml ({
-                            name: 'p1_mainFeatures',
-                            class: 'lead',
-                            value: 'MIP is powered by the MIP Data— providing detailed integrated granular manufacturing process data down to the most basic task level. All in one place.'
-                        })
-                    p.lead
-                        +rawHtml ({
-                            name: 'p2_mainFeatures',
-                            class: 'lead',
-                            value: 'Intelligent MIP Data enables powerful end-to-end people and data collaboration across the enterprise. Everyone from the front office to the shop floor to the delivery team can see the status of your production line and get real-time actionable insight.'
-                        })
-                    
-                    //- Learn More Button
-                    .d-flex.align-items-center
-                        +cta ({
-                            name: 'cta_mainFeatures',
-                            variant: 'flat',
-                            class: 'p-0 py-3'
-                        })
-        .p-3.p-md-5
-            .row
-                //- Main Features - Simple Startup Bullets
-                // Seperate These more
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-users-cog.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h1_mainFeatures_bullet',
-                            value: 'Configure Easily.'
-                        })
+					p
+						+rawHtml ({
+							name: 'p1_mainFeatures_bullet',
+							value: 'Easily configure your manufacturing environment. Rebalance lines quickly with drag-n-drop functionality.'
+						})
+				
+				.col-12.col-lg.py-3.py-lg-0
+					i.fab.fa-bluetooth.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h2_mainFeatures_bullet',
+							value: 'Connect IoT Devices.'
+						})
+					
+					p
+						+rawHtml ({
+							name: 'p2_mainFeatures_bullet',
+							value: 'Seamlessly connect any and all devices and equipment. Pull device process data into your plant-wide metrics.'
+						})
 
-                    p
-                        +rawHtml ({
-                            name: 'p1_mainFeatures_bullet',
-                            value: 'Easily configure your manufacturing environment. Rebalance lines quickly with drag-n-drop functionality.'
-                        })
-                
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fab.fa-bluetooth.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h2_mainFeatures_bullet',
-                            value: 'Connect IoT Devices.'
-                        })
-                    
-                    p
-                        +rawHtml ({
-                            name: 'p2_mainFeatures_bullet',
-                            value: 'Seamlessly connect any and all devices and equipment. Pull device process data into your plant-wide metrics.'
-                        })
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-sliders-h.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h3_mainFeatures_bullet',
+							value: 'Control Your Process.'
+						})
+					
+					p
+						+rawHtml ({
+							name: 'p3_mainFeatures_bullet',
+							value: 'Advanced process control supported in high mix or low mix assembly environments.'
+						})
+				
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-chart-bar.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h4_mainFeatures_bullet',
+							value: 'Collect & Improve.'
+						})
+					
+					p
+						+rawHtml ({
+							name: 'p4_mainFeatures_bullet',
+							value: 'Collect process data and cycle times down to the task level. Quickly identify problem areas and improvement initiatives.'
+						})
 
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-sliders-h.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h3_mainFeatures_bullet',
-                            value: 'Control Your Process.'
-                        })
-                    
-                    p
-                        +rawHtml ({
-                            name: 'p3_mainFeatures_bullet',
-                            value: 'Advanced process control supported in high mix or low mix assembly environments.'
-                        })
-                
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-chart-bar.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h4_mainFeatures_bullet',
-                            value: 'Collect & Improve.'
-                        })
-                    
-                    p
-                        +rawHtml ({
-                            name: 'p4_mainFeatures_bullet',
-                            value: 'Collect process data and cycle times down to the task level. Quickly identify problem areas and improvement initiatives.'
-                        })
+	//- Advanced Process Control
+	.container.py-3.mt-5
+		.p-3.p-md-5
+			.row
+				.col-12.col-lg-5
+					h2.display-1.text-uppercase.text-break.text-lg-nowrap.mb-4
+						+rawHtml ({
+							name: 'h1_processControl',
+							value: 'Advanced <br>Process <br>Control.'
+						})
 
-    //- Advanced Process Control
-    .container.py-3.mt-5
-        .p-3.p-md-5
-            .row
-                .col-12.col-lg-5
-                    h2.display-1.text-uppercase.text-break.text-lg-nowrap.mb-4
-                        +rawHtml ({
-                            name: 'h1_processControl',
-                            value: 'Advanced <br>Process <br>Control.'
-                        })
+					p.lead
+						+rawHtml ({
+							name: 'p1_processControl',
+							class: 'lead',
+							value: 'Whether your environment is high or low mix assembly, our solutions will fit your process control needs. MIP data gives you a flexible and free-flowing manufacturing landscape.'
+						})
 
-                    p.lead
-                        +rawHtml ({
-                            name: 'p1_processControl',
-                            class: 'lead',
-                            value: 'Whether your environment is high or low mix assembly, our solutions will fit your process control needs. MIP data gives you a flexible and free-flowing manufacturing landscape.'
-                        })
+				.col-12.col-lg-6.ms-lg-auto
+					.row.mb-4
+						.col-12.col-lg-auto
+							h3
+								i.fas.fa-newspaper.fa-2x.text-primary
+						.col-12.col-lg
+							h3.text-uppercase
+								+rawHtml ({
+									name: 'h2_processControl',
+									value: 'Configure BOM Options & Components.'
+								})
 
-                .col-12.col-lg-6.ms-lg-auto
-                    .row.mb-4
-                        .col-12.col-lg-auto
-                            h3
-                                i.fas.fa-newspaper.fa-2x.text-primary
-                        .col-12.col-lg
-                            h3.text-uppercase
-                                +rawHtml ({
-                                    name: 'h2_processControl',
-                                    value: 'Configure BOM Options & Components.'
-                                })
+							p.lead
+								+rawHtml ({
+									name: 'p2_processControl',
+									class: 'lead',
+									value: 'Easily manage variability and high mix process control with MIP. Our system intuitively reacts to the individual components and options of the BOM without the need to configure every possible variant of the product.'
+								})
 
-                            p.lead
-                                +rawHtml ({
-                                    name: 'p2_processControl',
-                                    class: 'lead',
-                                    value: 'Easily manage variability and high mix process control with MIP. Our system intuitively reacts to the individual components and options of the BOM without the need to configure every possible variant of the product.'
-                                })
+					.row.mb-4
+						.col-12.col-lg-auto
+							h3
+								i.fas.fa-tachometer-alt.fa-2x.text-primary
+						.col-12.col-lg
+							h3.text-uppercase
+								+rawHtml ({
+									name: 'h3_processControl',
+									value: 'Connect any IoT Devices.'
+								})
 
-                    .row.mb-4
-                        .col-12.col-lg-auto
-                            h3
-                                i.fas.fa-tachometer-alt.fa-2x.text-primary
-                        .col-12.col-lg
-                            h3.text-uppercase
-                                +rawHtml ({
-                                    name: 'h3_processControl',
-                                    value: 'Connect any IoT Devices.'
-                                })
+							p.lead
+								+rawHtml ({
+									name: 'p3_processControl',
+									class: 'lead',
+									value: 'No code necessary. Automatically display the correct build option, associated work instruction, and device controls based on BOM or Model at the station level.'
+								})
+					
+					.row
+						.col-12.col-lg-auto
+							h3
+								i.fas.fa-sliders-h.fa-2x.text-primary
+						.col-12.col-lg
+							h3.text-uppercase
+								+rawHtml ({
+									name: 'h4_processControl',
+									value: 'Adjust Process Controls Anytime.'
+								})
 
-                            p.lead
-                                +rawHtml ({
-                                    name: 'p3_processControl',
-                                    class: 'lead',
-                                    value: 'No code necessary. Automatically display the correct build option, associated work instruction, and device controls based on BOM or Model at the station level.'
-                                })
-                    
-                    .row
-                        .col-12.col-lg-auto
-                            h3
-                                i.fas.fa-sliders-h.fa-2x.text-primary
-                        .col-12.col-lg
-                            h3.text-uppercase
-                                +rawHtml ({
-                                    name: 'h4_processControl',
-                                    value: 'Adjust Process Controls Anytime.'
-                                })
+							p.lead
+								+rawHtml ({
+									name: 'p4_processControl',
+									class: 'lead',
+									value: 'MIP Data gives you a high-level overview of the plant floor. Seamlessly rebalance lines with drag-n-drop, adjust process controls, and attune any sudden discrepancies.'
+								})
+		
+	//- Platform Capabiltiies
+	.container.py-3
+		.p-3.p-md-5
+			.row.align-items-center.mb-5
+				.col-12.col-lg-5
+					h2.display-1.text-uppercase.mb-4
+						+rawHtml ({
+							name: 'heading_capabilities',
+							value: 'It\'s one integrated platform.'
+						})
 
-                            p.lead
-                                +rawHtml ({
-                                    name: 'p4_processControl',
-                                    class: 'lead',
-                                    value: 'MIP Data gives you a high-level overview of the plant floor. Seamlessly rebalance lines with drag-n-drop, adjust process controls, and attune any sudden discrepancies.'
-                                })
-        
-    //- Platform Capabiltiies
-    .container.py-3
-        .p-3.p-md-5
-            .row.align-items-center.mb-5
-                .col-12.col-lg-5
-                    h2.display-1.text-uppercase.mb-4
-                        +rawHtml ({
-                            name: 'heading_capabilities',
-                            value: 'It\'s one integrated platform.'
-                        })
+					p.lead
+						+rawHtml ({
+							name: 'p1_capabilities',
+							class: 'lead',
+							value: 'It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
+						})
+				.col-12.col-lg-6.ms-lg-auto
+					+image ({
+						name: 'image_capabilities',
+						src: 'https://picsum.photos/400/300/'
+					})
 
-                    p.lead
-                        +rawHtml ({
-                            name: 'p1_capabilities',
-                            class: 'lead',
-                            value: 'It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
-                        })
-                .col-12.col-lg-6.ms-lg-auto
-                    +image ({
-                        name: 'image_capabilities',
-                        src: 'https://picsum.photos/400/300/'
-                    })
+			//- Capabilities - Work Instructions
+			.row.g-0
+				.col-12.col-lg-6
+					+card ({
+						name: 'card1',
+						title: {
+							value: 'Work Instructions',
+							color: 'primary',
+							fontSize: 'display-6',
+							icon: 'fas fa-chart-bar text-primary',
+						},
+						subTitle: {
+							value: 'Paperless Factory',
+							color: 'primary'
+						},
+						padding: 'p-5',
+						hoverOverlay: true,
+						transition: 't-swipe-up'
+					})
+	
+				.col-12.col-lg-6
+					.row.g-0
+						.col-12.col-lg
+							+card ({
+								name: 'card3',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Advanced Training',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						.col-12.col-lg
+							+card ({
+								name: 'card2',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Data Collection',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						
+					.row.g-0
+						.col-12.col-lg
+							+card ({
+								name: 'card4',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Work Instruction Editor',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						
+						.col-12.col-lg
+							+card ({
+								name: 'card5',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Event-Based Work Instructions',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
 
-            //- Capabilities - Work Instructions
-            .row.no-gutters
-                .col-12.col-lg-6
-                    +card ({
-                        name: 'card1',
-                        title: 'Work Instructions',
-                        icon: 'fas fa-chart-bar text-primary',
-                        subTitle: 'Paperless Factory'
-                    })
-    
-                .col-12.col-lg-6
-                    .row.no-gutters
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card3',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Advanced Training'
-                            })
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card2',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Rework & Repair'
-                            })
-                        
-                    .row.no-gutters
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card4',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Work Instruction Editor'
-                            })
-                        
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card5',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Event-Based Work Instructions.'
-                            })
+			//- Capabilities - Traceability
+			.row.g-0
+				.col-12.col-lg-6
+					.row.g-0
 
-            //- Capabilities - Traceability
-            .row.no-gutters
-                .col-12.col-lg-6
-                    .row.no-gutters
+						.col-12.col-lg
+							+card ({
+								name: 'card9',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Serial Number, Batch, & Lot Marriage',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						
+						.col-12.col-lg
+							+card ({
+								name: 'card7',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Digital Twin',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
 
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card9',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Serial Number, Batch, & Lot Marriage'
-                            })
-                        
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card7',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Digital Twin'
-                            })
+					.row.g-0
+						.col-12.col-lg
+							+card ({
+								name: 'card8',
+								title: {
+									value: 'Incorporate vision systems to inspect and manage images.',
+									color: 'primary',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						
+						.col-12.col-lg
+							+card ({
+								name: 'card6',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Rework & Repair',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
 
-                    .row.no-gutters
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card8',
-                                text: 'Incorporate vision systems to inspect and manage images.'
-                            })
-                        
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card6',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Rework & Repair'
-                            })
+				.col-12.col-lg-6
+					+card ({
+						name: 'card10',
+						title: {
+							value: 'Traceability & Genealogy',
+							color: 'primary',
+							fontSize: 'display-6',
+							icon: 'fas fa-chart-bar text-primary',
+						},
+						subTitle: {
+							value: 'Compliance & Regulation Requirements',
+							color: 'primary'
+						},
+						padding: 'p-5',
+						hoverOverlay: true,
+						transition: 't-swipe-up'
+					})
+			
+			//- Capabilities - Business Intelligence
+			.row.g-0
+				.col-12.col-lg-6
+					+card ({
+						name: 'card11',
+						title: {
+							value: 'Business Intelligence',
+							color: 'primary',
+							fontSize: 'display-6',
+							icon: 'fas fa-chart-bar text-primary',
+						},
+						subTitle: {
+							value: 'Powered by MIP Data',
+							color: 'primary'
+						},
+						padding: 'p-5',
+						hoverOverlay: true,
+						transition: 't-swipe-up'
+					})
+				.col-12.col-lg-6
+					.row.g-0
+						.col-12.col-lg
+							+card ({
+								name: 'card12',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Root Cause Analysis & Continuous Improvement',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						
+						.col-12.col-lg
+							+card ({
+								name: 'card13',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Andon',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+					.row.g-0
+						.col-12.col-lg
+							+card ({
+								name: 'card14',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Production Visibility',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
+						
+						.col-12.col-lg
+							+card ({
+								name: 'card15',
+								image: {
+									src: 'https://picsum.photos/400/200',
+								},
+								title: {
+									value: 'Machine Monitoring / OEE',
+								},
+								hoverOverlay: true,
+								transition: 't-swipe-up'
+							})
 
-                .col-12.col-lg-6
-                    +card ({
-                        name: 'card10',
-                        title: 'Traceability & Genealogy',
-                        icon: 'fas fa-chart-bar text-primary',
-                        subTitle: 'Compliance & Regulation Requirements'
-                    })
-            
-            //- Capabilities - Business Intelligence
-            .row.no-gutters
-                .col-12.col-lg-6
-                    +card ({
-                        name: 'card11',
-                        title: 'Business Intelligence',
-                        icon: 'fas fa-chart-bar text-primary',
-                        subTitle: 'Powered by MIP Data'
-                    })
-                .col-12.col-lg-6
-                    .row.no-gutters
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card12',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Root Cause Analysis & Continuous Improvement'
-                            })
-                        
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card13',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Andon'
-                            })
-                    .row.no-gutters
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card14',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Production Visibility'
-                            })
-                        
-                        .col-12.col-lg
-                            +card ({
-                                name: 'card15',
-                                src: 'https://picsum.photos/400/200',
-                                title: 'Machine Monitoring / OEE'
-                            })
+	//- General Flexibility
+	.container.py-3
+		.p-3.p-md-5
+			.row
+				//- Main Features - Simple Startup Bullets
+				// Seperate These more
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-cloud-upload-alt.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h1_flexibility',
+							value: 'Cloud or Local Storage'
+						})
+					p
+						+rawHtml ({
+							name: 'p1_flexibility',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+						})
 
-    //- General Flexibility
-    .container.py-3
-        .p-3.p-md-5
-            .row
-                //- Main Features - Simple Startup Bullets
-                // Seperate These more
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-cloud-upload-alt.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h1_flexibility',
-                            value: 'Cloud or Local Storage'
-                        })
-                    p
-                        +rawHtml ({
-                            name: 'p1_flexibility',
-                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
-                        })
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-desktop.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h2_flexibility',
+							value: 'Scalable or Mobile'
+						})
+					p
+						+rawHtml ({
+							name: 'p2_flexibility',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+						})
+				
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-clipboard-check.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h3_flexibility',
+							value: 'Flexible Configuration'
+						})
+					p
+						+rawHtml ({
+							name: 'p3_flexibility',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+						})
 
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-desktop.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h2_flexibility',
-                            value: 'Scalable or Mobile'
-                        })
-                    p
-                        +rawHtml ({
-                            name: 'p2_flexibility',
-                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
-                        })
-                
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-clipboard-check.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h3_flexibility',
-                            value: 'Flexible Configuration'
-                        })
-                    p
-                        +rawHtml ({
-                            name: 'p3_flexibility',
-                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
-                        })
+				.col-12.col-lg.py-3.py-lg-0
+					i.fas.fa-headset.text-primary.fa-3x.mb-4
+					h5.text-uppercase
+						+rawHtml ({
+							name: 'h4_flexibility',
+							value: 'Support & Learning'
+						})
+					p
+						+rawHtml ({
+							name: 'p4_flexibility',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
+						})
 
-                .col-12.col-lg.py-3.py-lg-0
-                    i.fas.fa-headset.text-primary.fa-3x.mb-4
-                    h5.text-uppercase
-                        +rawHtml ({
-                            name: 'h4_flexibility',
-                            value: 'Support & Learning'
-                        })
-                    p
-                        +rawHtml ({
-                            name: 'p4_flexibility',
-                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut.'
-                        })
+	//- JEM Video
+	.bg-gray-800.mt-5
+		.container.py-3
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h_video',
+								value: 'Industry 4.0 is one step away!'
+							})
+						p.lead.text-white
+							+rawHtml ({
+								name: 'p_video',
+								class: 'lead text-white',
+								value: 'Watch a video about our digital work instructions, JEM, to learn how our platform is easily integrated with any existing process.'
+							})
 
-    //- JEM Video
-    .bg-gray-800.mt-5
-        .container.py-3
-            .row.align-items-center
-                .col-12.col-lg-6
-                    .p-3.p-lg-5
-                        h1.display-1.text-uppercase.text-white
-                            +rawHtml ({
-                                name: 'h_video',
-                                value: 'Industry 4.0 is one step away!'
-                            })
-                        p.lead.text-white
-                            +rawHtml ({
-                                name: 'p_video',
-                                class: 'lead text-white',
-                                value: 'Watch a video about our digital work instructions, JEM, to learn how our platform is easily integrated with any existing process.'
-                            })
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						video( width="100%" height="100%" controls poster='https://cdn2.hubspot.net/hubfs/490686/_site/Images/Stock%20Images/Video_Thumbnail_JEM.jpg')
+							source(src="https://cdn2.hubspot.net/hubfs/490686/Videos/Video_JEM-1.mp4" type="video/mp4")
 
-                .col-12.col-lg-6
-                    .p-3.p-lg-5
-                        video( width="100%" height="100%" controls poster='https://cdn2.hubspot.net/hubfs/490686/_site/Images/Stock%20Images/Video_Thumbnail_JEM.jpg')
-                            source(src="https://cdn2.hubspot.net/hubfs/490686/Videos/Video_JEM-1.mp4" type="video/mp4")
+	//- Updates
+	.container.py-3
+		.p-3.p-md-5
+			#carousel-updates.slick-carousel.carousel-buttons-dark.pb-3
+				mixin update(index)
+					div
+						.p-3.p-md-5
+							.row.align-items-center
+								.col-12.col-lg-6
+									h2.display-1.text-uppercase.text-break.mb-0
+										+rawHtml ({
+											name: 'title_update' + index,
+											value: 'Lorem ipsum dolor sit amet consectetur'
+										})
+								.col-12.col-lg-6
+									h4.text-uppercase
+										+rawHtml ({
+											name: 'h_update' + index,
+											value: 'Lorem Ipsum Dolor Sit.'
+										})
+									p.lead.mb-5
+										+rawHtml ({
+											name: 'p_update' + index,
+											class: 'lead mb-5',
+											value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Lorem ipsum dolor.'
+										})
 
-    //- Updates
-    .container.py-3
-        .p-3.p-md-5
-            #carousel-updates.slick-carousel.carousel-buttons-dark.pb-3
-                mixin update(index)
-                    div
-                        .p-3.p-md-5
-                            .row.align-items-center
-                                .col-12.col-lg-6
-                                    h2.display-1.text-uppercase.text-break.mb-0
-                                        +rawHtml ({
-                                            name: 'title_update' + index,
-                                            value: 'Lorem ipsum dolor sit amet consectetur'
-                                        })
-                                .col-12.col-lg-6
-                                    h4.text-uppercase
-                                        +rawHtml ({
-                                            name: 'h_update' + index,
-                                            value: 'Lorem Ipsum Dolor Sit.'
-                                        })
-                                    p.lead.mb-5
-                                        +rawHtml ({
-                                            name: 'p_update' + index,
-                                            class: 'lead mb-5',
-                                            value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Lorem ipsum dolor.'
-                                        })
+									+cta ({
+										name: 'cta' + index,
+										variant: 'primary'
+									})
+				- var n = 1
+				while n <= 3
+					+update(n++)
 
-                                    +cta ({
-                                        name: 'cta' + index,
-                                        variant: 'primary'
-                                    })
-                - var n = 1
-                while n <= 3
-                    +update(n++)
-
-    .bg-primary
-        .container.py-3
-            .p-3.p-md-5
-                .row
-                    .col
-                        .p-3.p-md-5
-                            h2.display-1.text-uppercase.text-white.text-break
-                                +rawHtml ({
-                                    name: 'h1_consultation',
-                                    value: 'Learn how you can sweep the competition under the rug.'
-                                })
-                            p.lead.text-white.mb-5
-                                +rawHtml ({
-                                    name: 'p1_consultation',
-                                    class: 'text-white lead mb-5',
-                                    value: 'Request a free consultation to learn more about the eFlex advantage!'
-                                })
-                            .row
-                                .col-12.col-lg-auto.mb-3.mb-lg-0
-                                    +cta ({
-                                        name: 'cta1_consultation',
-                                        variant: 'white',
-                                        class: 'text-primary',
-                                        guid: 'a142c21b-e203-4f53-b6f1-5c0bc51401f9'
-                                    })
-                                .col-12.col-lg-auto
-                                    +cta ({
-                                        name: 'cta2_consultation',
-                                        variant: 'outline-white',
-                                        guid: 'a735e3cd-802c-4460-b5f3-c50dcc2114b0'
-                                    })
+	.bg-primary
+		.container.py-3
+			.p-3.p-md-5
+				.row
+					.col
+						.p-3.p-md-5
+							h2.display-1.text-uppercase.text-white.text-break
+								+rawHtml ({
+									name: 'h1_consultation',
+									value: 'Learn how you can sweep the competition under the rug.'
+								})
+							p.lead.text-white.mb-5
+								+rawHtml ({
+									name: 'p1_consultation',
+									class: 'text-white lead mb-5',
+									value: 'Request a free consultation to learn more about the eFlex advantage!'
+								})
+							.row
+								.col-12.col-lg-auto.mb-3.mb-lg-0
+									+cta ({
+										name: 'cta1_consultation',
+										variant: 'white',
+										class: 'text-primary',
+										guid: 'a142c21b-e203-4f53-b6f1-5c0bc51401f9'
+									})
+								.col-12.col-lg-auto
+									+cta ({
+										name: 'cta2_consultation',
+										variant: 'outline-white',
+										guid: 'a735e3cd-802c-4460-b5f3-c50dcc2114b0'
+									})

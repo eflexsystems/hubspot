@@ -1,0 +1,49 @@
+//- _card.sass
+
+include ../rawHtml/_rawHtml.pug
+
+//- properties: [ name, href, transition, image: [ color, src, alt ], title: [ value, color, fontSize, icon ], subTitle: [ value, color, fontSize ], hoverOverlay, textOverlay, padding ]
+
+mixin card(args)
+	a.custom-card.d-flex.h-100( href=args.href ? args.href : '#')
+		.card.bg-gray-100.flex-fill.m-2( class=args.transition ? args.transition : 't-scale')
+
+			//- Title, Subtitle, Body
+			mixin cardContent()
+				if args.title
+					h6.card-title.text-uppercase.text-center.mb-0( class=`${args.title.color ? 'text-' + args.title.color : 'text-white'}` + ` ` + `${args.title.fontSize ? args.title.fontSize : null}`)
+						if args.title.icon
+							i.me-2( class=args.title.icon )
+						+rawHtml ({
+							name: 'title_' + args.name,
+							value: args.title.value ? args.title.value : 'Card Title'
+						})
+
+				if args.subTitle
+					h4.card-title.text-center.fst-italic.fw-light.my-2( class=`${args.title.color ? 'text-' + args.title.color : 'text-white'}` + ` ` + `${args.title.fontSize ? + args.title.fontSize : null}`)
+						+rawHtml ({
+							name: 'subTitle_' + args.name,
+							value: args.subTitle.value
+						})
+
+			//- Image Background Card
+			if args.image
+				img.card-img(src=args.image.src, alt=args.image.alt ? args.image.alt : "eFlex Systems")
+				.card-img-overlay.p-0
+					.o-75.position-absolute.w-100.h-100( class=`${args.image.color ? 'bg-' + args.image.color : 'bg-primary'}` )
+					.d-flex.align-items-center.justify-content-center.position-absolute.w-100.h-100.p-4
+						+cardContent
+		 
+			//- Solid Background Card
+			else
+				.card-body.d-flex.flex-column.align-items-center.justify-content-center( class=`${args.padding ? args.padding : 'p-4'}`)
+					if args.title
+						+cardContent
+
+			if args.hoverOverlay
+				//- Card Text Overlay
+				.card-text-overlay.d-flex.align-items-center.p-4.t-swipe-up-inset( class=`${args.padding ? args.padding : 'p-4'}`)
+					+rawHtml ({
+						name: 'textOverlay_' + args.name,
+						value: args.textOverlay ? args.textOverlay : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit.'
+					})

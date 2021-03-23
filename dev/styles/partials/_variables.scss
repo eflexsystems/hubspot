@@ -45,6 +45,9 @@ $display-font-sizes: (
 	6: 2.25rem,
 );
 
+// Native Columns
+$col-gap: 2rem;
+
 // Lead
 $lead-font-size: $font-size-lg;
 $lead-font-weight: 300;
@@ -115,3 +118,6 @@ $spacers: (
 
 // Custom Variables
 $breakpoint-xxl: 2175px;
+
+// Transition
+$t-scale-value: scale(1.05);

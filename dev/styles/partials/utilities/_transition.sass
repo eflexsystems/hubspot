@@ -1,0 +1,15 @@
+//- _transitions
+
+.t-scale
+	transition: all .2s ease-in-out 0s
+	&:hover
+		transform: $t-scale-value
+
+.t-swipe-up
+	clip-path: inset(0 0 0 0)
+	.t-swipe-up-inset
+		transition: all .3s ease-in-out 0s
+		top: 50%
+	&:hover
+		.t-swipe-up-inset
+			top: 0%
