@@ -5,13 +5,17 @@ append variables
 	- var mastheadHeight = '30rem'
 
 block masthead
+
+	//- Temporary Overlay
+	.bg-gray-800-o-75.position-absolute.w-100.h-100
+
 	//- Home Content
-	.container.h-100.z-1.py-5
+	.container.h-100.position-absolute.py-5
 		.row.h-100
 
 			//- Masthead Introduction
 			.col-12.col-lg-6
-				.d-flex.flex-column.justify-content-center.h-100
+				.d-flex.flex-column.justify-content-end.h-100
 					.p-3.p-md-5
 						.d-flex.flex-column
 							h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-0( style="hyphens: auto" )
@@ -21,14 +25,14 @@ block masthead
 								})
 
 prepend content
-	include ../../components/_card.pug
+	include ../../components/card/_card.pug
 
 append content
 
 	//- What we do
 	.container.py-5
-		.row.align-items-center.justify-content-between
-			.col-4
+		.row.align-items-center.justify-content-between.mb-5.mb-lg-0
+			.col-12.col-lg-4
 				.p-3.p-lg-5
 					h3.text-gray-400.text-uppercase
 						+rawHtml ({
@@ -42,7 +46,7 @@ append content
 							value: 'Innovate Simplify & Improve'
 						})
 				
-			.col-8
+			.col-12.col-lg-8
 				.p-3.p-lg-5
 					p.lead.mb-0
 						+rawHtml ({
@@ -52,7 +56,7 @@ append content
 						})
 		
 		//- What we do: Our Advantage
-		.row.align-items-center.p-3.p-lg-5
+		.row.align-items-center.p-3.p-lg-5.mb-5.mb-lg-0
 			.col
 				h3.text-gray-400.text-uppercase.mb-5
 					+rawHtml ({
@@ -66,13 +70,25 @@ append content
 					})
 
 	//- Mission Statement
-	.position-relative.text-white.bg-gray-800-o-75.py-5
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		+parallax ({
+			name: 'imageSrc_whatWeDo',
+			dataNaturalWidth: '1756',
+			dataNaturalHeight: '1171'
+		})
+
+		// Temporary Overlay
+		.bg-gray-800-o-75.position-absolute.w-100.h-100( style='z-index: -1' )
+
 		.container.py-5
 			.row.align-items-center.justify-content-center
-				.col-7
+				.col-12.col-lg-7
 					.p-3.p-lg-5.d-flex
-						i.fas.fa-quote-left.fa-3x
-						figure.mx-5
+						i.fas.fa-quote-left.fa-3x.text-white
+						figure.mx-2.mx-lg-5
 							blockquote.blockquote
 								h3.text-white.text-center.fw-light.lh-base.mb-4
 									+rawHtml ({
@@ -84,19 +100,34 @@ append content
 									| George Jewell - 
 									cite( title='Vice President of eFlex' )
 										| Vice President of eFlex
-						i.fas.fa-quote-right.fa-3x
+						i.fas.fa-quote-right.fa-3x.text-white
 
-		+parallax ({
-			name: 'imageSrc_whatWeDo',
-			dataImageSrc: 'https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Stock%20Images/Stock_9%20Factory%20Floor.jpg',
-			dataNaturalWidth: '1756',
-			dataNaturalHeight: '1171'
-		})
+		
+
+	
+	//- .container.h-100.position-absolute
+	//- 	.row.align-items-center.justify-content-center.h-100
+	//- 		.col-12.col-lg-7
+	//- 			.p-3.p-lg-5.d-flex
+	//- 				i.fas.fa-quote-left.fa-3x
+	//- 				figure.mx-2.mx-lg-5
+	//- 					blockquote.blockquote
+	//- 						h3.text-white.text-center.fw-light.lh-base.mb-4
+	//- 							+rawHtml ({
+	//- 								name: 'p_missionStatement',
+	//- 								value: 'Our mission is to provide our customers with the flexibility and efficiency to realize sustainable, world-class manufacturing.'
+	//- 							})
+	//- 					figcaption.blockquote-footer
+	//- 						h5.text-white.text-center.fw-light
+	//- 							| George Jewell - 
+	//- 							cite( title='Vice President of eFlex' )
+	//- 								| Vice President of eFlex
+	//- 				i.fas.fa-quote-right.fa-3x
 
 	//- Who we are
 	.container.py-5
-		.row.align-items-center
-			.col-4
+		.row.align-items-center.mb-5.mb-lg-0
+			.col-12.col-lg-4
 				.p-3.p-lg-5
 					h3.text-gray-400.text-uppercase
 						+rawHtml ({
@@ -110,7 +141,7 @@ append content
 							value: 'Engineers Coders & Visionaries'
 						})
 				
-			.col-8
+			.col-12.col-lg-8
 				.p-3.p-lg-5
 					p.lead.mb-0
 						+rawHtml ({
@@ -120,7 +151,7 @@ append content
 						})
 
 		//- What we do: Our Advantage
-		.row.align-items-center.p-3.p-lg-5
+		.row.align-items-center.p-3.p-lg-5.mb-5.mb-lg-0
 			.col
 				h3.text-gray-400.text-uppercase.mb-5
 					+rawHtml ({
@@ -151,7 +182,7 @@ append content
 								br
 								| Rochester Hills, MI 38306
 					h4.fw-light.mb-4
-						a.nav-link.link-light.p-0( href='mailto: sales@eflexsystems.com' )
+						a.nav-link.link-light.text-truncate.p-0( href='mailto: sales@eflexsystems.com' )
 							i.fas.fa-envelope.text-primary.me-3
 							| sales@eflexsystems.com
 					h4.fw-light.mb-4
@@ -177,34 +208,171 @@ append content
 							value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
 						})
 
-		mixin cardtest(n)
+		mixin leadershipCard(args)
 			+card ({
-				name: 'card',
-				src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-				alt: 'John Smith',
-				href: 'https://www.google.com',
+				name: args.name,
+				class: 'text-decoration-none',
+				title: {
+					value: args.person.name,
+					color: 'body',
+					fontSize: 'h4',
+				},
+				subTitle: {
+					value: args.person.position,
+					color: 'body',
+					fontSize: 'h6',
+				},
+				image: {
+					src: args.image.src,
+					alt: args.person.name + ', an eFlex Leader',
+				},
+				href: args.href,
+				newTab: true,
 				scale: true,
-				hoverOverlay: 'READ FULL BIO'
+				textOverlay: {
+					value: 'LINKEDIN PROFILE',
+					color: 'white',
+					bgColor: 'primary',
+					fontSize: 'h5',
+				},
+				content: 'bottom',
 			})
 
 		.p-3.p-lg-5
-			.row.align-items-center.text-center.g-0
-				.col
-					+cardtest(1)
-				.col
-					+cardtest(2)
-				.col
-					+cardtest(3)
-				.col
-					+cardtest(4)
-			.row.align-items-center.text-center.g-0
-				.col
-					+cardtest(5)
-				.col
-					+cardtest(6)
-				.col
-					+cardtest(7)
-				.col
-					+cardtest(8)
+			.row.align-items-center.text-center.g-0.mb-4
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'danmckiernan',
+						person: {
+							name: 'Dan McKiernan',
+							position: 'President',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/dan-mckiernan-776b996/',
+					})
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'georgejewell',
+						person: {
+							name: 'George Jewell',
+							position: 'Vice President',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/georgejewell/',
+					})
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'davebeskin',
+						person: {
+							name: 'Dave Beskin',
+							position: 'Application Support Manager',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/david-beskin-577b9033/',
+					})
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'daveschwenke',
+						person: {
+							name: 'Dave Schwenke',
+							position: 'Director of Systems Integration',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.google.com',
+					})
+			.row.align-items-center.text-center.g-0.mb-4
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'tinakennedy',
+						person: {
+							name: 'Tina Kennedy',
+							position: 'Director of Marketing',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/tina-kennedy-0b853410/',
+					})
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'markparmelee',
+						person: {
+							name: 'Mark Parmelee',
+							position: 'Computer Operations & Support Manager',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/mark-parmelee-9a425162/',
+					})
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'jasonbullard',
+						person: {
+							name: 'Jason Bullard',
+							position: 'Director of Sales',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/jason-bullard-25b86b45/',
+					})
+				.col-12.col-lg
+					+leadershipCard ({
+						name: 'josheasterling',
+						person: {
+							name: 'Josh Easterling',
+							position: 'Inside Sales Manager',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/joshua-easterling-84006b137/',
+					})
+			.row.align-items-center.justify-content-center.text-center.g-0.mb-4
+				.col-12.col-lg-3
+					+leadershipCard ({
+						name: 'toddschlueter',
+						person: {
+							name: 'Todd Schlueter',
+							position: 'Project Account Manager',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/todd-schlueter-a87a7511/',
+					})
+				.col-12.col-lg-3
+					+leadershipCard ({
+						name: 'jacobjewell',
+						person: {
+							name: 'Jacob Jewell',
+							position: 'Manager of Software Development',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/jacob-jewell-95842027/',
+					})
+				.col-12.col-lg-3
+					+leadershipCard ({
+						name: 'rachelglomski',
+						person: {
+							name: 'Rachel Glomski',
+							position: 'Senior Software Developer',
+						},
+						image: {
+							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+						},
+						href: 'https://www.linkedin.com/in/rachelglomski/',
+					})
 			
 			

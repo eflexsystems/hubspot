@@ -1,28 +1,35 @@
 html[data-scroll='0']
-    #header.header-interactive:not(:hover)
-        background-color: #00000000
-        transition-duration: .2s
-        .navbar
-            @extend .navbar-dark
-        .btn-primary
-            @extend .btn-outline-white
-            background-color: #00000000
+	#header.header-interactive:not(:hover)
+		background-color: #00000000
+		transition-duration: .2s
+		.navbar
+			@extend .navbar-dark
+		.btn-primary
+			@extend .btn-outline-white
+			background-color: #00000000
 
 #header
-    background-color: white
-    transition-duration: .2s
-    .navbar
-        @extend .navbar-light
+	background-color: white
+	transition-duration: .2s
+	.navbar
+		@extend .navbar-light
+
+#navbarHeader_mobile
+	max-height: 60vh
+
+	.dropdown .dropdown-menu
+		transition: all .35s ease !important
+
+	.dropdown.show .dropdown-menu
+		transition: all .35s ease-in !important
 
 //- Bootstrap Dropdown Slide Effect
 .dropdown .dropdown-menu
-    @extend .p-0
-    transition: none
-    max-height: 0
-    display: block
-    overflow: hidden
+	@extend .p-0
+	display: block
+	max-height: 0rem
+	overflow: hidden
 
 .dropdown.show .dropdown-menu
-    transition: all 1s
-    max-height: 100rem
-    max-width: 100%
+	max-width: 100%
+	max-height: 150rem

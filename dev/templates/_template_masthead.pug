@@ -19,8 +19,13 @@ block content
 	include ../components/parallax/_parallax.pug
 
 	//- Masthead Container
-	.bg-gray-800-o-75.d-flex.flex-column.justify-content-end.position-relative.pt-5( style='min-height: ' + mastheadHeight )
-		
+	.d-flex.flex-column.align-items-center.justify-content-end.position-relative.pt-5( style='height: ' + mastheadHeight )
+
+		block mastheadImage
+			+parallax ({
+				name: 'imageSrc_masthead'
+			})
+
 		block masthead
 			//- Home Content
 			.container.h-100.py-5
@@ -28,13 +33,13 @@ block content
 
 					//- Masthead Introduction
 					.col-12.col-lg-6
-						.d-flex.flex-column.justify-content-around.h-100
+						.d-flex.flex-column.justify-content-end.h-100
 							.p-3.p-md-5
 								.d-flex.flex-column
 									h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-( style="hyphens: auto" )
 										+rawHtml ({
 											name: 'title_masthead',
-											value: 'Solution Title'
+											value: 'Masthead Title'
 										})
 
 									p.lead.text-white.mb-5
@@ -49,10 +54,3 @@ block content
 										name: 'secondaryCta',
 										variant: 'outline-white'
 									})
-
-		block mastheadImage
-			+parallax ({
-				name: 'imageSrc_masthead'
-			})
-
-		
