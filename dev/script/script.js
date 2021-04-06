@@ -35,5 +35,4 @@ jQuery(window).load(function () {
     jQuery(".hs-image-widget").addClass("w-100");
 });
 
-//- Make header globally responsive
-let scrollResponsiveHeader = true;
+let scrollResponsiveHeader;

@@ -1,3 +1,5 @@
+let scrollResponsiveHeader = true;
+
 let map;
 
 function initMap() {

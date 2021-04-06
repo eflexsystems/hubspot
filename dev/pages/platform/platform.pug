@@ -3,4 +3,394 @@ extends ../../templates/_template.pug
 
 block content
 	//- Components being used.
+	include ../../components/rawHtml/_rawHtml.pug
 	include ../../components/cta/_cta.pug
+
+	//- Interactive Infographic
+	.container-fluid.g-0
+		.row.g-0
+			//- Left Side
+			.col-6.py-5.bg-gray-700
+				.p-3.p-lg-5
+
+			//- Right Side
+			.col-6
+				.d-flex.flex-column
+
+					//- Masthead
+					.d-flex.align-items-center.py-5( style='min-height: 50rem' )
+						.p-3.p-lg-5
+							h1.display-lg-1.text-uppercase.mb-4
+								+rawHtml ({
+									name: 'h1_masthead',
+									value: 'Bridge the Manufacturing Data Gap.',
+								})
+
+							h4.text-uppercase.fw-bolder.mb-4
+								+rawHtml ({
+									name: 'h2_masthead',
+									value: 'Manufacturing\'s Integrated IoT Platform',
+								})
+
+							p.mb-5
+								+rawHtml ({
+									name: 'p_masthead',
+									value: 'It\’s powered by eFlex\’s Manufacturing Integrated Platform – or MIP for short.  Built from the ground up to address the manufacturing data gap, MIP provides a connected, collaborative, data-driven environment for real-time visibility and insight.',
+								})
+
+							+cta ({
+								name: 'cta_masthead',
+								guid: 'f8b9429a-a9bd-4e34-a063-f573f8ecbf2d',
+								color: 'primary'
+							})
+					
+					//- Simplified
+					.py-5.bg-gray-700
+						.p-3.p-lg-5
+							h4.text-uppercase.fw-bolder.text-white.mb-4
+								+rawHtml ({
+									name: 'h1_simplified',
+									value: 'Intelligent Data Flows.',
+									class: 'text-white'
+								})
+
+							h1.display-lg-1.text-uppercase.text-white.mb-4
+								+rawHtml ({
+									name: 'h2_simplified',
+									value: 'Simplified Digital Transformation with MIP',
+									class: 'text-white'
+								})
+
+							p.text-white
+								+rawHtml ({
+									name: 'p1_simplified',
+									value: 'While the cost of traditional layers on the plant floor can be extremely expensive and labor intense – from hardware and integration costs to programming and data analysis needs, MIP provides significant cost savings and reduces the need for separate layers on the the plant floor – PLCs, HMIs, SCADA and MES/MOM systems.',
+									class: 'text-white'
+								})
+							
+							p.text-white
+								+rawHtml ({
+									name: 'p2_simplified',
+									value: 'One application environment with one common navigation and flow from the control of I/O at the sensor level to advanced analytics reporting. Connectivity and direct control covering a wide range of PLCs, sensors, applications and virtually any data source. Intelligent data collection and flow from the shop floor to the top floor for business intelligence and a competitive advantage.',
+									class: 'text-white'
+								})
+					
+					//- Competetive Advantage
+					.py-5.bg-gray-700
+						.p-3.p-lg-5
+							.mb-5
+								h4.text-uppercase.fw-bolder.text-white.mb-4
+									+rawHtml ({
+										name: 'h1_advantage',
+										value: 'Our Advantage.',
+										class: 'text-white'
+									})
+
+								h1.display-lg-1.text-uppercase.text-white.mb-4
+									+rawHtml ({
+										name: 'h2_advantage',
+										value: 'Robust and Cohesive Functionality',
+										class: 'text-white'
+									})
+
+								p.text-white
+									+rawHtml ({
+										name: 'p1_advantage',
+										value: 'eFlex\'s MIP is the most competitive platform on the market.',
+										class: 'text-white'
+									})
+								
+								p.text-white
+									+rawHtml ({
+										name: 'p2_advantage',
+										value: 'Other competing products that promise you Industry 4.0 fail to give you flexibility and cohesiveness that we offer. Our product operates as one universal application that expands with additional functionality seamlessly. Transitioning to Industry 4.0 can seem like a lot, but we make it easy.',
+										class: 'text-white'
+									})
+							
+							
+							.row
+								.col-12.col-lg-5
+									h3.text-uppercase.fw-bolder.text-white.mb-5
+										+rawHtml ({
+											name: 'h_fail',
+											value: 'Why Projects Fail',
+											class: 'text-white'
+										})
+									
+									mixin fail()
+										.row.mb-5
+											.col-auto
+												i.fas.fa-desktop.fa-3x.text-primary
+											.col
+												h4.text-uppercase.text-white.mb-1
+													+rawHtml ({
+														name: 'h1_fail',
+														value: 'Other platforms suck.',
+														class: 'text-white'
+													})
+												p.text-white
+													+rawHtml ({
+														name: 'p1_fail',
+														value: 'Other products are really bad. Like so bad that it makes you mad and waste money. We\'re here to save the day.',
+														class: 'text-white'
+													})
+									
+									+fail
+									+fail
+									+fail
+
+								.col-12.col-lg-5.mx-lg-auto
+									h3.text-uppercase.fw-bolder.text-white.mb-5
+										+rawHtml ({
+											name: 'h_succeed',
+											value: 'Why We Succeed',
+											class: 'text-white'
+										})
+
+									mixin succeed()
+										.row.mb-5
+											.col-auto
+												i.fas.fa-desktop.fa-3x.text-primary
+											.col
+												h4.text-uppercase.text-white.mb-1
+													+rawHtml ({
+														name: 'h1_succeed',
+														value: 'Other platforms suck.',
+														class: 'text-white'
+													})
+												p.text-white
+													+rawHtml ({
+														name: 'p1_succeed',
+														value: 'Other products are really bad. Like so bad that it makes you mad and waste money. We\'re here to save the day.',
+														class: 'text-white'
+													})
+									
+									+succeed
+									+succeed
+									+succeed
+								
+					mixin feature(args)
+						.mb-4
+							h4.text-uppercase.text-white.mb-2
+								+rawHtml ({
+									name: 'h' + args.index + '_' + args.group,
+									value: args.heading ? args.heading : loremipsum_xs,
+									class: 'text-white'
+								})
+							p.text-white
+								+rawHtml ({
+									name: 'p' + args.index + '_' + args.group,
+									value: args.body ? args.body : loremipsum_md,
+									class: 'text-white'
+								})
+
+					//- Configure
+					.py-5.bg-gray-700
+						.p-3.p-lg-5
+							.mb-5.pb-4
+								h1.display-lg-1.text-uppercase.text-white.mb-4
+									+rawHtml ({
+										name: 'h1_configure',
+										value: 'Configure',
+										class: 'text-white'
+									})
+
+								h3.text-uppercase.fw-bolder.text-white.mb-4
+									+rawHtml ({
+										name: 'h2_configure',
+										value: 'MIP is simple to configure- it\'s all connected.',
+										class: 'text-white'
+									})
+
+								p.text-white
+									+rawHtml ({
+										name: 'p1_configure',
+										value: 'It’s one integrated platform. It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment. Turn new solutions on instantly. Workflows can be changed iteratively and quickly, as the system learns and reacts.',
+										class: 'text-white'
+									})
+						
+							- var n = 1
+							while n <= 6
+								+feature ({
+									index: n++,
+									group: 'configureFeature'
+								})
+					
+					//- Connect
+					.py-5.bg-gray-700
+						.p-3.p-lg-5
+							.mb-5.pb-4
+								h1.display-lg-1.text-uppercase.text-white.mb-4
+									+rawHtml ({
+										name: 'h1_connect',
+										value: 'Configure',
+										class: 'text-white'
+									})
+
+								h3.text-uppercase.fw-bolder.text-white.mb-4
+									+rawHtml ({
+										name: 'h2_connect',
+										value: 'MIP is easy to connect – no programming needed.',
+										class: 'text-white'
+									})
+
+								p.text-white
+									+rawHtml ({
+										name: 'p1_connect',
+										value: 'Integrated connectivity, allowing for granular data collection from people, processes and assets.  Digital transformation simplified.',
+										class: 'text-white'
+									})
+
+							+feature ({
+								index: 1,
+								heading: 'IoT Devices',
+								body: 'Embedded, plug-n-play IoT device connect and instructions make it difficult for operators to make mistakes.  Barcode readers, fasteners, pick lights, gauges, vision systems, printers, cobots, augmented reality systems and more.',
+								group: 'connectFeature'
+							})
+
+							+feature ({
+								index: 2,
+								heading: 'PLCs',
+								body: 'Plug-n-play PLC connect and process data collection.  Supports open protocols including OPC-UA, Modbus as well as any proprietary connectors such as Siemens and Rockewell.',
+								group: 'connectFeature'
+							})
+
+							+feature ({
+								index: 3,
+								heading: 'Sensors, Legacy Equipment or Upper Level Systems',
+								body: 'Utilizing APIs or a browser based flow editor, seamlessly connect to sensors, older equipment, ERP systems and much more.',
+								group: 'connectFeature'
+							})
+
+							+feature ({
+								index: 4,
+								heading: 'Servers & Installations',
+								body: 'Install on a VM or server. Host on-site, in the cloud or a hybrid of the two.  Get maximum deployment, flexibility and secure configurability.',
+								group: 'connectFeature'
+							})
+						
+					//- Control
+					.py-5.bg-gray-700
+						.p-3.p-lg-5
+							.mb-5.pb-4
+								h1.display-lg-1.text-uppercase.text-white.mb-4
+									+rawHtml ({
+										name: 'h1_control',
+										value: 'Control',
+										class: 'text-white'
+									})
+
+								h3.text-uppercase.fw-bolder.text-white.mb-4
+									+rawHtml ({
+										name: 'h2_control',
+										value: 'MIP provides seamless control — error proofing at a new level.',
+										class: 'text-white'
+									})
+
+								p.text-white
+									+rawHtml ({
+										name: 'p1_control',
+										value: 'Digital work instructions and process control ensure operators always follow the right procedures, use the right tools with the right tolerance levels, at the right time, enforcing quality standards.',
+										class: 'text-white'
+									})
+								
+								p.text-white
+									+rawHtml ({
+										name: 'p2_control',
+										value: 'With process data and assembly images (1D and 2D data), get complete traceability and product genealogy to meet compliance requirements and protect against warranty claims.  A digital birth certificate, enabling a genetic-like profile on every product at every stage in the manufacturing process.',
+										class: 'text-white'
+									})
+					
+					//- Collect & Improve
+					.py-5.bg-gray-700
+						.p-3.p-lg-5
+							.mb-5.pb-4
+								h1.display-lg-1.text-uppercase.text-white.mb-4
+									+rawHtml ({
+										name: 'h1_collect',
+										value: 'Collect & Improve',
+										class: 'text-white'
+									})
+
+								h3.text-uppercase.fw-bolder.text-white.mb-4
+									+rawHtml ({
+										name: 'h2_collect',
+										value: 'MIP is data-driven – a new competitive advantage for your operations.',
+										class: 'text-white'
+									})
+
+								p.text-white
+									+rawHtml ({
+										name: 'p1_collect',
+										value: 'MIP is powered by the MIP Data – providing detailed integrated granular manufacturing process data down to the most basic task level. All in one place.',
+										class: 'text-white'
+									})
+								
+								p.text-white
+									+rawHtml ({
+										name: 'p2_collect',
+										value: 'Intelligent MIP Data enables powerful end-to-end people and data collaboration across the enterprise. Everyone from the shop floor to the top floor can see the status of your production line and get real-time actionable insight.  The ability to constantly monitor, adjust and improve the manufacturing process – at the edge and in the cloud.',
+										class: 'text-white'
+									})
+
+							+feature ({
+								index: 1,
+								heading: 'Reports & Dashboards',
+								body: 'With eFlex Business Intelligence, turn data silos into powerful reports and dashboards. Get actionable insight for every station, line, plant or enterprise wide needs.  With virtually unlimited configurations, monitor key performance indicators (KPIs), historical trends and real-time data that impacts your operations. Easily identify outliers, receive alerts when critical parameters are out of control and continuously improve.',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 2,
+								heading: 'Station Cycle Times',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 3,
+								heading: 'Quality Summary',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 4,
+								heading: 'Torque Tool Data',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 5,
+								heading: 'Repair, Rework, Reject Codes',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 6,
+								heading: 'Material Usage',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 7,
+								heading: 'Shift Summary',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 8,
+								heading: 'OEE & Downtime',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 9,
+								heading: 'Genealogy & Part History',
+								group: 'collectFeature'
+							})
+
+							+feature ({
+								index: 10,
+								heading: 'Line Balance Report',
+								group: 'collectFeature'
+							})
+

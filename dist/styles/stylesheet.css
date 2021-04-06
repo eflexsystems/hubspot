@@ -206,7 +206,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 1000;
 }
 
 small, .small {
@@ -10124,7 +10124,7 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .navbar .navbar-nav
 }
 
 .fw-lighter {
-  font-weight: lighter !important;
+  font-weight: 200 !important;
 }
 
 .fw-normal {
@@ -10136,7 +10136,7 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .navbar .navbar-nav
 }
 
 .fw-bolder {
-  font-weight: bolder !important;
+  font-weight: 1000 !important;
 }
 
 .text-lowercase {

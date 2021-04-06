@@ -1,3 +1,6 @@
-// raw_html
+//- _rawHtml
+
+//- properties: [ name, value, class ]
+
 mixin rawHtml(args)
     | {% raw_html "#{args.name}" value="#{args.value}", label="#{args.name}", extra_classes="#{args.class ? args.class : null}" %}

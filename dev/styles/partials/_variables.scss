@@ -15,9 +15,11 @@ $container-max-widths: (
 // Base Typography
 $body-color: $gray-700;
 $font-family-sans-serif: 'Titillium Web', sans-serif !important;
-$font-weight-normal: 400;
+$font-weight-lighter: 200;
 $font-weight-light: 300;
+$font-weight-normal: 400;
 $font-weight-bold: 600; // strong tag set in _base
+$font-weight-bolder: 1000;
 $font-size-base: 1rem;
 $font-size-lg: 1.375rem;
 
