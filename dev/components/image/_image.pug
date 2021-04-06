@@ -1,3 +1,6 @@
-// image
+//- image
+
+//- properties: [ name, alt, src, class ]
+
 mixin image(args)
     | {% image "#{args.name}" label="#{args.name}", alt="#{args.alt ? args.alt : null}", src="#{args.src}", extra_classes="#{args.class ? 'hs_ancestor ' + args.class : null}" %}

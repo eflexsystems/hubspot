@@ -1,6 +1,6 @@
 // parallax
 mixin parallax(args)
-	.parallax-window.d-none.d-lg-block.position-absolute.w-100.h-100(
+	.parallax-window.position-absolute.w-100.h-100(
 		style='top: 0; box-sizing: border-box; pointer-events: none' 
 		data-parallax="scroll"  
 		data-natural-width=args.dataNaturalWidth ? args.dataNaturalWidth : "1200"
@@ -8,9 +8,3 @@ mixin parallax(args)
 		data-image-src!='{% text \"' + args.name + '\", label=\"' + args.name + '\", value=\"' + (args.dataImageSrc ? args.dataImageSrc : `https://picsum.photos/800/600`) + '\", no_wrapper=True %}' 
 		data-speed=args.dataSpeed ? args.dataSpeed : .2
 	)
-
-	//- Mobile
-	include ../image/_image.pug
-
-	.d-block.d-lg-none.responsive-clip-path-mobile
-		| {% image "#{args.name}" label="#{args.name}", src!='{% text \"' + #{args.name} + '\", label=\"' + #{args.name} + '\", value=\"' + #{args.dataImageSrc ? args.dataImageSrc : `https://picsum.photos/800/600`} + '\", no_wrapper=True %}' %}

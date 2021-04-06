@@ -5,23 +5,23 @@ block content
     //- Components being used.
     include ../../components/cta/_cta.pug
 
-    .pt-5
-        .container.d-flex.flex-column.justify-content-center.py-5( style="min-height: 40rem" )
-            .row
-                .col
-                    .p-3.p-lg-5
-                        .row.mb-5
-                            .col
-                                h1.display-1
-                                    i.far.fa-sad-cry.fa-sm.me-4
-                                    | 404 - Page Not Found.
-                                p.lead Sorry, the page you were looking for at the URL was not found.
-                        .row
-                            .col-auto
-                                +cta ({
-                                    variant: 'primary'
-                                })
-                            .col-auto
-                                +cta ({
-                                    variant: 'outline-primary'
-                                })
+	.container.d-flex.flex-column.justify-content-center.py-5( style="min-height: 40rem" )
+		.row
+			.col
+				.p-3.p-lg-5
+					.row.mb-5
+						.col
+							h1.display-lg-1
+								i.far.fa-sad-cry.fa-sm.me-4
+								| 404 - Page Not Found.
+							p.lead-md Sorry, the page you were looking for at the URL was not found.
+					.row
+						.col-auto
+							+cta ({
+								color: 'primary'
+							})
+						.col-auto
+							+cta ({
+								variant: 'outline',
+								color: 'primary'
+							})

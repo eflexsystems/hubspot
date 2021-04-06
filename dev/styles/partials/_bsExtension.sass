@@ -1,0 +1,14 @@
+// Extension to Bootstrap capabilities
+
+// Reponsive Display Headings
+@each $grid-breakpoint, $grid-breakpoint-value in $grid-breakpoints
+	@media ( min-width: $grid-breakpoint-value )
+		@for $i from 1 through 4
+			.display-#{$grid-breakpoint}-#{$i}
+				font-size: map-get($display-font-sizes, $i)
+				font-weight: $display-font-weight
+				line-height: $display-line-height
+
+		.lead-#{$grid-breakpoint}
+			font-size: $lead-font-size
+			font-weight: $lead-font-weight

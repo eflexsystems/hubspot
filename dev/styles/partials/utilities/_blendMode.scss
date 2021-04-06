@@ -1,0 +1,14 @@
+// Utilities
+// Blend Mode
+
+@each $blend-mode in $blend-modes {
+	.bm-#{$blend-mode} {
+		mix-blend-mode: $blend-mode;
+	}
+	@each $color, $hex in $theme-colors {
+		.bm-#{$blend-mode}-#{$color} {
+			background-color: $hex;
+			mix-blend-mode: $blend-mode;
+		}
+	}
+}

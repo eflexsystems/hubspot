@@ -4,9 +4,6 @@ extends ./_template.pug
 block script
 	//- slick-carousel
 	script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
-	
-	script.
-		let scrollResponsiveHeader = true;
 
 block variables
 	- var mastheadHeight = '40rem'
@@ -17,9 +14,10 @@ block content
 	include ../components/cta/_cta.pug
 	include ../components/image/_image.pug
 	include ../components/parallax/_parallax.pug
+	include ../components/uiDevice/_uiDevice.pug
 
 	//- Masthead Container
-	.d-flex.flex-column.align-items-center.justify-content-end.position-relative.pt-5( style='height: ' + mastheadHeight )
+	.d-flex.flex-column.align-items-center.justify-content-end.position-relative( style='height: ' + mastheadHeight )
 
 		block mastheadImage
 			+parallax ({
@@ -28,7 +26,7 @@ block content
 
 		block masthead
 			//- Home Content
-			.container.h-100.py-5
+			.container.h-100.position-absolute.py-5
 				.row.h-100
 
 					//- Masthead Introduction
@@ -36,21 +34,21 @@ block content
 						.d-flex.flex-column.justify-content-end.h-100
 							.p-3.p-md-5
 								.d-flex.flex-column
-									h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-( style="hyphens: auto" )
+									h1.display-lg-1.text-uppercase.text-white.text-break.text-lg-nowrap( style="hyphens: auto" )
 										+rawHtml ({
 											name: 'title_masthead',
 											value: 'Masthead Title'
 										})
 
-									p.lead.text-white.mb-5
+									p.lead-md.text-white.mb-5
 										+rawHtml ({ 
 											name: 'desc_masthead',
-											class: 'lead text-white',
+											class: 'lead-md text-white',
 											value: 'Solution sub-title insert here.'
 										})
 
 									//- Masthead CTA          
 									+cta ({
-										name: 'secondaryCta',
-										variant: 'outline-white'
+										name: 'end',
+										color: 'primary'
 									})

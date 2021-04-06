@@ -2,5 +2,310 @@
 extends ../../../templates/_template_masthead.pug
 
 prepend script
-    script( type='text/javascript' )
-        include ./script.js
+	script( type='text/javascript' )
+		include ./script.js
+
+append content
+	.container.py-5
+		.row.align-items-center
+			.col
+				.p-3.p-lg-5
+					h1.display-lg-1.text-uppercase
+						+rawHtml ({
+							name: 'h_intro',
+							value: 'Improve Reliability & Reduce Costs.'
+						})
+					
+					p.lead-md
+						+rawHtml ({
+							name: 'p_intro',
+							value: 'Reactive maintenance can be extremely costly from production errors, downtime, labor costs to reduced asset life expectancy. eFlex Preventative Maintenance allows manufacturers to easily develop digital standardized maintenance procedures, enforce best practices, collect granular process data, with a permanent digital record for asset management and regulatory compliance.',
+							class: 'lead-md-md'
+						})
+				
+			.col
+				.p-3.p-lg-5
+					+image ({
+						name: 'image_intro',
+						src: 'https://picsum.photos/400/200'
+					})
+
+	//- Bullets
+	.container.py-5
+		.row.align-items-center
+			.col
+				.p-3.p-lg-5
+					+image ({
+						name: 'image1_examples',
+						src: 'https://picsum.photos/400/200'
+					})
+			.col
+				.p-3.p-lg-5
+					h3.text-uppercase
+						+rawHtml ({
+							name: 'h1_examples',
+							value: 'No More Paper Tracking.'
+						})
+					
+					p
+						+rawHtml ({
+							name: 'p1_examples',
+							value: 'Eliminate maintenance paper slips and manual tracking. Get a permanent digital record for all assets and equipment maintenance. Digital integration allows for quick and easy configurations, scheduling, process control, data collection and archiving.',
+						})
+		
+		.row.align-items-center
+			.col
+				.p-3.p-lg-5
+					h3.text-uppercase
+						+rawHtml ({
+							name: 'h2_examples',
+							value: 'Enforce Maintenance Processes.'
+						})
+					
+					p
+						+rawHtml ({
+							name: 'p2_examples',
+							value: 'Never miss or skip steps! Digital process control ensures every step is completed properly when performing maintenance. Get a better understanding of the time it takes to complete maintenance on equipment and assets in your operation. Time studies assist with scheduling staff and expectations.',
+						})
+			.col
+				.p-3.p-lg-5
+					+image ({
+						name: 'image2_examples',
+						src: 'https://picsum.photos/400/200'
+					})
+
+		.row.align-items-center
+			.col
+				.p-3.p-lg-5
+					+image ({
+						name: 'image3_examples',
+						src: 'https://picsum.photos/400/200'
+					})
+			.col
+				.p-3.p-lg-5
+					h3.text-uppercase
+						+rawHtml ({
+							name: 'h3_examples',
+							value: 'Collect Valuable Data & Metrics.'
+						})
+					
+					p
+						+rawHtml ({
+							name: 'p3_examples',
+							value: 'Built-in and customizable process data collection fields. Enter operator notes, inspections/verifications, who completed them, quality checklists, tooling measurements, camera images, and more. No limits to what you can collect and view.',
+						})
+	
+	//- Curate
+	.container.py-5
+		.row.align-items-center
+			.col-12.col-lg-6
+				.p-3.p-lg-5
+					h1.display-lg-1.text-uppercase
+						+rawHtml ({
+							name: 'h1_curate',
+							value: 'Curate the Manufacturing Process.'
+						})
+					
+					p.lead-md
+						+rawHtml ({
+							name: 'p1_curate',
+							value: 'Transparency into plant floor maintenance provides management the tools they need for continuous process improvement.',
+							class: 'lead-md-md'
+						})
+		.p-3.p-lg-5
+			.row
+				.col-12.col-lg-4
+					.pb-3.pb-lg-0.pe-lg-3
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h2_curate',
+								value: 'Verify Credentials.'
+							})
+						
+						p
+							+rawHtml ({
+								name: 'p2_curate',
+								value: 'Track operator credentials. If specific training or certification is needed in order to complete maintenance on specified equipment, log-in requirements can be set. Ensure staff have the necessary training and credentialing for safety and compliance.',
+							})
+
+				.col-12.col-lg-4
+					.pb-3.pb-lg-0.pe-lg-3
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h3_curate',
+								value: 'Accelerate Training.'
+							})
+						
+						p
+							+rawHtml ({
+								name: 'p3_curate',
+								value: 'Off-line mode available for training new staff. Step-by-step instructions with written and/or visual guides allow for accelerated training. User-configurable tabs also available to display PPE, MSDS and other required safety information when needed.',
+							})
+				
+				.col-12.col-lg-4
+					.pb-3.pb-lg-0.pe-lg-3
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h4_curate',
+								value: 'Configurations.'
+							})
+						
+						p
+							+rawHtml ({
+								name: 'p4_curate',
+								value: 'Setup maintenance processes, SOPs and work instructions quickly and easily. Use written instructions, images, videos, 3D models or connect to your current documents – PDF files, manuals, warranty or safety information. Make changes in minutes if needed!',
+							})
+
+	//- Business Intelligence
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		+parallax ({
+			name: 'imageSrc_bi',
+			dataNaturalWidth: '1756',
+			dataNaturalHeight: '1171'
+		})
+
+		.container.py-5
+			.row.align-items-end
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						.mb-5
+							h1.display-lg-1.text-uppercase.text-white
+								+rawHtml ({
+									name: 'h1_bi',
+									value: 'Data Transparency.',
+									class: 'text-white'
+								})
+							p.lead-md.text-white
+								+rawHtml ({
+									name: 'p1_bi',
+									value: 'Retain maintenance metrics for big data analysis. Observe metrics individually or as a whole.',
+									class: 'lead-md text-white'
+								})
+							
+						//- +image ({
+						//- 	name: 'image_bi',
+						//- 	src: 'https://picsum.photos/900/500'
+						//- })
+
+						+uiDevice ({
+							name: 'uiDevice_bi'
+						})
+					
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						.mb-5
+							h3.text-uppercase.text-white
+								+rawHtml ({
+									name: 'h2_bi',
+									value: 'Digital Maintenance Records.',
+									class: 'text-white'
+								})
+							p.text-white
+								+rawHtml ({
+									name: 'p2_bi',
+									value: 'Get detailed digital maintenance reports and records. When maintenance was completed, who completed it, notes and process data metrics, images, and more.',
+									class: 'text-white'
+								})
+						.mb-5
+							h3.text-uppercase.text-white
+								+rawHtml ({
+									name: 'h3_bi',
+									value: 'Advanced Dashboards & Alerts.',
+									class: 'text-white'
+								})
+							p.text-white
+								+rawHtml ({
+									name: 'p3_bi',
+									value: 'Retain maintenance metrics for big data analysis. Observe metrics individually or as a whole.',
+									class: 'text-white'
+								})
+
+						+cta ({
+							name: 'cta_demorequest',
+							variant: 'flat',
+							color: 'primary'
+						})
+
+	
+	.container.py-5
+		.p-3.p-lg-5
+			.row
+				mixin adjectiveBullets(args)
+					.col-12.col-lg-3
+						.pb-3.pb-lg-0.pe-lg-3
+							i.fas.fa-3x.mb-4( class='fa-' + args.icon )
+							h3.text-uppercase
+								+rawHtml ({
+										name: 'h' + args.index + '_adjectives',
+										value: args.heading,
+									})
+							p
+								+rawHtml ({
+										name: 'p' + args.index + '_adjectives',
+										value: args.body,
+									})
+
+				+adjectiveBullets ({
+					index: '1',
+					icon: 'expand-arrows-alt',
+					heading: 'Scalable.',
+					body: 'Start digital preventative maintenance at a small scale and expand enterprise wide for full transparency of asset management.'
+				})
+
+				+adjectiveBullets ({
+					index: '2',
+					icon: 'code-branch',
+					heading: 'Flexible.',
+					body: 'Quickly and easily modify maintenance procedures as needed, ensuring long term upkeep of equipment and assets.'
+				})
+
+				+adjectiveBullets ({
+					index: '3',
+					icon: 'cog',
+					heading: 'Configurable.',
+					body: 'Easily digitize standard maintenance procedures utilizing eFlex\'s robust, built-in work instruction editor.'
+				})
+
+				+adjectiveBullets ({
+					index: '4',
+					icon: 'link',
+					heading: 'Connected.',
+					body: 'Integrate smart tooling and devices in your maintenance process for precise measurement control and limit verification.'
+				})
+	
+	//- Request Demo
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		.responsive-clip-path.w-100.h-100.position-absolute( style='z-index: -1; box-sizing: border-box; pointer-events: none; top: 0' )
+			+image ({
+				name: 'image_demorequest',
+				src: 'https://picsum.photos/900/500'
+			})
+
+		.container.py-5
+			.row
+				.col.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h_demorequest',
+								value: 'See how eFlex can help your business.',
+								class: 'text-white'
+							})
+					
+						p.lead-md.text-white.mb-5
+							+rawHtml ({
+								name: 'p_demorequest',
+								value: 'Digitize standard maintenance procedures and ensure you never miss a step or timeline. Get an online demo and see how easy it is to get started!',
+								class: 'lead-md text-white'
+							})
+
+						+cta ({
+							name: 'cta_demorequest',
+							color: 'primary'
+						})

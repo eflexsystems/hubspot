@@ -121,4 +121,6 @@ $breakpoint-xxl: 2175px;
 
 // Transition
 $t-scale-value: scale(1.05);
-// $transition-collapse: max-height 0.35s ease;
+
+//- Blend Mode
+$blend-modes: 'multiply', 'exclusion', 'hue', 'screen', 'lighten';

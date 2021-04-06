@@ -1,0 +1,26 @@
+//- _uiDevice.pug
+
+include ../image/_image.pug
+
+//- properties: [ name, src, alt ]
+
+mixin uiDevice(args)
+
+	if args.device === 'desktop' || args.device === undefined
+		- var top = '6.94%'
+		- var left = '5%'
+		- var width = '90.2%'
+
+	.position-relative.w-100.h-auto
+		img.w-100.h-100( src='https://f.hubspotusercontent00.net/hubfs/8439350/Images/Device%20Frames/deviceFrame_desktop.png' style='pointer-events: none;' )
+
+		.position-absolute( style='top: ' + top + '; left: ' + left + '; width: ' + width + ';' )
+			+image ({
+				name: 'image_' + args.name,
+				src: args.src ? args.src : 'https://picsum.photos/400/225',
+				alt: args.alt ? args.alt : 'eFlex Systems Interface Example.'
+			})
+			
+			if args.device === 'desktop' || args.device === undefined
+				.position-absolute.overflow-hidden.w-50.h-100( style='top: 0; right: 0; pointer-events: none;' )
+					.bm-screen.o-25.position-relative( style="transform: rotate(-16deg); top: -25%; right: -30%; height: 139%; background-image: linear-gradient(white 15%, #00000000 60%);" )

@@ -1,21 +1,19 @@
-// Button
+// cta.sass
 
 // Button Flat
-.btn-flat
-	@extend .text-primary
-	&::after
-		font-family: "Font Awesome 5 Free"
-		font-size: .8em
-		font-weight: 900
-		content: "\f054"
-		margin-left: .75rem
-		transition: margin-left .2s linear
-	&:hover
+@each $theme-color, $hex in $theme-colors
+	.btn-flat-#{$theme-color}
+		@extend .p-0, .text-#{$theme-color}
 		&::after
-			margin-left: 1.25rem
+			font-family: "Font Awesome 5 Free"
+			font-size: .8em
+			font-weight: 900
+			content: "\f054"
+			margin-left: .75rem
+			transition: margin-left .2s linear
+		&:hover
+			&::after
+				margin-left: 1.25rem
 
 .btn-primary
 	@extend .text-white
-
-.cta_button
-	@extend .w-100

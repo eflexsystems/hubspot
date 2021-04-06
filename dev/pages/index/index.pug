@@ -32,16 +32,16 @@ block content
 						.d-flex.flex-column.justify-content-around.h-100
 							.p-3.p-md-5
 								.d-flex.flex-column
-									h1.display-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-4( style="hyphens: auto" )
+									h1.display-lg-1.text-uppercase.text-white.text-break.text-lg-nowrap.mb-4( style="hyphens: auto" )
 										+rawHtml ({
 											name: 'title_masthead',
 											value: 'Solve the Manufacturing Data Gap.'
 										})
 
-									p.lead.text-white
+									p.lead-md.text-white
 										+rawHtml ({ 
 											name: 'desc_masthead',
-											class: 'lead text-white',
+											class: 'lead-md text-white',
 											value: 'The manufacturing industry is poised for massive change and disruption. Beat the competition with eFlex’s Manufacturing Integrated Platform.'
 										})
 
@@ -53,14 +53,15 @@ block content
 											.col-12.col-md.mb-3.mb-lg-0
 												+cta ({
 													name: 'secondaryCta',
-													variant: 'outline-white',
+													variant: 'outline',
+													color: 'white',
 													class: 'w-100',
 													guid: '253bcfe6-ed67-497a-baff-dcc025793e9b'
 												})
 											.col-12.col-md
 												+cta ({
 													name: 'primaryCta',
-													variant: 'primary',
+													color: 'primary',
 													class: 'w-100'
 												})
 					
@@ -145,16 +146,16 @@ block content
 							name: 'heading_mainFeatures',
 							value: 'Increase Throughput. Maximize Quality. Reduce Costs.'
 						})
-					p.lead
+					p.lead-md
 						+rawHtml ({
 							name: 'p1_mainFeatures',
-							class: 'lead',
+							class: 'lead-md-md',
 							value: 'MIP is powered by the MIP Data— providing detailed integrated granular manufacturing process data down to the most basic task level. All in one place.'
 						})
-					p.lead
+					p.lead-md
 						+rawHtml ({
 							name: 'p2_mainFeatures',
-							class: 'lead',
+							class: 'lead-md-md',
 							value: 'Intelligent MIP Data enables powerful end-to-end people and data collaboration across the enterprise. Everyone from the front office to the shop floor to the delivery team can see the status of your production line and get real-time actionable insight.'
 						})
 					
@@ -163,6 +164,7 @@ block content
 						+cta ({
 							name: 'cta_mainFeatures',
 							variant: 'flat',
+							color: 'primary',
 							class: 'p-0 py-3'
 						})
 		.p-3.p-md-5
@@ -230,16 +232,16 @@ block content
 		.p-3.p-md-5
 			.row
 				.col-12.col-lg-5
-					h2.display-1.text-uppercase.text-break.text-lg-nowrap.mb-4
+					h2.display-lg-1.text-uppercase.text-break.text-lg-nowrap.mb-4
 						+rawHtml ({
 							name: 'h1_processControl',
 							value: 'Advanced <br>Process <br>Control.'
 						})
 
-					p.lead
+					p.lead-md
 						+rawHtml ({
 							name: 'p1_processControl',
-							class: 'lead',
+							class: 'lead-md-md',
 							value: 'Whether your environment is high or low mix assembly, our solutions will fit your process control needs. MIP data gives you a flexible and free-flowing manufacturing landscape.'
 						})
 
@@ -255,10 +257,10 @@ block content
 									value: 'Configure BOM Options & Components.'
 								})
 
-							p.lead
+							p.lead-md
 								+rawHtml ({
 									name: 'p2_processControl',
-									class: 'lead',
+									class: 'lead-md-md',
 									value: 'Easily manage variability and high mix process control with MIP. Our system intuitively reacts to the individual components and options of the BOM without the need to configure every possible variant of the product.'
 								})
 
@@ -273,10 +275,10 @@ block content
 									value: 'Connect any IoT Devices.'
 								})
 
-							p.lead
+							p.lead-md
 								+rawHtml ({
 									name: 'p3_processControl',
-									class: 'lead',
+									class: 'lead-md-md',
 									value: 'No code necessary. Automatically display the correct build option, associated work instruction, and device controls based on BOM or Model at the station level.'
 								})
 					
@@ -291,10 +293,10 @@ block content
 									value: 'Adjust Process Controls Anytime.'
 								})
 
-							p.lead
+							p.lead-md
 								+rawHtml ({
 									name: 'p4_processControl',
-									class: 'lead',
+									class: 'lead-md-md',
 									value: 'MIP Data gives you a high-level overview of the plant floor. Seamlessly rebalance lines with drag-n-drop, adjust process controls, and attune any sudden discrepancies.'
 								})
 		
@@ -303,16 +305,16 @@ block content
 		.p-3.p-md-5
 			.row.align-items-center.mb-5
 				.col-12.col-lg-5
-					h2.display-1.text-uppercase.mb-4
+					h2.display-lg-1.text-uppercase.mb-4
 						+rawHtml ({
 							name: 'heading_capabilities',
 							value: 'It\'s one integrated platform.'
 						})
 
-					p.lead
+					p.lead-md
 						+rawHtml ({
 							name: 'p1_capabilities',
-							class: 'lead',
+							class: 'lead-md-md',
 							value: 'It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment.'
 						})
 				.col-12.col-lg-6.ms-lg-auto
@@ -617,15 +619,15 @@ block content
 			.row.align-items-center
 				.col-12.col-lg-6
 					.p-3.p-lg-5
-						h1.display-1.text-uppercase.text-white
+						h1.display-lg-1.text-uppercase.text-white
 							+rawHtml ({
 								name: 'h_video',
 								value: 'Industry 4.0 is one step away!'
 							})
-						p.lead.text-white
+						p.lead-md.text-white
 							+rawHtml ({
 								name: 'p_video',
-								class: 'lead text-white',
+								class: 'lead-md text-white',
 								value: 'Watch a video about our digital work instructions, JEM, to learn how our platform is easily integrated with any existing process.'
 							})
 
@@ -643,7 +645,7 @@ block content
 						.p-3.p-md-5
 							.row.align-items-center
 								.col-12.col-lg-6
-									h2.display-1.text-uppercase.text-break.mb-0
+									h2.display-lg-1.text-uppercase.text-break.mb-0
 										+rawHtml ({
 											name: 'title_update' + index,
 											value: 'Lorem ipsum dolor sit amet consectetur'
@@ -654,16 +656,16 @@ block content
 											name: 'h_update' + index,
 											value: 'Lorem Ipsum Dolor Sit.'
 										})
-									p.lead.mb-5
+									p.lead-md.mb-5
 										+rawHtml ({
 											name: 'p_update' + index,
-											class: 'lead mb-5',
+											class: 'lead-md mb-5',
 											value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Ut viverra diam velit, lobortis eleifend ligula pulvinar ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum viverra arcu porta commodo. Lorem ipsum dolor.'
 										})
 
 									+cta ({
 										name: 'cta' + index,
-										variant: 'primary'
+										color: 'primary'
 									})
 				- var n = 1
 				while n <= 3
@@ -675,15 +677,15 @@ block content
 				.row
 					.col
 						.p-3.p-md-5
-							h2.display-1.text-uppercase.text-white.text-break
+							h2.display-lg-1.text-uppercase.text-white.text-break
 								+rawHtml ({
 									name: 'h1_consultation',
 									value: 'Learn how you can sweep the competition under the rug.'
 								})
-							p.lead.text-white.mb-5
+							p.lead-md.text-white.mb-5
 								+rawHtml ({
 									name: 'p1_consultation',
-									class: 'text-white lead mb-5',
+									class: 'text-white lead-md mb-5',
 									value: 'Request a free consultation to learn more about the eFlex advantage!'
 								})
 							.row
@@ -697,6 +699,7 @@ block content
 								.col-12.col-lg-auto
 									+cta ({
 										name: 'cta2_consultation',
-										variant: 'outline-white',
+										variant: 'outline',
+										color: 'white',
 										guid: 'a735e3cd-802c-4460-b5f3-c50dcc2114b0'
 									})

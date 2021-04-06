@@ -1,3 +1,5 @@
+// global script.js
+
 jQuery(window).load(function () {
 
     // Fade overlay once window is loaded.
@@ -6,12 +8,6 @@ jQuery(window).load(function () {
     // Swap hubspot styles with Bootstrap.
     jQuery("style").remove();
     jQuery("[id^=cta_button]").addClass("btn");
-
-    let variants = ["primary", "secondary", "success", "warning", "danger", "info", "light", "dark", "link", "white", "flat"];
-    variants.forEach(function (variant) {
-        jQuery("." + variant + " a").addClass("btn-" + variant);
-        jQuery(".outline-" + variant + " a").addClass("btn-outline-" + variant);
-    });
 
     // Pass hs module classes to children
     function hsChildInheritClass(selector) {
@@ -38,3 +34,6 @@ jQuery(window).load(function () {
     // Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
     jQuery(".hs-image-widget").addClass("w-100");
 });
+
+//- Make header globally responsive
+let scrollResponsiveHeader = true;

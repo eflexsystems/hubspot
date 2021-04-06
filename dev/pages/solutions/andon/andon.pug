@@ -10,17 +10,17 @@ append content
 		.row.align-items-center
 			.col
 				.p-3.p-lg-5
-					h1.display-1.text-uppercase
+					h1.display-lg-1.text-uppercase
 						+rawHtml ({
 							name: 'h_intro',
 							value: 'Data-driven Decision-making.'
 						})
 					
-					p.lead
+					p.lead-md
 						+rawHtml ({
 							name: 'p_intro',
 							value: 'Ensuring that every employee, from the shop floor to the front office, is on the same page requires timely, nonstop communication. With eFlex Andon, employees can quickly view production information and company announcements. This allows everyone to receive clear and consistent information, stay informed, and be prepared to take action in response to changing conditions.',
-							class: 'lead'
+							class: 'lead-md-md'
 						})
 				
 			.col
@@ -35,7 +35,7 @@ append content
 		.p-3.p-lg-5
 			.row.mb-5
 				.col-12.col-lg-6
-					h1.display-1.text-uppercase.mb-0
+					h1.display-lg-1.text-uppercase.mb-0
 						+rawHtml ({
 							name: 'title_keyFeatures',
 							value: 'Key Features'
@@ -166,20 +166,21 @@ append content
 			.row.h-100
 				.col-12.col-lg-6
 					.p-3.p-lg-5
-						h2.display-1.text-white.text-uppercase
+						h2.display-lg-1.text-white.text-uppercase
 							+rawHtml ({
 								name: 'h_questions',
 								value: 'Have Questions?'
 							})
 								
-						p.lead.text-white.mb-5
+						p.lead-md.text-white.mb-5
 							+rawHtml ({
 								name: 'p_questions',
 								value: 'Contact an eFlex team member to learn more about eFlex Andon or any of our other reliable solutions. Let\'s see how we can best fit your manufacturing needs.',
-								class: 'text-white lead'
+								class: 'text-white lead-md'
 							})
 
 						+cta ({
 							name: 'cta_questions',
-							variant: 'outline-white'
+							variant: 'outline',
+							color: 'white'
 						})
