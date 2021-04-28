@@ -12,6 +12,8 @@ block content
 			//- Left Side
 			.col-6.py-5.bg-gray-700
 				.p-3.p-lg-5
+					svg( width="100" height="100" viewBox="0 0 24 24" )
+						path( d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" )
 
 			//- Right Side
 			.col-6
@@ -82,21 +84,14 @@ block content
 								h4.text-uppercase.fw-bolder.text-white.mb-4
 									+rawHtml ({
 										name: 'h1_advantage',
-										value: 'Our Advantage.',
+										value: 'Industry 4.0 Goals.',
 										class: 'text-white'
 									})
 
 								h1.display-lg-1.text-uppercase.text-white.mb-4
 									+rawHtml ({
 										name: 'h2_advantage',
-										value: 'Robust and Cohesive Functionality',
-										class: 'text-white'
-									})
-
-								p.text-white
-									+rawHtml ({
-										name: 'p1_advantage',
-										value: 'eFlex\'s MIP is the most competitive platform on the market.',
+										value: 'Transitioning to the Digital Era',
 										class: 'text-white'
 									})
 								
@@ -107,9 +102,26 @@ block content
 										class: 'text-white'
 									})
 							
-							
-							.row
-								.col-12.col-lg-5
+							mixin proconFeature(args)
+								.row.mb-5
+									.col-auto
+										i.fas.fa-3x.text-primary( class='fa-' + args.icon )
+									.col
+										h4.text-uppercase.text-primary.mb-2
+											+rawHtml ({
+												name: 'h' + args.index + '_' + args.group,
+												value: args.heading ? args.heading : loremipsum_sm,
+												class: 'text-primary'
+											})
+										p.text-white
+											+rawHtml ({
+												name: 'p' + args.index + '_' + args.group,
+												value: args.body ? args.body : loremipsum_md,
+												class: 'text-white'
+											})
+
+							.row.g-5
+								.col-12.col-lg-6
 									h3.text-uppercase.fw-bolder.text-white.mb-5
 										+rawHtml ({
 											name: 'h_fail',
@@ -117,57 +129,133 @@ block content
 											class: 'text-white'
 										})
 									
-									mixin fail()
-										.row.mb-5
-											.col-auto
-												i.fas.fa-desktop.fa-3x.text-primary
-											.col
-												h4.text-uppercase.text-white.mb-1
-													+rawHtml ({
-														name: 'h1_fail',
-														value: 'Other platforms suck.',
-														class: 'text-white'
-													})
-												p.text-white
-													+rawHtml ({
-														name: 'p1_fail',
-														value: 'Other products are really bad. Like so bad that it makes you mad and waste money. We\'re here to save the day.',
-														class: 'text-white'
-													})
-									
-									+fail
-									+fail
-									+fail
+									+proconFeature ({
+										index: 1,
+										heading: 'Missing the problem and data-based objectives up front',
+										body: 'If you don\’t know what you\’re trying to solve for your Industry 4.0 goals will become over complicated and lead to inaction.  Start with identifying and solving one problem now and lay a framework to more easily solve future problems.',
+										group: 'fail',
+										icon: 'times'
+									})
 
-								.col-12.col-lg-5.mx-lg-auto
+									+proconFeature ({
+										index: 2,
+										heading: 'Not Process Savvy',
+										body: 'Misunderstanding the internal manufacturing process. This is key when trying to develop and implement a digital framework.',
+										group: 'fail',
+										icon: 'times'
+									})
+
+									+proconFeature ({
+										index: 3,
+										heading: 'No Internal Champion',
+										body: 'No key person in-house with product and process knowledge to lead the initiative and act as a key support resource to team members. This person embraces change with a strong, measurable impact on your technology\'s adoption and success.',
+										group: 'fail',
+										icon: 'times'
+									})
+
+									+proconFeature ({
+										index: 4,
+										heading: 'No Management Support',
+										body: 'Project being driven from the bottom-up with no upper management support. Not willing to invest the time and resources to deploy and manage the project which can often have a 2-3 year commitment.',
+										group: 'fail',
+										icon: 'times'
+									})
+
+									+proconFeature ({
+										index: 5,
+										heading: 'Company Culture',
+										body: 'Content with the status quo and don’t feel digitalization will make a difference. Not invested in the project or its success.',
+										group: 'fail',
+										icon: 'times'
+									})
+
+									+proconFeature ({
+										index: 6,
+										heading: 'Not Data Driven',
+										body: 'Not utilizing and optimizing data opportunities to drive continuous improvement, measure project objectives and ROI.',
+										group: 'fail',
+										icon: 'times'
+									})
+
+									+proconFeature ({
+										index: 7,
+										heading: 'Data Silos',
+										body: 'Departmental, isolated data silos and teams that prevent a collaborative environment and unified goals. Without a clear view of all relevant data, appropriate decision-making and Industry 4.0 goals are hindered.',
+										group: 'fail',
+										icon: 'times'
+									})
+
+								.col-12.col-lg-6.mx-lg-auto
 									h3.text-uppercase.fw-bolder.text-white.mb-5
 										+rawHtml ({
 											name: 'h_succeed',
-											value: 'Why We Succeed',
+											value: 'Why Projects Succeed',
 											class: 'text-white'
 										})
-
-									mixin succeed()
-										.row.mb-5
-											.col-auto
-												i.fas.fa-desktop.fa-3x.text-primary
-											.col
-												h4.text-uppercase.text-white.mb-1
-													+rawHtml ({
-														name: 'h1_succeed',
-														value: 'Other platforms suck.',
-														class: 'text-white'
-													})
-												p.text-white
-													+rawHtml ({
-														name: 'p1_succeed',
-														value: 'Other products are really bad. Like so bad that it makes you mad and waste money. We\'re here to save the day.',
-														class: 'text-white'
-													})
 									
-									+succeed
-									+succeed
-									+succeed
+									+proconFeature ({
+										index: 1,
+										heading: 'Manufacturing Expertise',
+										body: 'We get manufacturing! Our team has grown from the factory floor up, with engineering and process management backgrounds to help solve some of the toughest problems.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 2,
+										heading: 'Mission Critical Technology',
+										body: 'MIP is developed using innovative, secure, web-based technology with focus on mobile, cloud, big data analytics and mission critical manufacturing operations.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 3,
+										heading: 'Simplified Process Control - Even in High Mix Assembly',
+										body: 'Flexible configurations and advanced process control. Error proofing and traceability, even in complex manufacturing, has never been easier.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 4,
+										heading: 'Plug-n-play Device Connectivity',
+										body: 'Connectivity and direct control covering a wide range of PLCs, sensors, applications and virtually any data source.  Plug-n-play, comprehensive solution with no programming or app templates required.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 5,
+										heading: 'Scalable',
+										body: 'MIP is a scalable Industry 4.0 solution that grows with you when you\’re ready – whether factory-wide or throughout the enterprise globally.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 6,
+										heading: 'Data Insight & Business Intelligence',
+										body: 'Collect data from people, processes and assets with MIP. Easily turn granular data into real-time visibility and insight of operations for continuous improvement and a competitive advantage.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 7,
+										heading: 'Support through the whole process',
+										body: 'We want your digitization goals to be a success! Our dedicated support team along with the online eFlex Learning Center will help you every step of the way.',
+										group: 'succeed',
+										icon: 'check'
+									})
+
+									+proconFeature ({
+										index: 8,
+										heading: 'Return on Value (ROV) & Return on Investment (ROI)',
+										body: 'With data insight through MIP, manufacturers get significant return to value with support in making process, operational and strategic decisions.  ROI typically follows. Our customers have reported up to 3 million in cost savings within the first year of implementation within their facility from improvements in cycle times, parts per hour and first time quality scores.',
+										group: 'succeed',
+										icon: 'check'
+									})
 								
 					mixin feature(args)
 						.mb-4
@@ -208,13 +296,6 @@ block content
 										value: 'It’s one integrated platform. It’s all connected so it doesn’t need months to configure. You can be up and running in just a few days. No more complex layers— no more vendors trying to talk to each other across your manufacturing environment. Turn new solutions on instantly. Workflows can be changed iteratively and quickly, as the system learns and reacts.',
 										class: 'text-white'
 									})
-						
-							- var n = 1
-							while n <= 6
-								+feature ({
-									index: n++,
-									group: 'configureFeature'
-								})
 					
 					//- Connect
 					.py-5.bg-gray-700
@@ -223,7 +304,7 @@ block content
 								h1.display-lg-1.text-uppercase.text-white.mb-4
 									+rawHtml ({
 										name: 'h1_connect',
-										value: 'Configure',
+										value: 'Connect',
 										class: 'text-white'
 									})
 
@@ -304,7 +385,7 @@ block content
 					//- Collect & Improve
 					.py-5.bg-gray-700
 						.p-3.p-lg-5
-							.mb-5.pb-4
+							.mb-4
 								h1.display-lg-1.text-uppercase.text-white.mb-4
 									+rawHtml ({
 										name: 'h1_collect',
@@ -340,57 +421,60 @@ block content
 								group: 'collectFeature'
 							})
 
-							+feature ({
-								index: 2,
-								heading: 'Station Cycle Times',
-								group: 'collectFeature'
-							})
+							mixin featureBullet(args)
+								.d-flex.align-items-center.mb-3
+									i.fas.fa-circle.text-primary.me-2
+									p.text-white.mb-0
+										+rawHtml ({
+												name: 'h' + args.index + '_' + args.group,
+												value: args.value,
+												class: 'text-white'
+											})
+							.row.g-5
+								.col-12.col-lg-6
+									+featureBullet ({
+										index: 1,
+										value: 'Station Cycle Times'
+									})
 
-							+feature ({
-								index: 3,
-								heading: 'Quality Summary',
-								group: 'collectFeature'
-							})
+									+featureBullet ({
+										index: 2,
+										value: 'Quality Summary'
+									})
 
-							+feature ({
-								index: 4,
-								heading: 'Torque Tool Data',
-								group: 'collectFeature'
-							})
+									+featureBullet ({
+										index: 3,
+										value: 'Torque Tool Data'
+									})
+									
+									+featureBullet ({
+										index: 4,
+										value: 'Repair, Rework, Reject Codes'
+									})
 
-							+feature ({
-								index: 5,
-								heading: 'Repair, Rework, Reject Codes',
-								group: 'collectFeature'
-							})
+									+featureBullet ({
+										index: 5,
+										value: 'Material Usage'
+									})
 
-							+feature ({
-								index: 6,
-								heading: 'Material Usage',
-								group: 'collectFeature'
-							})
+								.col-12.col-lg-6
+									+featureBullet ({
+										index: 6,
+										value: 'Shift Summary'
+									})
 
-							+feature ({
-								index: 7,
-								heading: 'Shift Summary',
-								group: 'collectFeature'
-							})
+									+featureBullet ({
+										index: 7,
+										value: 'OEE & Downtime'
+									})
 
-							+feature ({
-								index: 8,
-								heading: 'OEE & Downtime',
-								group: 'collectFeature'
-							})
+									+featureBullet ({
+										index: 8,
+										value: 'Genealogy & Part History'
+									})
 
-							+feature ({
-								index: 9,
-								heading: 'Genealogy & Part History',
-								group: 'collectFeature'
-							})
-
-							+feature ({
-								index: 10,
-								heading: 'Line Balance Report',
-								group: 'collectFeature'
-							})
+									+featureBullet ({
+										index: 9,
+										value: 'Line Balance Report'
+									})
 

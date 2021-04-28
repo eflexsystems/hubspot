@@ -28,7 +28,7 @@ html
 
 		//- Template Specific Styles
 		block styles
-			link( href!="./style.css" )
+			| {{ require_css(get_asset_url("./style.css")) }}
 
 		//- Jquery
 		script( src='https://code.jquery.com/jquery-3.3.1.min.js' )

@@ -1,9 +1,0 @@
-[ {
-  "id" : "a53e912b-8fcf-f27b-1f5d-683ab40b4d7a",
-  "name" : "menu_field",
-  "label" : "Menu",
-  "required" : false,
-  "locked" : true,
-  "type" : "menu",
-  "default" : 34807156321
-} ]

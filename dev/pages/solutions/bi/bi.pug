@@ -1,6 +1,191 @@
 //- bi.pug
 extends ../../../templates/_template_masthead.pug
 
-prepend script
-    script( type='text/javascript' )
-        include ./script.js
+append script
+	script( type='text/javascript' )
+		include ./script.js
+
+append content
+	.container.py-5
+		.row.align-items-center
+			.col-12.col-lg
+				.p-3.p-lg-5
+					h1.display-lg-1.text-uppercase
+						+rawHtml ({
+							name: 'h_intro',
+							value: 'Unleash the Power of Data.'
+						})
+					
+					p.lead-md
+						+rawHtml ({
+							name: 'p_intro',
+							value: 'Access is the first step in harnessing the power of data. eFlex\'s embedded configuration and control of manufacturing processes provides access to data down to the task level. Granular, real-time visibility and insight of operations for continuous improvement initiatives and a competitive advantage.',
+							class: 'lead-md-md'
+						})
+				
+			.col-12.col-lg
+				.p-3.p-lg-5
+					+image ({
+						name: 'image_intro',
+						src: 'https://picsum.photos/400/200'
+					})
+
+	//- Dashboards
+	.container.py-5
+		.row.align-items-center
+			.col-12.col-lg
+				.p-3.p-lg-5
+					+image ({
+						name: 'image_dashboards',
+						src: 'https://picsum.photos/400/200'
+					})
+			.col-12.col-lg
+				.p-3.p-lg-5
+						.mb-5
+							h1.display-lg-1.text-uppercase
+								+rawHtml ({
+									name: 'h1_dashboards',
+									value: 'Powerful Reports & Dashboards.'
+								})
+
+							h4.text-uppercase
+								+rawHtml ({
+									name: 'h2_dashboards',
+									value: 'Get actionable insight for every station, line, plant or enterprise wide needs.'
+								})
+						
+							p
+								+rawHtml ({
+									name: 'p_dashboards',
+									value: 'Every business has different processes, data capture requirements, and needs. With eFlex\'s Business Intelligence, turn data silos into useful information viewed in powerful reports and dashboards. Get access to the information that\'s most critical to your operations, with virtually unlimited configurations. Monitor trends, easily identify outliers, and receive alerts when critical parameters are out of control. Link to other database if necessary and get actionable insight into your operations.',
+									})
+
+						+cta ({
+							name: 'cta_dashboards',
+							color: 'primary',
+						})
+	
+	//- Report Types
+	.container.py-5
+		.row.justify-content-lg-center.text-lg-center
+			.col-12.col-lg-6
+				.p-3.p-lg-5
+					h1.text-uppercase
+						+rawHtml ({
+							name: 'h_reportTypes',
+							value: 'Big Data at Your Fingertips.'
+						})
+					
+					p.lead-md
+						+rawHtml ({
+							name: 'h_reportTypes',
+							value: 'Seamlessly collect, display, analyze and act on information including, but not limited to:',
+							class: 'lead-md'
+						})
+		.p-3.p-lg-5
+			.row.justify-content-lg-center.text-lg-center
+				mixin reportType(args)
+					.col-12.col-sm-6.col-md-4.col-lg-3.mb-4
+						i.fas.fa-4x.mb-2( class='fa-' + (args.icon ? args.icon : 'tools') )
+						p.fst-italic
+							+rawHtml ({
+									name: 'p' + args.id + '_reportType',
+									value: args.heading ? args.heading : 'Heading',
+									class: 'fst-italic'
+								})
+					
+				+reportType ({
+					id: 1,
+					icon: 'clock',
+					heading: 'Station Cycle Times'
+				})
+
+				+reportType ({
+					id: 2,
+					icon: 'award',
+					heading: 'Quality Summary'
+				})
+
+				+reportType ({
+					id: 3,
+					icon: 'sync',
+					heading: 'Torque Tool Data'
+				})
+
+				+reportType ({
+					id: 4,
+					icon: 'tools',
+					heading: 'Repair, Rework, Reject Codes'
+				})
+
+				+reportType ({
+					id: 5,
+					icon: 'box-open',
+					heading: 'Material Usage'
+				})
+
+				+reportType ({
+					id: 6,
+					icon: 'history',
+					heading: 'Shift Summary'
+				})
+
+				+reportType ({
+					id: 7,
+					icon: 'stop-circle',
+					heading: 'OEE / Downtime'
+				})
+
+				+reportType ({
+					id: 8,
+					icon: 'code-branch',
+					heading: 'Genealogy & Part History'
+				})
+
+				+reportType ({
+					id: 9,
+					icon: 'chart-bar',
+					heading: 'Line Balance Report'
+				})
+
+				+reportType ({
+					id: 10,
+					icon: 'infinity',
+					heading: 'and so much more!'
+				})
+
+	//- Consultation
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		.responsive-clip-path.w-100.h-100.position-absolute( style='z-index: -1; box-sizing: border-box; pointer-events: none; top: 0' )
+			+image ({
+				name: 'image_consultation',
+				src: 'https://picsum.photos/900/500'
+			})
+	
+		.container.py-5
+				.row
+					.col.col-lg-6
+						.p-3.p-lg-5
+							h1.display-lg-1.text-uppercase.text-white
+								+rawHtml ({
+									name: 'h_consultation',
+									value: 'Talk to our experts',
+									class: 'text-white'
+								})
+						
+							p.lead-md.text-white.mb-5
+								+rawHtml ({
+									name: 'p_consultation',
+									value: 'Get a free consultation with our engineering sales team!',
+									class: 'lead-md text-white'
+								})
+
+							+cta ({
+								name: 'cta_consultation',
+								variant: 'outline',
+								color: 'white'
+							})
+				
