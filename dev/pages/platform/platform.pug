@@ -44,6 +44,8 @@ block content
 									value: 'It\’s powered by eFlex\’s Manufacturing Integrated Platform – or MIP for short.  Built from the ground up to address the manufacturing data gap, MIP provides a connected, collaborative, data-driven environment for real-time visibility and insight.',
 								})
 
+							//- .btn.btn-primary.text-uppercase Button
+
 							+cta ({
 								name: 'cta_masthead',
 								guid: 'f8b9429a-a9bd-4e34-a063-f573f8ecbf2d',
@@ -51,7 +53,7 @@ block content
 							})
 					
 					//- Simplified
-					.py-5.bg-gray-700
+					.pt-5.bg-gray-700
 						.p-3.p-lg-5
 							h4.text-uppercase.fw-bolder.text-white.mb-4
 								+rawHtml ({
@@ -82,7 +84,7 @@ block content
 								})
 					
 					//- Competetive Advantage
-					.py-5.bg-gray-700
+					.pt-5.bg-gray-700
 						.p-3.p-lg-5
 							.mb-5
 								h4.text-uppercase.fw-bolder.text-white.mb-4
@@ -106,16 +108,16 @@ block content
 										class: 'text-white'
 									})
 							
-							mixin proconFeature(args)
+							mixin proConFeature(args)
 								.row.mb-5
 									.col-auto
-										i.fas.fa-3x.text-primary( class='fa-' + args.icon )
+										i.fas.fa-3x.text-primary-light( class='fa-' + args.icon )
 									.col
-										h4.text-uppercase.text-primary.mb-2
+										h4.text-uppercase.text-primary-light.mb-2
 											+rawHtml ({
 												name: 'h' + args.index + '_' + args.group,
 												value: args.heading ? args.heading : loremipsum_sm,
-												class: 'text-primary'
+												class: 'text-primary-light'
 											})
 										p.text-white
 											+rawHtml ({
@@ -133,7 +135,7 @@ block content
 											class: 'text-white'
 										})
 									
-									+proconFeature ({
+									+proConFeature ({
 										index: 1,
 										heading: 'Missing the problem and data-based objectives up front',
 										body: 'If you don\’t know what you\’re trying to solve for your Industry 4.0 goals will become over complicated and lead to inaction.  Start with identifying and solving one problem now and lay a framework to more easily solve future problems.',
@@ -141,7 +143,7 @@ block content
 										icon: 'times'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 2,
 										heading: 'Not Process Savvy',
 										body: 'Misunderstanding the internal manufacturing process. This is key when trying to develop and implement a digital framework.',
@@ -149,7 +151,7 @@ block content
 										icon: 'times'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 3,
 										heading: 'No Internal Champion',
 										body: 'No key person in-house with product and process knowledge to lead the initiative and act as a key support resource to team members. This person embraces change with a strong, measurable impact on your technology\'s adoption and success.',
@@ -157,7 +159,7 @@ block content
 										icon: 'times'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 4,
 										heading: 'No Management Support',
 										body: 'Project being driven from the bottom-up with no upper management support. Not willing to invest the time and resources to deploy and manage the project which can often have a 2-3 year commitment.',
@@ -165,7 +167,7 @@ block content
 										icon: 'times'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 5,
 										heading: 'Company Culture',
 										body: 'Content with the status quo and don’t feel digitalization will make a difference. Not invested in the project or its success.',
@@ -173,7 +175,7 @@ block content
 										icon: 'times'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 6,
 										heading: 'Not Data Driven',
 										body: 'Not utilizing and optimizing data opportunities to drive continuous improvement, measure project objectives and ROI.',
@@ -181,7 +183,7 @@ block content
 										icon: 'times'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 7,
 										heading: 'Data Silos',
 										body: 'Departmental, isolated data silos and teams that prevent a collaborative environment and unified goals. Without a clear view of all relevant data, appropriate decision-making and Industry 4.0 goals are hindered.',
@@ -197,7 +199,7 @@ block content
 											class: 'text-white'
 										})
 									
-									+proconFeature ({
+									+proConFeature ({
 										index: 1,
 										heading: 'Manufacturing Expertise',
 										body: 'We get manufacturing! Our team has grown from the factory floor up, with engineering and process management backgrounds to help solve some of the toughest problems.',
@@ -205,7 +207,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 2,
 										heading: 'Mission Critical Technology',
 										body: 'MIP is developed using innovative, secure, web-based technology with focus on mobile, cloud, big data analytics and mission critical manufacturing operations.',
@@ -213,7 +215,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 3,
 										heading: 'Simplified Process Control - Even in High Mix Assembly',
 										body: 'Flexible configurations and advanced process control. Error proofing and traceability, even in complex manufacturing, has never been easier.',
@@ -221,7 +223,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 4,
 										heading: 'Plug-n-play Device Connectivity',
 										body: 'Connectivity and direct control covering a wide range of PLCs, sensors, applications and virtually any data source.  Plug-n-play, comprehensive solution with no programming or app templates required.',
@@ -229,7 +231,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 5,
 										heading: 'Scalable',
 										body: 'MIP is a scalable Industry 4.0 solution that grows with you when you\’re ready – whether factory-wide or throughout the enterprise globally.',
@@ -237,7 +239,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 6,
 										heading: 'Data Insight & Business Intelligence',
 										body: 'Collect data from people, processes and assets with MIP. Easily turn granular data into real-time visibility and insight of operations for continuous improvement and a competitive advantage.',
@@ -245,7 +247,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 7,
 										heading: 'Support through the whole process',
 										body: 'We want your digitization goals to be a success! Our dedicated support team along with the online eFlex Learning Center will help you every step of the way.',
@@ -253,7 +255,7 @@ block content
 										icon: 'check'
 									})
 
-									+proconFeature ({
+									+proConFeature ({
 										index: 8,
 										heading: 'Return on Value (ROV) & Return on Investment (ROI)',
 										body: 'With data insight through MIP, manufacturers get significant return to value with support in making process, operational and strategic decisions.  ROI typically follows. Our customers have reported up to 3 million in cost savings within the first year of implementation within their facility from improvements in cycle times, parts per hour and first time quality scores.',
@@ -262,7 +264,7 @@ block content
 									})
 								
 					mixin feature(args)
-						.mb-4
+						.mb-5
 							h4.text-uppercase.text-white.mb-2
 								+rawHtml ({
 									name: 'h' + args.index + '_' + args.group,
@@ -277,7 +279,7 @@ block content
 								})
 
 					//- Configure
-					.py-5.bg-gray-700
+					.pt-5.bg-gray-700
 						.p-3.p-lg-5
 							.mb-5.pb-4
 								h1.display-lg-1.text-uppercase.text-white.mb-4
@@ -302,7 +304,7 @@ block content
 									})
 					
 					//- Connect
-					.py-5.bg-gray-700
+					.pt-5.bg-gray-700
 						.p-3.p-lg-5
 							.mb-5.pb-4
 								h1.display-lg-1.text-uppercase.text-white.mb-4
@@ -355,7 +357,7 @@ block content
 							})
 						
 					//- Control
-					.py-5.bg-gray-700
+					.pt-5.bg-gray-700
 						.p-3.p-lg-5
 							.mb-5.pb-4
 								h1.display-lg-1.text-uppercase.text-white.mb-4
@@ -389,7 +391,7 @@ block content
 					//- Collect & Improve
 					.py-5.bg-gray-700
 						.p-3.p-lg-5
-							.mb-4
+							.mb-5
 								h1.display-lg-1.text-uppercase.text-white.mb-4
 									+rawHtml ({
 										name: 'h1_collect',
@@ -427,7 +429,7 @@ block content
 
 							mixin featureBullet(args)
 								.d-flex.align-items-center.mb-3
-									i.fas.fa-circle.text-primary.me-2
+									i.fas.fa-circle.text-primary-light.me-2
 									p.text-white.mb-0
 										+rawHtml ({
 												name: 'h' + args.index + '_' + args.group,

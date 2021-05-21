@@ -1,4 +1,4 @@
-let scrollResponsiveHeader = true;
+scrollResponsiveHeader = true;
 
 $('#carousel-spotlight').slick({
     slidesToShow: 1,

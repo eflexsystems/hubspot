@@ -1,12 +1,12 @@
 // Brand Identity Color Scheme
 $prussian-blue: #00274e; // Darkest Blue
-$tory-blue: #0064b2; // Blue
-$bal-hai: #93a4b7; // Light Blue
+$curious-blue: #2b90e2;
+$jordy-blue: #62adea; // Light Blue
 $mystic: #e6ecf1; // Lightest Blue
 $abbey: #464749; // Dark Gray
 $star-dust: #a2a2a0; // Gray
 $westar: #e1dfdd; // Light Gray
-$white: #ffffff;
+$white: #ffffff; // White
 $tia-maria: #d2611c; // Dark Orange
 $orange-peel: #ff9a00; // Orange
 
@@ -27,14 +27,14 @@ $limeade: #7ab200; // Dark Teal
 $forest-green: #23af41; // Dark Green
 $bondi-blue: #00a6b4; // Dark Cyan
 $tory-blue: #0c65b1; // Blue
-$butterfly-bush: #5151a5; // Dark Purple 
+$butterfly-bush: #5151a5; // Dark Purple
 
 // Grayscale
 $gray-100: #f2f2f2;
 $gray-200: $westar;
 $gray-300: #d5d6d3;
 $gray-400: $star-dust;
-$gray-500: #70747A;
+$gray-500: #70747a;
 $gray-600: #636466;
 $gray-700: $abbey;
 $gray-800: #323535;
@@ -43,57 +43,55 @@ $black: #1f2121;
 $none: #00000000;
 
 $grays: (
-  "gray-100": $gray-100,
-  "gray-200": $gray-200,
-  "gray-300": $gray-300,
-  "gray-400": $gray-400,
-  "gray-500": $gray-500,
-  "gray-600": $gray-600,
-  "gray-700": $gray-700,
-  "gray-800": $gray-800,
-  "gray-900": $gray-900,
-  "black": $black,
-  "none": $none
+	'gray-100': $gray-100,
+	'gray-200': $gray-200,
+	'gray-300': $gray-300,
+	'gray-400': $gray-400,
+	'gray-500': $gray-500,
+	'gray-600': $gray-600,
+	'gray-700': $gray-700,
+	'gray-800': $gray-800,
+	'gray-900': $gray-900,
+	'black': $black,
+	'none': $none,
 );
 
 $colors: (
-  "red": $mojo,
-  "orange": $orange-peel,
-  "yellow": $saffron-mango,
-  "green": $malachite,
-  "teal": $pear,
-  "cyan": $turquoise,
-  "blue": $curious-blue,
-  "purple": $cornflower-blue
+	'red': $mojo,
+	'orange': $orange-peel,
+	'yellow': $saffron-mango,
+	'green': $malachite,
+	'teal': $pear,
+	'cyan': $turquoise,
+	'blue': $curious-blue,
+	'purple': $cornflower-blue,
 );
 
 $colors-dark: (
-  "red-dark": $medium-carmine,
-  "orange-dark": $tia-maria,
-  "yellow-dark": $old-gold,
-  "teal-dark": $limeade,
-  "green-dark": $forest-green,
-  "cyan-dark": $bondi-blue,
-  "blue-dark": $tory-blue,
-  "purple-dark": $butterfly-bush,
-  "primary-dark": $tory-blue
+	'red-dark': $medium-carmine,
+	'orange-dark': $tia-maria,
+	'yellow-dark': $old-gold,
+	'teal-dark': $limeade,
+	'green-dark': $forest-green,
+	'cyan-dark': $bondi-blue,
+	'blue-dark': $tory-blue,
+	'purple-dark': $butterfly-bush,
+	'primary-dark': $tory-blue,
 );
 
 $theme-colors: (
-  "brand": $tory-blue,
-  "brand-dark": $prussian-blue,
-  "brand-light": $mystic,
-  "primary": map-get($colors, "blue"),
-  "secondary": $tia-maria,
-  "success": map-get($colors, "green"),
-  "info": $tory-blue,
-  "warning": map-get($colors, "orange"),
-  "danger": map-get($colors, "red"),
-  "gray-light": $gray-300,
-  "gray": $star-dust,
-  "gray-dark": $abbey,
-  "white": $white,
-  "none": $none
+	'primary': map-get($colors, 'blue'),
+	'primary-light': $jordy-blue,
+	'secondary': $tia-maria,
+	'success': map-get($colors, 'green'),
+	'info': $tory-blue,
+	'warning': map-get($colors, 'orange'),
+	'danger': map-get($colors, 'red'),
+	'gray-light': $gray-300,
+	'gray': $star-dust,
+	'gray-dark': $abbey,
+	'white': $white,
+	'none': $none,
 );
 
 $theme-colors: map-merge($theme-colors, $colors);

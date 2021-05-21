@@ -59,11 +59,9 @@ html
 		//- Variables
 		block variables
 
-		//- Padding to push content below the height of the header.
-		.pt-6
-			//- Content
-			block content
-
+		//- Content
+		block content
+			
 		//- Hubspot Footer Includes
 		| {{ standard_footer_includes }}
 
@@ -76,7 +74,7 @@ html
 			.vw-100.vh-100.d-flex.justify-content-center.align-items-center.position-absolute( style='top: 0')
 				i.fas.fa-circle-notch.fa-3x.fa-spin.text-gray-200
 
-		script(type='text/javascript')
+		script(type='text/javascript' defer)
 			//- Use the js added to hubspot later
 			include ../script/script.js
 			
