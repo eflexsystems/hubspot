@@ -2,7 +2,7 @@
 
 $border-width: 0.5px;
 $border-color: map-get($theme-colors, 'gray-800');
-$body-bg: map-get($theme-colors, 'white');
+$body-bg: map-get($theme-colors, 'gray-800');
 
 // Container
 $container-max-widths: (

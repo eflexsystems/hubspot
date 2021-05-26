@@ -30,44 +30,45 @@ prepend content
 append content
 
 	//- What we do
-	.container.py-5
-		.row.align-items-center.justify-content-between.mb-5.mb-lg-0
-			.col-12.col-lg-4
-				.p-3.p-lg-5
-					h3.text-gray-400.text-uppercase
-						+rawHtml ({
-							name: 'h1_whatWeDo',
-							value: 'What we do?'
-						})
+	.bg-white
+		.container.py-5
+			.row.align-items-center.justify-content-between.mb-5.mb-lg-0
+				.col-12.col-lg-4
+					.p-3.p-lg-5
+						h3.text-gray-400.text-uppercase
+							+rawHtml ({
+								name: 'h1_whatWeDo',
+								value: 'What we do?'
+							})
+						
+						h1.display-2.text-uppercase.text-break.text-lg-nowrap
+							+rawHtml ({
+								name: 'h2_whatWeDo',
+								value: 'Innovate Simplify & Improve'
+							})
 					
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+				.col-12.col-lg-8
+					.p-3.p-lg-5
+						p.lead-md.mb-0
+							+rawHtml ({
+								name: 'p1_whatWeDo',
+								class: 'lead-md-md',
+								value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
+							})
+			
+			//- What we do: Our Advantage
+			.row.align-items-center.p-3.p-lg-5.mb-5.mb-lg-0
+				.col
+					h3.text-gray-400.text-uppercase.mb-5
 						+rawHtml ({
-							name: 'h2_whatWeDo',
-							value: 'Innovate Simplify & Improve'
+							name: 'h_ourFounding',
+							value: 'Why We Do It?'
 						})
-				
-			.col-12.col-lg-8
-				.p-3.p-lg-5
-					p.lead-md.mb-0
+					p.col-n.col-n-lg-2
 						+rawHtml ({
-							name: 'p1_whatWeDo',
-							class: 'lead-md-md',
-							value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
+							name: 'p_ourFounding',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
 						})
-		
-		//- What we do: Our Advantage
-		.row.align-items-center.p-3.p-lg-5.mb-5.mb-lg-0
-			.col
-				h3.text-gray-400.text-uppercase.mb-5
-					+rawHtml ({
-						name: 'h_ourFounding',
-						value: 'Why We Do It?'
-					})
-				p.col-n.col-n-lg-2
-					+rawHtml ({
-						name: 'p_ourFounding',
-						value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
-					})
 
 	//- Mission Statement
 	.position-relative
@@ -103,45 +104,46 @@ append content
 						i.fas.fa-quote-right.fa-3x.text-white
 
 	//- Who we are
-	.container.py-5
-		.row.align-items-center.mb-5.mb-lg-0
-			.col-12.col-lg-4
-				.p-3.p-lg-5
-					h3.text-gray-400.text-uppercase
-						+rawHtml ({
-							name: 'h1_whoWeAre',
-							value: 'Who we are?'
-						})
+	.bg-white
+		.container.py-5
+			.row.align-items-center.mb-5.mb-lg-0
+				.col-12.col-lg-4
+					.p-3.p-lg-5
+						h3.text-gray-400.text-uppercase
+							+rawHtml ({
+								name: 'h1_whoWeAre',
+								value: 'Who we are?'
+							})
+						
+						h1.display-2.text-uppercase.text-break.text-lg-nowrap
+							+rawHtml ({
+								name: 'h2_whoWeAre',
+								value: 'Engineers Coders & Visionaries'
+							})
 					
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap
+				.col-12.col-lg-8
+					.p-3.p-lg-5
+						p.lead-md.mb-0
+							+rawHtml ({
+								name: 'p_whoWeAre',
+								class: 'lead-md-md',
+								value: 'Our team has grown from the manufacturing floor up, with engineering and process management backgrounds.  We truly understand manufacturing ecosystems and can help you realize your digitalization goals!'
+							})
+
+			//- What we do: Our Advantage
+			.row.align-items-center.p-3.p-lg-5.mb-5.mb-lg-0
+				.col
+					h3.text-gray-400.text-uppercase.mb-5
 						+rawHtml ({
-							name: 'h2_whoWeAre',
-							value: 'Engineers Coders & Visionaries'
-						})
-				
-			.col-12.col-lg-8
-				.p-3.p-lg-5
-					p.lead-md.mb-0
-						+rawHtml ({
-							name: 'p_whoWeAre',
-							class: 'lead-md-md',
-							value: 'Our team has grown from the manufacturing floor up, with engineering and process management backgrounds.  We truly understand manufacturing ecosystems and can help you realize your digitalization goals!'
+							name: 'h_ourAdvantage',
+							value: 'What makes us different?'
 						})
 
-		//- What we do: Our Advantage
-		.row.align-items-center.p-3.p-lg-5.mb-5.mb-lg-0
-			.col
-				h3.text-gray-400.text-uppercase.mb-5
-					+rawHtml ({
-						name: 'h_ourAdvantage',
-						value: 'What makes us different?'
-					})
-
-				p.col-n.col-n-lg-2
-					+rawHtml ({
-						name: 'p_ourAdvantage',
-						value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
-					})
+					p.col-n.col-n-lg-2
+						+rawHtml ({
+							name: 'p_ourAdvantage',
+							value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.'
+						})
 
 	//- Our Office
 	.container-fluid.g-0
@@ -170,187 +172,188 @@ append content
 	
 
 	//- Leadership
-	.container.py-5
-		.row.align-items-center.text-center
-			.col
-				.p-3.p-lg-5
-					h1.display-2.text-uppercase.text-break.text-lg-nowrap.mb-4
-						+rawHtml ({
-							name: 'h1_leadership',
-							value: 'Meet Our Leadership'
-						})
-					p.lead-md.mb-0
-						+rawHtml ({
-							name: 'p1_whatWeDo',
-							class: 'lead-md-md',
-							value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
-						})
+	.bg-white
+		.container.py-5
+			.row.align-items-center.text-center
+				.col
+					.p-3.p-lg-5
+						h1.display-2.text-uppercase.text-break.text-lg-nowrap.mb-4
+							+rawHtml ({
+								name: 'h1_leadership',
+								value: 'Meet Our Leadership'
+							})
+						p.lead-md.mb-0
+							+rawHtml ({
+								name: 'p1_whatWeDo',
+								class: 'lead-md-md',
+								value: 'eFlex Systems is changing manufacturing with innovative, software solutions. We strive to empower manufacturers to join the Industry 4.0 movement with cost effective, easy-to-use solutions, permitting them to become agile, data driven and best in class.'
+							})
 
-		mixin leadershipCard(args)
-			+card ({
-				name: args.name,
-				class: 'text-decoration-none',
-				title: {
-					value: args.person.name,
-					color: 'body',
-					fontSize: 'h4',
-				},
-				subTitle: {
-					value: args.person.position,
-					color: 'body',
-					fontSize: 'h6',
-				},
-				image: {
-					src: args.image.src,
-					alt: args.person.name + ', an eFlex Leader',
-				},
-				href: args.href,
-				newTab: true,
-				scale: true,
-				textOverlay: {
-					value: 'LINKEDIN PROFILE',
-					color: 'white',
-					bgColor: 'primary',
-					fontSize: 'h5',
-				},
-				content: 'bottom',
-			})
+			mixin leadershipCard(args)
+				+card ({
+					name: args.name,
+					class: 'text-decoration-none',
+					title: {
+						value: args.person.name,
+						color: 'body',
+						fontSize: 'h4',
+					},
+					subTitle: {
+						value: args.person.position,
+						color: 'body',
+						fontSize: 'h6',
+					},
+					image: {
+						src: args.image.src,
+						alt: args.person.name + ', an eFlex Leader',
+					},
+					href: args.href,
+					newTab: true,
+					scale: true,
+					textOverlay: {
+						value: 'LINKEDIN PROFILE',
+						color: 'white',
+						bgColor: 'primary',
+						fontSize: 'h5',
+					},
+					content: 'bottom',
+				})
 
-		.p-3.p-lg-5
-			.row.align-items-center.text-center.g-0.mb-4
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'danmckiernan',
-						person: {
-							name: 'Dan McKiernan',
-							position: 'President',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/dan-mckiernan-776b996/',
-					})
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'georgejewell',
-						person: {
-							name: 'George Jewell',
-							position: 'Vice President',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/georgejewell/',
-					})
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'davebeskin',
-						person: {
-							name: 'Dave Beskin',
-							position: 'Application Support Manager',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/david-beskin-577b9033/',
-					})
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'daveschwenke',
-						person: {
-							name: 'Dave Schwenke',
-							position: 'Director of Systems Integration',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.google.com',
-					})
-			.row.align-items-center.text-center.g-0.mb-4
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'tinakennedy',
-						person: {
-							name: 'Tina Kennedy',
-							position: 'Director of Marketing',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/tina-kennedy-0b853410/',
-					})
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'markparmelee',
-						person: {
-							name: 'Mark Parmelee',
-							position: 'Computer Operations & Support Manager',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/mark-parmelee-9a425162/',
-					})
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'jasonbullard',
-						person: {
-							name: 'Jason Bullard',
-							position: 'Director of Sales',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/jason-bullard-25b86b45/',
-					})
-				.col-12.col-lg
-					+leadershipCard ({
-						name: 'josheasterling',
-						person: {
-							name: 'Josh Easterling',
-							position: 'Inside Sales Manager',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/joshua-easterling-84006b137/',
-					})
-			.row.align-items-center.justify-content-center.text-center.g-0.mb-4
-				.col-12.col-lg-3
-					+leadershipCard ({
-						name: 'toddschlueter',
-						person: {
-							name: 'Todd Schlueter',
-							position: 'Project Account Manager',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/todd-schlueter-a87a7511/',
-					})
-				.col-12.col-lg-3
-					+leadershipCard ({
-						name: 'jacobjewell',
-						person: {
-							name: 'Jacob Jewell',
-							position: 'Manager of Software Development',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/jacob-jewell-95842027/',
-					})
-				.col-12.col-lg-3
-					+leadershipCard ({
-						name: 'rachelglomski',
-						person: {
-							name: 'Rachel Glomski',
-							position: 'Senior Software Developer',
-						},
-						image: {
-							src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
-						},
-						href: 'https://www.linkedin.com/in/rachelglomski/',
-					})
-			
+			.p-3.p-lg-5
+				.row.align-items-center.text-center.g-0.mb-4
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'danmckiernan',
+							person: {
+								name: 'Dan McKiernan',
+								position: 'President',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/dan-mckiernan-776b996/',
+						})
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'georgejewell',
+							person: {
+								name: 'George Jewell',
+								position: 'Vice President',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/georgejewell/',
+						})
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'davebeskin',
+							person: {
+								name: 'Dave Beskin',
+								position: 'Application Support Manager',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/david-beskin-577b9033/',
+						})
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'daveschwenke',
+							person: {
+								name: 'Dave Schwenke',
+								position: 'Director of Systems Integration',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.google.com',
+						})
+				.row.align-items-center.text-center.g-0.mb-4
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'tinakennedy',
+							person: {
+								name: 'Tina Kennedy',
+								position: 'Director of Marketing',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/tina-kennedy-0b853410/',
+						})
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'markparmelee',
+							person: {
+								name: 'Mark Parmelee',
+								position: 'Computer Operations & Support Manager',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/mark-parmelee-9a425162/',
+						})
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'jasonbullard',
+							person: {
+								name: 'Jason Bullard',
+								position: 'Director of Sales',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/jason-bullard-25b86b45/',
+						})
+					.col-12.col-lg
+						+leadershipCard ({
+							name: 'josheasterling',
+							person: {
+								name: 'Josh Easterling',
+								position: 'Inside Sales Manager',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/joshua-easterling-84006b137/',
+						})
+				.row.align-items-center.justify-content-center.text-center.g-0.mb-4
+					.col-12.col-lg-3
+						+leadershipCard ({
+							name: 'toddschlueter',
+							person: {
+								name: 'Todd Schlueter',
+								position: 'Project Account Manager',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/todd-schlueter-a87a7511/',
+						})
+					.col-12.col-lg-3
+						+leadershipCard ({
+							name: 'jacobjewell',
+							person: {
+								name: 'Jacob Jewell',
+								position: 'Manager of Software Development',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/jacob-jewell-95842027/',
+						})
+					.col-12.col-lg-3
+						+leadershipCard ({
+							name: 'rachelglomski',
+							person: {
+								name: 'Rachel Glomski',
+								position: 'Senior Software Developer',
+							},
+							image: {
+								src: 'https://expertphotography.com/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg',
+							},
+							href: 'https://www.linkedin.com/in/rachelglomski/',
+						})
+				
 			

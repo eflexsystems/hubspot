@@ -77,7 +77,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #464749;
-  background-color: #ffffff;
+  background-color: #323535;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(31, 33, 33, 0);
 }
@@ -602,7 +602,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #ffffff;
+  background-color: #323535;
   border: 0.5px solid #d5d6d3;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -2479,7 +2479,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #ffffff;
+  background-color: #323535;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2576,10 +2576,10 @@ textarea.form-control-lg {
   outline: none;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #323535, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #323535, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -5596,8 +5596,8 @@ textarea.form-control-lg {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #464749;
-  background-color: #ffffff;
-  border-color: #d5d6d3 #d5d6d3 #ffffff;
+  background-color: #323535;
+  border-color: #d5d6d3 #d5d6d3 #323535;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -0.5px;
@@ -6016,6 +6016,10 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .navbar .navbar-nav
   margin-bottom: -0.5rem;
   margin-left: -0.5rem;
   border-bottom: 0;
+}
+.card-header-tabs .nav-link.active {
+  background-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 .card-header-pills {
@@ -10332,7 +10336,7 @@ html[data-scroll="0"] #header.header-interactive:not(:hover) .navbar .navbar-nav
 }
 
 .bg-body {
-  background-color: #ffffff !important;
+  background-color: #323535 !important;
 }
 
 .bg-transparent {
