@@ -5,22 +5,43 @@ include ../image/_image.pug
 //- properties: [ name, src, alt ]
 
 mixin uiDevice(args)
-
+	
+	//- Desktop ratio = 16:9
 	if args.device === 'desktop' || args.device === undefined
+		- var deviceFrameSrc = 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/Device%20Frames/deviceFrame_desktop.png'
+		- var defaultSrc = 'https://picsum.photos/400/225'
 		- var top = '6.94%'
 		- var left = '5%'
 		- var width = '90.2%'
+	
+	//- Tablet ratio = 4:3
+	if args.device === 'tablet'
+		- var deviceFrameSrc = 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/Device%20Frames/deviceFrame_tablet.png'
+		- var defaultSrc = 'https://picsum.photos/400/300'
+		- var top = '5.3%'
+		- var left = '4.0%'
+		- var width = '92.8%'
+		- var height = '90.2%'
 
 	.position-relative.w-100.h-auto
-		img.w-100.h-100( src='https://f.hubspotusercontent00.net/hubfs/8439350/Images/Device%20Frames/deviceFrame_desktop.png' style='pointer-events: none;' )
+		img.w-100.h-100( src=deviceFrameSrc style='pointer-events: none;')
+		
+		if args.device === 'tablet'
+			.position-absolute( style='top: ' + top + '; left: ' + left + '; width: ' + width + '; height: ' + height + ';' )
+				.w-100.h-100.overflow-hidden( style='border-radius: 1rem; clip-path: inset(0 0 0 0)' )
+					+image ({
+						name: 'image_' + args.name,
+						src: args.src ? args.src : defaultSrc,
+						alt: args.alt ? args.alt : 'eFlex Systems Interface Example.'
+					})
 
-		.position-absolute( style='top: ' + top + '; left: ' + left + '; width: ' + width + ';' )
-			+image ({
-				name: 'image_' + args.name,
-				src: args.src ? args.src : 'https://picsum.photos/400/225',
-				alt: args.alt ? args.alt : 'eFlex Systems Interface Example.'
-			})
+		if args.device === 'desktop' || args.device === undefined
+			.position-absolute( style='top: ' + top + '; left: ' + left + '; width: ' + width + ';' )
+				+image ({
+					name: 'image_' + args.name,
+					src: args.src ? args.src : defaultSrc,
+					alt: args.alt ? args.alt : 'eFlex Systems Interface Example.'
+				})
 			
-			if args.device === 'desktop' || args.device === undefined
 				.position-absolute.overflow-hidden.w-50.h-100( style='top: 0; right: 0; pointer-events: none;' )
 					.bm-screen.o-25.position-relative( style="transform: rotate(-16deg); top: -25%; right: -30%; height: 139%; background-image: linear-gradient(white 15%, #00000000 60%);" )

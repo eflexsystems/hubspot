@@ -2,5 +2,381 @@
 extends ../../../templates/_template_masthead.pug
 
 prepend script
-    script( type='text/javascript' )
-        include ./script.js
+	//- slick-carousel
+	script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" )
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" )
+
+	script( type='text/javascript' )
+		include ./script.js
+
+append content
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'h_intro',
+								value: 'Error-Proof Material Handling'
+							})
+						
+						p.lead-md
+							+rawHtml ({
+								name: 'p_intro',
+								value: 'Simplify standardized work of the operator with an easy-to-use, plug-n-play kitting solution. Reduce material handling and processing times at the point-of-use. Free up line side space and deliver 100% quality product to the operator 100% of the time. eFlex Kitting is compatible with a variety of hardware solutions – with unmatched flexibility and an easy part picking system. Successfully used by global OEMs.',
+								class: 'lead-md-md'
+							})
+					
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+image ({
+							name: 'image_intro',
+							src: 'https://picsum.photos/400/200'
+						})
+
+	.bg-white
+		.container.py-5
+			.p-3.p-lg-5
+				.row
+					mixin featuresBullets(args)
+						.col-12.col-lg-3
+							.pb-3.pb-lg-0.pe-lg-3
+								i.fas.fa-3x.mb-4( class='fa-' + args.icon )
+								h3.text-uppercase
+									+rawHtml ({
+											name: 'h' + args.index + '_featureBullet',
+											value: args.heading,
+										})
+								p
+									+rawHtml ({
+											name: 'p' + args.index + '_featureBullet',
+											value: args.body,
+										})
+
+					+featuresBullets ({
+						index: '1',
+						icon: 'hdd',
+						heading: 'Supports Various Hardware Needs.',
+						body: 'Plug-n-play IO sensors and switches, barcode scanners, and vision systems. Installed on your rack designs or ours!'
+					})
+
+					+featuresBullets ({
+						index: '2',
+						icon: 'code-branch',
+						heading: 'Unmatched Flexibility Control.',
+						body: 'With unprecedented flexibility, you are no longer locked into hardware or a rigid system.'
+					})
+
+					+featuresBullets ({
+						index: '3',
+						icon: 'cog',
+						heading: 'hand-point-up.',
+						body: 'Quickly configure kitting tasks and standardize process control. No programming necessary – it\'s that easy!'
+					})
+
+					+featuresBullets ({
+						index: '4',
+						icon: 'award',
+						heading: 'Error Proof Load & Pick Side.',
+						body: 'Maximize quality management efforts. Error proof material handling for both pick and load side.'
+					})
+
+	//- Examples
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'title_examples',
+								value: 'One Application. Many kitting solutions.'
+							})
+						
+						p.lead-md
+							+rawHtml ({
+								name: 'subTitle_examples',
+								value: 'You pick the level of error-proofing you need!',
+								class: 'lead-md-md'
+							})
+
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice1_examples',
+							device: 'tablet'
+						})
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h1_examples',
+								value: 'Visual Guidance for Kitting Operators.'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p1_examples',
+								value: 'Visually guide and prompt the operator for correct part picking, kitting and assembly needs. Accelerate and reduce the cost of training. Gather KPIs for kitting cycle times, part picking verification, and more, to quickly identity constraints and improvement needs.',
+							})
+
+						+cta ({
+							name: 'cta1_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+			
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h2_examples',
+								value: 'Barcode Scan Parts'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p2_examples',
+								value: 'For higher level error proofing, barcode scan parts for expected kit values. This is a simple and cost effective way to error proof kitting operations without the need for wiring or additional hardware. This method also enforces and tracks the quality process, reduces production costs and assures regulatory standards are met. Process data capture allows for traceability and part genealogy reporting.',
+							})
+						
+						+cta ({
+							name: 'cta2_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice2_examples',
+							device: 'tablet',
+						})
+			
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice3_examples',
+							device: 'tablet',
+						})
+
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h3_examples',
+								value: 'Pick Error Proofing.'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p3_examples',
+								value: 'Easily integrate, configure and enable process control for pick lights and sensors to verify correct part picking. Collect process data and KPIs along the way. Apply to your rack designs or ours. We can provide a complete turnkey solution if needed!',
+							})
+						
+						+cta ({
+							name: 'cta3_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+				
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h4_examples',
+								value: 'Integrate BOMs & Models'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p4_examples',
+								value: 'Do you manufacture many models or product variations to meet customer demands? Have thousands of parts or configurations in your assembly process? No worries! Integrate your BOM and component specifications for quick and easy part proliferation and kitting needs. Assure products are build right the first time, every time.',
+							})
+						
+						+cta ({
+							name: 'cta4_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice5_examples',
+							device: 'tablet',
+						})
+
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice5_examples',
+							device: 'tablet',
+						})
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h5_examples',
+								value: 'Visual Inspection or Image Archive of Kits'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p5_examples',
+								value: 'For advanced error proofing and check, vision inspection can be used to verify kits and correct part picking. Or simply, capture an image of kits and archive for review, reporting, recalls or warranty claims.',
+							})
+						
+						+cta ({
+							name: 'cta5_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+	
+	//- Brochure
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		+parallax ({
+			name: 'imageSrc_brochure',
+			dataNaturalWidth: '1756',
+			dataNaturalHeight: '1171'
+		})
+
+		.container.py-5
+			.row.align-items-end
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h1_brochure',
+								value: 'Download our kitting brochure!',
+								class: 'text-white'
+							})
+
+						p.lead.text-white.mb-5
+								+rawHtml ({
+									name: 'p1_brochure',
+									value: 'To learn more about eFlex\'s flexible Kitting solutions and how they can help streamline material handling for almost any assembly process, download our brochure today!',
+									class: 'text-white lead'
+								})
+
+						+cta ({
+							name: 'cta_demorequest',
+							color: 'primary',
+							guid: '3a823f8b-1b01-438c-99fd-6a3ac3ff5ac6'
+						})
+	
+	//- Carousel: Benefits of Kitting
+	.bg-white
+		.container.py-3
+			.row
+				.col
+					.p-3.p-md-5
+						h3.text-uppercase.text-center.mb-5
+							+rawHtml ({
+								name: 'h1_kittingCarousel',
+								value: 'Benefits & ROI of eFlex Kitting:',
+							})
+
+						#carousel-kitting.slick-carousel.image-carousel.carousel-buttons-dark.pb-3
+							mixin kittingCarouselItem(args)
+								.d-flex.flex-column.justify-content-start.align-items-center.m-4( style='height: 8rem' )
+									i.fas.fa-3x.mb-4( class='fa-' + args.icon )
+									em
+										p.text-center.fs-italic
+											+rawHtml ({
+												name: 'p' + args.index + '_kittingCarouselItem',
+												value: args.label,
+											})
+										
+							+kittingCarouselItem ({
+								index: '1',
+								label: 'Cost Savings',
+								icon: 'money-check-alt',
+							})
+
+							+kittingCarouselItem ({
+								index: '2',
+								label: 'Accelerated Training',
+								icon: 'graduation-cap',
+							})
+
+							+kittingCarouselItem ({
+								index: '3',
+								label: 'Simplied Part Picking',
+								icon: 'box-open',
+							})
+
+							+kittingCarouselItem ({
+								index: '4',
+								label: 'Maximize \"Value Added\" Work',
+								icon: 'thermometer-full',
+							})
+
+							+kittingCarouselItem ({
+								index: '5',
+								label: 'Improved Quality',
+								icon: 'award',
+							})
+
+							+kittingCarouselItem ({
+								index: '6',
+								label: 'Efficient Cycle Times',
+								icon: 'clock',
+							})
+
+							+kittingCarouselItem ({
+								index: '7',
+								label: 'Improved Safety',
+								icon: 'hard-hat',
+							})
+
+							+kittingCarouselItem ({
+								index: '8',
+								label: 'Minimized Footprint',
+								icon: 'shoe-prints',
+							})
+	
+	//- Request Demo
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		.responsive-clip-path.w-100.h-100.position-absolute( style='z-index: -1; box-sizing: border-box; pointer-events: none; top: 0' )
+			+image ({
+				name: 'image_demorequest',
+				src: 'https://picsum.photos/900/500'
+			})
+
+		.container.py-5
+			.row
+				.col.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h_demorequest',
+								value: 'Request a Demo today!',
+								class: 'text-white'
+							})
+					
+						p.lead-md.text-white.mb-5
+							+rawHtml ({
+								name: 'p_demorequest',
+								value: 'To learn more about eFlex System\'s mulitple kitting solutions and how they might help streamline material handling for your operations, request a demo today!',
+								class: 'lead-md text-white'
+							})
+
+						+cta ({
+							name: 'cta_demorequest',
+							color: 'primary',
+							guid: '3a823f8b-1b01-438c-99fd-6a3ac3ff5ac6'
+						})

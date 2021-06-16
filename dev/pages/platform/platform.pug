@@ -1,10 +1,13 @@
 //- platform.pug
 extends ../../templates/_template.pug
 
-block script
+append script
 	//- Lottie Player CDN
 	script( src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js" )
 	script( src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js" )
+
+	//- basicLightbox CDN
+	script( src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js" )
 
 	script( type='text/javascript' )
 		include ./script.js
@@ -13,29 +16,23 @@ block content
 	//- Components being used.
 	include ../../components/rawHtml/_rawHtml.pug
 	include ../../components/cta/_cta.pug
+	include ../../components/image/_image.pug
 
-	//- Interactive Infographic
-	.container-fluid.g-0
-		.row.g-0
-			//- Left Side
-			.col-6.bg-gray-700#lottieContainer
-
-				//- Fixed Content
-				.position-fixed.w-100( style='pointer-events: none' )
-					.row
-						.col-6.vh-100
-							.p-3.p-lg-5.h-100
-								.d-flex.justify-content-center.align-items-center.h-100
-									lottie-player#lottie(
-										mode='normal'
-										src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/test.json"
-										style={ width: "320px", height: "180px" }
-									)
-
-			//- Right Side
-			.col-6.bg-white
-				.d-flex.flex-column
-
+	.bg-white
+		.container.g-0
+			.row.g-0
+				.col-6
+					.d-flex.justify-content-center.align-items-center.w-100( style='min-height: 50rem' )
+						lottie-player.p-5(
+							mode='normal'
+							autoplay
+							loop
+							src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/lottie_platformDataFlow.json"
+							background='white'
+							style={ width: "1000px" }
+						)
+					
+				.col-6
 					//- Masthead
 					.d-flex.align-items-center.py-5( style='min-height: 50rem' )
 						.p-3.p-lg-5
@@ -68,10 +65,33 @@ block content
 								.col-auto
 									+cta ({
 										name: 'cta_masthead',
-										guid: 'def2171a-4bbe-4b11-8ea2-7fd5eb538b0d',
+										label: 'Watch Video',
+										class: 'btn-video1',
 										variant: 'outline',
-										color: 'gray-800'
+										color: 'gray-800',
 									})
+
+	//- Interactive Infographic
+	.container-fluid.g-0
+		.row.g-0
+			//- Left Side
+			#lottieContainer.col-6.bg-gray-700
+				//- Fixed Content
+				.position-sticky.w-100( style='pointer-events: none; top: 0' )
+					.row
+						.vh-100
+							.p-3.p-lg-5.h-100
+								.d-flex.justify-content-center.align-items-center.h-100
+									lottie-player#lottie.p-5(
+										mode='normal'
+										src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/lottie_platformFull.json"
+										style={ width: "1527px", height: "auto" }
+										renderer: 'svg'
+									)
+
+			//- Right Side
+			.col-6.bg-white
+				.d-flex.flex-column
 					
 					//- Simplified
 					.pt-5.bg-gray-700
@@ -272,14 +292,6 @@ block content
 										index: 7,
 										heading: 'Support through the whole process',
 										body: 'We want your digitization goals to be a success! Our dedicated support team along with the online eFlex Learning Center will help you every step of the way.',
-										group: 'succeed',
-										icon: 'check'
-									})
-
-									+proConFeature ({
-										index: 8,
-										heading: 'Return on Value (ROV) & Return on Investment (ROI)',
-										body: 'With data insight through MIP, manufacturers get significant return to value with support in making process, operational and strategic decisions.  ROI typically follows. Our customers have reported up to 3 million in cost savings within the first year of implementation within their facility from improvements in cycle times, parts per hour and first time quality scores.',
 										group: 'succeed',
 										icon: 'check'
 									})
@@ -505,3 +517,62 @@ block content
 										value: 'Line Balance Report'
 									})
 
+	//- Video
+	.bg-white
+		.container.py-3
+			.row.align-items-center
+				.col-6
+					.p-3.p-md-5
+						h1.display-1.text-uppercase.mb-2( style='letter-spacing: -.25rem' )
+							+rawHtml ({
+								name: 'h1_video',
+								value: 'What Does a Manufacturing Integrated Platform Do?'
+							})
+
+						p.lead-md.mb-0
+							+rawHtml ({
+								name: 'p1_video',
+								class: 'lead-md-md',
+								value: 'Great Question. Watch this video now to find out!'
+							})
+				
+				.col-6
+					.p-3.p-md-5
+						button.btn-video2.w-100
+							.bg-black.d-flex.align-items-center.justify-content-center( style='width: 100%; height: 20rem' )
+								h2.text-uppercase.text-white watch video
+
+
+	//- Request Demo
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		.responsive-clip-path.w-100.h-100.position-absolute( style='z-index: -1; box-sizing: border-box; pointer-events: none; top: 0' )
+			+image ({
+				name: 'image_demorequest',
+				src: 'https://picsum.photos/900/500'
+			})
+
+		.container.py-5
+			.row
+				.col.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h_demorequest',
+								value: 'See how eFlex can help your business.',
+								class: 'text-white'
+							})
+					
+						p.lead-md.text-white.mb-5
+							+rawHtml ({
+								name: 'p_demorequest',
+								value: 'Digitize standard maintenance procedures and ensure you never miss a step or timeline. Get an online demo and see how easy it is to get started!',
+								class: 'lead-md text-white'
+							})
+
+						+cta ({
+							name: 'cta_demorequest',
+							color: 'primary'
+						})

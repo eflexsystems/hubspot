@@ -1,2 +1,199 @@
 //- oee.pug
-extends ../../../templates/_template.pug
+extends ../../../templates/_template_masthead.pug
+
+prepend script
+	script( type='text/javascript' )
+		include ./script.js
+
+append content
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'h_intro',
+								value: 'Machine State & Overall Equipment Effectiveness'
+							})
+						
+						p.lead-md
+							+rawHtml ({
+								name: 'p_intro',
+								value: 'Manufacturers are constantly challenged to increase productivity, improve quality and cut costs in order to successfully compete in today\'s market. With eFlex OEE, data is captured directly from machines/equipment and organized in a manner that drives peak performance. Visual content can be presented on any web-capable device such as large overhead displays, any PC connected to the network and mobile devices.',
+								class: 'lead-md-md'
+							})
+					
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+image ({
+							name: 'image_intro',
+							src: 'https://picsum.photos/400/200'
+						})
+	
+	//- Examples
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice1_examples',
+							device: 'tablet'
+						})
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h1_examples',
+								value: 'Robust Interactive Displays and KPIs.'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p1_examples',
+								value: 'eFlex OEE allows users to visualize data and Key Performance Indicators(KPIs) on any web-capable device. Station operators have the ability to enter notes and reason codes for faulted, starved or blocked stations. Notification features pinpoint the most concerning problems allowing plant personnel to take action immediately.',
+							})
+
+						+cta ({
+							name: 'cta1_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+			
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h2_examples',
+								value: 'Develop Rework & Repair Strategies.'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p2_examples',
+								value: 'Minimize scrap and reduce costs with rework/repair strategies. When parts are rejected, select a customizable drop down menu to choose the repair code necessary and enter any additional notes. Collect detailed process data for all rejected parts to more easily identity inefficiencies and continuous process improvement needs.',
+							})
+						
+						+cta ({
+							name: 'cta2_examples',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice2_examples',
+							device: 'tablet',
+						})
+	
+	//- Features
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'title_features',
+								value: 'Key Features of eFlex OEE:'
+							})
+						
+			mixin featureBullets(args)
+				.col-12.col-lg-4
+					.pb-3.pb-lg-0
+						.d-flex.align-items-end.mb-3
+							i.fas.fa-3x.me-4.mb-1( class='fa-' + args.icon )
+							h3.text-uppercase.mb-0
+								+rawHtml ({
+										name: 'h' + args.index + '_features',
+										value: args.heading,
+									})
+						p
+							+rawHtml ({
+									name: 'p' + args.index + '_features',
+									value: args.body,
+								})
+			.p-3.p-lg-5
+				.row.g-5.mb-4
+
+					+featureBullets ({
+						index: '1',
+						icon: 'code-branch',
+						heading: 'Streamline Data Flows.',
+						body: 'Streamline the collection of key performance indicators from shop floor equipment and operators. Interlock to machine controls to ensure events are properly classified.'
+					})
+
+					+featureBullets ({
+						index: '2',
+						icon: 'bullseye',
+						heading: 'Set Production Targets & Displays',
+						body: 'Set production targets and benchmarks per asset and resource. Configure dashboards to display current needs and historical trends to optimize improvement plans and processes.'
+					})
+
+					+featureBullets ({
+						index: '3',
+						icon: 'eye',
+						heading: 'Real-time Visibility of operations.',
+						body: 'Data is provided in real-time. Personnel will have immediate access to critical data allowing them to make quick decisions and reduce downtime.'
+					})
+
+				.row.g-5.mb-4
+
+					+featureBullets ({
+						index: '4',
+						icon: 'award',
+						heading: 'Identify Quality Issues Quickly.',
+						body: 'Gain visibility into production constraints, bottlenecks and quality concerns. Assign root causes to downtime events, classify idle time and enter scrap codes. Quickly notify key personnel via text and email when issues occur.'
+					})
+
+					+featureBullets ({
+						index: '5',
+						icon: 'cog',
+						heading: 'Increase Productivity.',
+						body: 'Obtain summary aggregation and drill-down visibility of assets, allowing you to boost productivity. Transparency of assets and resources allows for improved production, faster performance times with better quality.'
+					})
+
+					+featureBullets ({
+						index: '6',
+						icon: 'chart-bar',
+						heading: 'Set Reports & Security.',
+						body: 'Report manufacturing operation details such as machine status, shift peformance, downtime analysis, OEE, defects, operator productivity, etc. Provide tightly integrated security, activity logs and role-based access privileges.'
+					})
+	
+	//- Contact Expert
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		.responsive-clip-path.w-100.h-100.position-absolute( style='z-index: -1; box-sizing: border-box; pointer-events: none; top: 0' )
+			+image ({
+				name: 'image_contactexpert',
+				src: 'https://picsum.photos/900/500'
+			})
+
+		.container.py-5
+			.row
+				.col.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h_contactexpert',
+								value: 'Monitor It. Measure It. Improve It.',
+								class: 'text-white'
+							})
+					
+						p.lead-md.text-white.mb-5
+							+rawHtml ({
+								name: 'p_contactexpert',
+								value: 'To learn more about eFlex OEE and how it can improve lean manufacturing efforts, contact an eFlex expert today. We\'re here to help!',
+								class: 'lead-md text-white'
+							})
+
+						+cta ({
+							name: 'cta_contactexpert',
+							color: 'primary',
+							guid: 'eb04ecb8-1ba1-4fb6-b7ff-68a4f961ec46'
+						})

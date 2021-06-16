@@ -6,7 +6,7 @@ include ../rawHtml/_rawHtml.pug
 
 mixin card(args)
 	a.custom-card.d-flex.flex-column.h-100( href=args.href ? args.href : '#' target=(args.newTab ? '_blank' : null) class=args.class ? args.class : null )
-		.card.bg-gray-100.flex-fill.m-2( class=args.transition ? args.transition : 't-scale')
+		.card.bg-gray-100.flex-fill( class=args.transition ? args.transition : 't-scale')
 
 			//- Title, Subtitle, Body
 			mixin cardContent()
