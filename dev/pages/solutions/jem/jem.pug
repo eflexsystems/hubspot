@@ -12,6 +12,7 @@ prepend script
 
 append content
 	include ../../../components/card/_card.pug
+	include ../../../components/video/_video.pug
 
 	.bg-white
 		.container.py-5
@@ -254,7 +255,7 @@ append content
 	.bg-white
 		.container.py-3
 			.p-3.p-lg-5
-				.row
+				.row.align-items-center.g-5.gy-5
 					.col-12.col-lg-6
 						h1.display-lg-1.text-uppercase
 							+rawHtml ({
@@ -262,11 +263,19 @@ append content
 								value: 'Meet JEM.'
 							})
 
-						h3.text-uppercase.mb-5
+						p.lead-md
 							+rawHtml ({
-								name: 'h2_industries',
-								value: 'Watch a short three minute overview of eFlex\'s Job Element Monitor:',
+								name: 'p1_video',
+								value: 'Watch a short three minute overview of the Job Element Monitor, or JEM, eFlex\'s digital work instructions solution!',
+								class: 'lead-md'
 							})
+
+					.col-12.col-lg-6
+						+video ({
+							name: 'video',
+							id: 'video_jem',
+							imgSrc: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/cta_jemDark.jpg'
+						})
 
 	//- WIE
 	.position-relative
@@ -387,116 +396,269 @@ append content
 	//- JEM's Features & Benefits
 	.bg-white
 		.container.py-3
-			.row
-				.col-12.col-lg-6
-					.p-3.p-md-5
+			.p-3.p-md-5
+				.row.mb-5
+					.col-12.col-lg-6
+						
+							h1.display-lg-1.text-uppercase
+								+rawHtml ({
+									name: 'title_features',
+									value: 'JEM Features and Benefits.'
+								})
+
+							p.lead
+								+rawHtml ({
+									name: 'p_features',
+									value: 'eFlex\'s digital work instructions provide numerous benefits in an effort to improve your manufacturing process. Improve any area of your facility, simple and easy.',
+									class: 'lead'
+								})
+
+				.row.g-2.gy-2
+					mixin card_features(args)
+						.col-12.col-lg-6.col-xl-4
+							if args.imageSrc
+								+card ({
+									name: 'card' + args.index,
+									image: {
+										src: args.imageSrc,
+										color: 'primary'
+									},
+									title: {
+										value: args.title,
+									},
+									textOverlay: {
+										value: args.textOverlay
+									},
+									transition: 't-swipe-up'
+								})
+
+							else
+								+card ({
+									name: 'card' + args.index,
+									title: {
+										value: args.title,
+										color: 'primary'
+									},
+									textOverlay: {
+										value: args.textOverlay
+									},
+									transition: 't-swipe-up'
+								})
+					
+					+card_features ({
+						index: '1',
+						title: 'Easy Set-Up & Creation',
+						textOverlay: 'Easily create work instructions in a simple, easy-to-use system with JEMs built-in work instruction editor (WIE) tool. Use images, written instructions, video or connect to current PDF files. Quickly set-up task sequences and lines with drag-n-drop functionality - no programming needed.'
+					})
+
+					+card_features ({
+						index: '2',
+						title: 'Completely connected with integrated tooling',
+						textOverlay: 'Connect to upper level systems such as ERP, MES, BOMs & schedulers or eDHR. Easily integrate and collect process data from tooling and devices such as; barcode scanners, torque tools, gauges, cobots, vision systems & inspection cameras, pick lights, sensors, augmented reality systems, and more.'
+					})
+
+					+card_features ({
+						index: '3',
+						title: 'Traceability & Error Proofing',
+						imageSrc: 'https://picsum.photos/400/200',
+						textOverlay: 'Easily configure pre-requisite determination and enforcement. Capture part genealogy, batch and lot tracking, component and sub-component marriages, as well as rejected parts.'
+					})
+
+					+card_features ({
+						index: '4',
+						title: 'Advanced BI Reporting, Dashboards, & Alerts',
+						imageSrc: 'https://picsum.photos/400/200',
+						textOverlay: 'Every company likes to track different variables and statistics that pertain to their specific production needs. JEM\'s advanced BI reporting tool allows customers to view the information that is most important to them. Display information in customizable, real-time dashboards. Get alerts via email and texts.'
+					})
+
+					+card_features ({
+						index: '5',
+						title: 'Web-Based',
+						textOverlay: 'JEM is a web-based software application. Create work instructions or view reports anywhere, anytime via browser on any web-capable device - Surface Tablet, Chromebook, iPad, etc. No client side software load required. Monitor real-time production as needed.'
+					})
+
+					+card_features ({
+						index: '6',
+						title: 'Document Library & Version Control',
+						textOverlay: 'JEM has a built-in library within its editor tool to store and access work instructions. Only team members allowed to edit work instructions will have access to the library and work instruction approval process. Built-in version control captures when work instruction are updated and approved.'
+					})
+
+					+card_features ({
+						index: '7',
+						title: 'Real-Time Interactions & Cycle Times',
+						textOverlay: 'Work instructions and tasks are displayed in real-time. Get 100% time capture for each process task start & stop. Cycle time indicator shows targeted time for each station as well as actual time per station. Station data gives management the tools they need to make data-driven operational decisions.'
+					})
+
+					+card_features ({
+						index: '8',
+						title: 'Accelerated Training',
+						imageSrc: 'https://picsum.photos/400/200',
+						textOverlay: 'Off-line mode for separate training and production statuses. When new staff is able to walk through each production task step-by-step with written instructions and/or visuals, training is accelerated. JEM also has user configurable areas for station set-up, safety information, MSDS, etc, which impacts training.'
+					})
+
+					+card_features ({
+						index: '9',
+						title: 'Data Collection For Entire Process - End to End',
+						textOverlay: 'Built-in and customizable process data collection fields. Get a digital history of your entire production process. Track items such as – cycle times, quality checklists, inspections/verifications, who completed them, tooling measurements, camera images, user specific notes. No limits on what you can collect and view.'
+					})
+
+					+card_features ({
+						index: '10',
+						title: 'Cloud or On-Site Hosting',
+						imageSrc: 'https://picsum.photos/400/200',
+						textOverlay: 'Run application locally or in the cloud. You decide what works best for your operation. Both are web-based with direct access to data anywhere, anytime.'
+					})
+
+					+card_features ({
+						index: '11',
+						title: 'Secure Log-In & Verification Process',
+						textOverlay: 'Easily set-up multi-user levels and permissions. Track operator login time and credentials. If specific training or certification is needed in order to run a station, log-in requirements can be set to make sure compliance standards are met.'
+					})
+
+					+card_features ({
+						index: '12',
+						title: 'Scalable',
+						imageSrc: 'https://picsum.photos/400/200',
+						textOverlay: 'Implement digital work instructions on one line, in one plant or use as a global solution. With a scalable solution, you choose when and where you need it. With JEM – seamlessly integrate with other eFlex MIP solutions such as vision image management. All stored on one simple application interface.'
+					})
+
+	//- Advanced Capabilities
+	.bg-white
+		.container.py-5
+			.p-3.p-lg-5
+				.row.mb-5
+					.col-12.col-lg-6
 						h1.display-lg-1.text-uppercase
 							+rawHtml ({
-								name: 'title_features',
-								value: 'JEM Features and Benefits.'
+								name: 'h1_advCapabilities',
+								value: 'JEM\'s Advanced Capabilities'
 							})
-
-						p.lead.mb-5
+						p.lead-md
 							+rawHtml ({
-								name: 'p_features',
-								value: 'eFlex\'s digital work instructions provide numerous benefits in an effort to improve your manufacturing process. Improve any area of your facility, simple and easy.',
-								class: 'lead'
+								name: 'p1_advCapabilities',
+								value: 'Guide operators and error proof at a whole new level with these advanced capabilities!'
 							})
-
-			.p-3.p-md-5
-				.row.g-2.gy-2
-					.col-12.col-lg-4
-						+card ({
-							name: 'card1',
-							image: {
-								src: 'https://picsum.photos/400/200',
-								color: 'primary'
-							},
-							title: {
-								value: 'Easy Set-Up & Creation',
-							},
-							textOverlay: {
-								value: 'Easily create work instructions in a simple, easy-to-use system with JEMs built-in work instruction editor (WIE) tool. Use images, written instructions, video or connect to current PDF files. Quickly set-up task sequences and lines with drag-n-drop functionality - no programming needed.'
-							},
-							transition: 't-swipe-up'
+			
+				.row.g-5.gy-5.align-items-center
+					.col-12.col-lg-6
+						+uiDevice ({
+							name: 'uiDevice1_advCapabiltiies',
+							device: 'tablet'
 						})
-
-					.col-12.col-lg-4
-						+card ({
-							name: 'card2',
-							image: {
-								src: 'https://picsum.photos/400/200',
-								color: 'primary'
-							},
-							title: {
-								value: 'Completely connected with integrated tooling',
-							},
-							textOverlay: {
-								value: 'Connect to upper level systems such as ERP, MES, BOMs & schedulers or eDHR. Easily integrate and collect process data from tooling and devices such as; barcode scanners, torque tools, gauges, cobots, vision systems & inspection cameras, pick lights, sensors, augmented reality systems, and more.'
-							},
-							transition: 't-swipe-up'
-						})
-					
-					.col-12.col-lg-4
-						+card ({
-							name: 'card3',
-							image: {
-								src: 'https://picsum.photos/400/200',
-								color: 'primary'
-							},
-							title: {
-								value: 'Traceability & Error Proofing',
-							},
-							textOverlay: {
-								value: 'Easily configure pre-requisite determination and enforcement. Capture part genealogy, batch and lot tracking, component and sub-component marriages, as well as rejected parts.'
-							},
-							transition: 't-swipe-up'
+					.col-12.col-lg-6
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h1_advCapabilities',
+								value: 'Event-based work instructions.'
+							})
+						p
+							+rawHtml ({
+								name: 'p1_advCapabilities',
+								value: 'Provide automatic feedback loops to operators and never leave them guessing what to do next. For example, if a part is rejected at the station, a work instruction would automatically display to the operator what to do based on the rejected event. When work instructions are formatted to show operators exactly what to do given possible events, delays and errors are virtually eliminated.'
+							})
+				
+					.col-12.col-lg-6
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h2_advCapabilities',
+								value: 'Animated Guidance'
+							})
+						p
+							+rawHtml ({
+								name: 'p2_advCapabilities',
+								value: 'Animated guidance provides faster learning potential and visually guides operators through work instructions. For example, if an operator has five bolts to fasten, the work instructions would highlight the bolt to be fastened first, then, when that is completed, would highlight each subsequent bolt in order until the series is completed. This provides more specific visual guidance and ordering with less room for error and misunderstanding.'
+							})
+					.col-12.col-lg-6
+						+uiDevice ({
+							name: 'uiDevice2_advCapabiltiies',
+							device: 'tablet'
 						})
 				
-					.col-12.col-lg-4
-						+card ({
-							name: 'card4',
-							image: {
-								src: 'https://picsum.photos/400/200',
-								color: 'primary'
-							},
-							title: {
-								value: 'Document Library & Version Control',
-							},
-							textOverlay: {
-								value: 'JEM has a built-in library within its editor tool to store and access work instructions. Only team members allowed to edit work instructions will have access to the library and work instruction approval process. Built-in version control captures when work instruction are updated and approved.'
-							},
-							transition: 't-swipe-up'
+					.col-12.col-lg-6
+						+uiDevice ({
+							name: 'uiDevice3_advCapabiltiies',
+							device: 'tablet'
+						})
+					.col-12.col-lg-6
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h3_advCapabilities',
+								value: 'Process data capture.'
+							})
+						p
+							+rawHtml ({
+								name: 'p3_advCapabilities',
+								value: 'Collect unlimited amounts of process data with built-in and customizable data collection fields. Track items such as – cycle times, quality checklists, inspections/verifications, who completed them, tooling measurements, camera images, user specific notes, and much more. This will further eliminate paper at the station level and reduce manual data entry errors or missed entries.'
+							})
+							
+	//- Continuous Improvement
+	.bg-white
+		.container.py-3
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'title_improvement',
+								value: 'Continuous Improvement',
+							})
+						h3.text-uppercase.mb-5
+							+rawHtml ({
+								name: 'subtitle_improvement',
+								value: 'Lean Manufacturing Principles',
+							})
+						p.lead-md
+							+rawHtml ({
+								name: 'p_improvement',
+								value: 'The JEM platform streamlines lean, continuous improvement initiatives. Users can quickly and easily configure processes and create standarized work instructions. Connect and enable IoT devices with no programming needed. Ensure operators follow the appropriate task sequence for error proofing. Collect unlimited amounts of process data. And ultimately, turn data silos into useful insight for ongoing improvement initiatives.',
+								class: 'lead-md'
+							})
+				
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						+image ({
+							name: 'image_improvement',
+							src: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/inforgraphic_4cs.svg'
+						})
+	
+	//- Brochure
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		+parallax ({
+			name: 'imageSrc_brochure',
+			dataNaturalWidth: '1756',
+			dataNaturalHeight: '1171'
+		})
+
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h1_brochure',
+								value: 'Practical Guide to Digital Transformation',
+								class: 'text-white'
+							})
+
+						p.lead.text-white.mb-5
+								+rawHtml ({
+									name: 'p1_brochure',
+									value: 'Download our free guide today! 25 quick tips for moving from paper to digital work instructions.',
+									class: 'text-white lead'
+								})
+
+						+cta ({
+							name: 'cta_brochure',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
 						})
 
-					.col-12.col-lg-4
-						+card ({
-							name: 'card5',
-							image: {
-								src: 'https://picsum.photos/400/200',
-								color: 'primary'
-							},
-							title: {
-								value: 'Web-Based',
-							},
-							textOverlay: {
-								value: 'JEM is a web-based software application. Create work instructions or view reports anywhere, anytime via browser on any web-capable device - Surface Tablet, Chromebook, iPad, etc. No client side software load required. Monitor real-time production as needed.'
-							},
-							transition: 't-swipe-up'
-						})
-					
-					.col-12.col-lg-4
-						+card ({
-							name: 'card6',
-							image: {
-								src: 'https://picsum.photos/400/200',
-								color: 'primary'
-							},
-							title: {
-								value: 'Advanced BI Reporting, Dashboards, & Alerts',
-							},
-							textOverlay: {
-								value: 'Every company likes to track different variables and statistics that pertain to their specific production needs. JEM\'s advanced BI reporting tool allows customers to view the information that is most important to them. Display information in customizable, real-time dashboards. Get alerts via email and texts.'
-							},
-							transition: 't-swipe-up'
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						+image ({
+							name: 'image_brochure',
+							src: 'https://picsum.photos/400/200'
 						})

@@ -34,3 +34,5 @@ $('#carousel-jem').slick({
         }
     ]
 });
+
+videoLightroom('video_jem', 'https://f.hubspotusercontent00.net/hubfs/8439350/Videos/jem.mp4');

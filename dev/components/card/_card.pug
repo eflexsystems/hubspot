@@ -32,7 +32,7 @@ mixin card(args)
 
 			//- Image Background Card
 			if args.image
-				img.card-img(src=args.image.src, alt=args.image.alt ? args.image.alt : "eFlex Systems")
+				img.card-img.h-auto.position-absolute( style='min-width: 100%' src=args.image.src, alt=args.image.alt ? args.image.alt : "eFlex Systems")
 				.card-img-overlay.p-0
 					if args.image.color
 						.o-75.position-absolute.w-100.h-100( class='bg-' + args.image.color )
@@ -42,7 +42,7 @@ mixin card(args)
 		 
 			//- Solid Background Card
 			else
-				.card-body.d-flex.flex-column.align-items-center.justify-content-center( class=`${args.padding ? args.padding : 'p-4'}`)
+				.card-body.d-flex.flex-column.align-items-center.justify-content-center.position-absolute.w-100.h-100( class=`${args.padding ? args.padding : 'p-4'}`)
 					if args.title
 						+cardContent
 			

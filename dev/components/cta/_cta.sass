@@ -17,3 +17,12 @@
 
 .btn-primary
 	@extend .text-white
+
+.btn-video
+	img
+		transition-duration: $btn-t-duration
+	&:hover
+		img
+			@extend .o-75
+	&:focus
+		outline: none

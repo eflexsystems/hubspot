@@ -16,6 +16,7 @@ block content
 	include ../../components/image/_image.pug
 	include ../../components/card/_card.pug
 	include ../../components/parallax/_parallax.pug
+	include ../../components/video/_video.pug
 	
 	- var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
 
@@ -636,8 +637,11 @@ block content
 
 				.col-12.col-lg-6
 					.p-3.p-lg-5
-						video( width="100%" height="100%" controls poster='https://cdn2.hubspot.net/hubfs/490686/_site/Images/Stock%20Images/Video_Thumbnail_JEM.jpg')
-							source(src="https://cdn2.hubspot.net/hubfs/490686/Videos/Video_JEM-1.mp4" type="video/mp4")
+						+video ({
+							name: 'video',
+							id: 'video_jem',
+							imgSrc: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/cta_jemDark.jpg'
+						})
 
 	//- Updates
 	.bg-white

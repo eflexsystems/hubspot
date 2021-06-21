@@ -41,4 +41,26 @@ $(window).load(function () {
 });
 
 // scrollResponsiveHeader is for when the header can sit over a dark image as white text.
-let scrollResponsiveHeader;</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script><script type="text/javascript"></script></body></html>
+let scrollResponsiveHeader;
+
+let videoInstance;
+
+// html function for video lightroom component
+function videoLightroom(id, src) {
+	videoInstance = basicLightbox.create(
+		`
+			<div class='d-flex flex-column video-lightroom-container'>
+				<button class='btn btn-link link-light btn-sm align-self-end mb-2' onclick='videoInstance.close()'>
+					<i class='fas fa-times fa-lg'></i>
+				</button>
+				<video id="${id}" controls data-id="2">
+				<source src=${src} type="video/mp4">
+			</div>
+		`
+	);
+
+	document.querySelector('button#' + id + '_cta').onclick = () => {
+		videoInstance.show();
+		document.getElementById(id).play();
+	}
+}</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script><script type="text/javascript"></script></body></html>

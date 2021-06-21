@@ -1,5 +1,10 @@
 //- Image
 
+//- Use for images that maintain the same aspect ratio
+.clip-path
+	@extend .overflow-hidden
+	clip-path: inset(0 0 0 0)
+
 //- Use for responsive images so there is never a bleed.
 .responsive-clip-path
 	@extend .overflow-hidden

@@ -1,0 +1,22 @@
+//- Video Component
+
+include ../image/_image.pug
+
+append script
+	//- basicLightbox CDN
+	script( src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js" )
+
+//- properties: [ name, id, imgSrc, imgAlt ]
+//- Declare name, id, thumbnail imgSrc, and thumbnail imgAlt within pug.js with this mixin. Then, use the global videoLightroom() method to declare id and videoSrc in the page's adjacent script.js file.
+
+mixin video(args)
+
+	button.btn-video.clip-path.border-none.position-relative.p-0( id=args.id + '_cta' )
+		+image ({
+			name: args.name + '_thumbnail',
+			src: args.imgSrc,
+			alt: args.imgAlt ? args.imgAlt : 'eFlex Systems Software Video',
+		})
+
+		.d-flex.align-items-center.justify-content-center.position-absolute.w-100.h-100.t-0
+			i.fas.fa-play-circle.fa-5x.text-white.m-auto

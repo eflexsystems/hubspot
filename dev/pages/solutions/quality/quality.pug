@@ -2,5 +2,450 @@
 extends ../../../templates/_template_masthead.pug
 
 prepend script
-    script( type='text/javascript' )
-        include ./script.js
+
+	//- slick-carousel
+	script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" )
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" )
+
+	script( type='text/javascript' )
+		include ./script.js
+
+append content
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'h_intro',
+								value: 'Improve First Time Quality.'
+							})
+						
+						p.lead-md
+							+rawHtml ({
+								name: 'p_intro',
+								value: 'eFlex’s embedded quality management and process control allows manufacturers to reduce human error, easily identify non-conformance throughout the entire assembly process, enable reject and repair strategies, and ensure only good parts are produced. A quality management system with greater levels of efficiency, visibility and cost savings.',
+								class: 'lead-md-md'
+							})
+					
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+image ({
+							name: 'image_intro',
+							src: 'https://picsum.photos/400/200'
+						})
+	
+	//- Features
+	.bg-white
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'image1_features',
+							src: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/ui_dataCollection.png',
+							device: 'desktop'
+						})
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h1_features',
+								value: 'Improve Your Inspection Process.'
+							})
+						
+						p
+							+rawHtml ({
+								name: 'p1_features',
+								value: 'Easily Identify non-conformance and defects with inline quality inspection and prevent bad parts from moving downstream. Implement manual or automated inspection processes and minimize the cost of poor quality.',
+							})
+			
+			.row.align-items-center
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h2_features',
+								value: 'Develop Rework & Repair Strategies.'
+							})
+						
+						p
+							+rawHtml ({
+								name: 'p2_features',
+								value: 'Minimize scrap and reduce costs with rework/repair strategies. When parts are rejected, select a customizable drop down menu to choose the repair code necessary and enter any additional notes. Collect detailed process data for all rejected parts to more easily identity inefficiencies and continuous process improvement needs.',
+							})
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'image2_features',
+							src: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/ui_repairCodes.gif',
+							device: 'desktop'
+						})
+
+			.row.align-items-end
+				.col-12.col-lg
+					.p-3.p-lg-5
+						+image ({
+							name: 'image3_features',
+							src: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/infographic_prereq.png'
+						})
+				.col-12.col-lg
+					.p-3.p-lg-5
+						h3.text-uppercase
+							+rawHtml ({
+								name: 'h3_features',
+								value: 'Enforce Path Requirements.'
+							})
+						
+						p.mb-5
+							+rawHtml ({
+								name: 'p3_features',
+								value: 'Configure pre-requisites and never build out of order. Ensure parts have passed all requirements in sub-assembly and main assembly lines before being shipped out. Robust traceability and part genealogy ensure correct builds and quality standards.',
+							})
+
+						+cta ({
+							name: 'cta_features',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+		
+	.bg-white
+		.container.py-5
+			.row.align-items-end
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						.mb-5
+							h1.display-lg-1.text-uppercase
+								+rawHtml ({
+									name: 'title_tooling',
+									value: 'Easily Integrate Tooling & Devices'
+								})
+							p.lead-md
+								+rawHtml ({
+									name: 'subtitle_tooling',
+									value: 'To further eliminate errors, easily connect machines and IoT devices into your assembly process. Ensure operators follow the right procedures, use the right tools with the right tolerance levels, at the right time, and enforce quality standards.',
+									class: 'lead-md'
+								})
+			.p-3.p-lg-5
+				.row.g-5.gy-5
+					.col-12.col-lg-4
+						h3.text-uppercase
+							+rawHtml ({
+									name: 'h1_tooling',
+									value: 'Simplified Information.',
+								})
+						p.lead-md
+							+rawHtml ({
+									name: 'p1_tooling',
+									value: 'Plug-n-play, comprehensive solution with no programming or app templates required.',
+									class: 'lead-md'
+								})
+					
+					.col-12.col-lg-4
+						h3.text-uppercase
+							+rawHtml ({
+									name: 'h2_tooling',
+									value: 'Enforce Error Proofing.',
+								})
+						p.lead-md
+							+rawHtml ({
+									name: 'p2_tooling',
+									value: 'Embedded IoT devices and instructions make it difficult for operators to make mistakes.',
+									class: 'lead-md'
+								})
+					
+					.col-12.col-lg-4
+						h3.text-uppercase
+							+rawHtml ({
+									name: 'h3_tooling',
+									value: 'Warranty Protection.',
+								})
+						p.lead-md
+							+rawHtml ({
+									name: 'p3_tooling',
+									value: 'Capture and store assembly images. Verify products left the facility in good condition.',
+									class: 'lead-md'
+								})
+
+			.row
+				.col
+					.p-3.p-md-5
+						#carousel-quality.slick-carousel.image-carousel.carousel-buttons-dark.pb-3
+							mixin qualityCarouselItem(args)
+								.d-flex.flex-column.justify-content-start.align-items-center.m-4( style='height: 8rem' )
+									i.fas.fa-3x.mb-4( class='fa-' + args.icon )
+									em
+										p.text-center.fs-italic
+											+rawHtml ({
+												name: 'p' + args.index + '_qualityCarouselItem',
+												value: args.label
+											})
+										
+							+qualityCarouselItem ({
+								index: '1',
+								label: 'Barcode Readers',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '2',
+								label: 'Fasteners',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '3',
+								label: 'Pick Lights',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '4',
+								label: 'Gauges',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '5',
+								label: 'Vision Systems',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '6',
+								label: 'Cobots',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '7',
+								label: 'PLCs',
+								icon: 'cog',
+							})
+
+							+qualityCarouselItem ({
+								index: '8',
+								label: 'Printers',
+								icon: 'cog',
+							})
+	
+	//- Business Intelligence
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		+parallax ({
+			name: 'imageSrc_bi',
+			dataNaturalWidth: '1756',
+			dataNaturalHeight: '1171'
+		})
+
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						+uiDevice ({
+							name: 'uiDevice_bi',
+							device: 'desktop'
+						})
+					
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						.mb-5
+							h3.text-uppercase.text-white
+								+rawHtml ({
+									name: 'h1_bi',
+									value: 'Monitor Quality Trends.',
+									class: 'text-white'
+								})
+							p.text-white
+								+rawHtml ({
+									name: 'p1_bi',
+									value: 'With eFlex Business Intelligence, monitor quality trends and root cause analysis for stations, lines, plants, or enterprise wide needs. Powerful data collection down to the task level viewed in inituitive dashboards and reports. Get real-time visibility and insight of quality trends, allowing for continuous process improvement rather than just keeping defects out.',
+									class: 'text-white'
+								})
+
+						+cta ({
+							name: 'cta_bi',
+							color: 'primary',
+							guid: 'f45a304e-b763-4049-bff9-b08abe1db12a'
+						})
+
+	//- Continuous Improvement
+	.bg-white
+		.container.py-5
+			.p-3.p-lg-5
+				.row.align-items-center.mb-5
+					.col-12.col-lg-6
+						.mb-5
+							h1.display-lg-1.text-uppercase
+								+rawHtml ({
+									name: 'title_ci',
+									value: 'Continuous Improvement.'
+								})
+
+				.row.g-5.gy-5
+					.col-12.col-lg-4
+						h3.text-uppercase
+							+rawHtml ({
+									name: 'h1_ci',
+									value: 'Accelerate & Ensure Training Needs.',
+								})
+						p
+							+rawHtml ({
+									name: 'p1_ci',
+									value: 'Interactive digital work instructions allow for accelerated training processes. Certification validation can also be done at the station level to ensure operators are trained and certified to perform certain tasks in the assembly process.',
+								})
+					
+					.col-12.col-lg-4
+						h3.text-uppercase
+							+rawHtml ({
+									name: 'h2_ci',
+									value: 'Quick Process & Document Changes.',
+								})
+						p
+							+rawHtml ({
+									name: 'p2_ci',
+									value: 'If quality errors occur due to inaccurate work instructions or processes, users with verified credentials can quickly and easily modify them within the web-based platform and alert operators at the station level.',
+								})
+					
+					.col-12.col-lg-4
+						h3.text-uppercase
+							+rawHtml ({
+									name: 'h3_ci',
+									value: 'Meet Compliance & Quality Standards.',
+								})
+						p
+							+rawHtml ({
+									name: 'p3_ci',
+									value: 'Automate quality management processes and ensure regulatory and compliance standards are always met. Get digital build history reports and robust analtyics to support various groups and cross-functional teams.',
+								})
+
+	//- Who Benefits
+	.bg-white
+		.container.py-5
+			.p-3.p-lg-5
+				.row
+					.col-12.col-lg-6
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'title_whobenefits',
+								value: 'Who Benefits?'
+							})
+						
+						p.lead-md
+							+rawHtml ({
+								name: 'subtitle_whobenefits',
+								value: 'There something for everyone. Full Transparency for all stakeholders in the quality process.',
+								class: 'lead-md'
+							})
+			
+			.p-3.p-lg-5
+				.row.g-5.gy-5
+					mixin whobenefitsBullets(args)
+						.col-12.col-lg-3
+							.d-flex.flex-column.align-items-center.text-center
+								i.fas.fa-5x.text-primary.mb-4( class='fa-' + args.icon )
+								h4.text-uppercase.text-primary
+									+rawHtml ({
+											name: 'h' + args.index + '_adjectives',
+											value: args.heading,
+										})
+								p
+									+rawHtml ({
+											name: 'p' + args.index + '_adjectives',
+											value: args.body,
+										})
+
+					+whobenefitsBullets ({
+						index: '1',
+						icon: 'cog',
+						heading: 'Corporate HQ',
+						body: 'Access data from multiple sites, all in one place.'
+					})
+
+					+whobenefitsBullets ({
+						index: '2',
+						icon: 'cog',
+						heading: 'IT',
+						body: 'Single install point & data aggregation make the job of IT easy.'
+					})
+
+					+whobenefitsBullets ({
+						index: '3',
+						icon: 'cog',
+						heading: 'Plant Manager',
+						body: 'View plant wide live production metrics & dashboards.'
+					})
+
+					+whobenefitsBullets ({
+						index: '4',
+						icon: 'cog',
+						heading: 'Medical & Industrial Engineer',
+						body: 'Make manufacturing process changes quickly and easily.'
+					})
+
+					+whobenefitsBullets ({
+						index: '5',
+						icon: 'cog',
+						heading: 'Quality Engineer',
+						body: 'Error-proof, enforce quality standards and increase FTQ.'
+					})
+
+					+whobenefitsBullets ({
+						index: '6',
+						icon: 'cog',
+						heading: 'Lean & Continuous Improvement',
+						body: 'Get the data you need to drive change & monitor results.'
+					})
+
+					+whobenefitsBullets ({
+						index: '7',
+						icon: 'cog',
+						heading: 'Supervisor & Team Leader',
+						body: 'Monitor your team in real time and get the alerts you need.'
+					})
+
+					+whobenefitsBullets ({
+						index: '8',
+						icon: 'cog',
+						heading: 'Operator & Technician',
+						body: 'All the right information at the right time, just a touch away.'
+					})
+
+	//- Request Demo
+	.position-relative
+		
+		//- Overlay containers without a static height need to have static position on the body/content and a relative position wrapper.
+
+		.responsive-clip-path.w-100.h-100.position-absolute( style='z-index: -1; box-sizing: border-box; pointer-events: none; top: 0' )
+			+image ({
+				name: 'image_demorequest',
+				src: 'https://picsum.photos/900/500'
+			})
+
+		.container.py-5
+			.row
+				.col.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase.text-white
+							+rawHtml ({
+								name: 'h_demorequest',
+								value: 'See how eFlex can help your business.',
+								class: 'text-white'
+							})
+					
+						p.lead-md.text-white.mb-5
+							+rawHtml ({
+								name: 'p_demorequest',
+								value: 'Digitize standard maintenance procedures and ensure you never miss a step or timeline. Get an online demo and see how easy it is to get started!',
+								class: 'lead-md text-white'
+							})
+
+						+cta ({
+							name: 'cta_demorequest',
+							color: 'primary',
+							guid: '3a823f8b-1b01-438c-99fd-6a3ac3ff5ac6'
+						})

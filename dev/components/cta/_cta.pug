@@ -11,7 +11,7 @@ mixin cta(args)
 		.
 			{% cta "#{args.name}" label="#{args.name}" guid="#{args.guid ? args.guid : 'f45a304e-b763-4049-bff9-b08abe1db12a'}" extra_classes="hs_ancestor btn-#{(args.variant ? args.variant + '-' : '') + (args.color ? args.color : '')}#{args.class ? ' ' + args.class : null} text-uppercase" %}
 	else
-		button.btn.text-uppercase( class="btn-" + (args.variant ? args.variant + '-' : '' ) + (args.color ? args.color + ' ' : '') + (args.class ? ' ' + args.class : '') )
+		button.btn.text-uppercase( id=args.id ? args.id : null class="btn-" + (args.variant ? args.variant + '-' : '' ) + (args.color ? args.color + ' ' : '') + (args.class ? ' ' + args.class : ''))
 			+rawHtml ({
 				name: 'label_' + args.name,
 				value: args.label ? args.label : 'Button Label'
