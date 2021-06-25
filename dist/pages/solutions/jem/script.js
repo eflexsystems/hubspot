@@ -35,13 +35,4 @@ $('#carousel-jem').slick({
     ]
 });
 
-const instance = basicLightbox.create(`
-	<div>
-		<video controls data-id="2">
-		<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
-	</div>
-`)
-
-document.querySelector('button.btn-video').onclick = () => {
-	instance.show();
-}
+videoLightroom('video_jem', 'https://f.hubspotusercontent00.net/hubfs/8439350/Videos/jem.mp4');

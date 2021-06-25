@@ -1,0 +1,66 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+-->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{{ content.html_title }}</title><meta name="description" content="{{ content.meta_desctiption }}"><meta name="author" content="eFlex Systems">{{ standard_header_includes }}<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel="stylesheet">{{ require_css(get_asset_url("./style.css")) }}<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"><script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"></head><body>{% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800 d-none d-lg-block" %}
+{% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}<!-- parallax--><div class="bg-white position-relative"><div class="container py-5"><div class="row pt-6"><div class="col-12 col-lg-6"><div class="p-3 p-lg-5"><h1 class="display-1 text-uppercase">{% raw_html "title" value="It's time to go digital!", label="title", extra_classes="" %}</h1><p class="lead-md">{% raw_html "p1" value="Whether you are just starting your digital journey and looking for basic paperless work instructions, or looking for a fully automated solution with IIoT connected devices, tooling, vision systems and more, eFlex has you covered.", label="p1", extra_classes="lead-md" %}</p></div></div><div class="col-12 col-lg-6"><div class="p-3 p-lg-5">{% form "form" form_to_use="4b3821a3-d6da-418b-a4b1-1f77e04f9388", title="Request a Free Demo" %}</div></div></div></div><div class="position-absolute b-0 w-50 h-auto" style="max-width: 65rem">{% image "image" label="image", alt="", src="https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Interface%20Examples/Custom%20Device%20Interfaces/UI_Realisitic_JEM_2.png", extra_classes="" %}</div></div>{{ standard_footer_includes }}
+{% module "module_16038952826172" path="/_eflex/modules/footer", label="footer" %}<div class="fixed-top h-100 w-100" id="loadingOverlay" style="top: 0; z-index: 1031"><div class="bg-white position-fixed h-100 w-100"></div><div class="vw-100 vh-100 d-flex justify-content-center align-items-center position-absolute" style="top: 0"><i class="fas fa-circle-notch fa-3x fa-spin text-gray-200"></i></div></div><script type="text/javascript" defer>// global script.js
+
+$(window).load(function () {
+	
+	// Add Boostrap styles to hubspot
+	$("[id^=cta_button]").addClass("btn");
+
+	// Fade overlay once window is loaded.
+	$("#loadingOverlay").fadeOut(400);
+	
+	// Pass hs module classes to children
+	function hsChildInheritClass(selector) {
+		const hsExcludedClasses = ['hs_cos_wrapper', 'hs_cos_wrapper_widget', 'hs_cos_wrapper_type_cta', 'hs_cos_wrapper_type_raw_html', 'hs_ancestor'];
+
+		const ancestorElements = document.getElementsByClassName('hs_ancestor ' + selector);
+		for (var i = 0; i < ancestorElements.length; i++) {
+			const ancestorClasses = ancestorElements[i].classList;
+			for (var j = 0; j < ancestorClasses.length; j++) {
+				const ancestorClass = ancestorClasses[j];
+
+				if (hsExcludedClasses.includes(ancestorClass)) { }
+				else {
+					$('.' + selector + '.hs_ancestor.' + ancestorClass + ' a').addClass(ancestorClass);
+					$('.' + selector + '.hs_ancestor.' + ancestorClass).removeClass(ancestorClass);
+				}
+			}
+		}
+	};
+
+	// Select cta modules
+	hsChildInheritClass('hs_cos_wrapper_type_cta');
+
+	// Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
+	$(".hs-image-widget").addClass("w-100");
+});
+
+// scrollResponsiveHeader is for when the header can sit over a dark image as white text.
+let scrollResponsiveHeader;
+
+let videoInstance;
+
+// html function for video lightroom component
+function videoLightroom(id, src) {
+	videoInstance = basicLightbox.create(
+		`
+			<div class='d-flex flex-column video-lightroom-container'>
+				<button class='btn btn-link link-light btn-sm align-self-end mb-2' onclick='videoInstance.close()'>
+					<i class='fas fa-times fa-lg'></i>
+				</button>
+				<video id="${id}" controls data-id="2">
+				<source src=${src} type="video/mp4">
+			</div>
+		`
+	);
+
+	document.querySelector('button#' + id + '_cta').onclick = () => {
+		videoInstance.show();
+		document.getElementById(id).play();
+	}
+}</script><script type="text/javascript"></script></body></html>

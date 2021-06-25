@@ -1,13 +1,9 @@
 //- index.pug
 extends ../../templates/_template.pug
 
-block script
-	//- slick-carousel
-	script( type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+append script
 	script( type='text/javascript' )
 		include ./script.js
-	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" )
-	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" )
 
 block content
 	//- Components being used.
@@ -17,6 +13,7 @@ block content
 	include ../../components/card/_card.pug
 	include ../../components/parallax/_parallax.pug
 	include ../../components/video/_video.pug
+	include ../../components/carousel/_carousel.pug
 	
 	- var clients = ['GM_05', 'GE-Healthcare', 'Snap-on', 'Nissan', 'Gatan', 'Flexngate', 'Faurecia', 'Panasonic', 'Mueller']
 

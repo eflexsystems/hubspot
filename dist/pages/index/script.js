@@ -57,3 +57,5 @@ $('#carousel-updates').slick({
     autoplaySpeed: 5000,
     speed: 1000
 });
+
+videoLightroom('video_jem', 'https://f.hubspotusercontent00.net/hubfs/8439350/Videos/jem.mp4');

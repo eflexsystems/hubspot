@@ -20,17 +20,9 @@ LottieInteractivity.create({
 	],
 });
 
-const instance = basicLightbox.create(`
-	<div>
-		<video controls data-id="2">
-		<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
-	</div>
-`)
-
-document.querySelector('button.btn-video1').onclick = () => {
-	instance.show();
+document.querySelector('button#mip_cta1').onclick = () => {
+	videoInstance.show();
+	document.getElementById('video_mip').play();
 }
 
-document.querySelector('button.btn-video2').onclick = () => {
-	instance.show();
-}
+videoLightroom('video_mip', 'https://f.hubspotusercontent00.net/hubfs/8439350/Videos/mip.mp4');

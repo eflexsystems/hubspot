@@ -1,0 +1,48 @@
+//- demoRequest.pug
+extends ../../templates/_template.pug
+
+append script
+	script( type='text/javascript' )
+		include ./script.js
+
+prepend content
+	include ../../components/rawHtml/_rawHtml.pug
+	include ../../components/form/_form.pug
+	include ../../components/parallax/_parallax.pug
+	include ../../components/image/_image.pug
+	include ../../components/image/_image.pug
+
+append content	
+	.bg-white.position-relative
+		.container.py-5
+			.row.pt-6
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-1.text-uppercase
+							+rawHtml ({
+								name: 'title',
+								value: 'It\'s time to go digital!'
+							})
+						
+						p.lead-md
+							+rawHtml ({
+								name: 'p1',
+								value: 'Whether you are just starting your digital journey and looking for basic paperless work instructions, or looking for a fully automated solution with IIoT connected devices, tooling, vision systems and more, eFlex has you covered.',
+								class: 'lead-md'
+							})
+							
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						+form ({
+							name: 'form',
+							title: 'Request a Free Demo',
+							formid: '4b3821a3-d6da-418b-a4b1-1f77e04f9388'
+						})
+		
+		.position-absolute.b-0.w-50.h-auto( style="max-width: 65rem")
+			+image ({
+				name: 'image',
+				src: 'https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Interface%20Examples/Custom%20Device%20Interfaces/UI_Realisitic_JEM_2.png'
+			})
+
+//- https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Interface%20Examples/Custom%20Device%20Interfaces/UI_Realistic_Image%20Management.png
