@@ -1,0 +1,67 @@
+//- formRedirect.pug
+extends ../../templates/_template.pug
+
+prepend script
+	//- Lottie Player CDN
+	script( src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js" )
+	script( src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js" )
+
+	script( type='text/javascript' )
+		include ./script.js
+
+prepend content
+	include ../../components/rawHtml/_rawHtml.pug
+	include ../../components/image/_image.pug
+	include ../../components/cta/_cta.pug
+
+append content	
+	.bg-white.position-relative
+		.container.py-5
+			.p-3.p-lg-5
+				.row.align-items-center.g-5.gy-5.pt-6
+					.col-12.col-lg-6
+						h1.display-1.text-uppercase.mb-5
+							+rawHtml ({
+								name: 'title',
+								value: 'Your demo request was recieved!'
+							})
+						
+						p.lead-md.mb-4
+							+rawHtml ({
+								name: 'p1',
+								value: 'Thank you for requesting a demonstration with the eFlex team! We will be in touch shortly to set up your personal demo. We can\'t wait to show you the ins and outs of our product to see how we can best fit your production needs.',
+								class: 'lead-md'
+							})
+						
+						p.lead-md.mb-5
+							+rawHtml ({
+								name: 'p1',
+								value: 'In the meantime, check out the flexible ways we can improve your manufacturing process through our Manufacturing Integrated Platform.',
+								class: 'lead-md'
+							})
+						
+						.row.g-3.gy-3
+							.col-auto
+								+cta ({
+									name: 'cta1',
+									label: 'Learn More about MIP',
+									color: 'primary'
+								})
+							.col-auto
+								+cta ({
+									name: 'cta2',
+									label: 'Contact us with Questions',
+									color: 'black',
+									variant: 'outline'
+								})
+							
+					.col-12.col-lg-6 
+						lottie-player.w-100(
+							mode='normal'
+							autoplay
+							loop
+							src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/lottie_platformDataFlow.json"
+							background='white'
+							style={ width: "1000px" }
+						)
+					

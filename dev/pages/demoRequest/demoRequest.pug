@@ -1,16 +1,15 @@
 //- demoRequest.pug
 extends ../../templates/_template.pug
 
-append script
+prepend script
 	script( type='text/javascript' )
 		include ./script.js
 
 prepend content
 	include ../../components/rawHtml/_rawHtml.pug
 	include ../../components/form/_form.pug
-	include ../../components/parallax/_parallax.pug
 	include ../../components/image/_image.pug
-	include ../../components/image/_image.pug
+	include ../../components/carousel/_carousel.pug
 
 append content	
 	.bg-white.position-relative
@@ -39,10 +38,89 @@ append content
 							formid: '4b3821a3-d6da-418b-a4b1-1f77e04f9388'
 						})
 		
-		.position-absolute.b-0.w-50.h-auto( style="max-width: 65rem")
+		.position-lg-absolute.b-0.w-100.w-lg-50.h-auto.ms-n5.ms-lg-0( style="max-width: 65rem")
 			+image ({
 				name: 'image',
 				src: 'https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Interface%20Examples/Custom%20Device%20Interfaces/UI_Realisitic_JEM_2.png'
 			})
+	
+	.bg-gray-900
+		.container.py-5 
+			.row.justify-content-center
+				.col.col-xl-6
+					.p-3.p-lg-5
+						#carousel-demoRequest.slick-carousel.carousel-buttons-light
+							mixin demoRequestCarouselItem(args)
+								.d-flex.flex-column.justify-content-start.align-items-center.m-5
 
-//- https://f.hubspotusercontent30.net/hubfs/490686/_site/Images/Interface%20Examples/Custom%20Device%20Interfaces/UI_Realistic_Image%20Management.png
+									//- Company Logo
+									if args.logoSrc
+										.mb-4( style='width: ' + args.logoWidth )
+											+image ({
+												name: 'logo' + args.index + '_demoRequestCarouselItem',
+												src: args.logoSrc
+											})
+
+									.position-relative
+										p.text-white.text-center.align-self-start.pt-3.px-5.mb-0
+											+rawHtml ({
+												name: 'quote' + args.index + '_demoRequestCarouselItem',
+												value: args.quote,
+												class: 'text-white'
+											})
+										
+										//- Quotation Marks
+										.position-absolute.t-0.l-0
+											i.fas.fa-quote-left.fa-2x.text-gray-500
+										.position-absolute.t-0.r-0
+											i.fas.fa-quote-right.fa-2x.text-gray-500
+									
+									hr.w-50.text-white.my-4
+									h3.text-uppercase.text-white.text-center.px-5.mb-3
+										+rawHtml ({
+											name: 'person' + args.index + '_demoRequestCarouselItem',
+											value: args.person,
+											class: 'text-white'
+										})
+									em
+										p.text-white.text-center.px-5.mb-0
+											+rawHtml ({
+												name: 'jobTitle' + args.index + '_demoRequestCarouselItem',
+												value: args.jobTitle,
+												class: 'text-white'
+											})
+										p.text-white.text-center.px-5.mb-0
+											+rawHtml ({
+												name: 'jobTitle' + args.index + '_demoRequestCarouselItem',
+												value: args.company,
+												class: 'text-white'
+											})
+										
+										
+							+demoRequestCarouselItem ({
+								index: '1',
+								person: 'Matt Holtman',
+								jobTitle: 'Director of Manufacturing Engineering & Quality',
+								company: 'Gray Manufacturing Company, Inc.',
+								logoSrc: 'https://f.hubspotusercontent00.net/hubfs/8439350/Logos/Client%20Logos/logo_gray.png',
+								logoWidth: '5rem',
+								quote: 'eFlex provides our team members with an easily accessible assembly process that can be digitally updated at any time. It also gives our new team members the confidence to build products they\'ve never assembled before, with minimal training. Finally, the data logged during the job allows for productivity analysis and provides product genealogy with component lot information.',
+							})
+
+							+demoRequestCarouselItem ({
+								index: '2',
+								person: 'Jonathan Kurtz',
+								jobTitle: 'Program Manager',
+								company: 'Hirotec',
+								logoSrc: 'https://f.hubspotusercontent00.net/hubfs/8439350/Logos/Client%20Logos/logo_hirotec.png',
+								logoWidth: '16rem',
+								quote: 'One of the best benefits of moving to the digital platform with the eFlex software has been our ability to onboard new employees, bring them up to a functional state, get them working at a rate that\'s very similar to our existing employees, and allowing them the freedom, as they come into training, to virtually see how they will be eventually physically building the product.'
+							})
+
+							+demoRequestCarouselItem ({
+								index: '3',
+								person: 'Dominic',
+								jobTitle: 'Electrical Engineer',
+								company: 'Electrical Components OEM',
+								quote: 'The standards for our industry and customers are requiring validation and traceability at very granular levels. JEM not only provides the solution for these requirements, but it is also flexible enough to grow and evolve with the most complex assembly processes.'
+							})
