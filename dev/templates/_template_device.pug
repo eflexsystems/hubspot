@@ -1,0 +1,97 @@
+//- _template_device.pug
+extends ./_template.pug
+
+block variables
+	-
+		var mastheadHeight = '40rem'
+		var deviceName;
+	-
+		var devices = ['Barcode Readers', 'Torque & Nutrunners', 'Webcams', 'Vision Systems', 'I/O Connectivity - Pick Lights, Sensors, & Switches', 'Gauges & Scales', 'Printers', 'Cobots', 'AR'];
+		if( deviceName ) {
+			if( devices.length > devices.indexOf(deviceName) + 1 ) {
+				var deviceNextIndex = devices.indexOf(deviceName) + 1;
+			} 
+			else {
+				var deviceNextIndex = deviceNextIndex = 0;
+			}
+			var deviceNextName = devices[deviceNextIndex];
+		} 
+		else {
+			var deviceNextName = 'Default'
+		}
+	-
+		var deviceCamelCase;
+		deviceCamelCase = String(deviceName).charAt(0).toLowerCase() + String(deviceName).slice(1).replace(/\s/g, '').replace(/&/g, '');
+			
+block content
+	include ../components/parallax/_parallax.pug
+	include ../components/rawHtml/_rawHtml.pug
+	include ../components/cta/_cta.pug
+	include ../components/video/_video.pug
+
+	//- Masthead Container
+	.d-flex.flex-column.align-items-center.justify-content-end.position-relative( style='height: ' + mastheadHeight )
+	
+		block mastheadImage
+			+parallax ({
+				name: 'imageSrc_masthead',
+			})
+			
+		block masthead
+			//- Home Content
+			.container.h-100.position-absolute.py-5
+				.row.align-items-center.h-100.pt-6
+
+					//- Masthead Introduction
+					.col-12.col-lg-6
+						.p-3.p-md-5
+							h1.display-lg-1.text-uppercase.text-white.text-break.text-lg-nowrap( style="hyphens: auto" )
+								+rawHtml ({
+									name: 'title_' + deviceCamelCase,
+									value: deviceName
+								})
+
+							p.lead-md.text-white.mb-0
+								+rawHtml ({ 
+									name: 'desc_' + deviceCamelCase,
+									class: 'lead-md text-white',
+									value: loremipsum_md
+								})
+						
+						//- Next Device
+						.p-3.p-lg-5
+							h6.text-white.text-uppercase.mb-2
+								+rawHtml ({ 
+										name: 'next',
+										class: 'text-white',
+										value: 'Next IoT device:'
+									})
+							+cta ({
+								name: 'cta_nextDevice',
+								label: deviceNextName,
+								color: 'primary-light',
+								variant: 'flat',
+								class: 'btn-lg'
+							})
+
+	//- Video
+	.bg-white
+		.container.py-3
+			.row.align-items-center
+				.col-6
+					.p-3.p-md-5
+						h1.display-1.text-uppercase.mb-5( style='letter-spacing: -.25rem' )
+							+rawHtml ({
+								name: 'h_' + deviceCamelCase,
+								value: 'Seamlessly integrate your IoT ' + deviceName,
+							})
+						
+						block subContent
+				
+				.col-6
+					.p-3.p-md-5
+						+video ({
+							name: 'video_' + deviceCamelCase,
+							id: 'video_' + deviceCamelCase,
+							imgSrc: 'https://f.hubspotusercontent00.net/hubfs/8439350/Images/cta_iotDevices_' + deviceCamelCase + 'Dark.jpg'
+						})

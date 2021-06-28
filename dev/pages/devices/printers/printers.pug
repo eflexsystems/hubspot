@@ -1,0 +1,36 @@
+//- printers.pug
+extends ../../../templates/_template_device.pug
+
+append script
+	script( type='text/javascript' )
+		include ./script.js
+
+prepend variables
+	- var deviceName = 'Printers'
+
+block subContent
+	mixin bullet(args)
+		li
+			p.lead-md.mb-3
+				+rawHtml ({
+					name: 'bullet' + args.index + '_printers',
+					class: 'lead-md-md',
+					value: args.value
+				})
+
+	ul
+		+bullet({
+			index: '1',
+			value: 'Point of origin serialization - print labels and establish identification on the product with auto-generated serial numbers.'
+		})
+
+		+bullet({
+			index: '2',
+			value: 'Whether it\'s somewhere in the middle or at the end of the line, build data can be captured anywhere in the process.'
+		})
+
+		+bullet({
+			index: '3',
+			value: 'Print a label when it provides a value to collect additional information.'
+		})
+
