@@ -1,27 +1,40 @@
 //- 404.pug
 extends ../../templates/_template.pug
 
+block templateType
+	.
+		<!--
+		templateType: error_page
+		isAvailableForNewContent: true
+		-->
+
 block content
 	//- Components being used.
 	include ../../components/cta/_cta.pug
 
-	.container.d-flex.flex-column.justify-content-center.py-5( style="min-height: 40rem" )
-		.row
-			.col
-				.p-3.p-lg-5
-					.row.mb-5
-						.col
-							h1.display-lg-1
-								i.far.fa-sad-cry.fa-sm.me-4
-								| 404 - Page Not Found.
-							p.lead-md Sorry, the page you were looking for at the URL was not found.
-					.row
-						.col-auto
-							+cta ({
-								color: 'primary'
-							})
-						.col-auto
-							+cta ({
-								variant: 'outline',
-								color: 'primary'
-							})
+	.bg-white
+		.container.d-flex.flex-column.justify-content-center.py-5( style="min-height: 40rem" )
+			.row.pt-6
+				.col
+					.p-3.p-lg-5
+						.row.mb-5
+							.col
+								h1.display-lg-1
+									i.far.fa-sad-cry.fa-sm.me-4
+									| 404 - Page Not Found.
+								p.lead-md 
+									| Sorry, the page you were looking for at the URL was not found. Can't find what you're looking for? &nbsp;
+									a( href='https://www.eflexsystems.com/contact-customer-support' ) Contact us with questions
+									| .
+						.row
+							.col-auto
+								+cta ({
+									color: 'primary',
+									label: 'Home Page'
+								})
+							.col-auto
+								+cta ({
+									variant: 'outline',
+									color: 'black',
+									label: 'Our Platform'
+								})

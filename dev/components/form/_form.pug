@@ -1,7 +1,7 @@
 //- _form.pug
 
-//- https://developers.hubspot.com/docs/cms/hubl/tags * find use for different properties
+//- properties: [ name, formId, title ]
 
 mixin form(args)
 	.
-		{% form "#{args.name}" form_to_use="#{args.formid ? args.formid : '4b3821a3-d6da-418b-a4b1-1f77e04f9388'}", title="#{args.title ? args.title : 'Default Title'}" %}
+		{% form "#{args.name}" form_to_use="#{args.formId ? args.formId : '4b3821a3-d6da-418b-a4b1-1f77e04f9388'}", title="#{args.title ? args.title : 'Default Title'}" %}

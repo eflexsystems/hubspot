@@ -1,0 +1,66 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+-->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{{ content.html_title }}</title><meta name="description" content="{{ content.meta_desctiption }}"><meta name="author" content="eFlex Systems">{{ standard_header_includes }}<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel="stylesheet">{{ require_css(get_asset_url("./style.css")) }}<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"><script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"></head><body>{% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800 d-none d-lg-block" %}
+{% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}<!-- parallax--><!-- cta--><script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script><div class="d-flex flex-column align-items-center justify-content-end position-relative" style="height: 40rem"><div class="parallax-window position-absolute w-100 h-100" style="top: 0; box-sizing: border-box; pointer-events: none" data-parallax="scroll" data-natural-width="1200" data-natural-height="800" data-image-src="{% text "imageSrc_masthead", label="imageSrc_masthead", value="https://picsum.photos/800/600", no_wrapper=True %}" data-speed="0.2"></div><div class="container h-100 position-absolute py-5"><div class="row align-items-center h-100 pt-6"><div class="col-12 col-lg-6"><div class="p-3 p-md-5"><h1 class="display-lg-1 text-uppercase text-white text-break text-lg-nowrap" style="hyphens: auto">{% raw_html "title_barcodeReaders" value="Barcode Readers", label="title_barcodeReaders", extra_classes="" %}</h1><p class="lead-md text-white mb-0">{% raw_html "desc_barcodeReaders" value="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.", label="desc_barcodeReaders", extra_classes="lead-md text-white" %}</p></div><div class="p-3 p-lg-5"><h6 class="text-white text-uppercase mb-2">{% raw_html "next" value="Next IoT device:", label="next", extra_classes="text-white" %}</h6><button class="btn text-uppercase btn-flat-primary-light  btn-lg">{% raw_html "label_cta_nextDevice" value="Torque &amp; Nutrunners", label="label_cta_nextDevice", extra_classes="" %}</button></div></div></div></div></div><div class="bg-white"><div class="container py-3"><div class="row align-items-center"><div class="col-6"><div class="p-3 p-md-5"><h1 class="display-1 text-uppercase mb-5" style="letter-spacing: -.25rem">{% raw_html "h_barcodeReaders" value="Seamlessly integrate your IoT Barcode Readers", label="h_barcodeReaders", extra_classes="" %}</h1><div class="row flex-column g-3 gy-3"><div class="col"><p class="lead-md">{% raw_html "body_barcodeReaders" value="Barcode scanners are great for kicking off a build - whether scanning a barcode on the traveler or the product itself. They can error-proof your process with verification of correct parts, verification of expected kit values, and component marriage. They can help maintain genealogy records by integrating the scanning of serial numbers, lots, and batches. They can even be used to scan badges for operator login and verification of supervisor approval.", label="body_barcodeReaders", extra_classes="lead-md" %}</p></div></div></div></div><div class="col-6"><div class="p-3 p-md-5"><button class="btn-video clip-path border-none position-relative p-0" id="video_barcodeReaders_cta">{% image "video_barcodeReaders_thumbnail" label="video_barcodeReaders_thumbnail", alt="eFlex Systems Software Video", src="https://f.hubspotusercontent00.net/hubfs/8439350/Images/cta_iotDevices_printersDark.jpg", extra_classes="" %}<div class="d-flex align-items-center justify-content-center position-absolute w-100 h-100 t-0"><i class="fas fa-play-circle fa-5x text-white m-auto"></i></div></button></div></div></div><div class="p-3 p-md-5"><div class="row g-5 gy-5"><div class="col col-lg-4"><h5 class="text-uppercase">{% raw_html "h1_barcodeReaders" value="Handheld Scanners", label="h1_barcodeReaders", extra_classes="" %}</h5><p>{% raw_html "p2_barcodeReaders" value="Handheld scanners, either wired or wireless, are most commonly connected via USB. They also have the option of being connected through ethernet. Handheld scanners can be lower cost depending on the manufacturing environment. The quality of handheld scanners range from non-industrial to high-end scanners.", label="p2_barcodeReaders", extra_classes="" %}</p></div><div class="col col-lg-4"><h5 class="text-uppercase">{% raw_html "h2_barcodeReaders" value="Fixed Position Scanners", label="h2_barcodeReaders", extra_classes="" %}</h5><p>{% raw_html "p2_barcodeReaders" value="Wired fixed position scanners most commonly use an ethernet connection, but have USB options. These types enable high-speed, hands-free scanning of virtually any barcode on any surface. Wired scanners also provide advanced capabilities that many vendors offer for reading difficult codes (i.e. long range or poor quality).", label="p2_barcodeReaders", extra_classes="" %}</p></div><div class="col col-lg-4"><h5 class="text-uppercase">{% raw_html "h3_barcodeReaders" value="Webcams", label="h3_barcodeReaders", extra_classes="" %}</h5><p>{% raw_html "p3_barcodeReaders" value="Webcams are supported scanners that have very low cost and are a good option for simple applications. Webcams function as a connected USB device leveraging an algorithm to decode barcodes.", label="p3_barcodeReaders", extra_classes="" %}</p></div></div></div></div></div>{{ standard_footer_includes }}
+{% module "module_16038952826172" path="/_eflex/modules/footer", label="footer" %}<div class="fixed-top h-100 w-100" id="loadingOverlay" style="top: 0; z-index: 1031"><div class="bg-white position-fixed h-100 w-100"></div><div class="vw-100 vh-100 d-flex justify-content-center align-items-center position-absolute" style="top: 0"><i class="fas fa-circle-notch fa-3x fa-spin text-gray-200"></i></div></div><script type="text/javascript" defer>// global script.js
+
+$(window).load(function () {
+	
+	// Add Boostrap styles to hubspot
+	$("[id^=cta_button]").addClass("btn");
+
+	// Fade overlay once window is loaded.
+	$("#loadingOverlay").fadeOut(400);
+	
+	// Pass hs module classes to children
+	function hsChildInheritClass(selector) {
+		const hsExcludedClasses = ['hs_cos_wrapper', 'hs_cos_wrapper_widget', 'hs_cos_wrapper_type_cta', 'hs_cos_wrapper_type_raw_html', 'hs_ancestor'];
+
+		const ancestorElements = document.getElementsByClassName('hs_ancestor ' + selector);
+		for (var i = 0; i < ancestorElements.length; i++) {
+			const ancestorClasses = ancestorElements[i].classList;
+			for (var j = 0; j < ancestorClasses.length; j++) {
+				const ancestorClass = ancestorClasses[j];
+
+				if (hsExcludedClasses.includes(ancestorClass)) { }
+				else {
+					$('.' + selector + '.hs_ancestor.' + ancestorClass + ' a').addClass(ancestorClass);
+					$('.' + selector + '.hs_ancestor.' + ancestorClass).removeClass(ancestorClass);
+				}
+			}
+		}
+	};
+
+	// Select cta modules
+	hsChildInheritClass('hs_cos_wrapper_type_cta');
+
+	// Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
+	$(".hs-image-widget").addClass("w-100");
+});
+
+// scrollResponsiveHeader is for when the header can sit over a dark image as white text.
+let scrollResponsiveHeader;
+
+let videoInstance;
+
+// html function for video lightroom component
+function videoLightroom(id, src) {
+	videoInstance = basicLightbox.create(
+		`
+			<div class='d-flex flex-column video-lightroom-container'>
+				<button class='btn btn-link link-light btn-sm align-self-end mb-2' onclick='videoInstance.close()'>
+					<i class='fas fa-times fa-lg'></i>
+				</button>
+				<video id="${id}" controls data-id="2">
+				<source src=${src} type="video/mp4">
+			</div>
+		`
+	);
+
+	document.querySelector('button#' + id + '_cta').onclick = () => {
+		videoInstance.show();
+		document.getElementById(id).play();
+	}
+}</script><script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script><script type="text/javascript"></script></body></html>

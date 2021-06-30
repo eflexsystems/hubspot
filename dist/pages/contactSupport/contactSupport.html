@@ -1,0 +1,287 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+-->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{{ content.html_title }}</title><meta name="description" content="{{ content.meta_desctiption }}"><meta name="author" content="eFlex Systems">{{ standard_header_includes }}<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="{{ get_public_template_url('/_eflex/styles/stylesheet.css') }}" rel="stylesheet">{{ require_css(get_asset_url("./style.css")) }}<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/41afa11259.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"><script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"></head><body>{% module "module_16031320329341" path="/_eflex/modules/header", label="header", extra_classes="bg-gray-800 d-none d-lg-block" %}
+{% module "module_36664828293" path="/_eflex/modules/header_mobile", label="header_mobile", extra_classes="bg-gray-800 d-block d-lg-none" %}<!-- cta--><!-- parallax--><div class="d-flex flex-column align-items-center justify-content-end position-relative" style="height: 40rem"><div class="parallax-window position-absolute w-100 h-100" style="top: 0; box-sizing: border-box; pointer-events: none" data-parallax="scroll" data-natural-width="1200" data-natural-height="800" data-image-src="{% text "imageSrc_masthead", label="imageSrc_masthead", value="https://picsum.photos/800/600", no_wrapper=True %}" data-speed="0.2"></div><div class="container h-100 position-absolute py-5"><div class="row h-100"><div class="col-12 col-lg-6"><div class="d-flex flex-column justify-content-end h-100"><div class="p-3 p-md-5"><div class="d-flex flex-column"><h1 class="display-lg-1 text-uppercase text-white text-break text-lg-nowrap" style="hyphens: auto">{% raw_html "title_masthead" value="Masthead Title", label="title_masthead", extra_classes="" %}</h1><p class="lead-md text-white mb-5">{% raw_html "desc_masthead" value="Solution sub-title insert here.", label="desc_masthead", extra_classes="lead-md text-white" %}</p>{% cta "end" label="end" guid="f45a304e-b763-4049-bff9-b08abe1db12a" extra_classes="hs_ancestor btn-primary text-uppercase" %}</div></div></div></div></div></div></div><div class="bg-white position-relative"><div class="container py-5"><div class="row align-items-center"><div class="col-12 col-lg-6"><div class="p-3 p-lg-5"><h1 class="display-lg-1 text-uppercase">{% raw_html "h_intro" value="What can we help you with?", label="h_intro", extra_classes="" %}</h1><p class="lead-md">{% raw_html "p_intro" value="Please fill out the form below and a customer support specialist will get back with you shortly.", label="p_intro", extra_classes="lead-md" %}</p></div><div class="p-3 p-lg-5">{% form "form" form_to_use="7818b5b7-0691-4654-9023-302f5ce71576", title="Contact Support Ticket Form" %}</div></div></div></div><div class="position-lg-absolute w-100 h-100 t-0" style="pointer-events: none"><div class="container-fluid h-100 g-0"><div class="row h-100 g-0"><div class="col-lg-5 offset-lg-7 bg-gray-800 pt-lg-5" style="pointer-events: auto"><div class="row flex-column h-100 g-0"><div class="col"><div class="p-5 h-100"><div class="row flex-lg-column justify-content-center h-100 g-0 gy-5"><div class="col-12 col-lg-6"><h4 class="text-white text-uppercase mb-4">Main Office</h4><h5 class="fw-light mb-3"><a class="nav-link link-light d-flex p-0" href="http://maps.google.com/?q=210 W Tienken Rd, Rochester Hills, Michigan 38306"><i class="fas fa-map-marker-alt text-primary me-3"></i><span>210 W Tienken Rd<br>Rochester Hills, MI 38306</span></a></h5><h5 class="fw-light mb-3"><a class="nav-link link-light text-truncate p-0" href="mailto: sales@eflexsystems.com"><i class="fas fa-envelope text-primary me-3"></i>sales@eflexsystems.com</a></h5><h5 class="fw-light mb-3"><a class="nav-link link-light p-0" href="tel:+1-833-463-3539"><i class="fas fa-phone-volume text-primary me-3"></i>+1 833 463 3539</a></h5></div><div class="col-12"><h4 class="text-white text-uppercase mb-4">Support Team</h4><h5 class="fw-light mb-3"><a class="nav-link link-light text-truncate p-0" href="mailto: support@eflexsystems.com"><i class="fas fa-envelope text-primary me-3"></i>support@eflexsystems.com</a></h5><h5 class="fw-light mb-3"><a class="nav-link link-light p-0" href="tel:+1-855-399-2272"><i class="fas fa-phone-volume text-primary me-3"></i>+1 855 399 2272</a></h5></div></div></div></div><div class="col"><iframe class="w-100 h-100" src="https://snazzymaps.com/embed/292068" width="100%" height="600px" style="border:none; min-height: 20rem"></iframe></div></div></div></div></div></div></div>{{ standard_footer_includes }}
+{% module "module_16038952826172" path="/_eflex/modules/footer", label="footer" %}<div class="fixed-top h-100 w-100" id="loadingOverlay" style="top: 0; z-index: 1031"><div class="bg-white position-fixed h-100 w-100"></div><div class="vw-100 vh-100 d-flex justify-content-center align-items-center position-absolute" style="top: 0"><i class="fas fa-circle-notch fa-3x fa-spin text-gray-200"></i></div></div><script type="text/javascript" defer>// global script.js
+
+$(window).load(function () {
+	
+	// Add Boostrap styles to hubspot
+	$("[id^=cta_button]").addClass("btn");
+
+	// Fade overlay once window is loaded.
+	$("#loadingOverlay").fadeOut(400);
+	
+	// Pass hs module classes to children
+	function hsChildInheritClass(selector) {
+		const hsExcludedClasses = ['hs_cos_wrapper', 'hs_cos_wrapper_widget', 'hs_cos_wrapper_type_cta', 'hs_cos_wrapper_type_raw_html', 'hs_ancestor'];
+
+		const ancestorElements = document.getElementsByClassName('hs_ancestor ' + selector);
+		for (var i = 0; i < ancestorElements.length; i++) {
+			const ancestorClasses = ancestorElements[i].classList;
+			for (var j = 0; j < ancestorClasses.length; j++) {
+				const ancestorClass = ancestorClasses[j];
+
+				if (hsExcludedClasses.includes(ancestorClass)) { }
+				else {
+					$('.' + selector + '.hs_ancestor.' + ancestorClass + ' a').addClass(ancestorClass);
+					$('.' + selector + '.hs_ancestor.' + ancestorClass).removeClass(ancestorClass);
+				}
+			}
+		}
+	};
+
+	// Select cta modules
+	hsChildInheritClass('hs_cos_wrapper_type_cta');
+
+	// Responsive Images.. hsWrapperChildAddClass() doesn't work for image widget
+	$(".hs-image-widget").addClass("w-100");
+});
+
+// scrollResponsiveHeader is for when the header can sit over a dark image as white text.
+let scrollResponsiveHeader;
+
+let videoInstance;
+
+// html function for video lightroom component
+function videoLightroom(id, src) {
+	videoInstance = basicLightbox.create(
+		`
+			<div class='d-flex flex-column video-lightroom-container'>
+				<button class='btn btn-link link-light btn-sm align-self-end mb-2' onclick='videoInstance.close()'>
+					<i class='fas fa-times fa-lg'></i>
+				</button>
+				<video id="${id}" controls data-id="2">
+				<source src=${src} type="video/mp4">
+			</div>
+		`
+	);
+
+	document.querySelector('button#' + id + '_cta').onclick = () => {
+		videoInstance.show();
+		document.getElementById(id).play();
+	}
+}</script><script type="text/javascript">let map;
+
+function initMap() {
+
+	const mapStyleArray = [
+		{
+			"featureType": "all",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+					"saturation": 36
+				},
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 40
+				}
+			]
+		},
+		{
+			"featureType": "all",
+			"elementType": "labels.text.stroke",
+			"stylers": [
+				{
+					"visibility": "on"
+				},
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 16
+				}
+			]
+		},
+		{
+			"featureType": "all",
+			"elementType": "labels.icon",
+			"stylers": [
+				{
+					"visibility": "off"
+				}
+			]
+		},
+		{
+			"featureType": "administrative",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 20
+				}
+			]
+		},
+		{
+			"featureType": "administrative",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 17
+				},
+				{
+					"weight": 1.2
+				}
+			]
+		},
+		{
+			"featureType": "administrative.country",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"saturation": "-12"
+				}
+			]
+		},
+		{
+			"featureType": "landscape",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 20
+				}
+			]
+		},
+		{
+			"featureType": "poi",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 21
+				}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 17
+				}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 29
+				},
+				{
+					"weight": 0.2
+				}
+			]
+		},
+		{
+			"featureType": "road.arterial",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 18
+				}
+			]
+		},
+		{
+			"featureType": "road.local",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 16
+				}
+			]
+		},
+		{
+			"featureType": "transit",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 19
+				}
+			]
+		},
+		{
+			"featureType": "water",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#323235"
+				},
+				{
+					"lightness": 17
+				}
+			]
+		},
+		{
+			"featureType": "water",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"visibility": "on"
+				},
+				{
+					"hue": "#008dff"
+				},
+				{
+					"saturation": "30"
+				}
+			]
+		}
+	];
+
+	const svgMarker = {
+		path: 
+			"M31.77,0C14.22,0,0,14.22,0,31.77c0,17.55,14.12,42.41,31.77,58.88c17.67-16.66,31.77-41.34,31.77-58.88 C63.54,14.22,49.32,0,31.77,0z M31.77,44c-7.14,0-12.94-5.79-12.94-12.94c0-7.14,5.79-12.94,12.94-12.94 c7.14,0,12.94,5.79,12.94,12.94C44.71,38.21,38.91,44,31.77,44z",
+		fillColor: "#2B90E2",
+		fillOpacity: 1,
+		strokeWeight: 0,
+		rotation: 0,
+		scale: .75,
+		anchor: new google.maps.Point(10, 84),
+	};
+
+	const latLng = { lat: 42.695981919195546, lng: -83.13838993560815 };
+	map = new google.maps.Map(document.getElementById("map"), {
+		center: latLng,
+		zoom: 18,
+		styles: mapStyleArray,
+		mapTypeControlOptions: {},
+	});
+	
+	new google.maps.Marker({
+		position: latLng,
+		map,
+		icon: svgMarker,
+		title: "eFlex",
+	  });
+}</script></body></html>

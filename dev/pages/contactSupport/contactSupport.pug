@@ -1,0 +1,76 @@
+//- contactSupport.pug
+extends ../../templates/_template_masthead.pug
+
+append script
+	script( type='text/javascript' )
+		include ./script.js
+
+prepend content
+	include ../../components/form/_form.pug
+
+append content
+	.bg-white.position-relative
+		.container.py-5
+			.row.align-items-center
+				.col-12.col-lg-6
+					.p-3.p-lg-5
+						h1.display-lg-1.text-uppercase
+							+rawHtml ({
+								name: 'h_intro',
+								value: 'What can we help you with?'
+							})
+						p.lead-md
+							+rawHtml ({
+								name: 'p_intro',
+								value: 'Please fill out the form below and a customer support specialist will get back with you shortly.',
+								class: 'lead-md'
+							})
+					
+					.p-3.p-lg-5
+						+form ({
+							name: 'form',
+							title: 'Contact Support Ticket Form',
+							formId: '7818b5b7-0691-4654-9023-302f5ce71576'
+						})
+				
+		//- Our Office
+		.position-lg-absolute.w-100.h-100.t-0( style='pointer-events: none' )
+			.container-fluid.h-100.g-0
+				.row.h-100.g-0
+					.col-lg-5.offset-lg-7.bg-gray-800.pt-lg-5( style='pointer-events: auto' )
+						.row.flex-column.h-100.g-0
+							.col
+								.p-5.h-100
+									.row.flex-lg-column.justify-content-center.h-100.g-0.gy-5
+										.col-12.col-lg-6
+											h4.text-white.text-uppercase.mb-4 Main Office
+											h5.fw-light.mb-3
+												a.nav-link.link-light.d-flex.p-0( href='http://maps.google.com/?q=210 W Tienken Rd, Rochester Hills, Michigan 38306' )
+													i.fas.fa-map-marker-alt.text-primary.me-3
+													span
+														| 210 W Tienken Rd
+														br
+														| Rochester Hills, MI 38306
+											h5.fw-light.mb-3
+												a.nav-link.link-light.text-truncate.p-0( href='mailto: sales@eflexsystems.com' )
+													i.fas.fa-envelope.text-primary.me-3
+													| sales@eflexsystems.com
+											h5.fw-light.mb-3
+												a.nav-link.link-light.p-0( href='tel:+1-833-463-3539' )
+													i.fas.fa-phone-volume.text-primary.me-3
+													| +1 833 463 3539
+
+										.col-12
+											h4.text-white.text-uppercase.mb-4 Support Team
+											h5.fw-light.mb-3
+												a.nav-link.link-light.text-truncate.p-0( href='mailto: support@eflexsystems.com' )
+													i.fas.fa-envelope.text-primary.me-3
+													| support@eflexsystems.com
+											h5.fw-light.mb-3
+												a.nav-link.link-light.p-0( href='tel:+1-855-399-2272' )
+													i.fas.fa-phone-volume.text-primary.me-3
+													| +1 855 399 2272
+							
+							.col
+								iframe.w-100.h-100( src="https://snazzymaps.com/embed/292068" width="100%" height="600px" style="border:none; min-height: 20rem" )
+							
